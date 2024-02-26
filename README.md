@@ -1,4 +1,8 @@
-# NUST BS/MS/PhD Thesis Style
+# PhD thesis document. 
+
+## Style and project structure adapted from
+
+### NUST BS/MS/PhD Thesis Style
 
 The project is accessible as an [Overleaf template](https://www.overleaf.com/latex/templates/nust-seecs-thesis/bmkdkrfxqdmb)
 
