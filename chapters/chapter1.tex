@@ -1,0 +1,96 @@
+\chapter{Introduction and State of the Art}
+\label{c-intro}
+
+\section{Neuroscience, neurons and their dynamics}
+% \textit{What are neurons, its dynamics and what are the To-Dos}
+Neuroscience is a wide and challenging field in science. It faces crucial questions in science, such as what are the neural mechanisms in the brain activity, how can those mechanisms outcome as human cognition or behavior, how is the information processed and transferred through neural activity, how are neural disease generated and how can we detect and treat them. 
+These questions and many more have been open problems that have intrigued scientific community since the first steps on the field. Neuroscience was born as a discipline from physiology, biochemistry and anatomy, that agglutinates all these questions and more. As a broad field, it is approached from distinct perspectives. Thus, it is usually referred to by its subfields, e.g. Neurobiology, Neurophotonics, Neuropharmacology, Clinical Neuroscience, Developmental Neuroscience, Systems Neuroscience, Cognitive Neuroscience, Computational Neuroscience. All these fields aim to explain the brain performance either as a whole or part of it, lead by different techniques and approaches which have even generate new fields, such as Neuroimaging.
+
+We cannot think or discuss about neuroscience without highlighting the work by Santiago Ramón y Cajal, crucial in the firsts steps on the understanding of brain dynamics \cite{de_carlos_historical_2007,de_castro_editorial_2016,delgado-garcia_cajal_2015,de_castro_cajal_2019}. The idea of the "neuron doctrine" was a boost on the study of the brain, explaining and describing the structure of individual cells called \textit{neurons} that are able to connect and thus communicate by \textit{synapses}. In Figure \ref{cajal-neuron} there is one of his famous drawings of the description of a neuron.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\textwidth]{img/intro/CajalCerebellum.jpeg}
+    % https://es.wikipedia.org/wiki/Doctrina_de_la_neurona#/media/Archivo:CajalCerebellum.jpg
+    % https://microbioblog.es/la-fascinante-historia-de-la-reazione-nera
+    \caption{Representation of Cerebellum neurons by Ramon y Cajal}
+    \label{cajal-neuron}
+\end{figure}
+
+From that starting point there have been important findings in the neurons types and structures, such as Glia cells \ref{}. 
+
+Although as we have seen brain is a complex system and we could study it from many different prisms, in this thesis we follow a bottom-up approach. So we will analyze experimentally and theoretically the neural activity at ionic channels and small circuits (few synapses). Moreover, it follows a Neurocomputational perspective, that will be developed in detail in subsection \label{computational neuroscience}. In the following lines I will describe the basis of neural activation from a computational perspective, focusing not in their molecular properties but in the change of voltage that they are able to produce and how that inter-operates. 
+
+\subsection{Neural activation}
+Neurons are cells composed by axons (the information transfer tube), dendrites (the information reception point) and synapses (the process of information transfer). Also, as any other cell has a soma, where activity is processed. % TODO revisar triple.
+We can find two big types of synapses, electrical or chemical, depending on how is the process of information transferring. In figure \ref{synapse-types} there is a representation of both kinds. The main difference between them relay on how does the communication occur. Chemical synapses occur through the mediation of \textit{neurotransmitors}, where a presynaptic neuron liberates these molecules that are received and produce an alteration in a postsynaptic neuron. This is a fast mechanism that is conducted liberated in the media. Thus, this an asymmetrical and unidirectional connection, whereas in electrical synapses we find a symmetrcial and bidirectional connection. In thoses synapses, the neurons are almost attached by an structure called \textit{gap junction}, which "pipes" both neurons, in a tissued structure that constrains the leakage to the extracellular space. This communication is then faster than the synapses, which in comparison has no delay. Activity in electrical connections is usually synchronous \cite{levitan_neuron_2002}.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics{img/intro/synapses.png}
+    \caption{Representation of synapses types. Left. Example of electrical synapse structure. Right. Example of chemical synapse structure.}
+    \label{fig:synapse-types}
+\end{figure}
+
+% As said there are many different ways to study neural dynamics, but a common descriptor for neural activity are action potentials. Action potentials are the 
+Neural activity is often described by the potential alteration in the membrane caused by the flow of ionic channels and the conduction of nerve impulses by the axon. This variation of potential is called action potentials or spikes. We can see this as the minimal piece of information in the process of information reception, modification and transmission carried out by the neurons. A more concrete definition of spike could be "an abrupt and transient change of membrane voltage that propagates to other neurons via a long protrusion called an axon" \cite{izhikevich_dynamical_2007}. Thus when no activity is transferred through the axon, the potential is called resting potential, main alterations to this potential are depolarization, when the potential is less negative than the resting potential, and hyperpolarization, when the potential is more negative than the resting potential. In figure \ref{action potential} these potential phases are depicted. 
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{img/intro/dns_spike_phases.pdf}
+    \caption{Representation of phases and terminology of an action potential. Adaptation of \textit{Figure 2.15: Action potential in the Hodgkin-Huxley model.} from book "Dynamical systems in neuroscience" \cite{izhikevich_dynamical_2007}. }
+    \label{fig:action potential}
+\end{figure}
+The membrane can be composed by different ionic channels, and its dynamics are conditioned by that combination and the possible synaptic connections. This changes in dynamics can be manifested in different ways, but the most notorious ones are the shape of the action potential and the type of activity that they show. %p61 The Neuron 
+For example, in Figure \ref{fig:spike-types} there is an example of two distinct action potentials with visible differences in their shape. In Figure \ref{fig:spike_activity-types} there is an example of distinct neural activities from intracellular recordings. 
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{img/intro/spike-types.pdf}
+    \caption{Examples of different spike shapes. Representation of two recordings from two different cells in \textit{Lymnaea stagnalis}. Left: symmetrical spike; right: shoulder shaped spike.}
+    \label{fig:spike-types}
+\end{figure}
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{img/intro/spike_activity-types.pdf}
+    \caption{Representation of different spiking activities. Left: two simultaneous intracellular recordings in \textit{Lymnaea stagnalis} showing tonic firing at two different frequencies. Right: Two examples of bursting activity, up from \textit{Lymnaea stagnalis} and bottom from \textit{Carcinus maenas}}
+    \label{fig:spike_activity-types}
+\end{figure}
+If spikes are considered minimal pieces of information when coding the neural activity, the combination of these minimal information leads to new forms of information, also known as bursts. Although there is not a fixed description of a burst, and depending on the animal and system a burst might look different \cite{russell_bursting_1978,palmu_detection_2010,lundqvist_gamma_2016}, there are some common features in bursts: combination of spikes (more than two), higher frequency, sustained depolarization, a hyperpolarization followed by a resting inter-burst period (IBI). Traditionally, neural code has been studied as information by the binarization of the activity i.e. an spike does or does not occur. Burst can also be part of this codification, either as a whole piece of information or as a complex box of data itself. "bursts are a family of firing patterns that trigger physiological mechanisms not engaged by the same number of spikes in relative isolation" \cite{friedenberger_silences_2023}. Bursts can be originated either by internal activation, mostly by calcium channels or by the synaptic dynamics involving the corresponding cell (inhibition/excitation) (for an extended review see \cite{friedenberger_silences_2023}). This is the case in Central Pattern Generators (CPGs) \cite{Katz,steuer_central_2018} that will be discussed in detail bellow and in Chapter \ref{c-invariants-model}.
+
+\section{The importance of sequential neural dynamics}
+%the complex landscape of unanswered questions in the field of neuroscience, from a bottom-up approach. 
+In the complex landscape of neuroscience, its study and conceptualization can be framed in three parts: hierarchy, if the study is bottom-up or top-down approach; ; and sequentiallity Among all the studies here present there is a common key: sequentially in neural dynamics. We can see most dynamics in the whole brain and behavior as a sequence of interactions, from molecules to motor movement. In this section we well see a review of the sequential nature of neurons and their information processing.
+
+The structural differentiation in the 
+
+% There are many important cognitive processes that rely in sequential processes such as perception, memory, decision making, attention and emotion. %Binding \cite{Michel and coegin 2018, Ravinovich 2020, He 2018}.
+% Sequentiallity involves complex pieces of dynamical activity, that when incapsulated as units, can be seen as a chain of events with sequential behaviour \cite{Ravinovich,2023}.
+
+
+% Sequential activvation for unsuppervised learning/activity.
+
+Principles of Brain Dynamics: Global State Interaction Book
+https://www.frontiersin.org/articles/10.3389/fnsys.2014.00219/full
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8367843/
+
+
+\section{Computational Neuroscience}
+\section{Study in invertebrates}
+Even before computational techniques where an option, the study of Neural dynamics and behavior was carried using many different model animals. Apart from the hegemonic rodents models, there have been invaluable findings using invertebrates as animal models, such as genetics and developmental biology in \textit{C. elegans} \cite{brenner_genetics_1974}, \textit{Zebra fish} \cite{streisinger_production_1981} and \textit{Drosophila} \cite{nusslein-volhard_mutations_1980}; neural dynamics in \textit{Aplysia} \cite{HODGKIN1952,wachtel_direct_1967}, motor activity in \textit{Carcinus maenas} \cite{eisen} or \textit{Lymneae stagnalis}, the main animal model in this thesis. Those are only examples of fields, these animal models have been used for a wide variety of fields including behavioral studies, ecotoxicology, evolution, human disease modelling... \cite{romanova_animal_2018} 
+
+Despite the differences between invertebrates, mammals and concretely human brain, there are many characteristics of animals' systems that can be extrapolated to humans. In fact, there are differences even in mammal species \cite{preuss}, so by exploring more animal species there can be set a ground truth more reliable for many of the features that conform the dynamics and animal biology. 
+
+ % https://karger.com/bbe/article-abstract/55/6/287/46613/Taking-the-Measure-of-Diversity-Comparative?redirectedFrom=fulltext  
+ %First, by examining a wider range of species than are currently employed, and by using modern techniques of phyletic analysis, neuroscientists can more rigorously identify those features of cortical organization that are, in fact, widely shared among mammals or among particular mammalian subgroups. Second, by taking account of variations, neuroscientists can abstract more reliable and general principles of structure-function relationships in the nervous system. Finally, freed from the doctrine of basic uniformity, neuroscientists can pursue the study of human cortical specializations, and so advance our understanding of what distinguishes humans as a biological species.
+
+Among the advantages in using invertebrates there are the easy access to the nervous system, the ease of breeding and reproduction, the simplicity of their biological features, making a full description possible, i.e. the genomic description of \textit{C. elegans} or the nervous system in \textit{Lymnaea stagnalis}. Also some selected species were a main field of study in the last decades, so there is plenty of literature for each one even in different fields. It is also very attractive from this simpler systems that, despite their simplicity their nervous system is still capable of neural activity, behaviour and even learning actions as we do. 
+
+Findings in invertebrates are sometimes overlooked, arguing that features in invertebrates cannot be extrapolated to humans. Thus, there are often used mammals by their biological similarity. However, models in invertebrates have proven their utility not only in basic science. We can find examples of this in human disseases, memory, motor activity and neuromodulation. 
+
+Particularly, in the study of neural processes, the ease of accessibility and finite number of large neurons in the system, have made invertebrates an interesting case of study. In Figure \ref{fig:invertebrates timeline} there is a timeline containing crucial discoveries in Neuroscience, some of them Nobel Prize winners in the last century, as well as current relevant discoveries in the field. 
+% https://docs.google.com/spreadsheets/d/16rOG5LSuFMQGHAakeYqcdG26NIZnY4NWtr6TZku_UKs/edit#gid=0
+
+Apart from the possible advances in science, invertebrates models can also bridge the gap between resources and science, allowing low-income labs and countries to do science. This animal models are usually cheaper to obtain, maintain and there is usually a possibility of breeding own colonies. This makes their use extendable and breaks some economical barriers in science, where high-income countries usually centralize the science production with strong conventions \cite{castillo_spineless_2017,stephan_how_2015}. 
+
+\textit{What can computational neuroscience provide to experimental approaches}
+\section{Neuromodulation and its need for clinical applications}

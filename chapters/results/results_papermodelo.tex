@@ -1,0 +1,135 @@
+
+The \textit{Lymnaea} feeding CPG model faithfully reproduces the activity of the main neurons involved in the generation of its triphasic rhythm \cite{Vavoulis2007}. This includes their waveforms and the relationships between the cycle period and the duration of several intervals reported in \cite{Elliott1991}.
+
+
+%is  including the interaction between them. Due to, not only the connections that where represented in the diagram of Fig. \ref{fig:CPG diagram}, but also the intrinsic activity of each neuron, the model reproduces the feeding rhythm and the linear relationships 
+% of some intervals with the period as described in \cite{Elliott1991}. 
+
+
+Following the current injection protocol defined in section \ref{subsec:inj protocol}, N1M, N3t and SO neurons in the model were stimulated for our analysis of the sequence interval variability. 
+%cambios
+The effect on injecting a current ramp on N2v is not reported here since it leads to lower variability than the other cases. Here on, the results of the analyses from the  current injection protocols on the specified neurons are reported. In all simulations, we could test the robustness of the rhythm while inducing the external perturbation that evoked variability in the search for dynamical invariants.
+
+
+\subsubsection{N1M driven variability}
+\label{subsec:n1m driven}
+
+N1M neuron is frequently stimulated using ramp protocols in living preparations \cite{Elliott1991} as it plays an important role in initiating the CPG rhythm. In our case, after applying the current injection protocol into N1M and detecting the spike and burst events for each neuron in the CPG model, all  intervals represented in Fig. \ref{fig:intervals} were quantified. The variability and the correlation between the period and each interval was computed, leading to the results shown in Figs. \ref{fig:invariant n1m boxplot} and \ref{fig:invariant n1m}.
+
+Figure \ref{fig:invariant n1m boxplot} displays the boxplots of the duration of all sequence intervals defined above. Regarding burst duration of the neurons (N1M-BD, N2v-BD, N3t-BD), we can observe in this figure that the most variable one corresponds to N3t neuron. Furthermore, the derived intervals which cover N3 burst duration are also the ones presenting larger variability (i.e., N2-N1, N3-N1 and N3-N2 intervals and N2-N1 delay). On the other hand, the least variable intervals correspond to the ones related to N2v and N1M burst duration, i.e., N1-N2, N1-N3, N2-N3 intervals and N1-N2, N1-N3, N3-N1, N2-N3, N3-N2 delays. They show a nearly a constant duration during each period.
+
+Figure \ref{fig:invariant n1m} plots the cycle-by-cycle measurements of the intervals defined in \ref{fig:intervals} against the period. The first row displays burst duration intervals, which are the intervals analyzed in Elliot et al. \cite{Elliott1991} from data obtained in electrophysiological recordings of living neurons, and in Vavoulis et al. from data obtained in model simulations \cite{Vavoulis2007}. The results shown in this row match those results, being N3t-BD the most correlated to the period, which can be noted by the $R^2$ value close to one in the linear regression. The other two intervals (N1M-BD and N2v-BD), which were also the least variable, are not strongly correlated to the period. 
+
+%The variability presented in these intervals is *** equivalent **** to the one in period interval. It is remarkable that the N3-N2 interval, which contains N1M and N3t burst duration, is the most similar one ***similar variability to the period***?. Although N3t-BD is much more variable than N1M-BD, this last one still exhibits a considerable difference with respect to N2v-BD, presenting N1M a higher variability  ***discutible***. Therefore, N3-N2 interval, which consists of N1M and N3t, is the most similar to the period, since it is the most variable one (composed by the two BD intervals with higher variability). 
+% ****habría que nombar estos intervalos entre paréntesis****.
+% The distribution found in intervals N2-N1, N3-N1, N3-N2 intervals and N2-N1 delay, is equivalent to the one in period interval, being once again, the N3-N2 interval the more similar one. Hence, the linear relationships are more likely to appear in these intervals whose distribution is closer to the period. ***esto también lo tenemos que discutir*****
+
+
+Likewise, the most variable intervals derived from other time references of the sequence also show a high correlation with the period, i.e., they present dynamical invariants, in this case N2-N1, N3-N1, N3-N2 intervals and N2-N1 delay. The cycle-by-cycle period variability is a consequence of the variability in these specific intervals.
+%Since the ones involving N3t burst duration are the most correlated to the period, interval changes seem to be due to N3t variability.
+
+On the other hand, intervals related to neuron N2v and N1M are the least variable. N2v is the one least affected by the global activity of the circuit, in terms of its burst duration. Moreover, some of the intervals are very short, or even negative, since the end of a given neuron's burst overlaps the next one's beginning (N1-N2 and N3-N1 delay). %This is the case for N1-N2 and N3-N1 delay (4th row, 1st column and 5th row, 2nd column, respectively in Fig. \ref{fig:invariant n1m}).  
+
+
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=\textwidth]{img/results-paper-modelo/figure5.eps}
+\caption{Box-plots of the  sequence intervals under N1M neuron stimulation.}
+\label{fig:invariant n1m boxplot}
+\end{figure}
+\clearpage
+\newpage
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=\textwidth]{img/results-paper-modelo/figure6_row1.eps}
+  \includegraphics[width=\textwidth]{img/results-paper-modelo/figure6_row2-3.eps}%
+      
+  \includegraphics[width=\textwidth]{img/results-paper-modelo/figure6_row4-5.eps}%
+
+    \caption{Interval correlations to period for N1M-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays. Linear relationships are quantified by the $R^2$ values of the regression.}
+    \label{fig:invariant n1m}
+\end{figure}
+
+\clearpage
+\newpage
+
+\subsubsection{N3t driven variability}
+
+The stimulation protocol was also applied to N3t neuron. In spite that no previous analysis on injecting a current ramp into this neuron has been reported neither experimentally nor in the feeding CPG computational model, due to the connectivity in the circuit, it can be expected that stimulation of N3t will induce variability in the rhythm. The characterization of the sequence intervals in this case are shown in Fig. 
+\ref{fig:invariant n3t boxplot} and the correlation analysis is displayed in Fig. \ref{fig:invariant n3t test17}.
+%In fact, we can expect a similar result to N1M-driven simulation because of their bidirectional connectivity see Fig. \ref{fig:CPG diagram}.  ***dicutir si es siméterica o no *****
+
+
+Results shown in Fig. \ref{fig:invariant n3t boxplot} indicate that the larger variability is present in the same intervals related to N3t burst duration, as when the stimulation was delivered to N1M. However, in this simulation we observe that N1M had a lower variability while N3t had a higher variability with respect to the previous condition. 
+%: N1M decreased its variability while N3t has increased it *****discutir***. 
+In contrast, N2v-BD maintained its variability, as well as all the derived intervals containing this burst duration.
+
+Note that N3-N1 delay, which is the interval from the end of the N3t burst to the beginning of N1M burst, shows negative values. This means that neuron N1M started earlier than the end of N3t in every cycle. Whilst this was also present in N1M-driven activity, here the variability of this interval is much higher, leading to a larger overlapping.
+% N2v maintains its variability, being this interval and all the intervals related to it the least variable. Hence, in the distribution of the activity in the circuits between the neurons, the main negotiation is between N1M and N3t, distributing the variability and the period leading between they both. ***esto también lo tenemos que pulir un poco****
+
+Figure \ref{fig:invariant n3t test17} plots each interval duration against the period. As in the previous condition, the dynamical invariants (i.e. intervals presenting a strong correlation to the period) show up in the intervals related to N3t, which were the ones presenting also the highest variability, whereas those intervals that do not participate in dynamical invariants, are the ones related to N1M and mostly N2v (the least variable ones). 
+
+
+%The linear relationships regarding the least variable intervals (related to N2v and N1M burst durations), also present similar results to those discussed above when the rhythm was driven by N1M. Hence, the intervals most correlated are the ones with higher variability, whereas those intervals that do not participate in dynamical invariants, are the ones related to N1M and mostly N2v (the least variable ones).
+%***revisar redundancia***
+
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=\textwidth]{img/results-paper-modelo/figure7.eps}
+\caption{Box-plots of the sequence intervals under N3t neuron stimulation. }
+\label{fig:invariant n3t boxplot}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=\textwidth]{img/results-paper-modelo/figure8_row1.eps}
+  \includegraphics[width=\textwidth]{img/results-paper-modelo/figure8_row2-3.eps}
+      
+  \includegraphics[width=\textwidth]{img/results-paper-modelo/figure8_row4-5.eps}
+
+    \caption{Interval correlations to Period for N3t-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays.}
+    \label{fig:invariant n3t test17}
+\end{figure}
+
+\subsubsection{SO driven variability}
+
+The same protocol was implemented with a ramp stimulation applied to SO to induce variability, using the injected current values shown in Table \ref{table:inj values} for each neuron. Events were detected and all intervals were measured (Fig. \ref{fig:intervals}) and their variability was characterized. %This neuron has also been used in previous studies with stimulation protocols both in electrophysiological experiments and in model simulations due to its important role in rhythm activation and modulation. ***se podría quitar, si no hay que poner las referencias otra vez****
+
+Figure \ref{fig:invariant so boxplot} displays the box-plot representing the distinct interval variability. In this case, we found more intervals showing large variability than in the previous cases. N2v intervals, as it happened in the previous results, show low variability. %, which indicates that period variability is more likely a consequence of N3t and N1M activity.
+N1M and N3t neurons show high variability in their burst duration intervals, being N1M even more variable than N3t, as opposed to the previous results when the stimulation was introduced in other cells. All intervals derived from these two neurons have high variability and a similar structure. %Therefore, now the intervals which show low variability are the ones related to N2v. 
+
+% In spite all this, what remains constant from N1M-driven simulation is the variability of the N3-N2 interval, which includes both N1M and N3t burst duration, being N3-N2 the most variable one, and the closest to the period variability.%distribution
+
+% Since in this case there are more neurons showing high variability, we should expect finding more correlations when plotting each interval against the period.  ***también deberíamos quitar redundancia aquí***
+% Hence, as it happened in the previous results, all intervals related to N3t show dynamical invariants, but this time they are also present in the ones related with N1M, which show a high variability. 
+% the intervals with more variability and, thus, those that had a more similar variability structure to the period, were the ones that showed dynamical invariants%(a highest linear relation to the period)
+
+
+Figure \ref{fig:invariant so test19} displays the corresponding correlation analysis between all intervals and the period. %In this case, as it happens in the box-plot, there are found different results
+In this case, we found correlations in the same intervals as before: N2-N1, N3-N1, N3-N2 intervals and N2-N1 delay; which are the intervals related to N3t burst duration. However, under SO stimulation,  N1-N2, N1-N3 intervals were also highly correlated to the period. Even the correlation for N3-N2 delay considerably increased in relation to the other stimulation conditions. These intervals are the ones related to N1M neuron activity, and were also the most variable ones.  These results reproduce the experimentally analyzed effects set out in \cite{Elliott1991}, when rhythm and variability was induced by injecting current into a living SO neuron.
+
+%Furthermore, it is important to notice that N3-N1 delay is negative again ****por qué es importante si es lo mismo que antes****. As it happened in N3t-driven simulation, this means there is a constant overlapping between N3 and N1 in each cycle, i.e. N3t burst interval is coming earlier. This can be also appreciated in boxplot, since this interval is represented below 0. 
+
+Compared to the N1M and N3t stimulation results, there is another difference when driving the rhythm with SO: burst duration is much shorter, so the period and the rest of intervals are consequently smaller. Therefore, when driving the rhythm by SO, the period variability seems to arise from both N3t as well as by N1M. 
+%the model produces a rhythm where the information about period duration seems to be carried by N3t as well as by N1M. 
+
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=\textwidth]{img/results-paper-modelo/figure9.eps}
+\caption{Box-plots of the sequence intervals under SO neuron stimulation.}
+\label{fig:invariant so boxplot}
+\end{figure}
+\clearpage
+\newpage
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=\textwidth]{img/results-paper-modelo/figure10_row1.eps}
+  \includegraphics[width=\textwidth]{img/results-paper-modelo/figure10_row2-3.eps}
+      
+  \includegraphics[width=\textwidth]{img/results-paper-modelo/figure10_row4-5.eps}%
+
+    \caption{Interval correlations to Period for SO-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays.}
+    \label{fig:invariant so test19}
+\end{figure}
+

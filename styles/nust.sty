@@ -1,0 +1,94 @@
+% author Khalid Latif
+% created on   09-Feb-2009
+
+% modified: Hasan Ali Khattak
+% modified on: 18-Feb-2022
+
+
+%\renewcommand{\figurename}{Fig.}
+%\renewcommand{\tablename}{Tab.}
+\renewcommand{\contentsname}{Contents}
+
+
+% Theorem and Algorithm commands
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{algorithm}{Algorithm}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+
+% Subtitle, Authors Registration Number and Address
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\subtitle{} %Default empty sub-title
+\newcommand{\regno}[1]{\gdef\@regno{#1}}
+\newcommand{\address}[1]{\gdef\@address{#1}}
+
+% Title of the degree
+% Some of the degree program are defined below
+\newcommand{\degree}[1]{\gdef\@degree{#1}}
+
+% \def\EPS{Escuela Politécnica Superior }
+
+% School name
+% Some of the schools are defined below
+\newcommand{\school}[1]{\gdef\@school{#1}}
+\def\EPS{Escuela Politécnica Superior (EPS)}
+
+
+% Superviser's name and affiliation
+\newcommand{\adviser}[1]{\gdef\@adviser{#1}}
+\newcommand{\adviserAffiliation}[1]{\gdef\@adviserAffiliation{#1}}
+\adviserAffiliation{} % Default empty affiliation
+
+% Reset page numbering to 'arabic'
+\newcommand{\resetpagenumbering}{
+	\cleardoublepage
+	\pagenumbering{arabic}
+}
+
+
+
+
+
+% Redefine 'maketitle' command to make use of adviser details and NUST emblem
+\renewcommand{\maketitle}{
+
+\begin{titlepage}
+\begin{center}
+    {\LARGE\textbf{\@title}}\\
+    {\large\textbf\@subtitle}\\
+   	By\\
+   	\LARGE{\textbf{\@author}}\\
+    \vspace*{\stretch{2}}
+    
+    \includegraphics[width=0.30\textwidth]{img/logos/logo_uam-eps-converted-to.pdf}
+    \includegraphics[width=0.30\textwidth]{img/logos/logo_eps-eps-converted-to.pdf}
+    
+    \vspace*{\stretch{2}}
+    \large{\LARGE{PhD thesis}\\}
+   	\vspace*{\stretch{1}}
+    \begin{large}
+   	\expandafter{\@regno} \\
+    	
+   	\vspace*{\stretch{2}}
+     	
+   	Supervisor\\
+   	\textbf{\@adviser} \\
+
+    \vspace*{\stretch{2}}
+   	  
+   	\@adviserAffiliation\\
+   	\end{large}
+
+   	\begin{large}
+   	{\@school},\\
+   	Universidad Autónoma de Madrid (UAM)\\
+   	Madrid, Spain.
+     	
+   	\vspace*{\stretch{2}}
+    	
+   	(\@date)
+    \end{large}
+	
+\end{center}
+\end{titlepage}
+\pagenumbering{roman}
+}
