@@ -27,7 +27,7 @@ We can find two big types of synapses, electrical or chemical, depending on how 
 
 \begin{figure}[hbt!]
     \centering
-    \includegraphics{img/intro/synapses.png}
+%    \includegraphics{img/intro/synapses.png}
     \caption{Representation of synapses types. Left. Example of electrical synapse structure. Right. Example of chemical synapse structure.}
     \label{fig:synapse-types}
 \end{figure}
@@ -75,6 +75,63 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8367843/
 
 
 \section{Computational Neuroscience}
+Computational Neuroscience is the study of neural dynamics from a computational view. It enhances the theoretical and computational techniques to address the study of nervous system functioning at multiple levels, from molecular 
+level to complex networks or behavior. It is then by definition, a multi-disciplinary field. The basis of Computational Neuroscience lay on the understanding of brain dynamics from its electrical signals and the information they carry \cite{schwiening_brief_2012,catterall_hodgkin-huxley_2012,dimitrov_information_2011,shannon_mathematical_1948}. computational Neuroscience has extended its scope, leading to new paths of research including complex networks, graph theory, single cell analysis and machine learning techniques \cite{cns2023}. Actually, in fields such as Artificial Intelligence there is a symbiotic relationship between fields, while both inspire and help each other grow \cite{wozniak_deep_2020,goncalves_training_2020}.
+
+In this thesis, all experimental recordings have been supported with simulations performed with conductance-based models. These models are mathematical descriptions of the dynamics of the ionic channels, based on the electrical description of neuronal signal. The first description is usually assigned to Hodgkin and Huxley model, that defined dynamical equations based on the electrical circuit of neurons in \textit{Aplysia}, see \ref{fig:electrical circuit}.
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./img/intro/dns_neuron_circuit.pdf}
+	\caption{Electrical circuit representing membrane. Figure 2.3 from book from book "Dynamical systems in neuroscience" \cite{izhikevich_dynamical_2007}.}
+	\label{fig:electrical circuit}
+\end{figure}
+
+In this models, the simulation of neural electrical activity is based on the combination of different ionic channels, whose dynamics are also well defined with a description of activation gates which can also have their own dynamics. An example of the equations corresponding to figure \ref{fig:electrical circuit} are:
+\begin{equation}
+		C V = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)
+\end{equation}
+
+\begin{multicols}{2}
+	\begin{equation}
+		n = \alpha_n (V)(1-n)-\beta_n(V)n
+	\end{equation}
+
+	\begin{equation}
+		m = \alpha_m (V)(1-m)-\beta_m(V)m
+	\end{equation}
+	
+	\begin{equation}
+		h = \alpha_h (V)(1-h)-\beta_h(V)h
+	\end{equation}
+
+	\vspace{20pt}
+
+	\begin{equation}
+	\alpha_n(V)=0.01\frac{10-V}	{\exp(\frac{10-V}{10})-1}
+	\end{equation}
+	\begin{equation}
+	\beta_n(V)=0.0125\exp(\frac{-V}{80})
+	\end{equation}
+
+
+\vspace{-15pt}
+	\begin{equation}
+		\alpha_m(V)=0.1\frac{25-V}{\exp(\frac{25-V}{10})-1}
+	\end{equation}
+	\begin{equation}
+		\beta_m(V)=4\exp(\frac{-V}{18})
+	\end{equation}
+
+\vspace{-15pt}
+	\begin{equation}
+	\alpha_h(V)=0.07\exp\frac{-V}{20}
+	\end{equation}
+	\begin{equation}
+		\beta_h(V)=\frac{1}{\exp(\frac{30-V}{10})+1}
+	\end{equation}
+\end{multicols}
+
 \section{Study in invertebrates}
 Even before computational techniques where an option, the study of Neural dynamics and behavior was carried using many different model animals. Apart from the hegemonic rodents models, there have been invaluable findings using invertebrates as animal models, such as genetics and developmental biology in \textit{C. elegans} \cite{brenner_genetics_1974}, \textit{Zebra fish} \cite{streisinger_production_1981} and \textit{Drosophila} \cite{nusslein-volhard_mutations_1980}; neural dynamics in \textit{Aplysia} \cite{HODGKIN1952,wachtel_direct_1967}, motor activity in \textit{Carcinus maenas} \cite{eisen} or \textit{Lymneae stagnalis}, the main animal model in this thesis. Those are only examples of fields, these animal models have been used for a wide variety of fields including behavioral studies, ecotoxicology, evolution, human disease modelling... \cite{romanova_animal_2018} 
 

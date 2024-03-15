@@ -1,13 +1,16 @@
 \documentclass[11pt,a4paper,twoside]{book} %scrbook book report
 
-% \usepackage[
-% backend=biber,
-% style=numeric,
-% sorting=ynt
-% ]{biblatex}
-% \addbibresource{thesis-references}
+ \usepackage[
+ backend=biber,
+ style=numeric,
+ sorting=ynt
+ ]{biblatex}
+ 
+ \addbibresource{own-bib.bib}
+ \addbibresource{thesis_references.bib}
+% \addbibresource{laser-references.bib}
 
-\usepackage{biblatex}
+%\usepackage{biblatex}
 
 
 % Essential packages
@@ -22,8 +25,10 @@
 \usepackage{mathptmx}              % Times New Roman Font accross the document
 
 \usepackage{subfigure}
-\usepackage{subcaption}
+%\usepackage{subcaption}
 \usepackage{multirow}
+
+\usepackage{multicol}
 
 \usepackage{url}
 
@@ -102,7 +107,7 @@
 %\usepackage{listings}
 %\lstloadlanguages{Java,XML}
 %\lstset{frame=lines}
-\usepackage{./styles/astron}
+%\usepackage{./styles/astron}
 %\usepackage{xspace}
 %\usepackage[leqno]{amsmath}
 %\usepackage{hyperref}
@@ -112,11 +117,12 @@
 
 \graphicspath{{./img/}{./figs/}}
 
-\title{Characterization of the sequential nature of neuronal dynamics: Experimental recordings, computational models and novel stimulation neurotechnology.
-}
+\title{Characterization of the sequential nature of neuronal dynamics: Experimental recordings, computational models and novel stimulation neurotechnology.}
+
 %\subtitle{A sub-title}
 
 \author{Alicia Garrido Peña}
+
 \degree{\EPS} % MSCSE, MSCCS %% Degree Title and It's abbreviation
 \school{\EPS} %SChool abbreviation and Full Name
 
@@ -131,26 +137,9 @@
 % \setstretch{1.1}
 % \linespread{1.1}
 
-% \bibliographystyle{apalike}
-% \bibliographystyle{ieeetr}
-
-% \bibliography{thesis-references, laser-bib}
-
-
-% Declare the author's name to filter by
-\newcommand{\AuthorName}{Author Garrido-Peña, Alicia}
-
-% Create a sourcemap to filter entries by author name
-\DeclareSourcemap{
-  \maps[datatype=bibtex]{
-    \map{
-      \step[fieldsource=author, notmatch=\regexp{\b\AuthorName\b}, final]
-      \step[entrynull]
-    }
-  }
-}
 
 \geometry{margin=1in,top=1in, bottom=1in, includefoot, headheight=13.6pt}
+
 \begin{document}
 
 % Set custom margins for the title page
@@ -172,7 +161,7 @@
 \tableofcontents
 \listoftables
 \listoffigures
-\input{Acronym}
+%\input{Acronym}
 
 \newpage
 % \lstlistoflistings
@@ -182,39 +171,28 @@
 \resetpagenumbering
 
 \input{chapters/chapter1}
-\input{chapters/chapter2}
-\input{chapters/chapter3-methods}
-\input{chapters/chapter4-invariants}
-\input{chapters/chapter5-laser}
-\input{chapters/chapter6}
-\input{chapters/chapter7}
+%\input{chapters/chapter2}
+%\input{chapters/chapter3-methods}
+%\input{chapters/chapter4-invariants}
+%\input{chapters/chapter5-laser}
+%\input{chapters/chapter6}
+%\input{chapters/chapter7}
 
-\bibliography{thesis_references, laser-references, own-bib}
-\bibliographystyle{apalike}
+
+\printbibliography
 
 
 \begin{appendix}
 \chapter{Publications}
 %% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own
-% \section{Research Publications}
+ \section{Research Publications}
 
 %% Assuming you've already given \addbibresource{own-bib.bib} in the main doc. Right? Right???
-% \nocite{*}
+\nocite{*}
 
-%% If you just want everything in one list
-% \printbibliography[heading={none}]
-% \addbibresource{own-bib.bib}
+ \printbibliography[heading={subbibliography},title={Journal Publications},type=article, keyword={AGP},resetnumbers=true]
 
-\section{Publications by Author Garrido-Peña, Alicia}
-% \def\AuthorName{Author Garrido-Peña, Alicia}
-\printbibliography[title={Publications by \AuthorName}, heading=subbibliography]
-
-% \printbibliography[heading={subbibliography},title={Journal Publications},type=article]
-
-% \printbibliography[heading={subbibliography},title={Conference Proceedings},type=inproceedings]
-
-% \printbibliography[heading={subbibliography},title={Books and Chapters},filter={booksandchapters}]
-
+\printbibliography[heading={subbibliography},title={Conference Proceedings},type=inproceedings,keyword={AGP},resetnumbers=true]
 
 
 \chapter{Appendix A}
