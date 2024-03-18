@@ -6,9 +6,9 @@
  sorting=ynt
  ]{biblatex}
  
- \addbibresource{own-bib.bib}
+% \addbibresource{own-bib.bib}
  \addbibresource{thesis_references.bib}
-% \addbibresource{laser-references.bib}
+ \addbibresource{laser-references.bib}
 
 %\usepackage{biblatex}
 
@@ -188,13 +188,16 @@
  \section{Research Publications}
 
 %% Assuming you've already given \addbibresource{own-bib.bib} in the main doc. Right? Right???
+
+\begin{refsection}[own-bib.bib]
 \nocite{*}
 
- \printbibliography[heading={subbibliography},title={Journal Publications},type=article, keyword={AGP},resetnumbers=true]
+\printbibliography[heading={subbibliography},title={Journal Publications},type=article,resetnumbers=true]
 
-\printbibliography[heading={subbibliography},title={Conference Proceedings},type=inproceedings,keyword={AGP},resetnumbers=true]
+\printbibliography[heading={subbibliography},title={Conference Proceedings},type=inproceedings]
 
 
+\end{refsection}
 \chapter{Appendix A}
 The separate numbering of appendices is also supported by LaTeX. The \textit{appendix} macro can be used to indicate that following chapters are to be numbered as appendices. Only use the \textit{appendix} macro once for all appendices.
 
