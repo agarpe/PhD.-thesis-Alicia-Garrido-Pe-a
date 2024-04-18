@@ -1,13 +1,164 @@
 \chapter{Materials and Methods}
-\subsection{Electrophysiology in Lymnaea Stagnalis}
+\section{Electrophysiology in \textit{Lymnaea Stagnalis}}
 
-\subsection{NIR laser setup}
-\subsection{Conductance based models}
-\subsection{Analysis}
+\label{subsec:preparation}
+As it has been mentioned before, recordings for the CPG sequence characterization were carried out in the mollusc \textit{Lymnaea Stagnalis} because of its easy accessible neural system, and the size and resistance of its neurons to electrode impaling.  
+
+In order to record cell signals extra- and intracellularly, it is necessary to have full access to the neurons and the nerves. This is why the central neural system (CNS), as it was shown in section \ref{subsec: Lymnaea}, was isolated from the rest of the snail structure in all experiments reported here. 
+
+\begin{figure}[htb!]
+	\minipage{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{img/methods/preparation/microscope}
+	\endminipage\qquad
+	\minipage{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{img/methods/preparation/rem_shell.jpg}
+	\endminipage\qquad 
+	\minipage{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{img/methods/preparation/buccal_mass_ganglias.jpg}
+	\endminipage\qquad
+	\caption{Dissection steps for isolating neural system. Left panel: Microscope with the preparation. Middle panel: snail after shell extraction. Right panel: buccal mass, esophagus and CNS exposed.}
+	\label{fig:preparation}
+\end{figure}
+
+The first step isolating the ganglions containing the cells is extracting the snail shell and removing all unnecessary elements above the buccal system. It is important to localize the mouth and foot of the snail, since the bucall mass and CNS is right above them, so cuts must be parallel to them and as superficial as possible to avoid harming any important part of the neural system. Once the buccal mass, the esophagus and the CNS are exposed, the nerves connecting them to the rest of the pedal and buccal skin are cut. Now the only element that remains connected is the buccal mass containing all the muscles directly controlled by the buccal ganglia in the feeding cycle studied here.
+
+Once the system is isolated by separating the nerves connected to the mass, it is important to stretch and fix the system well in the dish. This is crucial for the later manipulation and recording phases. 
+
+The intracellular technique selected in this study for recording the membrane potential of the neurons uses sharp electrodes filled with cloride solution, obtained by pulling glasses. Figures \ref{fig:puller} and \ref{fig:electrode} show the puller machine and an example of a sharped electrode for the intracellular recordings. 
+
+\begin{figure}[htb!]
+	\minipage{0.5\textwidth}
+	\centering
+	\includegraphics[width=0.8\linewidth]{img/methods/preparation/puller.jpg}
+	\caption{Puller used to pull sharped micro-electrodes for the intracelluar recordings. }
+	\label{fig:puller}
+	\endminipage\qquad
+	\hspace*{-3mm}
+	\minipage{0.5\textwidth}
+	\centering
+	\includegraphics[width=0.85\linewidth]{img/methods/preparation/electrode4_zoom.jpg}
+	\caption{Example of a sharp micro-electrode.}
+	\label{fig:electrode}
+	\endminipage\qquad
+\end{figure}
+
+As it was set out in the introduction (section \ref{subsec: electrophysiology}), in this technique the electrodes are introduced gently into the cells, allowing the membrane potential recording while trying to minimize the harm to the cell. The \textit{Lymnaea} ganglia are protected by a sheath above them which is thicker than in other animals used in similar  electrophysiological studies. This is usually solved doing desheathing, i.e. peeling the ganglia manually removing this layer with the forceps. However, such technique is not enough for \textit{Lymnaea} in most cases and it must be complemented (or substituted) with protease application (Sigma type XIV). This is an enzyme that digests the tissue when applying a small amount on the preparation.
+
+Besides intracellular recordings, there is also an extracellular set up which is typically used to record the activity of the nerves to identify the presence of the CPG rhythm. For its use, it is necessary to isolate the nerve to be recorded and the electrode from the rest of the preparation. This is done using vaseline surrounding both the nerve and the electrode. 
+
+For the purpose of this study, the nerves employed for the extracellular recordings are the symmetrical pair of nerves coming out from the buccal ganglia, which were originally connected to the buccal mass. Since these nerves send out the impulses to move the muscles, the neurons whose activity is recorded in the extracellular signals are mostly motoneurons \cite{Benjamin1979a}, not the ones initiating the rhythm but the ones following the CPG neurons. It is important to localize these neurons in the extracellular recording for detecting the rhythm and the patterns. 
+
+Obtaining good quality recordings for the characterization of the CPG temporal dynamics is not an easy task. On the one hand, the feeding rhythm in \textit{Lymnaea} is pretty slow and it is not always active. In \textit{Lymnaea} literature, several options are proposed to solve this issue. The first solution is stimulating the neurons responsible for the initiation of the feeding rhythm, such as the SO modullator neuron on the buccal ganglia or also the CBC, CVs neurons, located on brain ganglia. Stimulating these cells usually activates the target circuits \cite{Benjamin2012}. However, the access to these neurons is not always easy, apart from the fact that it might be necessary to keep them in constant stimulation. 
+Another option for activation discussed in the literature is appliying octopamine. Some neurons in the buccal ganglia are sensitive to octopamine and, as a result, this procedure activates the rhythm \cite{Vehovszky2004}. 
+Alternatively, some electrophysiologists leave the mouth of the snail semi-intact in order to apply sucrose resulting in the rhythm activation \cite{Vavoulis2007,Vehovszky2004,Straub2002}. This technique, however, requires extensive experience on dissection techniques. 
+As a foresighted option, starving the snails for three days with no food and selecting the first animal approaching the food seems to be effective for obtaining the feeding rhythm, with up to 80\% of success \cite{Elliott1991}.
+
+Apart from the difficulties obtaining the rhythm, there are typically difficulties to reach the neurons. Interneurons that are part of the CPG are the smaller ones, which, concerning the electrophysiology method used in this project (sharp electrodes) increases the difficulty of the recording process. Apart from that, the motoneurons which are more directly associated to each of these interneuron feeding phase, are about the same small size, which adds to this inconvenience. 
+
+Taking all these issues and recommendations into account, recordings using the above mentioned electrophysiological techniques can be performed. Their aim is not only recording the rhythm, but also the activity of relevant neurons that contains the right temporal reference of the feeding rhythm.
+
+\section{Feeding CPG in \textit{L. stagnalis}}
+%\input{chapters/methods-paper-modelo}
+
+
+\subsection{\textit{Lymnaea} Neural System} 
+\label{subsec: Lymnaea}
+In addition to the recording techniques' performance restrictions, there are many different issues involving the biological preparation. The fact that all these electrophysiology experiments are performed with delicate living individuals must be taking into account. This issue is, in many occasions, a huge restriction, which involves aspects regarding reproducibility and ease of the preparations and the decision on the experimental techniques that will be used. For instance, is it not the same to make recordings from mice than a crab, not only due to the distinct complexity of their neural system  but for the methods
+\begin{wrapfigure}{l}{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/methods/lymnaea_copy.jpg} 
+	\caption{\textit{Lymnaea Stagnalis}}
+	\label{fig:snail}
+\end{wrapfigure} used. Any research work involving animals, must follow animals treatment guidelines, where all these restrictions are contained, guaranteeing protection and welfare of animals for research purpose. In this work, we followed the guidelines from the European Commision and Universidad Autónoma de Madrid.
+
+
+Therefore, working with biological individuals with less complex neural systems has many advantages. Their welfare and manipulation involve less requirements, e.g., usually, there is no need of having a specific animal lab facilities for hosting them. Apart form that, their simple neural system is adequate when the subject of study are individual cells or their interactions in microcircuits, as in the case of CPGs. Invertebrate preparations allow studying neural dynamics from identified neurons and known connections which has had a huge impart in understanding the nervous system \cite{Katz2019}.
+
+Due to all the advantages discussed above in addition to the ease of the associated preparation, the large size of neuron cells, the simplicity of the circuits, etc., many invertebrate spices have been studied yielding a vast amount of information regarding their morphology, electrophysiology and behaviour.
+
+
+One of the invertebrate species that  has been widely studied in the context of neuroscience research is\textit{Lymnaea Stangalis}. The knowledge gathered in the last decades from this animals includes the detailed morphology of its nervous system and the the relationship of the dynamics of different circuits to several motor activities. This makes it a good candidate for the experiments addressed in this project. 
+
+\subsubsection{Lymnaea morphology}
+
+\textit{Lymnaea Stangalis} is a pond snail, whose neural system is shown in figure \ref{fig:lymn neural sys}. As in some other molluscs, e.g. {\sl Clione}, the neural system is conformed by several ganglia, each of them controlling (mainly, but not exclusively) some specific function of the snail. Figure \ref{fig:lymn neural sys diagram} shows a diagram of the different ganglia which are part of this system. The symmetry of the system can be observed in this figure. This system has two ganglia of each type, except from the visceral ganglion, all of them are interconnected by nerves. In order to have an overview of the system, bellow we will go through the different ganglia describing their main function. 
+
+\begin{figure}[h!]
+	\minipage{0.45\textwidth}
+	\centering
+	\includegraphics[angle=180,width=0.9\linewidth]{img/methods/IMG00027.JPG}
+	\caption{\textit{Lymnaea} preparation after dissection and desheathing pinned in Petri dish.}
+	\label{fig:lymn neural sys}\includegraphics[angle=180,width=0.9\linewidth]{img/methods/preparation/buccal_ganglia.JPG}
+	\caption{Lymnaea buccal ganglia.}
+	\label{fig:buccal ganglia}
+	\endminipage
+	\minipage{0.45\textwidth}
+	\centering
+	\includegraphics[width=\linewidth]{img/methods/CNS_diagram.png}
+	\caption{Lymnaea nervous system diagram.}
+	\label{fig:lymn neural sys diagram}
+	\endminipage
+\end{figure}
+
+
+% \begin{figure}[h!]
+%     \minipage{0.45\textwidth}
+%         \centering
+%         \includegraphics[angle=180,width=0.9\linewidth]{img/methods/preparation/buccal_ganglia.JPG}
+%     \caption{Buccal ganglia}
+%     \label{fig:buccal ganglia}
+%     \endminipage
+%     \minipage{0.45\textwidth}
+%     \centering
+%         \includegraphics[width=0.5\linewidth]{}
+%     \caption{Buccal ganglia Diagram}
+%     \label{fig:buccal ganglia diagram}
+%     \endminipage
+%     % \label{fig:logos}
+% \end{figure}
+
+On the upper area, we find the buccal ganglia, which control the buccal muscle involved in the processes of open-rasp-swallow, known as the feeding cycle, initiated by a CPG circuit contained in these ganglia, together with the motoneurons generating the movement, as we will discuss further on in detail. Right bellow it, two cerebral ganglia are found. They are involved in the activation and modulation of many circuits and processes. Located on the sides of the diagram, the pedal ganglia control the snail pedal movements as crawling or swimming, and they are originally joined leading to the ring shape of the system. The pleural ganglia, which contain sensory neurons, are connected to the mantle. And finally, at the bottom of the diagram, we find the parietal ganglion, involved in the control of the gill (respiratory organ) and the olfactory organ, and the visceral ganglion, connected to organs of the \textit{Lymnaea} such as the intestine, the heart, and part of the genital apparatus.
+
+In this work, we are going to focus in one of the ganglia containing a CPG circuit: the buccal ganglia. Our goal is to analyze and characterize the time intervals that build the sequence of its feeding cycle. This ganglia, is showed in detail in
+% the diagram of figure \ref{fig:buccal ganglia diagram}, and in
+a photo taken with the microscope in figure \ref{fig:buccal ganglia}. Other ganglia will be also used in the second part of this project because of the activity and shape of their neurons in relationship with the implementation of hybrid experiments \cite{GarridoPena2019}.
+
+%%%% In contrast to other systems functionality where motoneurons are CPGs neurons \cite{stomatogastric} ((page 5 review), in Lymnaea nervous system, CPGs and motoneurons are separated groups of neurons. 
+
+\subsubsection{Lymnaea feeding rhythm}
+
+The feeding activity of the \textit{Lymnaea}, concerning the buccal mass, is classified in three main steps: Rest, protraction, rasp and swallow. This sequence of buccal movements in the snail is executed by the motor neurons distributed in the ganglia. Each of these phases is leaded by one interneuron from the CPG: N1, N2, N3, and consequently, the motoneurons associated to them, which generate bursts at the same time. 
+
+In a first approach, it is easier to see this feeding as an hierarchical sequence of neuronal activations. First of all, a sensory input handled in a ganglion makes some neurons in the cerebral ganglion change their activity, consequently initiating the CPG rhythm in the N-neurons which are followed by the motoneuron rhythm. However, the activation of this circuit is not hierarchical but distributed. It has been proved that motoneurons are also implied in the feeding cycle activation \cite{Staras1998}, having some of the neurons activated simultaneously and not sequentially. Moreover, there are some neurons such as SO (in the buccal ganglia) or CGC (in the cerebral ganglia) which have a modulator role in the CPG, even though they are not part of it, as they have their own behaviour and function when the rhythm is inactivated. 
+
+
+Hence, an initial resting state, where the CPG as well as the moto-neurons have no activity, may change due to a sensory input. This input, received in the presence of food or during hunger, is handled in the cerebral ganglia generating activity and changing the SO tonic spiking during resting (which was inhibiting the CPG) to a bursting mode, meaning the start of the feeding cycle. Table \ref{table:tabla spikes} displays a summary of some neurons involved in each phase. 
+
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{lccc}
+		Neuron                                           & \multicolumn{1}{l}{Protraction} & \multicolumn{1}{l}{Rasp} & \multicolumn{1}{l}{Swallow} \\ \hline
+		Interneuron                                     & N1                              & N2                       & N3                          \\
+		& \multicolumn{1}{l}{}            & \multicolumn{1}{l}{}     & \multicolumn{1}{l}{}        \\
+		\multicolumn{1}{c}{\multirow{3}{*}{Motoneuron}} & B7                              & B10                      & B3                        \\
+		\multicolumn{1}{c}{}                            & B6                              & B4                       & B9                        \\
+		\multicolumn{1}{c}{}                            & B1                              &                          &                         
+	\end{tabular}
+	\caption{Neuron participation in feeding phases.}
+	\label{table:tabla spikes}
+\end{table}
+
+
+
+\section{NIR laser setup}
+\section{Conductance based models}
+\section{Analysis}
 Although models where implemented in $C++$ leveraging its computational speed, most analysis where performed in Python3, since it is a frequently used tool and libraries as Pandas are very effective for data analysis. 
 Scripts are avaliable at \#TODO: add link to git. 
 
-\section{Feeding CPG study}
-\input{chapters/methods-paper-modelo}
 \section{CW-NIR laser}
-\input{chapters/methods/methods-paper-laser}
+%\input{chapters/methods/methods-paper-laser}
