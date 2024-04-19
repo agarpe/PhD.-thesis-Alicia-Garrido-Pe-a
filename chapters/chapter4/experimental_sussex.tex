@@ -1,8 +1,11 @@
 When studying temporal structures in neural dynamics, the definition of the time references is a key first point. In the computational analysis in the previous section, the time reference to define the intervals where first and last spike in the burts. In that case, as well as in the case of inter-neurons in \textit{C. maenas} the CPG phases are directly related with the bursting activity of these neurons. However, in the case of \textit{Lymnaea stagnalis}, activity is usually characterized using recordings from both inter-neurons and moto-neurons \parencite{elliot, benjamin, crossley}. This leads to a more flexible reference of the time references, so for this analysis, references will be defined by the phase and each phase will be bounded by different neurons. For example, in Figure \ref{fig:example lymnaea phases recording} the three phases in the  CPG are marked over the recording, note how it can be delimited by the neurons in the circuit but some of the moto-neurons cover several phases and that phases are delimited not only by the spikes but the hyperpolarization periods. Therefore, to characterize the time sequences in the feeding CPG, we need compound reference from several neural recordings that can be summarized as in Table \ref{table:cpg ref intervals}
 
+%\TODO revisar
+Table \ref{table:tabla spikes} displays a summary of some neurons involved in each phase. \todo{viene del tfm revisar}
+
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-\begin{table}[]
+\begin{table}[htb!]
 	\begin{tabular}{cl|l|ll}
 		\multicolumn{1}{l}{}                                 & \multicolumn{1}{c|}{\textbf{N1}} & \multicolumn{1}{c|}{\textbf{N2}} & \multicolumn{1}{c}{\textbf{N3}} &  \\
 		\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Start}}} & Last spike of N3t/B3             & Inhibition of B5                 & First spike of B8               &  \\
@@ -13,6 +16,23 @@ When studying temporal structures in neural dynamics, the definition of the time
 	\caption{Time reference boundaries for the three phases in the feeding CPG}
 	\label{table:cpg ref intervals}
 \end{table}
+
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{lccc}
+		Neuron                                           & \multicolumn{1}{l}{Protraction} & \multicolumn{1}{l}{Rasp} & \multicolumn{1}{l}{Swallow} \\ \hline
+		Interneuron                                     & N1                              & N2                       & N3                          \\
+		& \multicolumn{1}{l}{}            & \multicolumn{1}{l}{}     & \multicolumn{1}{l}{}        \\
+		\multicolumn{1}{c}{\multirow{3}{*}{Motoneuron}} & B7                              & B10                      & B3                        \\
+		\multicolumn{1}{c}{}                            & B6                              & B4                       & B9                        \\
+		\multicolumn{1}{c}{}                            & B1                              &                          &                         
+	\end{tabular}
+	\caption{Neuron participation in feeding phases.}
+	\label{table:tabla spikes}
+\end{table}
+
+
 
 \begin{figure}[bth!]
 \centering
