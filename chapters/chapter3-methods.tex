@@ -295,4 +295,15 @@ The stimulation was triggered when the area reached a specific threshold, which 
 Using this detection protocol, we assessed the effect of the illumination at different phases of the action potential in the range from 100 ms before the spike peak to 80 ms after the spike peak (see an example of the illumination offset in Fig. \ref{fig:offset_example}). The illumination interval was 58 ms, validated as the minimal duration for effective stimulation in the test trials. The RTXI module programmed for this study is available at \href{https://github.com/GNB-UAM/spike_predictor}{github.com/GNB-UAM/spike\_predictor}.
 
 
+\subsection{Temperature estimation}
+\label{sec:temperature-estimation}
+To estimate the CW-NIR laser induced temperature change, we used the open-pipette method employed in previous experimental studies to measure the temperature variation during the illumination \parencite{li_temporal_2013, rabbitt_heat_2016,brown_thermal_2020, brown_response_2021}. We calibrated the resistance and temperature relation using a thermistor (EPCOS, 10$k\Omega$) to measure the temperature in the preparation solution in the range from 23ºC to 29ºC. We used two protocols:  injecting a constant current to calculate the resistance change from the voltage recording, and injecting pulses of a specific current value. From the resulting recording slope of the linear regression, we computed the conversion from voltage to temperature. For the estimation of the temperature change during the laser stimulation, we measured the voltage change during short intervals of laser illumination and the temperature value at its saturation plateau. This estimation is represented in Fig. \ref{fig:temperature estimation}.
+
+
+
+\begin{figure}[htb!]
+	\includegraphics[width=\textwidth]{img/laser/temperature_estimation.pdf}
+	\caption{Open-pipette temperature estimation method. Each row in the panel represents pulsed and continuous current delivery for the estimation, respectively. For both examples: left column, temperature and voltage relation. Right column filtered mean of voltage recordings from short illumination intervals in the pipette. }
+	\label{fig:temperature estimation}
+\end{figure}
 
