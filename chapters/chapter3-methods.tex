@@ -66,10 +66,159 @@ Hence, an initial resting state, where the CPG as well as the moto-neurons have 
 This CPG circuit can be studied in a disected preparation, since snail's neurons are active after the isolation of the system. Specially, the CPG rhythm is maintained after its activation and it is generated in an autonomous way by the neurons in the circuit. However, due to the slow dynamics of the system and the nature of the experimental setting there are different ways to initiate the rhythm. In \textit{Lymnaea} literature, several options are proposed to solve this issue. The first solution is stimulating the neurons responsible for the initiation of the feeding rhythm, such as the SO modulator neuron on the buccal ganglia or also the CBC, CVs neurons, located on brain ganglia. Stimulating these cells usually activates the target circuits \cite{Benjamin2012}. However, the access to these neurons is not always easy and it might be necessary to keep them in constant stimulation. Another option for activation discussed in the literature is appliying octopamine. Some neurons in the buccal ganglia are sensitive to octopamine and, as a result, this procedure activates the rhythm \cite{Vehovszky2004}. Alternatively, in a semi-intact preparation, it can be applied sucrose to activate the rhythm \cite{Vavoulis2007,Vehovszky2004,Straub2002}. As a foresighted option, controlling the snails' feeding and selecting the first animal approaching the food seems to be effective for obtaining the feeding rhythm, with up to 80\% of success \cite{Elliott1991}.\todo{del tfm, quitar?}
 
 \section{NIR laser setup}
+
 \section{Conductance based models}
+For the theoretical analyses in this work, there have been used simulations of conductance-based models. As discussed in section \ref{computational neuroscience}, these models are based on a specific combination of ionic channels with a dynamic dependent on time that reproduces the Voltage value in the membrane at each time instant. There are many types of models and descriptions, depending on the specific combination of channels. Models used in this work, for both chapters \ref{c-invariants} and \ref{c-laser}, are description of neurons in \textit{Lymnaea stagnalis} for a neuron in cerebral ganglia, CGC \parencite{vavoulis_balanced_2010} and neurons in the feeding CPG in the buccal ganglia --SO, N1M, N2v, N3t, \parencite{vavoulis_computational_2007}. The first one, simulates a tonic firing and shoulder shape spike waveform, similar to the activity in some neurons in the right parietal ganglion. The second model is a detailed description of the CPG circuit with a combination of two-compartments neurons and a gradual synapse, that allows sufficient flexibility in the circuit to induce variability in the model --this will be discussed in detail in section \ref{c-invariant-models}. Equations \ref{eq:CGC}-\ref{eq:synapse} describe these to models. 
+
+\subsection{CGC neuron model}
+ This model is described by six different ionic channels: Persistent and transient sodium currents ($I_{NaP}$, $I_{NaT}$); transient and delayed rectifier potassium currents ($I_A$, $I_D$), and a low-voltage-activated and high-voltage-activated calcium currents ($I_{LVA}$, $I_{HVA}$), described by Eqs. \ref{eq:voltage} to \ref{eq:channels}. \todo{añadir para qué es cada corriente}
+ 
+  \begin{equation}
+ 	C_m\frac{dV}{dt} = I_{inj} - I_{NaT} - I_{NaP} - I_{A} - I_{D} - I_{LVA} - I_{HVA},
+ 	\label{eq:voltage}
+ \end{equation}
+ 
+ \begin{equation}
+ 	I_{NaT} = g_{NaT} m_{{\inf}}^3 h (V - E_{Na}),
+ \end{equation}
+ \begin{equation}
+ 	I_{NaP} = g_{NaP} r^3 (V - E_{Na}),
+ \end{equation}
+ \begin{equation}
+ 	I_{A} = g_{A} a^4 b (V - E_{K}),
+ \end{equation}
+ \begin{equation}
+ 	I_{D} = g_{D} n^4 (V - E_{K}),
+ 	% \label{eq:channels}
+ \end{equation}
+ \begin{equation}
+ 	I_{LVA} = g_{LVA} c_{{\inf}}^3 d_{{\inf}} (V - E_{Ca}),
+ \end{equation}
+ \begin{equation}
+ 	I_{HVA} = g_{HVA} e^3 f (V - E_{Ca}).
+ 	\label{eq:channels}
+ \end{equation}
+
+Inactivation and activation dynamic variables $r,a,n,e$ and $h,b,f$ are defined by:
+\begin{equation}
+	\frac{dx}{dt} = \frac{x_{\inf}-x}{\tau_x},
+	\end{equation}
+where $x = h,r,a,b,n,e$ or $f$ and $x_{\inf}$ and $tau_x$ are defined by:
+
+\begin{equation}
+	x_{\inf} = {(1+exp(\frac{V_H^x-V}{V_S^x}))}^{-1}
+\end{equation}
+
+See Supplementary Material in \cite{vavoulis_balanced_2010} for more details. 
+
+The implementation of this model is available at Neun library \href{https://github.com/GNB-UAM/neun}{github.com/GNB-UAM/neun} (VavoulisCGCModel).
+
+
+\subsection{Feeding CPG model}
+The Vavoulis et al. description of the individual neurons considers a two-compartment model to represent the soma and the axon as  differentiated structures coupled by an axial resistance \cite{Vavoulis2007}. This separation of the soma and the axon is used to regulate the interaction between the fast and slow dynamics in the model. The slow dynamics are located the soma, whereas the fast dynamics are included in the axon compartment. This distributed formalism is represented in Fig. \ref{fig:CPG diagram 2 compartments}a., where each circle represents either soma or axon, containing the different ionic currents for each one. The description of the voltage dynamics is provided by equations (\ref{eq:soma}) and (\ref{eq:axon}) for soma and axon compartments, respectively: 
+
+\begin{equation}
+	\tau_m\frac{dV_S}{dt} = i_{inj} - i_{L,S} - i_X - i_{ec,S} - i_{syn} \\,
+	\quad with \quad i_X = [i_{ACh},i_{NaL},i_T]
+	\label{eq:soma}
+\end{equation}
+
+\begin{equation}
+	\tau_m\frac{dV_A}{dt} = -i_{L,A} - i_{NaT} - i_K - i_{ec,A}
+	\label{eq:axon}
+\end{equation}
+
+
+\begin{figure}
+	\centering
+	\begin{minipage}[c]{0.45\textwidth}
+		\centering
+		(a) \par
+		\includegraphics[width=\textwidth]{methods/invariants-model/figure1a.eps}
+	\end{minipage}\hfill
+	\begin{minipage}[c]{0.45\textwidth}
+		\centering
+		(b) \par
+		\includegraphics[width=\textwidth]{methods/invariants-model/figure1b.eps}
+	\end{minipage}
+	\caption{\textbf{Panel (a)}. Ionic channel distribution in the two-compartment description for the individual neurons in the Vavoulis et al. model \cite{Vavoulis2007} used in this study. At the soma: $I_{ACh}$, acetylcholine ionic channel; $I_{NaL}$, slowly inactivating sodium
+		ionic channel;$I_T$, low-threshold calcium current; $I_{inj}$, injected current; $I_{L,S}$, leakage current in the soma; $I_{syn}$, synaptic current. At the axon: $I_{NaT}$, fast inactivating sodium current; $I_K$, delayed rectifier potassium current; $I_{L,A}$, leakage current in the axon. The electrical couplings are described as $I_{ec,S}=g_{ec}(V_S-V_A)$ and $I_{ec,A}=g_{ec}(V_A-V_S)$, respectively, being $g_{ec}$ the coupling conductance. The color for each $I_X$ current represents the CPG neuron that includes it at the soma,  N1M, N2v and N3t, respectively, as shown in panel (b). 
+		%cambios
+		\textbf{Panel (b)}. Connection scheme for the {\sl Lymnaea} feeding CPG circuit model. For details on the ionic channel current descriptions and associated parameters, see \cite{Vavoulis2007}. The colors indicating each neuron in the circuit match those in the representation of their corresponding somatic membrane potential traces throughout the paper. 
+	}
+	\label{fig:CPG diagram 2 compartments}
+\end{figure}
+
+%\begin{figure}
+%	\centering
+%	\begin{adjustbox}{valign=c}
+%		\begin{minipage}[c]{0.45\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{methods/invariants-model/figure1a.eps}
+%		\end{minipage}
+%	\end{adjustbox}\hfill
+%	\begin{minipage}[c]{0.45\textwidth}
+%		\centering
+%		\includegraphics[width=\textwidth]{methods/invariants-model/figure1b.eps}
+%	\end{minipage}
+%	\caption{\textbf{Panel (a)}. Ionic channel distribution in the two-compartment description for the individual neurons in the Vavoulis et al. model \cite{Vavoulis2007} used in this study. At the soma: $I_{ACh}$, acetylcholine ionic channel; $I_{NaL}$, slowly inactivating sodium
+%		ionic channel;$I_T$, low-threshold calcium current; $I_{inj}$, injected current; $I_{L,S}$, leakage current in the soma; $I_{syn}$, synaptic current. At the axon: $I_{NaT}$, fast inactivating sodium current; $I_K$, delayed rectifier potassium current; $I_{L,A}$, leakage current in the axon. The electrical couplings are described as $I_{ec,S}=g_{ec}(V_S-V_A)$ and $I_{ec,A}=g_{ec}(V_A-V_S)$, respectively, being $g_{ec}$ the coupling conductance. The color for each $I_X$ current represents the CPG neuron that includes it at the soma,  N1M, N2v and N3t, respectively, as shown in panel (b). 
+%		%cambios
+%		\textbf{Panel (b)}. Connection scheme for the {\sl Lymnaea} feeding CPG circuit model. For details on the ionic channel current descriptions and associated parameters, see \cite{Vavoulis2007}. The colors indicating each neuron in the circuit match those in the representation of their corresponding somatic membrane potential traces throughout the paper. 
+%	}
+%	\label{fig:CPG diagram 2 compartments}
+%\end{figure}
+
+
+\vspace{0.3in}
+
+\noindent Here we follow the notation of~\cite{Vavoulis2007} where $\tau_m$ represents the time constant of the membrane (in ms) given by the ratio of the membrane capacitance (in nF) and the leakage conductance (in $\mu$S).  In equations \ref{eq:soma} and \ref{eq:axon}, $i$ variables (given in mV) are the product of the corresponding currents (in nA) times the passive input resistance given in M$\Omega$.
+%, $i=I*R$, where  $R$ is given in M$\Omega$.
+
+The soma compartment contains a slow current $I_X$ whose ionic nature depends on the specific CPG neuron described (see Fig.~\ref{fig:CPG diagram 2 compartments}a.). Thus, $I_X$  represents one channel, either $I_{ACh}$, $I_{NaL}$ or $I_{T}$, responsible of the specific slow dynamics associated with neurons N1M, N2v and N3t, respectively.  Along with the slow ionic channel and the leakage channel  $I_{L,S}$, the soma compartment also receives the synaptic current $I_{syn}$ and the injection current $I_{inj}$. All currents are explained in detail below.
+
+On the other hand, fast channels are part of the axon compartment: a fast inactivating sodium current $I_{NaT}$ and a delayed rectifier potassium current $I_{K}$. These channels, along with the axon leakage channel  $I_{L,A}$ follow the definition in \cite{HODGKIN1952} model.
+
+The model cells as described above are not endogenously bursters so to achieve bursting activity, a distinct constant value of  \(i_{inj}\) is applied to the cells. 
+
+The CPG topology scheme is shown in Fig. \ref{fig:CPG diagram 2 compartments}, where the connections between neurons are represented by dashed or solid lines, depending on whether the connection is slow or fast, respectively, and filled or empty circles at their end denoting the direction and the effect on the postsynaptic neuron: excitation (empty circles) or inhibition (filled circles).
+Individual neurons following the previous description are connected by graded synapses, defined by equations (\ref{eq:syn1}-\ref{eq:syn2}) \cite{Vavoulis2007}. The differential point of a graded synapse is that it is dependent on voltage values and time, many synapses models used are just dependent on a trigger voltage value, that activates the synapse (see Figure \ref{fig:synapses-models example} for an example of each type). This model of synapse allows dynamical adaptation of neurons in the circuit to maintain the rhythm despite the variability. \todo{discutir en el capítulo}
+
+\begin{equation}
+	i_{syn} = \sum_j \gamma_{syn,j} s_j (V_S - E_{syn,j})
+	\label{eq:syn1}
+\end{equation}
+
+\begin{equation}
+	\frac{ds_j}{dt} = \frac{r_{j}-s_j}{\tau_{syn,j}}
+\end{equation}
+
+\begin{equation}
+	\frac{dr_j}{dt} = \frac{r_{\infty,j}-r_j}{\tau_{syn,j}}
+\end{equation}
+
+\begin{equation}
+	r_{\infty,j}=\frac{1}{1+e^{(-40-V_{pre_{V_S}})/2.5}}
+	\label{eq:syn2}
+\end{equation}
+
+
+\noindent where index $j$ runs over all presynaptic neurons and \(\gamma_{syn,j}, E_{syn,j},\tau_{syn},V_{pre_{V_S}}\) are the product of input resistance and maximal synaptic conductance, the synaptic reversal potential, the synaptic time constant and the presynaptic potential, respectively. 
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\linewidth]{methods/invariants-model/figure2.eps}
+	\caption{Triphasic feeding rhythm as produced by the circuit CPG model described in Fig. \ref{fig:CPG diagram 2 compa}. In this simulation, $i_{inj}$ values applied to each neuron are 8.5, 6, 2 and 0 mV, respectively.}
+	\label{fig:model simulation}
+\end{figure}
+
+The 3 inter-neurons described in this circuit have different waveform shapes, determined by their corresponding ionic channel and the axon connectivity, in Fig. \ref{fig:model simulation}  \todo{quitar marcos} there is an example of a simulation with all neurons in the circuit. First, N1M voltage characteristics are provided by an acetylcholine sensitive channel (\(i_{ACh} = 200 * p^3 * (V_S + 30)\)), which causes the gradual spiking frequency increase as well as the visible plateau, i.e., the slow wave is sustained before hyperpolarization. On the other hand, N2v has a slowly inactivating sodium channel (\(i_{NaL} = 2 * p^3 * q^3 * (V_S-55)\)), which causes the slow depolarization in this neuron. N2v neuron has a lower spiking frequency caused by the conductance value given for the axial $g_{ec}$ linking the two compartments, which is much lower in this cell. Finally, the N3t neuron has the particularity of a post inhibitory rebound, which generates an initial fast spiking followed by a decrease in the firing rate as the burst evolves. This latter property is caused by a low-threshold calcium channel (\( i_T = 3.27 * p^3 * q *(V_S-80)\)). SO neuron has no \(I_X\) channel (in contrast to N1M, N2v and N3t neurons) so its activity is the result of the combination of the common ionic channels in the axon and the soma.
+
+ 
 \section{Analysis}
-Although models where implemented in $C++$ leveraging its computational speed, most analysis where performed in Python3, since it is a frequently used tool and libraries as Pandas are very effective for data analysis. 
-Scripts are avaliable at \#TODO: add link to git. 
+Although models where implemented in $C++$ taking advantage of its computational speed, most analysis where performed in Python3, since it is a frequently used tool and libraries as Pandas are very effective for data analysis. 
+Scripts are available at \todo{ add link to git. }
 
 \section{CW-NIR laser}
 %\input{chapters/methods/methods-paper-laser}
