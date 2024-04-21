@@ -100,8 +100,8 @@ Models can be classified by their level of specification, i.e. what level of abs
 	\caption{Neural and network models classified by biophysical detail, structure modeled. Figure adapted from Figure 2 \cite{gleeson_open_2019}}
 	\label{fig:models-classification}
 \end{figure}
-
-Although it was included in this classification, the capability of models to reproduce chaotic activity is often undervalued. Most studies use deterministic non-chaotic models, which are sufficient when exploring input/output responses, studying the role of different biophysical elements or supporting experimental results. However, living systems are chaotic and highly variable, and still able to produce sequential, constant and reproducible patterned activity. While this is a key aspect in neural dynamics, models usually exclude the variability from their description and include, when necessary Gaussian noise as external input to induce stochasticity. However, this is limited when exploring the role of variability in the sequences or in the information processing, inferring hypothesis from the model analysis. 
+Although it was included in this classification, the capability of models to reproduce chaotic activity is often undervalued. Most studies use deterministic non-chaotic models, which are sufficient when exploring input/output responses, studying the role of different biophysical elements or supporting experimental results. However, living systems are chaotic and highly variable, and still able to produce sequential, constant and reproducible patterned activity. While this is a key aspect in neural dynamics, models usually exclude the variability from their description and include, when necessary Gaussian noise as external input to induce stochasticity. However, this is limited when exploring the role of variability in the sequences or in the information processing, inferring hypothesis from the model analysis.
+\todo{mejorar justificación y añadir referencias de gaussian}
 %#ToDo mejorar justificación y añadir referencias de gaussian.
 
 \subsubsection{Conductance-based models}
@@ -195,6 +195,7 @@ As in living systems, the combination of different channels lead to different ac
 
 
 \section{Study in invertebrates}
+\label{c-intro-invertebrates}
 Even before computational techniques were an option, the study of Neural dynamics and behavior was carried using many different model animals. Apart from the hegemonic rodents models, there have been invaluable findings using invertebrates as animal models, such as genetics and developmental biology in \textit{C. elegans} \parencite{brenner_genetics_1974}, \textit{Zebra fish} \parencite{streisinger_production_1981} and \textit{Drosophila} \parencite{nusslein-volhard_mutations_1980}; neural dynamics in \textit{Aplysia} \parencite{HODGKIN1952,wachtel_direct_1967}, motor activity in \textit{Carcinus maenas} \parencite{eisen_mechanisms_1982} or \textit{Lymnaea stagnalis} \parencite{Benjamin1979b}, the main animal model in this thesis. Those are only examples of fields, these animal models have been used for a wide variety of fields including behavioral studies, ecotoxicology, evolution, human disease modelling... \parencite{romanova_animal_2018} 
 
 Despite the differences between invertebrates, mammals and concretely human brain, there are many characteristics of animals' systems that can be extrapolated to humans. In fact, there are differences even in mammal species \parencite{preuss_taking_2000}, so by exploring more animal species there can be set a better ground truth for the aspects that shape the neuronal and behavioral dynamics. 
@@ -215,7 +216,13 @@ Apart from the possible advances in science, invertebrates models can also bridg
 
 \subsubsection{\textit{Lymnaea stagnalis}, the great pond snail}
 Besides the potential of research in invertebrates in general, here we explore neural system in the great pond snail, \textit{Lymanea stagnalis}. This mollusk has been an important case of study since the late XX century, when it was used extensively to study neurobiological processes and nervous system functioning \parencite{Benjamin1979a}. %#TODO: repaso de Benjamin
-From that point on it has been key in other fields as host-parasite or genome editing. This last field is thanks to the short and well studied life-cycle in \textit{L. stagnalis} (see Figure \ref{fig:lymnaea_life_cycle}), as well as the easiness to lab-bread them, without losing its main characteristics through generations \parencite{noland_observations_1946}. 
+
+\begin{wrapfigure}{l}{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/methods/lymnaea_copy.jpg} 
+	\caption{\textit{Lymnaea Stagnalis}}
+	\label{fig:snail}
+\end{wrapfigure}  From that point on it has been key in other fields as host-parasite or genome editing. This last field is thanks to the short and well studied life-cycle in \textit{L. stagnalis} (see Figure \ref{fig:lymnaea_life_cycle}), as well as the easiness to lab-bread them, without losing its main characteristics through generations \parencite{noland_observations_1946}. 
 
 
 \begin{figure}[htb!]
