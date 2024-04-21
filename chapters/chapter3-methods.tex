@@ -130,17 +130,18 @@ The Vavoulis et al. description of the individual neurons considers a two-compar
 
 
 \begin{figure}
-	\centering
-	\begin{minipage}[c]{0.45\textwidth}
-		\centering
-		(a) \par
-		\includegraphics[width=\textwidth]{methods/invariants-model/figure1a.eps}
-	\end{minipage}\hfill
-	\begin{minipage}[c]{0.45\textwidth}
-		\centering
-		(b) \par
-		\includegraphics[width=\textwidth]{methods/invariants-model/figure1b.eps}
-	\end{minipage}
+\centering
+\begin{minipage}[t]{0.45\textwidth}
+	\raggedright
+	(a) \par
+	\vspace{75pt}
+	\includegraphics[width=\textwidth]{methods/invariants-model/figure1a.eps}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\textwidth}
+	\raggedright
+	(b) \par
+	\includegraphics[width=\textwidth]{methods/invariants-model/figure1b.eps}
+\end{minipage}
 	\caption{\textbf{Panel (a)}. Ionic channel distribution in the two-compartment description for the individual neurons in the Vavoulis et al. model \cite{Vavoulis2007} used in this study. At the soma: $I_{ACh}$, acetylcholine ionic channel; $I_{NaL}$, slowly inactivating sodium
 		ionic channel;$I_T$, low-threshold calcium current; $I_{inj}$, injected current; $I_{L,S}$, leakage current in the soma; $I_{syn}$, synaptic current. At the axon: $I_{NaT}$, fast inactivating sodium current; $I_K$, delayed rectifier potassium current; $I_{L,A}$, leakage current in the axon. The electrical couplings are described as $I_{ec,S}=g_{ec}(V_S-V_A)$ and $I_{ec,A}=g_{ec}(V_A-V_S)$, respectively, being $g_{ec}$ the coupling conductance. The color for each $I_X$ current represents the CPG neuron that includes it at the soma,  N1M, N2v and N3t, respectively, as shown in panel (b). 
 		%cambios
@@ -148,27 +149,6 @@ The Vavoulis et al. description of the individual neurons considers a two-compar
 	}
 	\label{fig:CPG diagram 2 compartments}
 \end{figure}
-
-%\begin{figure}
-%	\centering
-%	\begin{adjustbox}{valign=c}
-%		\begin{minipage}[c]{0.45\textwidth}
-%			\centering
-%			\includegraphics[width=\textwidth]{methods/invariants-model/figure1a.eps}
-%		\end{minipage}
-%	\end{adjustbox}\hfill
-%	\begin{minipage}[c]{0.45\textwidth}
-%		\centering
-%		\includegraphics[width=\textwidth]{methods/invariants-model/figure1b.eps}
-%	\end{minipage}
-%	\caption{\textbf{Panel (a)}. Ionic channel distribution in the two-compartment description for the individual neurons in the Vavoulis et al. model \cite{Vavoulis2007} used in this study. At the soma: $I_{ACh}$, acetylcholine ionic channel; $I_{NaL}$, slowly inactivating sodium
-%		ionic channel;$I_T$, low-threshold calcium current; $I_{inj}$, injected current; $I_{L,S}$, leakage current in the soma; $I_{syn}$, synaptic current. At the axon: $I_{NaT}$, fast inactivating sodium current; $I_K$, delayed rectifier potassium current; $I_{L,A}$, leakage current in the axon. The electrical couplings are described as $I_{ec,S}=g_{ec}(V_S-V_A)$ and $I_{ec,A}=g_{ec}(V_A-V_S)$, respectively, being $g_{ec}$ the coupling conductance. The color for each $I_X$ current represents the CPG neuron that includes it at the soma,  N1M, N2v and N3t, respectively, as shown in panel (b). 
-%		%cambios
-%		\textbf{Panel (b)}. Connection scheme for the {\sl Lymnaea} feeding CPG circuit model. For details on the ionic channel current descriptions and associated parameters, see \cite{Vavoulis2007}. The colors indicating each neuron in the circuit match those in the representation of their corresponding somatic membrane potential traces throughout the paper. 
-%	}
-%	\label{fig:CPG diagram 2 compartments}
-%\end{figure}
-
 
 \vspace{0.3in}
 
@@ -182,7 +162,7 @@ On the other hand, fast channels are part of the axon compartment: a fast inacti
 The model cells as described above are not endogenously bursters so to achieve bursting activity, a distinct constant value of  \(i_{inj}\) is applied to the cells. 
 
 The CPG topology scheme is shown in Fig. \ref{fig:CPG diagram 2 compartments}, where the connections between neurons are represented by dashed or solid lines, depending on whether the connection is slow or fast, respectively, and filled or empty circles at their end denoting the direction and the effect on the postsynaptic neuron: excitation (empty circles) or inhibition (filled circles).
-Individual neurons following the previous description are connected by graded synapses, defined by equations (\ref{eq:syn1}-\ref{eq:syn2}) \cite{Vavoulis2007}. The differential point of a graded synapse is that it is dependent on voltage values and time, many synapses models used are just dependent on a trigger voltage value, that activates the synapse (see Figure \ref{fig:synapses-models example} for an example of each type). This model of synapse allows dynamical adaptation of neurons in the circuit to maintain the rhythm despite the variability. \todo{discutir en el capítulo}
+Individual neurons following the previous description are connected by graded synapses, defined by equations (\ref{eq:syn1}-\ref{eq:syn2}) \cite{Vavoulis2007}. The differential point of a graded synapse is that it is dependent on voltage values and time, many synapses models used are just dependent on a trigger voltage value, that activates the synapse (see Figure \ref{fig:synapses-models example} ple of each type). This model of synapse allows dynamical adaptation of neurons in the circuit to maintain the rhythm despite the variability. \todo{discutir en el capítulo}
 
 \begin{equation}
 	i_{syn} = \sum_j \gamma_{syn,j} s_j (V_S - E_{syn,j})
