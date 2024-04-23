@@ -19,6 +19,69 @@ We studied the effect CW-NIR illumination focused on neurons with spontaneous to
 
 %\section{Results}
 
+\section{Data Analysis Methods}
+
+\subsection{Spike waveform characterization parameters} \label{sec:characterization parameters}
+\label{sect:metrics}
+For both experimental recordings and model simulations, action potentials were detected as the maximum point over a threshold, and each waveform was segmented 100ms before and after the peak temporal reference. For the superposition of action potentials (Figs. \ref{fig:continuous_results_panel},\ref{fig:continuous_model},\ref{fig:temperature model}) the waveforms were aligned in the $x$-axis by the peak and in the $y$-axis by the first point of the waveform voltage values.
+
+\begin{figure}[htb!]
+	\includegraphics[width=\textwidth]{img/laser/spike_metrics.pdf}
+	\caption{Representation of waveform shape's metrics: a) Spike duration at half width. b) Spike amplitude between the maximum and minimum voltage values. c) Depolarization slope at half width. d) Repolarization slope at half width.}
+	\label{fig:spike metrics}
+\end{figure}
+
+
+For the waveform shape characterization, we used four metrics: duration, amplitude, depolarization and repolarization slopes. They are depicted in Fig. \ref{fig:methods_general}B and defined as follows:
+\begin{itemize}
+	\item Duration: Time interval between the two points at half width of the action potential. 
+	\item Amplitude: Difference between minimum and maximum voltage values in the waveform in the analyzed segment. 
+	\item Depolarization slope: Slope in the depolarization phase (previous to the peak) measured 1 ms before and after the half width point reference.
+	\item Repolarization slope: Slope in the repolarization phase (after the peak) measured 1 ms before and after the half width point reference.
+\end{itemize}
+
+These metrics were used for the quantitative analysis of the change in experimental recordings and model simulations. In Sec. \ref{sect:statistical_analysis} below we describe the quantification methodology for the waveform metric change as well as for the comparison between the experimental and model results.
+
+
+
+\subsection{Statistical Analysis}
+\label{sect:statistical_analysis}
+The statistical significance analysis in the data obtained from the sustained CW-NIR stimulation protocol in Figure \ref{fig:continuous_results_panel} was performed applying a paired T-test to the four spike waveform metrics characterized here (see Fig. \ref{fig:methods_general}B). Data from distinct experiments was gathered and paired by recordings of control-laser and control-recovery (see Fig. \ref{fig:continuous_results_panel}C). The null-hypothesis tested was that control group was equal to the laser group and that the control group was equal to the recovery group, respectively. Since we performed the test in the four waveform metrics --spike duration, depolarization slope, repolarization slope and amplitude-- we applied the Bonferroni correction, thus we considered high-significance when $\rho < 0.01/4$.
+
+To compare recordings from different neurons, we normalized the change between the laser and the control conditions for each waveform metric using the following expressions for electrophysiological data:
+
+\begin{equation}
+	{metric\ change}_{experimental} = \frac{|\mu(metric_{laser}) - \mu(metric_{control})|}{|\mu(metric_{control})|},
+\end{equation}
+\noindent where $\mu(metric_{laser/control})$ is the mean of the corresponding metric for all waveforms in a given laser stimulation or control trial.
+
+Analogously, to compare the change between the distinct model simulations we normalized the change in the parameter-driven simulated variability range using the following expression:
+
+\begin{equation}
+	\label{eq: model change}
+	{metric\ change}_{model} = \frac{|metric_{min} - metric_{max}|}{|metric_{max}|},
+\end{equation}
+
+\noindent where $metric_{min/max}$ refers to the minimum or maximum value of the corresponding waveform metric resulting from the model simulations in the  considered parameter range.
+
+
+For the comparison between experimental data and model simulations in Figure \ref{fig:continuous_model}, we defined an experimental reference for each metric as the general mean and standard deviation for all experiments ($N=23$). This allowed us to define a range of change due to the laser effect to which the model values could be compared. The mean of metric experimental change (MEC) was defined as:
+\begin{equation}
+	\mu_{MEC} = \frac{1}{N}\sum_{i=1}^{N}\frac{|\mu(\text{metric})_{\text{laser}} - \mu(\text{metric})_{\text{control}}|_{i}}{|\mu(\text{metric})_{\text{control}}|_{i}},
+\end{equation}
+
+Here, $\mu(\text{metric})_{\text{laser}}$ and $\mu(\text{metric})_{\text{control}}$ represent the mean values for each experiment $i$ in laser stimulation and control trials, respectively, where the index $i$ ranges for all experiments, with $N$ being the number of experiments.
+
+Thus, the percentage change in waveform from the model simulations, as described in equation \ref{eq: model change}, was mapped to this reference range: $(\mu_{MEC}\pm2\sigma_{MEC})$, with $\sigma_{MEC}$ being the standard deviation of the MEC. To visually represent this range, we utilized a color gradient with the \textit{background\_gradient} option in \textit{DataFrame} style in Python. The formula for mapping these values is:
+
+\[\text{Gradient value} = \frac{\text{value} - \text{Vmin}}{\text{Vmax} - \text{Vmin}}\]
+
+Here, \textit{value} represents the percentage change in the model simulation for a specific metric, while \textit{Vmin} and \textit{Vmax} represent $\mu_{MEC}-2\sigma_{MEC}$ and $\mu_{MEC}+2\sigma_{MEC}$ respectively, with $\mu_{MEC}$ and $\sigma_{MEC}$ being the specific mean and standard deviation corresponding to the metric specified in \textit{value}.
+
+All data analyses were performed in Python, the scripts are available in \href{https://github.com/GNB-UAM/Garrido-Pena_Modulation-neural-dynamics-by-CW-NIR-stimulation}{github.com/GNB-UAM/Garrido-Pena\_Modulation-neural-dynamics-by-CW-NIR-stimulation}.
+
+
+
 \section{Sustained CW-NIR laser stimulation effect on single neuron dynamics}
 \subsection{CW laser effect on spike waveform}
 In this paper we performed experimental triplets of control, sustained CW-NIR laser stimulation and recovery recordings (for details see Sec. \ref{sect:sustained-protocol}). This protocol provided a reference for the characterization of the laser effect. The data analyzed in this section corresponds to the spontaneous activity of neurons from the right parietal ganglion (RPG) of \textit{Lymnaea stagnalis}, under no stimulation other than the laser illumination when specified.
@@ -66,6 +129,7 @@ The absolute firing rate hinders some characteristics of the neural activity, su
 Overall, our results in this subsection show a larger tendency to a frequency increase in response to the NIR illumination indicating that it is possible to achieve neuronal excitation under sustained CW-NIR laser stimulation. It is also important to highlight that inhibition was not found in any of these experiments with sustained CW-NIR laser stimulation during tonic firing activity. 
 
 
+\subsection{Effect of CW-NIR stimulation in a minimal circuit}
 
 
 \subsection{Effect of CW-NIR stimulation at different wavelengths}
