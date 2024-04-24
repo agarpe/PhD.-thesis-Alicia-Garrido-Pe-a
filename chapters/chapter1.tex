@@ -22,7 +22,7 @@ From that starting point there have been important findings in the neurons types
 Although as we have seen brain is a complex system and we could study it from many different prisms, in this thesis we follow a bottom-up approach. So we will analyze experimentally and theoretically the neural activity at ionic channels and small circuits (few synapses). Moreover, it follows a Neurocomputational perspective, that will be developed in detail in subsection \label{computational neuroscience}. In the following lines I will describe the basis of neural activation from a computational perspective, focusing not in their molecular properties but in the change of voltage that they are able to produce and how that inter-operates. 
 
 \subsection{Neural activation}
-Neurons are cells composed by axons (the information transfer tube), dendrites (the information reception point) and synapses (the process of information transfer). Also, as any other cell has a soma, where activity is processed. % TODO revisar triple.
+Neurons are cells composed by axons (the information transfer tube), dendrites (the information reception point) and synapses (the process of information transfer). Also, as any other cell has a soma, where activity is processed. \todo{revisar}
 We can find two big types of synapses, electrical or chemical, depending on how is the process of information transferring. In figure \ref{synapse-types} there is a representation of both kinds. The main difference between them relay on how does the communication occur. Chemical synapses occur through the mediation of \textit{neurotransmitors}, where a presynaptic neuron liberates these molecules that are received and produce an alteration in a postsynaptic neuron. This is a fast mechanism that is conducted liberated in the media. Thus, this an asymmetrical and unidirectional connection, whereas in electrical synapses we find a symmetrcial and bidirectional connection. In thoses synapses, the neurons are almost attached by an structure called \textit{gap junction}, which "pipes" both neurons, in a tissued structure that constrains the leakage to the extracellular space. This communication is then faster than the synapses, which in comparison has no delay. Activity in electrical connections is usually synchronous \parencite{levitan_neuron_2002}.
 
 \begin{figure}[hbt!]
@@ -86,6 +86,9 @@ Temporal processing can be defined as the decoding of a generated temporal code.
 
 The sequential activity in brain goes from the scale of microsecond to days, as it is the example of circadian rhythms (see \cite{mauk_neural_2004}). We can also see this in the generation of coordinated motor activity as it is the case of the feeding of a snail. At the scale of microseconds, there is a flow of ions that generate a sequence of ionic channel activation, that in the scale of milliseconds, produce that produce action potentials that activate the corresponding muscles at the scale of seconds  and generate the necessary sequential movement to eat: open the mouth, rasp food and swallow. In figure \ref{fig:time scale feeding} there is an illustration of these scales.
 
+\begin{figure}[hbt!]
+	\includegraphics[width=\textwidth]{img/intro/time scale/time-scale-feeding.pdf}
+\end{figure}
 
 
 However, it is not clear how exactly the brain processes time. In contrast to the theory of a central clock that manages time for every behavioral task, it is extended the theory of a distributed time processing \parencite{buonomano_temporal_1995,ivry_representation_1996}. For that to be processed, but maintaining effective responses, especially in movement, there is a need of circuits that manage the sequential movement.\todo{bibliografía} This is the case of Central Pattern Generators (CPGs), these are closed circuits of neurons that activate sequentially, in mutual inhibition and that generate coordinated motor activity in many systems, from insects to humans \parencite{bibid}. There are a few key aspects that makes this circuit an interesting case of study. First, the neurons in the closed-topology are able to maintain a rhythmic activity in an autonomous manner by mutual inhibition. Second, the activity is flexible enough to adapt to changes in the context, e.g., variations in the terrain while walking. Finally, it is present in many systems and in some of them there is a direct transcription between the neurons in the circuit and the motor movement they produce, e.g., the PD, LP and PY neurons in the stomatogastric CPG in the crab \textit{C. maenas} correspond to the pilo
@@ -226,7 +229,7 @@ Besides the potential of research in invertebrates in general, here we explore n
 
 \begin{wrapfigure}{l}{0.3\textwidth}
 	\centering
-	\includegraphics[width=0.7\linewidth]{img/methods/lymnaea_copy.jpg} 
+	\includegraphics[width=0.7\linewidth]{img/intro/lymnaea.png} 
 	\caption{\textit{Lymnaea Stagnalis}}
 	\label{fig:snail}
 \end{wrapfigure}  From that point on it has been key in other fields as host-parasite or genome editing. This last field is thanks to the short and well studied life-cycle in \textit{L. stagnalis} (see Figure \ref{fig:lymnaea_life_cycle}), as well as the easiness to lab-bread them, without losing its main characteristics through generations \parencite{noland_observations_1946}. 
