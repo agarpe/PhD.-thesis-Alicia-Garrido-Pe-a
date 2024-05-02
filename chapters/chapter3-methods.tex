@@ -8,22 +8,25 @@ In this thesis, intraceullular neuronal recordings have been carried out in the 
 
 The technique followed for the neural activity acquisition was intracellular recordings with filled with 3 M $KCl$ sharp electrodes, in Figure \ref{fig:membranepotential recording} there is a scheme of the potential measurement. In this technique, a glass micropippete penetrates the cell to record its activity, with a minimal damage on the cell, and the membrane potential is then recorded using a DC amplifier (ELC-03M, NPI Electronic, Hauptstrasse, Tamm, Germany). Micropippetes were pulled using a Sutter Instruments puller (Model P-97) (see Figure \ref{fig:electrode}). Membrane potential was recorded and recordings were acquired at 10 KHz using an A/D board (PCI-625 with a BNC-2090A DAQ device, National Instruments).
 
-To facilitate the access to the cell, the sheath above it was reduced using protease (Sigma XVII) over the ganglion for $\sim$1 min and then washed with fresh saline. In order to record cell signals extra- and intracellularly, it is necessary to have full access to the neural system. Although there is an option to keep the buccal mass and do a semi-intact preparation \parencite{Staras1999} in this work the neural system (ganglia and nerves) was fully isolated (see \cite{garrido-pena_tfm_2022} for more details). The preparation was immersed in a saline solution (in mM: 51.3 $NaCl$, 1.7 $KCl$, 1.5 $MgCl_2\cdot6H_2O$, 4.1 $CaCl_2\cdot2H_2O$, 5 $HEPES$, corrected to pH 7.8 with 4 $M$ $NaOH$). All procedures followed the European Commission and Universidad Autónoma de Madrid animal treatment guidelines. \todo{poner imagenes en la misma linea}
+To facilitate the access to the cell, the sheath above it was reduced using protease (Sigma XVII) over the ganglion for $\sim$1 min and then washed with fresh saline. In order to record cell signals extra- and intracellularly, it is necessary to have full access to the neural system. Although there is an option to keep the buccal mass and do a semi-intact preparation \parencite{Staras1999} in this work the neural system (ganglia and nerves) was fully isolated (see \cite{garrido-pena_tfm_2022} for more details). The preparation was immersed in a saline solution (in mM: 51.3 $NaCl$, 1.7 $KCl$, 1.5 $MgCl_2\cdot6H_2O$, 4.1 $CaCl_2\cdot2H_2O$, 5 $HEPES$, corrected to pH 7.8 with 4 $M$ $NaOH$). All procedures followed the European Commission and Universidad Autónoma de Madrid animal treatment guidelines.
 
-\begin{figure}[htb!]
+\begin{figure}[hbt!]
 	\centering
-	\includegraphics[angle=180,width=0.45\linewidth]{img/methods/IMG00027.jpg}
-	\caption{Lymnaea stagnalis neural system isolated.}
-	\label{fig:preparation}
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\includegraphics[angle=180,width=0.99\linewidth]{img/methods/IMG00027.jpg}
+		\caption{\textit{Lymnaea stagnalis} neural system isolated.}
+		\label{fig:preparation}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.4\textwidth}
+		\centering
+		\includegraphics[width=0.99\linewidth]{img/methods/preparation/electrode4_zoom.jpg}
+		\caption{Example of a sharp micro-electrode glass}
+		\label{fig:electrode}
+	\end{minipage}
 \end{figure}
 
-
-\begin{figure}[htb!]
-	\centering
-	\includegraphics[width=0.45\linewidth]{img/methods/preparation/electrode4_zoom.jpg}
-	\caption{Example of a sharp micro-electrode.}
-	\label{fig:electrode}
-\end{figure}
 
 \section{\textit{L. stagnalis} Neural System morphology}
 
@@ -79,7 +82,7 @@ For the theoretical analyses in this work, there have been used simulations of c
  \end{equation}
  
  \begin{equation}
- 	I_{NaT} = g_{NaT} m_{{\inf}}^3 h (V - E_{Na}),
+ 	I_{NaT} = g_{NaT} m_{{\infty}}^3 h (V - E_{Na}),
  \end{equation}
  \begin{equation}
  	I_{NaP} = g_{NaP} r^3 (V - E_{Na}),
@@ -92,7 +95,7 @@ For the theoretical analyses in this work, there have been used simulations of c
  	% \label{eq:channels}
  \end{equation}
  \begin{equation}
- 	I_{LVA} = g_{LVA} c_{{\inf}}^3 d_{{\inf}} (V - E_{Ca}),
+ 	I_{LVA} = g_{LVA} c_{{\infty}}^3 d_{{\infty}} (V - E_{Ca}),
  \end{equation}
  \begin{equation}
  	I_{HVA} = g_{HVA} e^3 f (V - E_{Ca}).
@@ -101,12 +104,12 @@ For the theoretical analyses in this work, there have been used simulations of c
 
 Inactivation and activation dynamic variables $r,a,n,e$ and $h,b,f$ are defined by:
 \begin{equation}
-	\frac{dx}{dt} = \frac{x_{\inf}-x}{\tau_x},
+	\frac{dx}{dt} = \frac{x_{\infty}-x}{\tau_x},
 	\end{equation}
-where $x = h,r,a,b,n,e$ or $f$ and $x_{\inf}$ and $tau_x$ are defined by:
+where $x = h,r,a,b,n,e$ or $f$ and $x_{\infty}$ and $tau_x$ are defined by:
 
 \begin{equation}
-	x_{\inf} = {(1+exp(\frac{V_H^x-V}{V_S^x}))}^{-1}
+	x_{\infty} = {(1+exp(\frac{V_H^x-V}{V_S^x}))}^{-1}
 \end{equation}
 
 See Supplementary Material in \cite{vavoulis_balanced_2010} for more details. 
