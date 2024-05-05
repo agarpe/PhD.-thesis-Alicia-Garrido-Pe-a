@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="invertebrates_timeline.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.83492762"
+     inkscape:cx="551.05585"
+     inkscape:cy="327.79784"
+     inkscape:window-width="1920"
+     inkscape:window-height="1023"
+     inkscape:window-x="1"
+     inkscape:window-y="1106"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient19390-6">
+      <stop
+         style="stop-color:#009799;stop-opacity:1;"
+         offset="0"
+         id="stop19386" />
+      <stop
+         style="stop-color:#009799;stop-opacity:0;"
+         offset="1"
+         id="stop19388" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="EmptyDiamondL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyDiamondL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8)"
+         style="fill-rule:evenodd;fill:context-fill;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         id="path2184" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker18891"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyDiamondLstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(7,0)"
+         style="fill-rule:evenodd;fill:context-fill;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         id="path18889" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="EmptyDiamondLstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyDiamondLstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(7,0)"
+         style="fill-rule:evenodd;fill:context-fill;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0,-7.0710768 L -7.0710894,0 L 0,7.0710589 L 7.0710462,0 L 0,-7.0710768 z "
+         id="path2193" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DotL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(7.4, 1)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path2139" />
+    </marker>
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect2076"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.000408163"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect77"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.000408163"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect77-8"
+       is_visible="true"
+       lpeversion="1"
+       steps="1"
+       threshold="0.000408163"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient19390-6"
+       id="radialGradient19392"
+       cx="146.65585"
+       cy="225.76227"
+       fx="146.65585"
+       fy="225.76227"
+       r="143.56659"
+       gradientTransform="matrix(9.9591483e-5,1,-3.0477854,3.0353369e-4,691.14958,-64.528724)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="mix-blend-mode:screen;fill:#008080;stroke:url(#radialGradient19392);stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.797333"
+       d="m 3.0892614,82.19566 c 95.7110596,0 191.4221186,0 287.1331786,0"
+       id="path75-5"
+       inkscape:path-effect="#path-effect77-8"
+       inkscape:original-d="M 3.0892614,82.19566 H 290.22244" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:4.5861px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       x="14.51003"
+       y="49.865307"
+       id="text4351"><tspan
+         sodipodi:role="line"
+         id="tspan4349"
+         style="stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+         x="14.51003"
+         y="49.865307">Hodkin and Huxley, 1952</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+         x="14.51003"
+         y="55.597931"
+         id="tspan4357">Animal: <tspan
+   style="font-style:italic"
+   id="tspan17405">Aplysia</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+         x="14.51003"
+         y="61.330559"
+         id="tspan4365">Description of the neural process </tspan></text>
+    <path
+       style="fill:none;stroke:#009699;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.392157;marker-start:url(#EmptyDiamondL);marker-end:url(#EmptyDiamondLstart)"
+       d="m 37.387699,81.880656 c 0,-5.653909 0,-11.307819 0,-16.961728"
+       id="path2074"
+       inkscape:path-effect="#path-effect2076"
+       inkscape:original-d="M 37.387699,81.880656 V 64.918928" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+       x="88.592239"
+       y="11.220066"
+       id="text22257"><tspan
+         sodipodi:role="line"
+         id="tspan22255"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="88.592239"
+         y="11.220066">The Timeline of Invertebrates in Neuroscience </tspan></text>
+  </g>
+</svg>
