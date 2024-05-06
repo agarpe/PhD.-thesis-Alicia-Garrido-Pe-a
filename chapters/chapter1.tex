@@ -52,7 +52,7 @@ For example, in Figure \ref{fig:spike-types} there is an example of two distinct
 \begin{figure}[htb!]
     \centering
     \includegraphics[width=\linewidth]{img/intro/spike_activity-types.pdf}
-    \caption{Representation of different spiking activities. Left: two simultaneous intracellular recordings in \textit{Lymnaea stagnalis} showing tonic firing at two different frequencies. Right: Two examples of bursting activity, up from \textit{Lymnaea stagnalis} and bottom from \textit{Carcinus maenas}}
+    \caption{Representation of two examples of different spiking activity. Left: two simultaneous intracellular recordings in \textit{Lymnaea stagnalis} showing tonic firing at two different frequencies. Right: Two examples of bursting activity, up from \textit{Lymnaea stagnalis} and bottom from \textit{Carcinus maenas}}
     \label{fig:spike_activity-types}
 \end{figure}
 
@@ -83,6 +83,8 @@ Brain dynamics can be described as a sequence of interactions, from molecules to
 
 Temporal processing can be defined as the decoding of a generated temporal code. A common example of temporal processing is usually speech, where sequential patterns are present in the structure of phrases, as a sequences of syllables and silences \parencite{kiebel_recognizing_2009}. In this line, an extended case of study is the birdsong, which has this similarity to human's speech, as they process sequences of syllables \parencite{prather_brains_2017,fishbein_sound_2019}. Beyond speech, sequential processing is also present in the motor movement, from muscle activation to repetitive coordinated actions such as rhythmic tapping or music performance \parencite{ding_temporal_2017}. Also, there are many important cognitive processes that rely in sequential mechanisms such as perception, memory, decision making, attention and emotion \parencite{michel_eeg_2018, he_robust_2018, rabinovich_sequential_2020}.
 
+However, it is not clear how exactly the brain processes time. In contrast to the theory of a central clock that manages time for every behavioral task, it is extended the theory of a distributed time processing \parencite{buonomano_temporal_1995,ivry_representation_1996}. For that to be processed, but maintaining effective responses, especially in movement, there is a need of circuits that manage the sequential rhythmic activity. This is the case of Central Pattern Generators (CPGs), closed circuits of neurons that activate sequentially in mutual inhibition and generate coordinated motor activity. They are present in many systems, from insects to humans \parencite{pearson_central_1972,marder_central_2001,mackay-lyons_central_2002,minassian_human_2017}. There are a few key aspects that makes this circuit an interesting case of study. First, the neurons in the closed-topology are able to maintain a rhythmic activity in an autonomous manner by mutual inhibition. Second, the activity is flexible enough to adapt to changes in the context, e.g., variations in the terrain while walking. Finally, it is present in many systems and in some of them there is a direct transcription between the neurons in the circuit and the motor movement they produce. For example, in the stomatogastric CPG in the crab \textit{C. maenas}, in charge of the pylorus movement, the PD (pyloric dilator), LP (Lateral Pyloric) and PY (PYloric) neurons correspond to the pylorus dilatation, pylorus close and contraction of the rostral constrictor to move food particles \parencite{selverston_oscillations_2006}.
+
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=0.9\textwidth]{img/intro/time scale/time-scale-feeding.pdf}
@@ -90,15 +92,14 @@ Temporal processing can be defined as the decoding of a generated temporal code.
 	\label{fig:time scale feeding}
 \end{figure}
 
-The sequential activity in brain goes from the scale of microsecond to days, as it is the example of circadian rhythms (see \cite{mauk_neural_2004}). We can also see this in the generation of coordinated motor activity as it is the case of the feeding of a snail. In figure \ref{fig:time scale feeding} there is an illustration of these scales. At the scale of microseconds, there is a flow of ions that generate a sequence of ionic channel activation, that in the scale of milliseconds produce action potentials. The combination of them in form of rhythmic bursts, activate the corresponding muscles at the scale of seconds and generate the necessary sequential movement to eat: open the mouth, rasp food and swallow, that will be repeated along day. 
+The sequential activity in brain goes from the scale of microsecond to days (see the example of circadian rhythms at \cite{mauk_neural_2004}). In Figure \ref{fig:time scale feeding} there is an illustrative example of the sequential nature of activity at different scales in the generation of coordinated motor activity in the feeding of a snail. At the scale of microseconds, there is a flow of ions that generate a sequence of ionic channel activation, that in the scale of milliseconds produce action potentials. The combination of them in form of rhythmic bursts, activate the corresponding muscles at the scale of seconds and generate the necessary sequential movement to eat: open the mouth, rasp food and swallow, that will be repeated along day. 
 
-However, it is not clear how exactly the brain processes time. In contrast to the theory of a central clock that manages time for every behavioral task, it is extended the theory of a distributed time processing \parencite{buonomano_temporal_1995,ivry_representation_1996}. For that to be processed, but maintaining effective responses, especially in movement, there is a need of circuits that manage the sequential rhythmic activity. This is the case of Central Pattern Generators (CPGs), closed circuits of neurons that activate sequentially in mutual inhibition and generate coordinated motor activity. They are present in many systems, from insects to humans \parencite{pearson_central_1972,marder_central_2001,mackay-lyons_central_2002,minassian_human_2017}. There are a few key aspects that makes this circuit an interesting case of study. First, the neurons in the closed-topology are able to maintain a rhythmic activity in an autonomous manner by mutual inhibition. Second, the activity is flexible enough to adapt to changes in the context, e.g., variations in the terrain while walking. Finally, it is present in many systems and in some of them there is a direct transcription between the neurons in the circuit and the motor movement they produce. For example, in the stomatogastric CPG in the crab \textit{C. maenas}, in charge of the pylorus movement, the PD (pyloric dilator), LP (Lateral Pyloric) and PY (PYloric) neurons correspond to the pylorus dilatation, pylorus close and contraction of the rostral constrictor to move food particles \parencite{selverston_oscillations_2006}.  \todo{mover arriba, mezclar con ejemplo de lymnaea}
 
-Besides the focus on sensory processing, behavior and cognition (macroscale and top-bottom approaches), the study of the action potential dynamic and the interaction between ionic channels and synapses is crucial, since it is a key part in any brain process so it cannot be detached from the whole. The neuromodulation of these channels at different sites along the neuron can affect synaptic inputs/outputs, how the neurons communicate and the resulting process. Ionic channels are the starting point of the electrical signal generated underlying neuronal network activity, and a malfunction of it can contribute to neuronal disorders \parencite{kecskes_editorial_2023}. Thus, understanding brain activity not only at large scales but from the voltage generation dynamics can be crucial for a real and complete brain understanding. Their study can also help distinguish between short- and long-term modulation, a key aspect in neural plasticity and the application of neuromodulatory techniques \parencite{chambers_light-activated_2008,kenneth_modulation_2019}.
+Thus, apart from the focus on sensory processing, behavior and cognition (large temporal scales and top-bottom approaches), the study of the action potential dynamic and the interaction between ionic channels and synapses is crucial, since it is a key part in any brain process so it cannot be detached from the whole. The alteration of these channels at different sites along the neuron can affect synaptic inputs/outputs, how the neurons communicate and the resulting process. Ionic channels are the starting point of the electrical signal generated underlying neuronal network activity, and a malfunction of it can contribute to neuronal disorders \parencite{kecskes_editorial_2023}. Thus, understanding brain activity not only at large scales but from the voltage generation dynamics can be crucial for a real and complete brain understanding. Their study can also help distinguish between short- and long-term modulation, a key aspect in neural plasticity and the application of neuromodulatory techniques \parencite{chambers_light-activated_2008,kenneth_modulation_2019}.
 
-It is usual to talk about neural activity as blocks of information and as a binary on-off, even for whole brain areas, classifying task by those findings, that although are undoubtable relevant, they missregard the importance of variability processing. 
+Regarding sequential studies, it is common to talk about neural activity as blocks of information and as a binary on-off, even for whole brain areas, classifying task by those findings, that although are undoubtedly relevant, they miss-regard the importance of variability and its processing. 
 %Although often disregarded in macroscopic studies and as a consequence in bottom-up approaches,
-it is important to explore the mechanisms that allow to maintain a robust sequential activity despite changes in context and the variability underlying the neural dynamics. Action potentials and bursts are classified as we have seen depending on their waveform shape and grouped activity, however in those subgroups there is a high intra-variability, where for example bursting activity can differ in shape and duration, i.e., number of spikes in a bursts. In Figure \ref{fig:burst variability} there is an example of the variability in the burst waveform and duration for a sequence of several bursts. 
+It is important to explore the mechanisms that allow to maintain a robust sequential activity despite changes in context and the variability underlying the neural dynamics. Action potentials and bursts are classified as we have seen depending on their waveform shape and grouped activity, however in those subgroups there is a high intra-variability, where for example bursting activity can differ in shape and duration, i.e., number of spikes in a bursts. In Figure \ref{fig:burst variability} there is an example of the variability in the burst waveform and duration for a sequence of several bursts. \todo{añadir sobre variabilidad}
 
 
 \begin{figure}[htb!]
@@ -125,22 +126,30 @@ Models can be classified by their level of specification, i.e. what level of abs
 	\caption{Neural and network models classified by biophysical detail, structure modeled. Figure adapted from Figure 2 \cite{gleeson_open_2019}}
 	\label{fig:models-classification}
 \end{figure}
-Although it was included in this classification, the capability of models to reproduce chaotic activity is often undervalued. Most studies use deterministic non-chaotic models, which are sufficient when exploring input/output responses, studying the role of different biophysical elements or supporting experimental results. However, living systems are chaotic and highly variable, and still able to produce sequential, constant and reproducible patterned activity. While this is a key aspect in neural dynamics, models usually exclude the variability from their description and include, when necessary Gaussian noise as external input to induce stochasticity. However, this is limited when exploring the role of variability in the sequences or in the information processing, inferring hypothesis from the model analysis.
+Although it was included in this classification, the capability of models to reproduce chaotic activity is often undervalued, as it happens in experimental research. Most studies use deterministic non-chaotic models, which are sufficient when exploring input/output responses, studying the role of different biophysical elements or supporting experimental results. However, living systems are chaotic and highly variable, and still able to produce sequential, constant and reproducible patterned activity. While this is a key aspect in neural dynamics, models usually exclude the variability from their description and induce stochasticity through Gaussian noise as external input. However, this is limited when exploring the role of variability in the sequences or in the information processing, inferring hypothesis from the model analysis.
 \todo{mejorar justificación y añadir referencias de gaussian}
 %#ToDo mejorar justificación y añadir referencias de gaussian.
 
 \subsubsection{Conductance-based models}
 
-In this thesis, all experimental recordings have been supported with simulations on conductance-based models. They can be defined as mathematical descriptions of the ionic channels dynamics, based on their electrical signal. The first description is usually assigned to \cite{hodgkin_quantitative_1952} model, that defined dynamical equations based on the electrical circuit of neurons in \textit{Aplysia}, see \ref{fig:electrical circuit}.
+In this thesis, all experimental recordings have been supported with simulations on conductance-based models. They are defined as mathematical descriptions of the ionic channels dynamics, based on their electrical signal. The pioneer study \cite{hodgkin_quantitative_1952} model defined dynamical equations based on the electrical circuit of neurons in \textit{Aplysia}, similar to the one described in \ref{fig:electrical circuit}. This modeled circuit is also used to conform the intracellular recording configuration, where the pipette is included as an extra current compensated by the electrode in the bath.
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{./img/intro/dns_neuron_circuit.pdf}
-	\caption{Electrical circuit representing membrane. Figure 2.3 from book "Dynamical systems in neuroscience" from \cite{izhikevich_dynamical_2007}.}
+	\includegraphics[width=0.7\textwidth]{./img/intro/electrical_circuit.pdf}
+	\caption{Electrical circuit describing the membrane voltage model.}
 	\label{fig:electrical circuit}
 \end{figure}
 
-In this models, the simulation of neural electrical activity is based on the combination of different ionic channels, whose dynamics are also well defined with a description of activation gates which are also dynamically defined. The equations correspond to the following structure:
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./img/intro/intracellular_recording_circuit.pdf}
+	\caption{Electrical circuit representing the scheme for intracellular recordings.}
+	\label{fig:clamp circuit}
+\end{figure}
+
+
+In these models, the simulation of neural electrical activity is based on the mathematical description of different ionic channels in the circuit, whose dynamics are also well defined by activation gates. The equations correspond to the following structure:
 
 Dynamical Voltage time dependent:
 
@@ -160,7 +169,7 @@ Activation gates usually have an exponential tendency, and are defined by activa
 
 \begin{equation}
 	\label{eq:alpha-beta}
-	\frac{act}{dt} = \frac{act{\inf,i}-act_i}{\tau_{act,i}}
+	\frac{act}{dt} = \frac{act_{\infty,i}-act_i}{\tau_{act,i}}
 \end{equation}
 
 where $\tau_{act,i}$ are the relaxation time constants which are usually voltage-dependent and modeled using sigmoid or Gaussian functions, as in equations \ref{eq:alpha-beta}. 
@@ -209,11 +218,11 @@ where $\tau_{act,i}$ are the relaxation time constants which are usually voltage
 \end{multicols}
 
 
-As in living systems, the combination of different channels lead to distinct outputs, e.g. shoulder and no-shoulder type neurons showed in Figure \ref{fig:spike-types}, can be reproduced in models (see Fig. \ref{fig:spike-types model}). 
+As in living systems, the combination of different channels lead to distinct outputs, e.g. shoulder and no-shoulder type neurons showed in Figure \ref{fig:spike-types}, can be reproduced in models by including specific channels, e.g., calcium for the shoulder shape (see Fig. \ref{fig:spike-types model}). 
 
 \begin{figure}[htb!]
 	\includegraphics[width=\textwidth]{img/intro/spike-types model.pdf}
-	\caption{text}
+	\caption{Simulation of two distinct spike types: no shoulder (a) and shoulder shaped (b), described by equations in \cite{hodgkin_quantitative_1952} and \cite{vavoulis_balanced_2010}, respectively}
 	\label{fig:spike-types model}
 \end{figure}
 
