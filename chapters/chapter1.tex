@@ -70,9 +70,9 @@ In circuits neurons can be connected by one or both types of synapses, and they 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.44\textwidth]{img/intro/cpg diagram.png}
+    \includegraphics[width=0.64\textwidth]{img/intro/cpg diagram.png}
     \includegraphics[width=0.35\textwidth]{img/intro/The_Human_Connectome.png}
-    \caption{Left. gastric and pyloric circuit scheme of \textit{Carcinus Maenas} \parencite{huerta_topology_2001}. Right. Conectome in human brain rendered from 20 subjects (By Andreashorn - Own work,\href{ https://commons.wikimedia.org/w/index.php?curid=41581320}){CC BY-SA 4.0}}
+    \caption{Left. gastric and pyloric circuit scheme of \textit{Carcinus Maenas} \parencite{huerta_topology_2001}. Right. Conectome in human brain rendered from 20 subjects (By Andreashorn - Own work,\href{https://commons.wikimedia.org/w/index.php?curid=41581320}{CC BY-SA 4.0})}
     \label{fig:neural circuits}
 \end{figure}
 
@@ -253,7 +253,37 @@ As in living systems, the combination of different channels lead to distinct out
 	\caption{Simulation of two distinct spike types: no shoulder (a) and shoulder shaped (b), described by equations in \cite{hodgkin_quantitative_1952} and \cite{vavoulis_balanced_2010}, respectively}
 	\label{fig:spike-types model}
 \end{figure}
-\todo{Añadir conectividad}
+Apart from the modeling of the action potential generation, synapses can also be modeled depending on the type and the level of specificity. Synapses are defined in conductance-based model as an extra current, that simulates the alteration in the neuron dynamics by chemical or electrical synapses. In conductance based models, electrical synapses are usually defined by the following equation:
+\begin{equation}
+    I_{ij}(t) = g (V_i(t) - Vj(t))
+\end{equation}
+\noindent where $i$ and $j$ represent the two neurons conforming the electrical synapse.
+Chemical synapses can be defined by different levels of specification, depending on the synapse activation, and have a different definition for post- and pre- synaptic neurons. (i) the neuron can be activated by a binary cause: occurrence or absence of an action potential (see Eq. \ref{eq:synapse binary}), (ii) the synapse is dynamic and its triggering is also dependent on the voltage variations (see Eq. \ref{eq:synapse dynamic}). 
+
+\begin{equation}
+     I_{ij}(t) = g(t) (V_i - E_j^{syn})
+     \label{eq:synapse binary}
+\end{equation}
+\noindent where $E_j^{syn}$ is the voltage value at which the synaptic current cancels \parencite{torres_modeling_2012, destexhe_efficient_1994}. 
+\begin{equation}
+   	i_{syn} = \sum_j \gamma_{syn,j} s_j (V_S - E_{syn,j})
+    \label{eq:synapse binary}
+\end{equation}
+
+\begin{equation}
+	\frac{ds_j}{dt} = \frac{r_{j}-s_j}{\tau_{syn,j}}
+\end{equation}
+
+\begin{equation}
+	\frac{dr_j}{dt} = \frac{r_{\infty,j}-r_j}{\tau_{syn,j}}
+\end{equation}
+
+\begin{equation}
+	r_{\infty,j}=\frac{1}{1+e^{(-40-V_{pre_{V_S}})/2.5}}
+	\label{eq:syn2}
+\end{equation}
+
+\todo{Revisar y completar}
 
 
 \subsection{Variability in Computational Models}
