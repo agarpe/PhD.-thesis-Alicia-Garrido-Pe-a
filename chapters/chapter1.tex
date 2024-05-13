@@ -4,7 +4,7 @@
 \section{Neuroscience, neurons and their dynamics}
 % \textit{What are neurons, its dynamics and what are the To-Dos}
 Neuroscience is a wide and challenging field in science. It faces crucial questions, such as the neural mechanisms in the brain activity, how can those mechanisms outcome as human cognition or behavior, how is the information processed and transferred through neural activity, how are neural diseases generated and how can we detect and treat them. 
-These questions and many more have been open problems that have intrigued scientific community since the first steps on the field. Neuroscience was born as a discipline from physiology, biochemistry and anatomy. As a broad field, it is approached from distinct perspectives. So it is usually referred to by its subfields, e.g. Neurobiology, Neurophotonics, Neuropharmacology, Clinical Neuroscience, Developmental Neuroscience, Systems Neuroscience, Cognitive Neuroscience, Computational Neuroscience. All these fields aim to explain the brain performance either as a whole or in parts. They use different techniques and approaches where some of which give rise to entirely new fields, like Neuroimaging.
+These questions and many more have been open problems that have intrigued scientific community since the first steps on the field. Neuroscience was born as a discipline from physiology, biochemistry and anatomy. As a broad field, it is approached from distinct perspectives and it is usually referred to by its subfields, e.g. Neurobiology, Neurophotonics, Neuropharmacology, Clinical Neuroscience, Developmental Neuroscience, Systems Neuroscience, Cognitive Neuroscience, Computational Neuroscience. All these fields aim to explain the brain performance either as a whole or in parts. They use different techniques and approaches where some of which give rise to entirely new fields, like Neuroimaging.
 
 We cannot think or discuss about neuroscience without highlighting the work by Santiago Ramón y Cajal, crucial in the firsts steps on the understanding of brain dynamics \parencite{de_carlos_historical_2007,de_castro_editorial_2016,delgado-garcia_cajal_2015,de_castro_cajal_2019}. The idea of the "neuron doctrine" was a boost on the study of the brain, explaining and describing the structure of individual cells called \textit{neurons} that are able to connect and thus communicate by \textit{synapses}. In Figure \ref{cajal-neuron} there is one of his famous drawings of the description of a neuron.
 
@@ -19,10 +19,45 @@ We cannot think or discuss about neuroscience without highlighting the work by S
 
 %From that starting point there have been important findings in the neurons types and structures, such as Glia cells \ref{}. 
 
-As we have seen brain is a complex system and we can study it from many different prisms. In this thesis we follow a bottom-up approach. So we will analyze experimentally and theoretically the neural activity at ionic channels and small circuits (few synapses). Moreover, we will follows a Neurocomputational perspective, that will be developed in detail in subsection \label{computational neuroscience}. In the following lines we will approach the basis of neural activation from a computational perspective necessary for the reading flow of this document. We will focus not in their molecular properties but in the change of voltage that they are able to produce and how that inter-operates. 
+As we have seen brain is a complex system and we can study it from many different prisms. In this thesis we follow a bottom-up approach. So we will analyze experimentally and theoretically the neural activity at ionic channels and small circuits (few synapses). Moreover, we will follow a Neurocomputational perspective, that will be defined in detail in subsection \ref{sec:computational neuroscience}. In the following lines we will approach the basis of neural activation from a computational perspective necessary for the reading flow of this document. We will focus not in their molecular properties but in the change of voltage that they are able to produce and how that inter-operates. 
 
 \subsection{Neural activation}
-Neurons are cells composed by axons (the information transfer tube), dendrites (the information reception point) and synapses (the process of information transfer). Also, as many other cell it has a soma and although the activity generation is a complex distributed event, in many cases it is in the soma where the activity is processed. We can find two big types of synapses, electrical or chemical, depending on how is the process of information transferring. In Figure \ref{fig:synapse-types} there is a representation of both kinds. The main difference between them relay on how does the communication takes place. Chemical synapses occur through the mediation of \textit{neurotransmitors}, where a presynaptic neuron liberates these molecules that are received and produce an alteration in a postsynaptic neuron. This is a fast mechanism that is conducted in the media. Thus, this connection is asymmetrical and unidirectional, whereas in electrical synapses we find a symmetrical and bidirectional connection. In those synapses, the neurons are almost attached by an structure called \textit{gap junction}, which "pipes" both neurons, in a tissued structure that constrains the leakage to the extracellular space. This communication is then faster than the synapses, which in comparison has no delay. Activity in electrical connections is usually synchronous \parencite{levitan_neuron_2002}.
+Neurons are cells composed by axons (the information transfer tube), dendrites (the information reception point) and synapses (the process of information transfer). Also, as many other cells, it has a soma and although the generation of activity is a complex distributed event, to a great extent it is in the soma where the activity is processed. 
+
+% As said there are many different ways to study neural dynamics, but a common descriptor for neural activity are action potentials. Action potentials are the 
+Neural activity is often described by the potential alteration in the membrane caused by the flow of ionic channels and the conduction of nerve impulses by the axon. These variations of potential are called action potentials or spikes. We can see them as the minimal pieces of information in the process of its reception, modification and transmission carried out by the neurons. A more concrete definition of spike could be "an abrupt and transient change of membrane voltage that propagates to other neurons via a long protrusion called an axon" \parencite{izhikevich_dynamical_2007}. Thus when no activity is transferred through the axon, the potential is called resting potential, when this potential is altered by a voltage increase it is known as depolarization. After reaching a peak of voltage, the potential starts decreasing again. When the potential is more negative than the resting potential is known as hyperpolarization. In Figure \ref{fig:action potential} the action potential phases are depicted. 
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/intro/action_potential.pdf}
+    \caption{Representation of phases and terminology of an action potential. (Adapted from Chris73, Wikimedia Commons, \href{https://creativecommons.org/licenses/by-sa/3.0/}{CC BY-SA 3.0}). }
+    \label{fig:action potential}
+\end{figure}
+
+The neural activity is generated by the flow of different ionic channels that counterbalance the voltage value generating the action potential. The membrane can be composed by different ionic channels, and its dynamics are conditioned by that combination and the possible synaptic connections. These changes in dynamics can be manifested in different ways, but the most notorious ones are the shape of the action potential and the type of activity that they show. %p61 The Neuron 
+For example, in Figure \ref{fig:spike-types} there is an example of two distinct action potentials with visible differences in their shape, of them presents a symmetrical shape, where depolarization and repolarization slopes are similar, whereas in the right waveform, there is a notable shoulder in the repolarization and its timescale is almost the double of example in (a).
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{img/intro/spike-types.pdf}
+    \caption{Examples of different spike shapes. Representation of two recordings from two different cells in \textit{Lymnaea stagnalis}. Left: symmetrical spike; right: shoulder shaped spike.}
+    \label{fig:spike-types}
+\end{figure}
+
+If spikes are considered minimal pieces of information when coding the neural activity, the combination of these minimal information leads to new forms of information, also known as bursts. Although there is not a fixed description of a burst, and depending on the animal and system a burst might look different \parencite{russell_bursting_1978,palmu_detection_2010,lundqvist_gamma_2016}, there are some common features in bursts: combination of spikes (more than two), higher frequency, sustained depolarization, a hyperpolarization followed by a resting period called inter-burst interval (IBI). In Figure \ref{fig:spike_activity-types} there is an example of distinct neural activities from intracellular recordings, depending on the neuron, its composition and the circuit it is inmerse in, they present tonic firing (first column), at different rates, and bursting activity (second column). 
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{img/intro/spike_activity-types.pdf}
+    \caption{Representation of two examples of different spiking activity. Left: two simultaneous intracellular recordings in \textit{Lymnaea stagnalis} showing tonic firing at two different frequencies. Right: Two examples of bursting activity, up from \textit{Lymnaea stagnalis} and bottom from \textit{Carcinus maenas}}
+    \label{fig:spike_activity-types}
+\end{figure}
+Traditionally, neural code has been studied as information by the binarization of the activity i.e. an spike does or does not occur. Burst can also be part of this codification, either as a whole piece of information or as a complex box of data itself: "bursts are a family of firing patterns that trigger physiological mechanisms not engaged by the same number of spikes in relative isolation" \parencite{friedenberger_silences_2023}. Bursts can be originated either by internal activation, mostly by calcium channels or by the synaptic dynamics involving the corresponding cell (inhibition/excitation) (for an extended review see \parencite{friedenberger_silences_2023}). This is the case in Central Pattern Generators (CPGs) \parencite{Katz,steuer_central_2018} that will be discussed in detail bellow and in Chapter \ref{c-invariants-model}.
+
+\subsection{Network dynamics}
+\todo{completar}
+Although analyzing the activity of a single neuron is important in terms of its dynamic, channels and the information it might carry, when talking about information processing and behavior, it is crucial to study the dynamics in circuits. Specially when talking about human brain and millions of neurons we divide the activity in groups and networks, exploring them as a whole. 
+A circuit of neurons is defined by neurons interconnected by synapses.
+We can find two big types of synapses, electrical or chemical. In Figure \ref{fig:synapse-types} there is a representation of both kinds. The main difference between them relay on how does the communication take place. Chemical synapses occur through the mediation of \textit{neurotransmitors}, where a presynaptic neuron liberates these molecules that are received and produce an alteration in a postsynaptic neuron. This is a fast mechanism that is conducted in the media. Thus, this connection is asymmetrical and unidirectional, whereas in electrical synapses we find a symmetrical and bidirectional connection. In those synapses, the neurons are almost attached by an structure called \textit{gap junction}, which "pipes" both neurons, in a tissued structure that constrains the leakage to the extracellular space. This communication is then faster than the chemical synapses, which in comparison has no delay. Activity in electrical connections is usually synchronous \parencite{levitan_neuron_2002}.
 
 \begin{figure}[hbt!]
     \centering
@@ -31,35 +66,14 @@ Neurons are cells composed by axons (the information transfer tube), dendrites (
     \label{fig:synapse-types}
 \end{figure}
 
-% As said there are many different ways to study neural dynamics, but a common descriptor for neural activity are action potentials. Action potentials are the 
-Neural activity is often described by the potential alteration in the membrane caused by the flow of ionic channels and the conduction of nerve impulses by the axon. This variation of potential is called action potentials or spikes. We can see this as the minimal piece of information in the process of information reception, modification and transmission carried out by the neurons. A more concrete definition of spike could be "an abrupt and transient change of membrane voltage that propagates to other neurons via a long protrusion called an axon" \parencite{izhikevich_dynamical_2007}. Thus when no activity is transferred through the axon, the potential is called resting potential, when this potential is altered by a voltage increase it is known as depolarization. After reaching a peak of voltage, the potential starts decreasing again. When the potential is more negative than the resting potential is known as hyperpolarization. In figure \ref{fig:action potential} the action potential phases are depicted. 
+In circuits neurons can be connected by one or both types of synapses, and they usually are conected to other circuits or modulatory neurons. In Figure \ref{fig:neural circuits} there is an example of circuits at a cellular and macroscopic level.
 
-\begin{figure}[htb!]
+\begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{img/intro/action_potential.pdf}
-    \caption{Representation of phases and terminology of an action potential. (Adapted from Chris73, Wikimedia Commons, \href{https://creativecommons.org/licenses/by-sa/3.0/}{CC BY-SA 3.0})}
-    \label{fig:action potential}
+    \includegraphics{img/intro/The_Human_Connectome.png}
+    \caption{By Andreashorn - Own work,\href{CC BY-SA 4.0}{ https://commons.wikimedia.org/w/index.php?curid=41581320}}
+    \label{fig:enter-label}
 \end{figure}
-
-This activity is generated by the flow of different ionic channels that counterbalance the voltage value generating the action potential. The membrane can be composed by different ionic channels, and its dynamics are conditioned by that combination and the possible synaptic connections. These changes in dynamics can be manifested in different ways, but the most notorious ones are the shape of the action potential and the type of activity that they show. %p61 The Neuron 
-For example, in Figure \ref{fig:spike-types} there is an example of two distinct action potentials with visible differences in their shape. In Figure \ref{fig:spike_activity-types} there is an example of distinct neural activities from intracellular recordings. 
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\linewidth]{img/intro/spike-types.pdf}
-    \caption{Examples of different spike shapes. Representation of two recordings from two different cells in \textit{Lymnaea stagnalis}. Left: symmetrical spike; right: shoulder shaped spike.}
-    \label{fig:spike-types}
-\end{figure}
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\linewidth]{img/intro/spike_activity-types.pdf}
-    \caption{Representation of two examples of different spiking activity. Left: two simultaneous intracellular recordings in \textit{Lymnaea stagnalis} showing tonic firing at two different frequencies. Right: Two examples of bursting activity, up from \textit{Lymnaea stagnalis} and bottom from \textit{Carcinus maenas}}
-    \label{fig:spike_activity-types}
-\end{figure}
-
-If spikes are considered minimal pieces of information when coding the neural activity, the combination of these minimal information leads to new forms of information, also known as bursts. Although there is not a fixed description of a burst, and depending on the animal and system a burst might look different \parencite{russell_bursting_1978,palmu_detection_2010,lundqvist_gamma_2016}, there are some common features in bursts: combination of spikes (more than two), higher frequency, sustained depolarization, a hyperpolarization followed by a resting period called inter-burst interval (IBI). Traditionally, neural code has been studied as information by the binarization of the activity i.e. an spike does or does not occur. Burst can also be part of this codification, either as a whole piece of information or as a complex box of data itself: "bursts are a family of firing patterns that trigger physiological mechanisms not engaged by the same number of spikes in relative isolation" \parencite{friedenberger_silences_2023}. Bursts can be originated either by internal activation, mostly by calcium channels or by the synaptic dynamics involving the corresponding cell (inhibition/excitation) (for an extended review see \parencite{friedenberger_silences_2023}). This is the case in Central Pattern Generators (CPGs) \parencite{Katz,steuer_central_2018} that will be discussed in detail bellow and in Chapter \ref{c-invariants-model}.
-
-\subsection{Network dynamics}
-\todo{completar}
 
 \section{The sequential nature of neural dynamics}
 %the complex landscape of unanswered questions in the field of neuroscience, from a bottom-up approach.
@@ -114,6 +128,7 @@ It is important to explore the mechanisms that allow to maintain a robust sequen
 
 
 \section{Studying neural dynamics in computational models.}
+\label{sec:computational neuroscience}
 Computational Neuroscience is a subfield of neuroscience that enhances the theoretical and computational techniques to address the study of nervous system functioning at multiple levels, from molecular level to complex networks or behavior. It is then by definition, a multi-disciplinary field. The basis of Computational Neuroscience lay on the understanding of brain dynamics from its electrical signals and the information they carry \parencite{schwiening_brief_2012,catterall_hodgkin-huxley_2012,dimitrov_information_2011,shannon_mathematical_1948}. Computational Neuroscience has extended its scope, leading to new paths of research including complex networks, graph theory, single cell analysis and machine learning techniques \parencite{cns2023}. In fields such as Artificial Intelligence there is even a symbiotic relationship between fields, where both inspire and help each other grow \parencite{amunts_human_2019,wozniak_deep_2020,goncalves_training_2020}.
 
 An important part of Computational Neuroscience is the description of living dynamics with theoretical models and the reproduction of their activity by the model simulation. The simulation of neural activity is a powerful tool to explore the neuronal dynamics, biophysical sources and possible mechanisms underlying the neural signaling, behavior, etc. Its strength relies on the reproducibility, extensive range of tunable parameters and the ability to modify (include/exclude) elements in the system or circuit. Although models cannot fully substitute research on living systems, they do lead us closer to the insight of neural dynamic, being a fast, effective and less costly alternative to advances in science. Their strength in reproducing brain processes also relies in the similarity to the brain dynamics and its signal processing.
