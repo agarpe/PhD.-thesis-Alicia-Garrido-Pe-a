@@ -110,7 +110,7 @@ It is important to explore the mechanisms that allow to maintain a robust sequen
 \end{figure}
 
 
-\section{Computational Neuroscience}
+\section{Studying neural dynamics in computational models.}
 Computational Neuroscience is a subfield of neuroscience that enhances the theoretical and computational techniques to address the study of nervous system functioning at multiple levels, from molecular level to complex networks or behavior. It is then by definition, a multi-disciplinary field. The basis of Computational Neuroscience lay on the understanding of brain dynamics from its electrical signals and the information they carry \parencite{schwiening_brief_2012,catterall_hodgkin-huxley_2012,dimitrov_information_2011,shannon_mathematical_1948}. Computational Neuroscience has extended its scope, leading to new paths of research including complex networks, graph theory, single cell analysis and machine learning techniques \parencite{cns2023}. In fields such as Artificial Intelligence there is even a symbiotic relationship between fields, where both inspire and help each other grow \parencite{amunts_human_2019,wozniak_deep_2020,goncalves_training_2020}.
 
 An important part of Computational Neuroscience is the description of living dynamics with theoretical models and the reproduction of their activity by the model simulation. The simulation of neural activity is a powerful tool to explore the neuronal dynamics, biophysical sources and possible mechanisms underlying the neural signaling, behavior, etc. Its strength relies on the reproducibility, extensive range of tunable parameters and the ability to modify (include/exclude) elements in the system or circuit. Although models cannot fully substitute research on living systems, they do lead us closer to the insight of neural dynamic, being a fast, effective and less costly alternative to advances in science. Their strength in reproducing brain processes also relies in the similarity to the brain dynamics and its signal processing.
@@ -127,9 +127,12 @@ Models can be classified by their level of specification, i.e. what level of abs
 	\caption{Neural and network models classified by biophysical detail, structure modeled. Figure adapted from Figure 2 \cite{gleeson_open_2019}}
 	\label{fig:models-classification}
 \end{figure}
+
+\subsection{Variability in Computational Models}
+
 Although it was included in this classification, the capability of models to reproduce chaotic activity is often undervalued, as it happens in experimental research. Most studies use deterministic non-chaotic models, which are sufficient when exploring input/output responses, studying the role of different biophysical elements or supporting experimental results. However, living systems are chaotic and highly variable, and still able to produce sequential, constant and reproducible patterned activity. While this is a key aspect in neural dynamics, models usually exclude the variability from their description and induce stochasticity through Gaussian noise as external input \parencite{linaro_accurate_2011,pezo_diffusion_2014,zheng_spontaneous_2020}. However, this is limited when exploring the role of variability in the sequences or in the information processing, inferring hypothesis from the model analysis. There are possibilities to include the variability in the own neural dynamics, within its channels, as it is the example of \cite{hindmarsh_model_1984} or \cite{komendantov_deterministic_1996}, where in both descriptions, there is a combination of parameters that lead both to a chaotic state, where the resulting activity is not purely deterministic. When the source of the variability in the system comes from its intrinsic properties there is a possibility to study its dynamics and the role of this variability in the system without artificially induced modifications such as noise in the gaussian or currents, and explore the specific properties of the channels as if it was an spontaneous activity recording.
 
-\subsubsection{Conductance-based models}
+\subsection{Conductance-based models}
 
 In this thesis, all experimental recordings have been supported with simulations on conductance-based models. They are defined as mathematical descriptions of the ionic channels dynamics, based on their electrical signal. The pioneer study \cite{hodgkin_quantitative_1952} model defined dynamical equations based on the electrical circuit of neurons in \textit{Aplysia}, similar to the one described in \ref{fig:electrical circuit}. This modeled circuit is also used to conform the intracellular recording configuration, where the pipette is included as an extra current compensated by the electrode in the bath.
 
@@ -235,7 +238,7 @@ As in living systems, the combination of different channels lead to distinct out
 	\caption{Simulation of two distinct spike types: no shoulder (a) and shoulder shaped (b), described by equations in \cite{hodgkin_quantitative_1952} and \cite{vavoulis_balanced_2010}, respectively}
 	\label{fig:spike-types model}
 \end{figure}
-
+\todo{Añadir conectividad}
 
 
 \section{Study in invertebrates}
@@ -299,7 +302,7 @@ In the context of neuronal dynamics modifications, Neuromodulation is an area of
 
 Beyond the direct social impact that clinical application of neuromodulation have, its use for basis science is essential for a clear understanding of the implications of these novel techniques, the biophysical mechanism they are able to alter and its safety range, and also for a wide understanding of the brain functioning. In this context, since the firsts applications of electrophysiology by \cite{neher_single-channel_1976} and the subsequent apparition of patch-clamp technique \cite{hamill_improved_1981}, many different techniques have been developed, for distinct systems. Including hybrid procedures such as dynamic-clamp, that combines the electrical recording/stimulation with the possibilities of computing through a closed-loop protocol in real-time \parencite{nowotny_dynamic_2022}. This enhances the neuronal signal processing possibilities, by allowing to implement specific algorithms to intervene the neural activity and test it to different approaches. The combination of this technique with other neuromodulatory techniques allow to a detailed study with great possibilities. 
 
-
+\todo{dar vuelta}
 
 
 
