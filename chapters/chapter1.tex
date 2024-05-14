@@ -152,7 +152,7 @@ Models can be classified by their level of specification, i.e. what level of abs
 
 \subsection{Conductance-based models}
 
-In this thesis, all experimental recordings have been supported with simulations on conductance-based models. They are defined as mathematical descriptions of the ionic channels dynamics, based on their electrical signal. The pioneer study \cite{hodgkin_quantitative_1952} model defined dynamical equations based on the electrical circuit of neurons in \textit{Aplysia}, similar to the one described in \ref{fig:electrical circuit}. This modeled circuit is also used to conform the intracellular recording configuration, where the pipette is included as an extra current compensated by the electrode in the bath.
+In this thesis, all experimental recordings have been supported with simulations on conductance-based models. They are defined as mathematical descriptions of the ionic channels dynamics, based on their electrical signal. The pioneer study \cite{hodgkin_quantitative_1952} model defined dynamical equations based on the electrical circuit of neurons in \textit{Aplysia}, similar to the one described in \ref{fig:electrical circuit}. This modeled circuit is also used to conform the intracellular recording configuration, where the pipette is included as an extra current compensated by the electrode in the bath (see Fig. \ref{fig:clamp circuit}).
 
 \begin{figure}[htb!]
 	\centering
@@ -169,9 +169,7 @@ In this thesis, all experimental recordings have been supported with simulations
 \end{figure}
 
 
-In these models, the simulation of neural electrical activity is based on the mathematical description of different ionic channels in the circuit, whose dynamics are also well defined by activation gates. The equations correspond to the following structure:
-
-Dynamical Voltage time dependent:
+In these models, the simulation of neural electrical activity is based on the mathematical description of different ionic channels in the circuit, whose dynamics are also well defined by activation gates. First, there is a mathematical description of the Voltage dependent on time, as described equation \ref{eq:voltage ions}:
 
 \begin{equation}
  C_m \frac{dV}{dt} = I - \sum I_{x},
@@ -179,7 +177,7 @@ Dynamical Voltage time dependent:
 
 where $I_{x}$ is the current description for each channel involved in the action potential generation, e.g. $I_K$, $I_{Na}$, $I_{Ca}$.
 
-Each channel is also described as a differential equation, voltage-dependent composed by activation-gates dynamics:
+Second, each channel is also described as a differential equation, voltage-dependent composed by activation-gates dynamics:
 \begin{equation}
 I_x =  g_x \sum act_{vars}^n (V - E_x), 
 \end{equation}
@@ -195,67 +193,33 @@ Activation gates usually have an exponential tendency, and are defined by activa
 where $\tau_{act,i}$ are the relaxation time constants which are usually voltage-dependent and modeled using sigmoid or Gaussian functions, as in equations \ref{eq:alpha-beta}. 
 
 
- An example of the equations corresponding to figure \ref{fig:electrical circuit} are:
-\begin{equation}
-		C V = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)
-\end{equation}
+Following the \cite{HODGKIN1952} description, an example of the equations corresponding to figure \ref{fig:electrical circuit} are described in the following table:
+%\begin{equation}
+%		C \frac{dV}{dt} = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)
+%\end{equation}
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 \begin{table}[h!]
 	\begin{tabular}{cccc}
+		\multicolumn{1}{l}{Voltage equation}                                                              & \multicolumn{3}{c}{$C \frac{dV}{dt} = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)$}                                                                                                       \\ \hline
 		\multicolumn{1}{l}{}                                                                              & \multicolumn{2}{c}{Activation variables}                                                                                                                 & Inactivation variable                          \\ \hline
 		\multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}gating \\ variables\end{tabular}}                  & \multicolumn{1}{c|}{$n = \alpha_n (V)(1-n)-\beta_n(V)n$}                    & \multicolumn{1}{c|}{$m = \alpha_m (V)(1-m)-\beta_m(V)m$}                   & $h = \alpha_h (V)(1-h)-\beta_h(V)h$            \\ \hline
 		\multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}transition \\ rates\end{tabular}}} & \multicolumn{1}{c|}{$\alpha_n(V)=0.01\frac{10-V}{\exp(\frac{10-V}{10})-1}$} & \multicolumn{1}{c|}{$\alpha_m(V)=0.1\frac{25-V}{\exp(\frac{25-V}{10})-1}$} & $\alpha_h(V)=0.07\exp\frac{-V}{20}$            \\ \cline{2-4} 
 		\multicolumn{1}{c|}{}                                                                             & \multicolumn{1}{c|}{$\beta_n(V)=0.0125\exp(\frac{-V}{80})$}                 & \multicolumn{1}{c|}{$\beta_m(V)=4\exp(\frac{-V}{18})$}                     & $\beta_h(V)=\frac{1}{\exp(\frac{30-V}{10})+1}$ \\ \hline
 	\end{tabular}
+	\label{table:hh-equations}
 \end{table}
-%
-%\begin{multicols}{2}
-%	\begin{equation}
-%		n = \alpha_n (V)(1-n)-\beta_n(V)n
-%	\end{equation}
-%	\begin{equation}
-%		m = \alpha_m (V)(1-m)-\beta_m(V)m
-%	\end{equation}
-%	\begin{equation}
-%		h = \alpha_h (V)(1-h)-\beta_h(V)h
-%	\end{equation}
-%
-%
-%	\begin{equation}
-%	\alpha_n(V)=0.01\frac{10-V}{\exp(\frac{10-V}{10})-1}
-%	\end{equation}
-%	\begin{equation}
-%	\beta_n(V)=0.0125\exp(\frac{-V}{80})
-%	\end{equation}
-%
-%
-%\vspace{-15pt}
-%	\begin{equation}
-%		\alpha_m(V)=0.1\frac{25-V}{\exp(\frac{25-V}{10})-1}
-%	\end{equation}
-%	\begin{equation}
-%		\beta_m(V)=4\exp(\frac{-V}{18})
-%	\end{equation}
-%
-%\vspace{-15pt}
-%	\begin{equation}
-%	\alpha_h(V)=0.07\exp\frac{-V}{20}
-%	\end{equation}
-%	\begin{equation}
-%		\beta_h(V)=\frac{1}{\exp(\frac{30-V}{10})+1}
-%	\end{equation}
-%\end{multicols}
 
-
-As in living systems, the combination of different channels lead to distinct outputs, e.g. shoulder and no-shoulder type neurons showed in Figure \ref{fig:spike-types}, can be reproduced in models by including specific channels, e.g., calcium for the shoulder shape (see Fig. \ref{fig:spike-types model}). 
+That combination of channels generates the spike waveform showed in Fig. \ref{fig:spike-types model}a) but, as in living systems, the combination of different channels lead to distinct outputs, e.g. shoulder and no-shoulder type neurons (see previous section, Fig. \ref{fig:spike-types}). This is the case of waveform in Fig. \ref{fig:spike-types model} b), where this shoulder shape could be reproduced in models by including specific channels, e.g., calcium channels.
 
 \begin{figure}[htb!]
 	\includegraphics[width=\textwidth]{img/intro/spike-types model.pdf}
 	\caption{Simulation of two distinct spike types: no shoulder (a) and shoulder shaped (b), described by equations in \cite{hodgkin_quantitative_1952} and \cite{vavoulis_balanced_2010}, respectively}
 	\label{fig:spike-types model}
 \end{figure}
+
+\subsubsection{\large{Modeling networks}}
 Apart from the modeling of the action potential generation, synapses can also be modeled depending on the type and the level of specificity. Synapses are defined in conductance-based model as an extra current, that simulates the alteration in the neuron dynamics by chemical or electrical synapses. In conductance based models, electrical synapses are usually defined by the following equation:
 \begin{equation}
     I_{ij}(t) = g (V_i(t) - Vj(t))
