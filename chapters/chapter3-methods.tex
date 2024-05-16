@@ -142,6 +142,7 @@ To simulate the temperature dependency in the neuronal activity, a $Q_{10}$ fact
 where $\bar{g}_i$, $\bar{\phi}_i$, $c_0$ are the original values used in the model and $\gamma = 0.05$.
 
 \subsection{Feeding CPG model}
+\label{sec:CPG model}
 The Vavoulis et al. description of the individual neurons considers a two-compartment model to represent the soma and the axon as  differentiated structures coupled by an axial resistance \cite{Vavoulis2007}. This separation of the soma and the axon is used to regulate the interaction between the fast and slow dynamics in the model. The slow dynamics are located the soma, whereas the fast dynamics are included in the axon compartment. This distributed formalism is represented in Fig. \ref{fig:CPG diagram 2 compartments}a., where each circle represents either soma or axon, containing the different ionic currents for each one. The description of the voltage dynamics is provided by equations (\ref{eq:soma}) and (\ref{eq:axon}) for soma and axon compartments, respectively: 
 
 \begin{equation}

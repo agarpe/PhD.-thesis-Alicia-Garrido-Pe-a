@@ -54,7 +54,7 @@ If spikes are considered minimal pieces of information when coding the neural ac
 Traditionally, neural code has been studied as information by the binarization of the activity i.e. an spike does or does not occur. Burst can also be part of this codification, either as a whole piece of information or as a complex box of data itself: "bursts are a family of firing patterns that trigger physiological mechanisms not engaged by the same number of spikes in relative isolation" \parencite{friedenberger_silences_2023}. Bursts can be originated either by internal activation, mostly by calcium channels or by the synaptic dynamics involving the corresponding cell (inhibition/excitation) (for an extended review see \parencite{friedenberger_silences_2023}). This is the case in Central Pattern Generators (CPGs) \parencite{Katz,steuer_central_2018} that will be discussed in detail bellow and in Chapter \ref{c-invariants-model}.
 
 \subsection{Network dynamics}
-\todo{completar}
+
 Although analyzing the activity of a single neuron is important in terms of its dynamic, channels and the information it might carry, when talking about information processing and behavior, it is crucial to study the dynamics in circuits. Specially when talking about human brain and millions of neurons we divide the activity in groups and networks, exploring them as a whole. 
 A circuit of neurons is defined by neurons interconnected by synapses.
 We can find two big types of synapses, electrical or chemical. In Figure \ref{fig:synapse-types} there is a representation of both kinds. The main difference between them relay on how does the communication take place. Chemical synapses occur through the mediation of \textit{neurotransmitors}, where a presynaptic neuron liberates these molecules that are received and produce an alteration in a postsynaptic neuron. This is a fast mechanism that is conducted in the media. Thus, this connection is asymmetrical and unidirectional, whereas in electrical synapses we find a symmetrical and bidirectional connection. In those synapses, the neurons are almost attached by an structure called \textit{gap junction}, which "pipes" both neurons, in a tissued structure that constrains the leakage to the extracellular space. This communication is then faster than the chemical synapses, which in comparison has no delay. Activity in electrical connections is usually synchronous \parencite{levitan_neuron_2002}.
@@ -66,9 +66,9 @@ We can find two big types of synapses, electrical or chemical. In Figure \ref{fi
     \label{fig:synapse-types}
 \end{figure}
 
-In circuits neurons can be connected by one or both types of synapses, and they usually are conected to other circuits or modulatory neurons. In Figure \ref{fig:neural circuits} there is an example of circuits at a cellular and macroscopic level.
+In circuits neurons can be connected by one or both types of synapses, and they usually are conected to other circuits or modulatory neurons. In Figure \ref{fig:neural circuits} there is an example of circuits at a cellular and macroscopic level.\todo{completar}
 
-\begin{figure}
+\begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.64\textwidth]{img/intro/cpg diagram.png}
     \includegraphics[width=0.35\textwidth]{img/intro/The_Human_Connectome.png}
@@ -115,14 +115,15 @@ The sequential activity in brain goes from the scale of microsecond to days (see
 
 Thus, apart from the focus on sensory processing, behavior and cognition (large temporal scales and top-bottom approaches), the study of the action potential dynamic and the interaction between ionic channels and synapses is crucial, since it is a key part in any brain process so it cannot be detached from the whole. The alteration of these channels at different sites along the neuron can affect synaptic inputs/outputs, how the neurons communicate and the resulting process. Ionic channels are the starting point of the electrical signal generated underlying neuronal network activity, and a malfunction of it can contribute to neuronal disorders \parencite{kecskes_editorial_2023}. Thus, understanding brain activity not only at large scales but from the voltage generation dynamics can be crucial for a real and complete brain understanding. Their study can also help distinguish between short- and long-term modulation, a key aspect in neural plasticity and the application of neuromodulatory techniques \parencite{chambers_light-activated_2008,kenneth_modulation_2019}.
 
-Regarding sequential studies, it is common to talk about neural activity as blocks of information and as a binary on-off, even for whole brain areas, classifying task by those findings, that although are undoubtedly relevant, they miss-regard the importance of variability and its processing. 
+%Regarding sequential studies, it is common to talk about neural activity as blocks of information and as a binary on-off event, even for whole brain areas, classifying tasks by those findings. Although the findings under this approach have been undoubtedly relevant, they usually do not consider the importance of dynamics, variability and how their processing affects behavior.
+ 
 %Although often disregarded in macroscopic studies and as a consequence in bottom-up approaches,
-It is important to explore the mechanisms that allow to maintain a robust sequential activity despite changes in context and the variability underlying the neural dynamics. Action potentials and bursts are classified as we have seen depending on their waveform shape and grouped activity, however in those subgroups there is a high intra-variability, where for example bursting activity can differ in shape and duration, i.e., number of spikes in a bursts. In Figure \ref{fig:burst variability} there is an example of the variability in the burst waveform and duration for a sequence of several bursts. \todo{añadir sobre variabilidad}
+It is important to explore the mechanisms that allow to maintain a robust sequential activity despite changes in context and the variability underlying the neural dynamics. Action potentials and bursts are classified as we have seen depending on their waveform shape and grouped activity, however in those subgroups there is a high intra-variability, where for example bursting activity can differ in shape and duration, i.e., number of spikes in a bursts. In Figure \ref{fig:burst variability} there is an example of the variability in the burst waveform and duration for a sequence of several bursts. The study of this variability unveils key factors in the sequentiallity and how it is maintain despite of the alterations in the medium. This is the case for example of dynamical invariants, i.e., strong relationships between time intervals that conform a cycle of activity, when analyzing the activity cycle-by-cycle \parencite{reyes_artificial_2008,elices_robust_2019,garrido-pena_characterization_2021,berbel_emergence_2024}. This dynamical invariants might have a crucial role understanding the robustness of sequential activity and the relation between variability, robustness and flexibility found in many brain processes \parencite{citas}. We will discussed in detail this phenomena in the CPG of \textit{Lymnaea stagnalis} in chapter \ref{c-invariants}.
 
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{img/intro/burst_variability.pdf}
+	\includegraphics[width=0.6\textwidth]{img/intro/burst_variability.pdf}
 	\caption{Superimposition of bursts at different time instants aligned by the first point of the segment for intracellular recordings of an LP neuron in the sthomatogastric CPG.}
 	\label{fig:burst variability}
 \end{figure}
@@ -132,10 +133,10 @@ It is important to explore the mechanisms that allow to maintain a robust sequen
 \label{sec:computational neuroscience}
 Computational Neuroscience is a subfield of neuroscience that enhances the theoretical and computational techniques to address the study of nervous system functioning at multiple levels, from molecular level to complex networks or behavior. It is then by definition, a multi-disciplinary field. The basis of Computational Neuroscience lay on the understanding of brain dynamics from its electrical signals and the information they carry \parencite{schwiening_brief_2012,catterall_hodgkin-huxley_2012,dimitrov_information_2011,shannon_mathematical_1948}. Computational Neuroscience has extended its scope, leading to new paths of research including complex networks, graph theory, single cell analysis and machine learning techniques \parencite{cns2023}. In fields such as Artificial Intelligence there is even a symbiotic relationship between fields, where both inspire and help each other grow \parencite{amunts_human_2019,wozniak_deep_2020,goncalves_training_2020}.
 
-An important part of Computational Neuroscience is the description of living dynamics with theoretical models and the reproduction of their activity by the model simulation. The simulation of neural activity is a powerful tool to explore the neuronal dynamics, biophysical sources and possible mechanisms underlying the neural signaling, behavior, etc. Its strength relies on the reproducibility, extensive range of tunable parameters and the ability to modify (include/exclude) elements in the system or circuit. Although models cannot fully substitute research on living systems, they do lead us closer to the insight of neural dynamic, being a fast, effective and less costly alternative to advances in science. Their strength in reproducing brain processes also relies in the similarity to the brain dynamics and its signal processing.
+An important part of Computational Neuroscience is the description of living dynamics with theoretical models and the reproduction of their activity by the model simulation. The simulation of neural activity is a powerful tool to explore the neuronal dynamics, biophysical sources and possible mechanisms underlying the neural signaling, behavior, etc. Its strength relies on the reproducibility, extensive range of tunable parameters and the ability to modify (include/exclude) elements in the system or circuit. Although models cannot fully substitute research on living systems, they do lead us closer to the insight of neural dynamic, being a fast, effective and less costly alternative to advances in science. Their strength in reproducing brain processes also relies in the similarity to the brain dynamics and its signal processing. Also, models are an essential complement reaching detailed descriptions where experimental approaches such as electrophysiology have their limitation. 
 %Like science is not about truth, but about knowledge, models do not aim to substitute living systems, but to lead us closer to the insight of neural dynamics. %#ToDo revisar
 
-Models can be classified by their level of specification, i.e. what level of abstraction is decided in neural dynamics, the structure being modeled and the size of the network, or their ability to reproduce chaotic activity. In Figure \ref{fig:models-classification} there is a colored box illustrating this classification, with examples of models of large networks as \cite{potjans_cell-type_2014,bezaire_interneuronal_2016}, of single cell but still detailed as in \cite{smith_dendritic_2013} and more abstract descriptions as in \cite{izhikevich_simple_2003}.
+Models can be classified by their level of specification, i.e. what level of abstraction is decided in neural dynamics, the structure being modeled and the size of the network, or their ability to reproduce chaotic activity. In Figure \ref{fig:models-classification} there is a colored box illustrating this classification, with examples of models of large networks as \cite{potjans_cell-type_2014,bezaire_interneuronal_2016}, of single cell but still detailed as in \cite{smith_dendritic_2013} and more abstract descriptions as in \cite{izhikevich_simple_2003}. Regarding the level of description, in the different biophysical models there is always a choice between high description of non-linearities, channels and excitation properties, and efficiency in computation. In this line, from \cite{hodgkin_quantitative_1952} model, rich in the description of nonlinearities, \cite{hindmarsh_model_1984} defined with polynomial equations, similar neuronal dynamics. \cite{fitzhugh_impulses_1961}, defined a model substituting a detailed description of nonlinearities by a fast and slow description of the dynamics (see \cite{torres_modeling_2012} for a review of this models). 
 
 
 %Adapt models table from
@@ -143,12 +144,9 @@ Models can be classified by their level of specification, i.e. what level of abs
 \begin{figure}[bth!]
 	\centering
 	\includegraphics[width=\textwidth]{img/intro/models classification.pdf}
-	\caption{Neural and network models classified by biophysical detail, structure modeled. Figure adapted from Figure 2 \cite{gleeson_open_2019} under \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons CC-BY license}}
+	\caption{Neural and network models classified by biophysical detail, structure modeled and size of the network. Figure adapted from Figure 2 \cite{gleeson_open_2019} under \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons CC-BY license}. Models are classified by the biophysical detail, by y-axes being the models in the bottom the less specific ones; by the size of the network modeled, from left to right one cell to hundreds of cells; and by the brain-structure they model, represented in colored boxes. The shape of the box also classifies the model in network model or individual cell model. A third category was here included from the original work, representing by an spiral in the box the ability of the model to produce chaotic activity without external alterations, i.e, reproduce spontaneous variability.}
 	\label{fig:models-classification}
 \end{figure}
-
-%Añadir tipos de modelos escritos handbook
-\todo{escribir tipos de modelos} 
 
 \subsection{Conductance-based models}
 
@@ -173,6 +171,7 @@ In these models, the simulation of neural electrical activity is based on the ma
 
 \begin{equation}
  C_m \frac{dV}{dt} = I - \sum I_{x},
+  \label{eq:voltage ions}:
 \end{equation}
 
 where $I_{x}$ is the current description for each channel involved in the action potential generation, e.g. $I_K$, $I_{Na}$, $I_{Ca}$.
@@ -190,7 +189,7 @@ Activation gates usually have an exponential tendency, and are defined by activa
 	\frac{act}{dt} = \frac{act_{\infty,i}-act_i}{\tau_{act,i}}
 \end{equation}
 
-where $\tau_{act,i}$ are the relaxation time constants which are usually voltage-dependent and modeled using sigmoid or Gaussian functions, as in equations \ref{eq:alpha-beta}. 
+where $\tau_{act,i}$ are the relaxation time constants which are usually voltage-dependent and modeled using sigmoid or Gaussian functions. 
 
 
 Following the \cite{HODGKIN1952} description, an example of the equations corresponding to figure \ref{fig:electrical circuit} are described in the following table:
@@ -201,13 +200,18 @@ Following the \cite{HODGKIN1952} description, an example of the equations corres
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 \begin{table}[h!]
-	\begin{tabular}{cccc}
-		\multicolumn{1}{l}{Voltage equation}                                                              & \multicolumn{3}{c}{$C \frac{dV}{dt} = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)$}                                                                                                       \\ \hline
-		\multicolumn{1}{l}{}                                                                              & \multicolumn{2}{c}{Activation variables}                                                                                                                 & Inactivation variable                          \\ \hline
-		\multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}gating \\ variables\end{tabular}}                  & \multicolumn{1}{c|}{$n = \alpha_n (V)(1-n)-\beta_n(V)n$}                    & \multicolumn{1}{c|}{$m = \alpha_m (V)(1-m)-\beta_m(V)m$}                   & $h = \alpha_h (V)(1-h)-\beta_h(V)h$            \\ \hline
-		\multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}transition \\ rates\end{tabular}}} & \multicolumn{1}{c|}{$\alpha_n(V)=0.01\frac{10-V}{\exp(\frac{10-V}{10})-1}$} & \multicolumn{1}{c|}{$\alpha_m(V)=0.1\frac{25-V}{\exp(\frac{25-V}{10})-1}$} & $\alpha_h(V)=0.07\exp\frac{-V}{20}$            \\ \cline{2-4} 
-		\multicolumn{1}{c|}{}                                                                             & \multicolumn{1}{c|}{$\beta_n(V)=0.0125\exp(\frac{-V}{80})$}                 & \multicolumn{1}{c|}{$\beta_m(V)=4\exp(\frac{-V}{18})$}                     & $\beta_h(V)=\frac{1}{\exp(\frac{30-V}{10})+1}$ \\ \hline
+	\begin{tabular}{lccc}
+		Voltage equation                                                                 & \multicolumn{3}{c}{$C \frac{dV}{dt} = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)$}                                                                                                                                  \\ \hline
+		& \multicolumn{2}{c}{Activation variables}                                                                                                                              & Inactivation variable                                        \\ \hline
+		\multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}gating \\ variables\end{tabular}} & \multicolumn{1}{c|}{$\frac{dm(t)}{dt}=\frac{m_{\infty}(V(t))-m(t)}{\tau_m(V(t))}$} & \multicolumn{1}{c|}{$\frac{dn(t)}{dt}=\frac{n_{\infty}(V(t))-n(t)}{\tau_n(V(t))}$} & $\frac{dh(t)}{dt}=\frac{h_{\infty}(V(t))-h(t)}{\tau_h(V(t))}$ \\ \hline
 	\end{tabular}
+%	\begin{tabular}{cccc}
+%		\multicolumn{1}{l}{Voltage equation}                                                              & \multicolumn{3}{c}{$C \frac{dV}{dt} = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)$}                                                                                                       \\ \hline
+%		\multicolumn{1}{l}{}                                                                              & \multicolumn{2}{c}{Activation variables}                                                                                                                 & Inactivation variable                          \\ \hline
+%		\multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}gating \\ variables\end{tabular}}                  & \multicolumn{1}{c|}{$n = \alpha_n (V)(1-n)-\beta_n(V)n$}                    & \multicolumn{1}{c|}{$m = \alpha_m (V)(1-m)-\beta_m(V)m$}                   & $h = \alpha_h (V)(1-h)-\beta_h(V)h$            \\ \hline
+%		\multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}transition \\ rates\end{tabular}}} & \multicolumn{1}{c|}{$\alpha_n(V)=0.01\frac{10-V}{\exp(\frac{10-V}{10})-1}$} & \multicolumn{1}{c|}{$\alpha_m(V)=0.1\frac{25-V}{\exp(\frac{25-V}{10})-1}$} & $\alpha_h(V)=0.07\exp\frac{-V}{20}$            \\ \cline{2-4} 
+%		\multicolumn{1}{c|}{}                                                                             & \multicolumn{1}{c|}{$\beta_n(V)=0.0125\exp(\frac{-V}{80})$}                 & \multicolumn{1}{c|}{$\beta_m(V)=4\exp(\frac{-V}{18})$}                     & $\beta_h(V)=\frac{1}{\exp(\frac{30-V}{10})+1}$ \\ \hline
+%	\end{tabular}
 	\label{table:hh-equations}
 \end{table}
 
@@ -222,35 +226,33 @@ That combination of channels generates the spike waveform showed in Fig. \ref{fi
 \subsubsection{\large{Modeling networks}}
 Apart from the modeling of the action potential generation, synapses can also be modeled depending on the type and the level of specificity. Synapses are defined in conductance-based model as an extra current, that simulates the alteration in the neuron dynamics by chemical or electrical synapses. In conductance based models, electrical synapses are usually defined by the following equation:
 \begin{equation}
-    I_{ij}(t) = g (V_i(t) - Vj(t))
+    I_{ij}(t) = \bar{G}_{ij} (V_i(t) - Vj(t))
 \end{equation}
-\noindent where $i$ and $j$ represent the two neurons conforming the electrical synapse.
-Chemical synapses can be defined by different levels of specification, depending on the synapse activation, and have a different definition for post- and pre- synaptic neurons. (i) the neuron can be activated by a binary cause: occurrence or absence of an action potential (see Eq. \ref{eq:synapse binary}), (ii) the synapse is dynamic and its triggering is also dependent on the voltage variations (see Eq. \ref{eq:synapse dynamic}). 
+\noindent where $i$ and $j$ represent the two neurons conforming the electrical synapse and $\bar{G}_{ij}$ is a constant representing the maximum value of synapse conductance in the connection.
 
+On the other hand, chemical synapses are by definition asymmetrical and can be described as in equation \ref{eq:synapse binary}:
 \begin{equation}
-     I_{ij}(t) = g(t) (V_i - E_j^{syn})
+     I_{ij}(t) = G_{ij}(t) (V_i - E_j^{syn})
      \label{eq:synapse binary}
 \end{equation}
-\noindent where $E_j^{syn}$ is the voltage value at which the synaptic current cancels \parencite{torres_modeling_2012, destexhe_efficient_1994}. 
-\begin{equation}
-   	i_{syn} = \sum_j \gamma_{syn,j} s_j (V_S - E_{syn,j})
-    \label{eq:synapse binary}
-\end{equation}
+\noindent where $E_j^{syn}$ is the voltage value at which the synaptic current cancels and $G_{ij}$ can now have complex dynamics considering the trafficking of neurotransmitters as in equation \ref{eq: Gii} \parencite{torres_modeling_2012}. 
 
 \begin{equation}
-	\frac{ds_j}{dt} = \frac{r_{j}-s_j}{\tau_{syn,j}}
+	G{ij}(t) = \bar{G_{ij}}  \Theta(t-t_j^{sp}) \alpha (t-t_j^{sp})
+	\label{eq: Gii}
 \end{equation}
+
+Depending on the selection of this level of specification, the neuron can be activated by a (i) binary cause: occurrence or absence of an action potential, or (ii) a dynamic model that is also dependent on the voltage variations. In that second case the level of specification is higher, with a richer description of the synapse dynamics. This is the case for example of \cite{tsodyks_neural_1997}, represented in equations \ref{eq:tsodyks1},\ref{eq:tsodyks2} or the gradual synapse in the CPG model by \cite{vavoulis_dynamic_2007}, discussed in methods chapter, section \ref{sec:CPG model}.
+
 
 \begin{equation}
-	\frac{dr_j}{dt} = \frac{r_{\infty,j}-r_j}{\tau_{syn,j}}
+	\frac{dU}{dt} = -\frac{U}{\tau_{\text{rec}}} + U_{\infty}(1 - U) \delta(t - t_{\text{spike}})
+	\label{eq:tsodyks1}
 \end{equation}
-
 \begin{equation}
-	r_{\infty,j}=\frac{1}{1+e^{(-40-V_{pre_{V_S}})/2.5}}
-	\label{eq:syn2}
+	\frac{dX}{dt} = -\frac{X}{\tau_{\text{fac}}} + (1 - X) \frac{U(t_{\text{spike}})}{U_{\infty}} \delta(t - t_{\text{spike}})
+	\label{eq:tsodyks2}
 \end{equation}
-
-\todo{Revisar y completar}
 
 
 \subsection{Variability in Computational Models}
