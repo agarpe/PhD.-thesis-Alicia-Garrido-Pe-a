@@ -1,0 +1,6 @@
+N1M; B3; B8 --> threshold
+
+N2v --> Events of N1M inhibition by logical operator NOT
+        XOR NOTN1M B8
+        detect B7
+        N2v AND NOT B7 --> to clean small events

@@ -1,0 +1,18 @@
+[signal values]
+v_scale = 10
+dt = 0.1
+
+[waveform]
+w_left = 150
+w_right = 700
+
+[burst selection]
+ini_rang = 20
+end_rang = 28
+
+[waveform selection]
+ini_burst = 20
+end_burst = 50
+
+[plot]
+color = #428a80ff
