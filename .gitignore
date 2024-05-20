@@ -11,3 +11,8 @@
 *.xml
 *.svg
 *leftovers*
+*.dtvw-dat
+*.txt
+*.s2rx
+*.smrx
+*.dtvw-cfg
