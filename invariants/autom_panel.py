@@ -65,6 +65,7 @@ def create_file(path):
     os.system('pwd')
     os.system('pdflatex -interaction=nonstopmode panel_with_intervals.tex')
     os.system('rm panel_with_intervals.log panel_with_intervals.aux')
+    os.system('pdfcrop panel_with_intervals.pdf panel_with_intervals.pdf')
 
 for path in paths:
     inner_paths = glob.glob(path+'/*/')
