@@ -286,6 +286,29 @@ To further explore the role of the temperature on each channel, we have performe
 
 \section{Activity-dependent stimulation to assess the laser effect at distinct stages of the spike dynamics} 
 \label{sec:activity dependent}
+
+\subsection{Model simulation of activity-dependent stimulation}
+
+To address in a computational approach the observed effect experimentally, we have simulated the effect on a CGC-model neuron modulating two of the channels where the effect on the neurons was larger. This way, only during a certain time interval, the conductance in channels gD and gHVA was modified to the value replicating hte "maximum effect" (see Figure \ref{fig:activity dependent model stimulation})
+
+\begin{figure}[htb!]
+	\includegraphics[width=\textwidth]{img/laser/activity-dependent-model/depol_model.png}
+	\includegraphics[width=\textwidth]{img/laser/activity-dependent-model/repol_model.png}
+	\caption{Simulation of the effect of CW-NIR laser in the CGC-model. Stimulating only during the depolarization or only during repolarization phases for first and second rows respectively.}
+	\label{fig:activity dependent model stimulation}
+\end{figure}
+
+With this simulation we obtain the results in Figure \ref{fig:activity dependent simulation results}, where, as in the experimental results, the effect is larger when the stimulation is only in the repolarization slope, whereas while the effect is over the depolarization slope, the effect is only visibile in the depolarization slope. 
+
+\begin{figure}[htb!]
+	\includegraphics[width=\textwidth]{img/laser/activity-dependent-model/depol_combined.png}
+	\caption{Results in the spike waveform for the simulation of the effect of CW-NIR laser in the CGC-model. Stimulating only during the depolarization or only during repolarization phases for first and second rows respectively.}
+	\label{fig:activity dependent simulation results}
+\end{figure}
+
+\subsection{Experimental activity-dependent stimulation}
+
+\todo{cambio de orden con la anterior: reescribir}
 So far we have shown how sustained CW-NIR laser affects neural activity by modifying the dynamics of spike generation. In the previous section \ref{sect:models} we used a conductance-based model to theoretically assess the spike evolution and the different candidates involved in the modulation of the action potential generation (i.e., ionic channels and capacitance). To address this effect in an experimental setting is a complex task. Usually, it is accomplished using chemicals to block or open specific channels \parencite{liang_temperature-dependent_2009}. This is not a generalizable method in different systems and individuals, and it restricts the channel study to a system with a detailed description of the specific neuron being recorded. We chose instead to assess the spike generation dynamics at different stages, which implies modifying the activity of several channels at a time in a precise timing relative to the spike generation dynamics. This task is only experimentally feasible with an activity-dependent stimulation protocol.
 \begin{figure}[htb!]
 	\centering
@@ -310,25 +333,6 @@ Figure \ref{fig:activity dependent} shows the outcome of the application of this
 Figure \ref{fig:activity dependent error mean } agglutinates the results from 5 different closed-loop experiments, all of them normalized to the mean of the control and sustained laser references for each day, as minimum and maximum values, respectively. The arch trend is maintained. Again, note that the maximum effect for each spike metric occurs at a different stage. For the depolarization, the maximum change was found at the range of -20 to 0 ms, which corresponds to a stimulation during the whole depolarization. A fast rise when the illumination ceased right after the spike can be seen (i.e (0-20] range), since it corresponded to a stimulation during the depolarization and repolarization. In the repolarization, this trend was slightly delayed, reaching the maximum difference from the control at (20-40]. Such changes were also reproduced in the duration. This points to a modulatory effect of the laser depending on the stimulation instant. Previous to -20 ms, the laser was illuminating the neuron while all ionic channels were starting to activate, specially those involved in the process of the depolarization. However, those channels involved in the repolarization and hyperpolarization were also active earlier than the peak. This is why we can see a difference in all three metrics even at the early ranges of the action potential generation (e.g. -80 ms).
 
 Using the activity-dependent protocol we were able to assess the neural activity at different stages of its dynamics in a controlled way. The results from these experiments showed that it is possible to modify the action potential generation in a temporally precise manner and that the effect of the CW-NIR laser illumination is dependent on the instant of the stimulation. This sets the basis for assessing the biophysical sources of the effect impacting distinct channels without modifying the system condition. Also, it is a proof of concept demonstrating the possibility of developing laser stimulation protocols driven by specific neural activity events in an accessible and freely available real-time tool.
-
-\subsection{Model simulation of activity-dependent stimulation}
-
-To address in a computational approach the observed effect experimentally, we have simulated the effect on a CGC-model neuron modulating two of the channels where the effect on the neurons was larger. This way, only during a certain time interval, the conductance in channels gD and gHVA was modified to the value replicating hte "maximum effect" (see Figure \ref{fig:activity dependent model stimulation})
-
-\begin{figure}[htb!]
-	\includegraphics[width=\textwidth]{img/laser/activity-dependent-model/depol_model.png}
-	\includegraphics[width=\textwidth]{img/laser/activity-dependent-model/repol_model.png}
-	\caption{Simulation of the effect of CW-NIR laser in the CGC-model. Stimulating only during the depolarization or only during repolarization phases for first and second rows respectively.}
-	\label{fig:activity dependent model stimulation}
-\end{figure}
-
-With this simulation we obtain the results in Figure \ref{fig:activity dependent simulation results}, where, as in the experimental results, the effect is larger when the stimulation is only in the repolarization slope, whereas while the effect is over the depolarization slope, the effect is only visibile in the depolarization slope. 
-
-\begin{figure}[htb!]
-	\includegraphics[width=\textwidth]{img/laser/activity-dependent-model/depol_combined.png}
-	\caption{Results in the spike waveform for the simulation of the effect of CW-NIR laser in the CGC-model. Stimulating only during the depolarization or only during repolarization phases for first and second rows respectively.}
-	\label{fig:activity dependent simulation results}
-\end{figure}
 
 
 \section{Discussion}
