@@ -1,25 +1,15 @@
 
 \subsection{Time references, intervals and CPG sequence}
 \label{subsec:intervals}
-The variability study addressed here is based on the characterization of  cycle-by-cycle intervals in the rhythm produced by the model CPG.
+The variability study addressed in this chapter is based on the characterization of cycle-by-cycle intervals in the rhythm produced by the model CPG.
 In our analysis of variability, we assess the presence of linear relationships between the intervals that build the sequence and the cycle-by-cycle period to characterize and unveil similar dynamical invariants as those found in the stomatogastric CPG \cite{elices_robust_2019}. 
-This is illustrated in Fig. \ref{fig:intervals}, where single neuron intervals and intervals defined between neurons are depicted. 
-The intervals here analyzed can be measured for any three neurons following a robust triphasic rhythm. In this paper N1, N2 and N3 represent the feeding CPG neurons simulated in the model: N1M, N2v and N3t, respectively.
+The intervals here analyzed can be measured for any three neurons following a robust triphasic rhythm. In this paper N1, N2 and N3 represent the feeding CPG phases, represented in the model by interneurons N1M, N2v and N3t, respectively and in the experimental data by different combinations of moto- and interneurons.
 
-Here is the definition of each interval:
-\begin{enumerate}
-	\item \textbf{Burst Duration (BD)}, measured as the time interval between the first and the last spike of the burst (start to end in the trace of a given neuron).
-	\item \textbf{Inter burst interval (IBI)}, characterized as the difference between the last spike of a burst and the first one of the next one (end to start in the trace of a given neuron).
-	\item \textbf{Period}, which envelops the bursts from the three neurons, measured as the distance between the first spike of one burst in a neuron and the first spike of the next one on that neuron (start to start).
-	\item \textbf{NeuronX-NeuronY interval}, this interval is measured from the start of the burst of neuron X to the start of the burst of neuron Y (start X to start Y).
-	\item \textbf{NeuronX-NeuronY delay}, being the time lapse between the burst end of a neuron X and the burst beginning of neuron Y. (end X to start Y).
-\end{enumerate}
-
-\begin{figure}
+\begin{figure}[hbt!]
 	\centering
 	\begin{minipage}{\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{img/methods-paper-modelo/figure4a.eps} 
+		\includegraphics[width=0.8\textwidth]{img/methods-paper-modelo/figure4a.eps} 
 		\label{fig:intervals_bd}
 	\end{minipage}
 	% \hfill
@@ -38,6 +28,16 @@ Here is the definition of each interval:
 	
 	\label{fig:intervals}
 \end{figure}
+
+
+This is illustrated in Fig. \ref{fig:intervals}, where single neuron intervals and intervals defined between neurons are depicted and the definition of each interval is as follows:
+\begin{enumerate}
+	\item \textbf{Burst Duration (BD)}, measured as the time interval between the first and the last spike of the burst (start to end in the trace of a given neuron).
+	\item \textbf{Inter Burst Interval (IBI)}, characterized as the difference between the last spike of a burst and the first one of the next one (end to start in the trace of a given neuron).
+	\item \textbf{Period}, which envelops the bursts from the three neurons, measured as the distance between the first spike of one burst in a neuron and the first spike of the next one on that neuron (start to start).
+	\item \textbf{NeuronX-NeuronY interval}, this interval is measured from the start of the burst of neuron X to the start of the burst of neuron Y (start X to start Y).
+	\item \textbf{NeuronX-NeuronY delay}, being the time lapse between the burst end of a neuron X and the burst beginning of neuron Y. (end X to start Y).
+\end{enumerate}
 
 \subsection{Inducing variability in the model by current injection}
 \label{subsec:inj protocol}
@@ -88,4 +88,8 @@ Simulations of \cite{vavoulis_computational_2007} model were implemented in C++.
 The statistical analysis was done in Python 3.6. For the temporal variability study, first the spikes were detected using the change in the derivative during the computation of the model along with a threshold condition. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. 
 
 Thus, all intervals defined in section \ref{subsec:intervals} were measured and their variability was characterized by statistical analysis tools, i.e,  boxplots and linear correlations. For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. \todo{mover a methods generales?}
+
+\subsection{Experimental stimulation}
+\subsection{Models with chaotic activity}
+\subsection{Hybrot structure}
 
