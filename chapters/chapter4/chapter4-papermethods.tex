@@ -1,37 +1,72 @@
-\subsection{Inducing variability by current injection}
+
+\subsection{Time references, intervals and CPG sequence}
+\label{subsec:intervals}
+The variability study addressed here is based on the characterization of  cycle-by-cycle intervals in the rhythm produced by the model CPG.
+In our analysis of variability, we assess the presence of linear relationships between the intervals that build the sequence and the cycle-by-cycle period to characterize and unveil similar dynamical invariants as those found in the stomatogastric CPG \cite{elices_robust_2019}. 
+This is illustrated in Fig. \ref{fig:intervals}, where single neuron intervals and intervals defined between neurons are depicted. 
+The intervals here analyzed can be measured for any three neurons following a robust triphasic rhythm. In this paper N1, N2 and N3 represent the feeding CPG neurons simulated in the model: N1M, N2v and N3t, respectively.
+
+Here is the definition of each interval:
+\begin{enumerate}
+	\item \textbf{Burst Duration (BD)}, measured as the time interval between the first and the last spike of the burst (start to end in the trace of a given neuron).
+	\item \textbf{Inter burst interval (IBI)}, characterized as the difference between the last spike of a burst and the first one of the next one (end to start in the trace of a given neuron).
+	\item \textbf{Period}, which envelops the bursts from the three neurons, measured as the distance between the first spike of one burst in a neuron and the first spike of the next one on that neuron (start to start).
+	\item \textbf{NeuronX-NeuronY interval}, this interval is measured from the start of the burst of neuron X to the start of the burst of neuron Y (start X to start Y).
+	\item \textbf{NeuronX-NeuronY delay}, being the time lapse between the burst end of a neuron X and the burst beginning of neuron Y. (end X to start Y).
+\end{enumerate}
+
+\begin{figure}
+	\centering
+	\begin{minipage}{\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/methods-paper-modelo/figure4a.eps} 
+		\label{fig:intervals_bd}
+	\end{minipage}
+	% \hfill
+	
+	\vspace{1cm}
+	\begin{minipage}[t]{\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/methods-paper-modelo/figure4b.eps} 
+		\label{fig:intervals_der}
+	\end{minipage}
+	
+	\caption{\textbf{Panel A}. Individual neuron sequence interval definitions. Each BD label represents the burst duration, defined as the time interval from the first spike to the last spike in the neuron's burst. Period was measured as the interval from the first spike of N1 burst to the first spike of the next N1 burst, covering three phases %(N1M,N2v, N3t) 
+		in relation to the activity of the other neurons. IBI represents the interburst interval, defined as the time from the last spike of a neuron's burst to the first one of the next burst in the same neuron.
+		\textbf{Panel B}. Definition of intervals involving pairs of neurons. NXNY interval represents interval from NX start to NY start. NXNY delay represents interval from NX end to NY start. Period was measured from N1 start to N1 start, covering the three phases of the CPG rhythm.
+	}
+	
+	\label{fig:intervals}
+\end{figure}
+
+\subsection{Inducing variability in the model by current injection}
 \label{subsec:inj protocol}
-The spiking-bursting activity of the model CPG neurons can be modulated by using an additional current injection on each cell, implemented in the \(i_{inj}\) term of equation (\ref{eq:soma}), as performed in many experimental protocols. Depending on the value % of the current 
-applied,%TODO current o value applied?
-% the corresponding neuron dynamics changes. While for N2v a change in this current injection corresponds to a change in burst frequency (i.e. the number of bursts increases/decreases), for the rest of the neurons in the model (N1M, N3t and SO) a change in \(i_{inj}\) affects their burst duration. %%TODO ????
-the corresponding neuron dynamics changes. While for N2v a change in this injection corresponds to a change in burst frequency (i.e. the number of bursts increases/decreases),
-for the rest of the neurons in the model a change in \(i_{inj}\) affects burst duration for N3t and SO,  and the length of the depolarization phase in N1M.
+The spiking-bursting activity of the model CPG neurons can be modulated by using an additional current injection on each cell, implemented in the \(i_{inj}\) term of equation (\ref{eq:soma}), as performed in many experimental protocols. Depending on the current value applied, the corresponding neuron dynamics changes. While for N2v a change in this injection corresponds to a change in burst frequency (i.e. the number of bursts increases/decreases), for the rest of the neurons in the model a change in \(i_{inj}\) affects burst duration for N3t and SO, and the length of the depolarization phase in N1M.
 
 
-Whilst the single neuron model descriptions have no intrinsic variability, the effect produced by the modulation of the injected current in each neuron induces variability into the circuit, which allows characterizing the sequence intervals and the period, the associated robustness of the rhythm and the presence of dynamical invariants. Such stimulation has been used previously in the living circuit, as reported by Elliot et al. \cite{Elliott1991}. The authors of this work showed that it is possible to activate the feeding CPG with variability caused by current injection into individual cells in the circuit. CPG rhythms obtained under this type of stimulation differ depending on which neuron is being stimulated. 
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\textwidth]{img/methods-paper-modelo/circuit_w_current.pdf}
+	\caption{Illustration of the CPG activity when a current ramp \(i_{inj}\) is applied to N3t. Variability in the sequence intervals was induced by applying two consecutive ramps as the one shown in this figure into different cells.  }
+	\label{fig:complete ramp example}
+\end{figure}
+
+Whilst the single neuron model descriptions have no intrinsic variability, the effect produced by the modulation of the injected current in each neuron induces variability into the circuit, which allows characterizing the sequence intervals and the period, the associated robustness of the rhythm and the presence of dynamical invariants. Such stimulation has been used previously in the living circuit, as reported by \cite{Elliott1991}. The authors of this work showed that it is possible to activate the feeding CPG with variability caused by current injection into individual cells in the circuit. CPG rhythms obtained under this type of stimulation differ depending on which neuron is being stimulated. To induce variability in the model we used a ramp protocol resulting in circuit time-interval variations as in Fig. \ref{fig:complete ramp example}.
 
 % Even though this CPG model do not present intrinsic variability, thanks to the current \(i_{inj}\), variability is induced into the model, effectively changing burst duration. This current injection has also been used in Lymnaea preparation in living elements, stimulating N1M and SO, obtaining rhythm. Neural sequences obtained after the stimulation differ one another depending on which neuron is being stimulated. 
 
+
 By varying the current injected into N1M, its burst duration is kept nearly constant, but its depolarization phase before the spiking activity begins becomes longer. Since N3t is the neuron fitting in the sequence in that phase (see Fig. \ref{fig:model simulation}), it also increases its burst duration, being the most variable one in the CPG rhythm. 
 
-When %current 
-value \(i_{inj}\) is increased on neuron SO, its burst duration becomes longer. Since SO has a modulator effect over N3t and N1M, it also alters the burst duration of these two neurons.
+When value \(i_{inj}\) is increased on neuron SO, its burst duration becomes longer. Since SO has a modulator effect over N3t and N1M, it also alters the burst duration of these two neurons.
 
-Neuron N3t also shows variable burst duration when an evolving current is injected. When \(i_{inj}\) increases on N3t, its burst duration increases, elongating the N1M depolarization phase.  
+Neuron N3t also shows variable burst duration when an evolving current is injected. When \(i_{inj}\) value on N3t is larger, its burst duration increases, elongating the N1M depolarization phase.  
 
 Finally, when current is applied to N2v the effect on its burst duration or the burst duration of the rest of the neurons is rather small. However, \(i_{inj}\) % current 
 modulates N2v burst frequency through the hyperpolarization phase. 
 
 %cambios
-Therefore, we used a current ramp protocol to induce variability in the CPG model defined as follows: a ramp variable $c$, which controlled the current injection value ($i_{inj}=c$) %TODO
-on the neuron being stimulated, was increased from a minimum to a maximum value, and then decreased back to the initial value. This was repeated twice in each simulation. The ramp variable was modified with a fixed step value every 4.6 seconds (the approximate duration of two N3t bursts).
-% occurrence of each two bursts in N3t neuron (every 5 seconds). ***discutimos esto, es cada burst o cada dos como dice abajo, quizás convendría decir que corresponde a ese tiempo en el modelo sin estímulo. Por otro lado el lector se podría preguntar por qué no es una rampa de subida y bajada prestablecida en el tiempo***
-The minimum and maximum $c$ values were different in each cell and were %chosen experimentally using model simulations 
-tuned to generate realistic spiking-bursting behavior. %cambios : añadir por si experimentally no se entiende bien? depending on the effect of the injected current on the neuron to ensure robust burst generation in all neurons 
-%Note that this variable $c$ value which goes through the different values in the ramp is $i_{inj}$ value, replacing the constant value of this current.
-All parameters used for the simulation analyses reported in this paper are summarized in Table \ref{table:inj values}. An example of how this ramp current injection affects the rhythm is shown in Fig. \ref{fig:complete ramp example}. 
-%cambios : quitar esta frase e indicarlo en seccion 2.3
-% The rest of model and synapse parameters used to simulate the model are the same ones specified in the paper that describes the Vavoulis et al. model \cite{Vavoulis2007}.
-
+Therefore, we used a current ramp protocol to induce variability in the CPG model defined as follows: a ramp variable $c$, which controlled the current injection value ($i_{inj}=c$) on the neuron being stimulated, was increased from a minimum to a maximum value, and then decreased back to the initial value. This was repeated twice in each simulation. The ramp variable was modified with a fixed step value every 4.6 seconds (the approximate duration of two N3t bursts). The minimum and maximum $c$ values were different in each cell and were tuned to generate realistic spiking-bursting behavior. All parameters used for the simulation analyses reported in this paper are summarized in Table \ref{table:inj values}.
 
 \begin{table}[h!]
 \centering
@@ -46,61 +81,11 @@ All parameters used for the simulation analyses reported in this paper are summa
 \end{table}
 
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{img/methods-paper-modelo/figure3.eps}
-    \caption{Illustration of the CPG activity when a current ramp \(i_{inj}\) is applied to N3t. Variability in the sequence intervals was induced by applying two consecutive ramps as the one shown in this figure into different cells.  }
-    \label{fig:complete ramp example}
-\end{figure}
 
 
-\subsection{Model simulation specifications and statistical analysis}
-Simulations of the Vavoulis et al. model \cite{Vavoulis2007} were implemented in C++. The code of the feeding CPG model implementation is available at \href{github.com/GNB-UAM/CPG-feeding-Lymnaea}{https://github.com/GNB-UAM/CPG-feeding-Lymnaea}. Each simulation had the duration of two consecutive cycles of up and down ramps as the one shown in Fig. \ref{fig:complete ramp example} using the parameters described in Table \ref{table:inj values}. The number of bursts in each simulation was approximately 140 (this number slightly depends on the neuron stimulated). Parameter values such as reversal potentials and synaptic conductances were the same ones specified in \cite{Vavoulis2007}.
-The statistical analysis was done in Python 3.6. For the temporal variability study, first the spikes were detected %\sout{using a threshold protocol. Due to the drift in the spike amplitude during the bursting of some of the neurons (as N2v), the spike detection was performed over the $1^{st}$ derivative of the signal}
-using the change in the derivative during the computation of the model along with a threshold condition. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. 
+\subsection{Model simulation specifications and statistical analysis}\todo{añadir en métodos generales o ampliarlo también a experimental}
+Simulations of \cite{vavoulis_computational_2007} model were implemented in C++. The code of the feeding CPG model implementation is available at \href{github.com/GNB-UAM/CPG-feeding-Lymnaea}{https://github.com/GNB-UAM/CPG-feeding-Lymnaea}. This model was also included in Neun library in a Github repository \href{github.com/GNB-UAM/Neun}{https://github.com/GNB-UAM/Neun}. Each simulation had the duration of two consecutive cycles of up and down ramps as the one shown in Fig. \ref{fig:complete ramp example} using the parameters described in Table \ref{table:inj values}. The number of bursts in each simulation was approximately 140 (this number slightly depends on the neuron stimulated). Parameter values such as reversal potentials and synaptic conductances were the same ones specified in \cite{Vavoulis2007}.
+The statistical analysis was done in Python 3.6. For the temporal variability study, first the spikes were detected using the change in the derivative during the computation of the model along with a threshold condition. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. 
 
-Thus, all intervals defined below in section \ref{subsec:intervals} were measured and their variability was characterized by statistical analysis tools, i.e,  boxplots and linear correlations. For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. 
+Thus, all intervals defined in section \ref{subsec:intervals} were measured and their variability was characterized by statistical analysis tools, i.e,  boxplots and linear correlations. For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. \todo{mover a methods generales?}
 
-\subsection{Time references, intervals and CPG sequence}
-\label{subsec:intervals}
-The variability study addressed here is based on the characterization of  cycle-by-cycle intervals in the rhythm produced by the model CPG. % In order to explore possible dynamical invariants on this \textit{Lymnaea} feeding CPG, the intervals here analyzed follow the ones defined for the stomatogastric CPG dynamical invariants \cite{Elices2019}. Hence, based on the burst duration we will have in each cycle all corresponding burst duration intervals and some derived intervals obtained by the combination of pair of neurons, as well as the period. The resulting intervals here analyzed are shown in figure \ref{fig:intervals}. 
-In our analysis of variability, we assess the presence of linear relationships between the intervals that build the sequence and the cycle-by-cycle period to characterize and unveil similar dynamical invariants as those found in the stomatogastric CPG \cite{elices_robust_2019}. 
-%Hence, we characterize the intervals building the CPG sequence, including its period. 
-%on the burst duration we will have in each cycle all corresponding burst duration intervals and some derived intervals obtained by their combination of pair of neurons, including the period.
-% Hence, the burst events detected are going to be used to define three intervals in the trace of each individual neuron, and two additional intervals defined from the relation between two neurons. 
-This is illustrated in Fig. \ref{fig:intervals}, where single neuron intervals and intervals defined between neurons are depicted. 
-%cambios
-The intervals here analyzed can be measured for any three neurons following a robust triphasic rhythm. In this paper N1, N2 and N3 represent the feeding CPG neurons simulated in the model: N1M, N2v and N3t, respectively.
-
-% Here is the definition of each interval:
-% \begin{enumerate}
-%     \item \textbf{Burst Duration (BD)}, measured as the time interval between the first and the last spike of the burst (start to end in the trace of a given neuron).
-%     \item \textbf{Inter burst interval (IBI)}, characterised as the difference between the last spike of a burst and the first one of the next one (end to start in the trace of a given neuron).
-%     \item \textbf{Period}, which envelops the bursts from the three neurons, measured as the distance between the first spike of one burst in a neuron and the first spike of the next one on that neuron (start to start).
-%     \item \textbf{NeuronX-NeuronY interval}, this interval is measured from the burst beginning of neuron X to the burst beginning of neuron Y (start X to start Y).
-%     \item \textbf{NeuronX-NeuronY delay}, being the time lapse between the burst end of a neuron X and the burst beginning of neuron Y. (end X to start Y).
-% \end{enumerate}
-
-\begin{figure}
-\centering
-\begin{minipage}{\textwidth}
-\centering
-\includegraphics[scale=0.8]{img/methods-paper-modelo/figure4a.eps} 
-\label{fig:intervals_bd}
-\end{minipage}
-% \hfill
-
-    \vspace{1cm}
-\begin{minipage}[t]{\textwidth}
-\centering
-\includegraphics[scale=0.8]{img/methods-paper-modelo/figure4b.eps} 
-\label{fig:intervals_der}
-\end{minipage}
- 
- \caption{\textbf{Panel A}. Individual neuron sequence interval definitions. Each BD label represents the burst duration, defined as the time interval from the first spike to the last spike in the neuron's burst. Period was measured as the interval from the first spike of N1 burst to the first spike of the next N1 burst, covering three phases %(N1M,N2v, N3t) 
- in relation to the activity of the other neurons. IBI represents the interburst interval, defined as the time from the last spike of a neuron's burst to the first one of the next burst in the same neuron.
-    \textbf{Panel B}. Definition of intervals involving pairs of neurons. NXNY interval represents interval from NX start to NY start. NXNY delay represents interval from NX end to NY start. Period was measured from N1 start to N1 start, covering the three phases of the CPG rhythm.
-    }
-    
-    \label{fig:intervals}
-\end{figure}
