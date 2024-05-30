@@ -1,63 +1,62 @@
-When studying temporal structures in neural dynamics, the definition of the time references is a key first point. In the computational analysis in the previous section, the time reference to define the intervals where first and last spike in the burts. In that case, as well as in the case of inter-neurons in \textit{C. maenas} the CPG phases are directly related with the bursting activity of these neurons. However, in the case of \textit{Lymnaea stagnalis}, activity is usually characterized using recordings from both inter-neurons and moto-neurons \parencite{elliot, benjamin, crossley}. This leads to a more flexible reference of the time references, so for this analysis, references will be defined by the phase and each phase will be bounded by different neurons. For example, in Figure \ref{fig:example lymnaea phases recording} the three phases in the  CPG are marked over the recording, note how it can be delimited by the neurons in the circuit but some of the moto-neurons cover several phases and that phases are delimited not only by the spikes but the hyperpolarization periods. Therefore, to characterize the time sequences in the feeding CPG, we need compound reference from several neural recordings that can be summarized as in Table \ref{table:cpg ref intervals}
+When studying temporal structures in neural dynamics, the definition of the time references is a key first point. In the computational analysis in the previous section, the time reference to define the intervals where first and last spike in the burts. In that case, as well as in the case of inter-neurons in \textit{C. maenas} the CPG phases are directly related with the bursting activity of these neurons and the burst can be consistently defined by the first and last spike. However, in the case of \textit{Lymnaea stagnalis}, activity is usually characterized using recordings from both inter-neurons and moto-neurons \parencite{elliott_interactions_1985, staras_pattern-generating_1998, benjamin_distributed_2012}. This leads to the need of a combination of burst references to define the time intervals in the cycles and phases of the CPG. Thus, for this analysis, we will consider the three phases in the CPG, protraction, rasp and swallow, that are associated mainly to N1M, N2v and N3t neurons. Since it is not always possible to record those neurons at the same time (specially N2v that is in the ventral side), we will define them by a combination of motor- and inter-neuron recordings that follow those neurons and represent each phase. For example, in Figure \ref{fig:example lymnaea phases recording} the three phases in the  CPG are marked by a colored background over the recording, note how it can be delimited by the neurons in the circuit but some of the moto-neurons cover several phases, as it is the case of B4 in panel a) or B3 in panel b). Also phases can be defined by the first and last spike, as it is the case for phase N3 and neuron B8, but in other cases as the phase N2, the reference is the hyperpolarization of some neurons, such as the strong inhibition visible in neuron B5 in panel b). Also, depolarization of some neurons carry relevant information, since for example in the case of B1 the "bumps" visible represent the N1 phase, by the connection between N1M and B1. Therefore, to characterize the time sequences in the feeding CPG, we need compound reference from several neural recordings that can be summarized as in Table \ref{table:cpg ref intervals}
 
-%\TODO revisar
-Table \ref{table:tabla spikes} displays a summary of some neurons involved in each phase. \todo{viene del tfm revisar}
-
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
 \begin{table}[htb!]
-	\begin{tabular}{cl|l|ll}
-		\multicolumn{1}{l}{}                                 & \multicolumn{1}{c|}{\textbf{N1}} & \multicolumn{1}{c|}{\textbf{N2}} & \multicolumn{1}{c}{\textbf{N3}} &  \\
-		\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Start}}} & Last spike of N3t/B3             & Inhibition of B5                 & First spike of B8               &  \\
-		\multicolumn{1}{c|}{}                                & Depolarization in B1             &                                  &                                 &  \\ \cline{1-4}
-		\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{End}}}   & Last spike of B5                 & First spike of B8                & Last spike of N3t/B3            &  \\
-		\multicolumn{1}{c|}{}                                & Hyperpolarization in B1          &                                  &                                 & 
+	\centering
+	\begin{tabular}{cl|l|l}
+		\multicolumn{1}{l}{}                                 & \multicolumn{1}{c|}{\textbf{N1-Protraction}} & \multicolumn{1}{c|}{\textbf{N2-Rasp}} & \multicolumn{1}{c}{\textbf{N3-Swallow}} \\ \hline
+		\multicolumn{1}{c|}{\multirow{3}{*}{\textbf{Start}}} & Last spike of N3t/B3                         & Inhibition of B5                      & First spike of B8                       \\
+		\multicolumn{1}{c|}{}                                & Depolarization or first spike in B1          &                                       &                                         \\
+		\multicolumn{1}{c|}{}                                & First spike in B6                            &                                       &                                         \\ \hline
+		\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{End}}}   & Last spike of B5                             & First spike of B8                     & Last spike of N3t/B3                    \\
+		\multicolumn{1}{c|}{}                                & Hyperpolarization in B1 or B6                &                                       &                                        
 	\end{tabular}
 	\caption{Time reference boundaries for the three phases in the feeding CPG}
 	\label{table:cpg ref intervals}
 \end{table}
 
 
-\begin{table}[h!]
-	\centering
-	\begin{tabular}{lccc}
-		Neuron                                           & \multicolumn{1}{l}{Protraction} & \multicolumn{1}{l}{Rasp} & \multicolumn{1}{l}{Swallow} \\ \hline
-		Interneuron                                     & N1                              & N2                       & N3                          \\
-		& \multicolumn{1}{l}{}            & \multicolumn{1}{l}{}     & \multicolumn{1}{l}{}        \\
-		\multicolumn{1}{c}{\multirow{3}{*}{Motoneuron}} & B7                              & B10                      & B3                        \\
-		\multicolumn{1}{c}{}                            & B6                              & B4                       & B9                        \\
-		\multicolumn{1}{c}{}                            & B1                              &                          &                         
-	\end{tabular}
-	\caption{Neuron participation in feeding phases.}
-	\label{table:tabla spikes}
-\end{table}
-
-
 
 \begin{figure}[bth!]
-\centering
-\includegraphics[width=\textwidth]{img/invariants/example_phases_1.pdf}
-\\
-\vspace{10pt}
-\includegraphics[width=\textwidth]{img/invariants/example_phases_2.pdf}
-\caption{Delimitation of phases in the feeding CPG of \textit{Lymnaea stagnalis} based on different recordings.}
-\label{fig:example lymnaea phases recording}
+	\centering
+	\begin{minipage}[b]{\textwidth}
+		\makebox[0pt][l]{\hspace*{-130pt}\text{a)}}\\
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/invariants/example_phases_1.pdf}
+	\end{minipage}
+	\vspace{20pt}
+	\begin{minipage}[b]{\textwidth}
+		\makebox[0pt][l]{\hspace*{-130pt}\text{b)}}\\
+		\centering
+		\includegraphics[width=0.9\textwidth]{img/invariants/example_phases_2.pdf}
+	\end{minipage}
+	\caption{Delimitation of phases in the feeding CPG of \textit{Lymnaea stagnalis} based on different recordings. Panel a) intracellular recordings for motoneurons B4,B3,B1 and B8 and the interneuron N1M. Phases are delimited by N1M and B1, that have the same activation time for phase N1, the inhibition of N1M and the start of the depolarization in B8 for phase N2 and the first and last spike of burst B8 for phase N3. Panel b) intracellular recordings for motoneurons B3,B4,B5, B1 and B8. Phases are delimited by B1 depolarization for phase N1, the strong inhibition of B5 for phase N2 and the fisrt and last spike of burst B8 for phase N3.}
+	\label{fig:example lymnaea phases recording}
 \end{figure}
 
+Another key point in the study of the feeding CPG of \textit{L. stagnalis} is that the generation of the rhythm is a combined action of different cells \cite{benjamin_distributed_2012}, not only interneurons but also motoneurons have a role in the activation \parencite{staras_pattern-generating_1998} and modulatory neurons in the buccal and cerebral ganglia are involved in the rhythm. All these factors affect the rhythm and thus the neuronal sequential activation and how variability is distributed among the different intervals cycle by cycle. Also, not all the neurons are involved every time the rhythm is active, and that gives also information about the different contexts in which the rhythm is taking part. For example, the rhythm can be activated by the presence of food or sucrose stimulation, in which case the animal needs to initiate the activity and ingest food, the rhythm is started by the stimulation of the lip nerve that also stimulates N1M. Also, even at the absence of food but when the animal is hungry, the CPG can be activated, in this case with a strong role of N3t as modulator. The modulation of the rhythm is also a key aspect and modulatory neurons as SO or CV1a control the rhythm after its initiation, showed to have distinct alternative roles in the activity \parencite{kemenes_multiple_2001}. 
 
-
-
-\begin{figure}[bth!]
+\begin{figure}[bth!]In this section we will analyze and describe different examples of experiments for the isolated ganglia with intracellular recordings under: spontaneous activity, SO-driven activity spontaneous and induced, medium lip nerve stimulation induced activity and CV1a-driven induced activity.
 	\centering
 	\includegraphics[width=\textwidth]{img/invariants/distributed_benjamin_2012.pdf}
-	\caption{Representation of the distributed system of the feeding CPG. From left to right .... Dots indicate inhibitory chemical synapses, bars excitatory chemical synapses and resistor symbols electrotonic (electrical) synapses. Panel C from Figure 1 in \cite{benjamin_distributed_2012} (work under license \href{http://creativecommons.org/licenses/by/2.0}{Creative Commons Attribution})}
+	\caption{Representation of the distributed system of the feeding CPG. Dots indicate inhibitory chemical synapses, bars excitatory chemical synapses and resistor symbols electrotonic (electrical) synapses. Colors indicate the function of the neuron classified in modulatory or initiator (orange and yellow, respectively) and the three phases protraction, rasp and swallow (green, blue and red, respectively). From left to right food detection represented by Lips that stimulate CGC, SO CBIs and N1M neurons and initiate the rhythm. The ongoing activity is then modulated by those neurons but also by OC neurons and N1 and N3t neuron. Some examples of motor neurons are represented on the right side of the panel, associated to each feeding phase. This figure was adapted from Panel C from Figure 1 in \cite{benjamin_distributed_2012} (work under license \href{http://creativecommons.org/licenses/by/2.0}{Creative Commons Attribution})}
 	%	Synaptic connectivity and functions of neurons in the feeding circuit. Modulatory function is indicated by yellow and initiating function by orange. CPG interneurons and motoneurons active during the three phases of the feeding rhythm are indicated by green (P = protraction), blue (R = rasp) and red (S = swallow). Neurons labeled with two colors have two functions. Dots indicate inhibitory chemical synapses, bars excitatory chemical synapses and resistor symbols electrotonic (electrical) synapses. This figure emphasizes the point that many of the neurons have more than function in the feeding network. See Abbreviations for all definitions of neuron types.
-	\label{fig:feeding distribution}
+	\label{fig:feeding distribution}%
 \end{figure}
 
+%Benjamin2012    One of the central controllers of
+%spontaneous feeding is the N3t CPG interneuron and
+%this cell is involved in mediating the effects of hunger
+%and satiety. As was described earlier, the N3ts fire toni-
+%cally to inhibit the N1M cells and the rate of this tonic
+%activity determines the level of activity in the whole feed-
+%ing CPG. By comparing the rates of firing in isolated
+%ganglia it was found that the N3t firing frequency was
+%higher in satiated compared with starved snails and that
+%this was inversely correlated to the frequency of sponta-
+%neously fictive feeding cycles [4]. 
 
-
-
+%kemenes 2001
+%CV1a by modulating motoneuron burst duration and SO by setting the frequency of the ongoing rhythm
 
 
 \subsubsection{Invariants in spontaneous activity}
