@@ -2,7 +2,7 @@ The first objective reported in this section was to reproduce in a computational
 
 First result we report is that the the model of the feeding CPG faithfully reproduces the activity of the main neurons involved in the generation of its triphasic rhythm \parencite{vavoulis_dynamical_2007}. This includes their waveforms and the relationships between the cycle period and the duration of several intervals reported in \parencite{elliott_temporal_1991}. Note that, since there was not a description of a chaotic mode, all the rhythms explored here were analyzed from induced stimulation, not by simulating spontaneous activity. This was a restriction when exploring spontaneous activity, since the circuit needed to be altered by one of the neurons, simulating a extended experimental protocol, but still altering the circuit in a predefined way. Also, other phenomena reported in the pyloric CPG experimental work, were there was a "reset" in the inter-cycle dynamics of the dynamical invariants, could not be explored in this model, since the ramp value was progressive (see Apendix Fig. \ref{fig:N1M stimulation pairplot reset} for a representation of this non-reset output). All this will be reported in the following Section \ref{sec:experimental sussex} with experimental recordings and other options to reproduce the functional variability will be discussed in Sec. \ref{sec:model variability}
 
-\subsubsection{N1M driven variability}
+\subsection{N1M driven variability}
 \label{subsec:n1m driven}
 
 N1M neuron is frequently stimulated using ramp protocols in living preparations \parencite{elliott_temporal_1991} as it plays an important role in initiating the CPG rhythm. In our case, after applying the current injection protocol into N1M and detecting the spike and burst events for each neuron in the CPG model, all  intervals represented in Fig. \ref{fig:intervals} were quantified. We show in Fig. \ref{fig:invariant n1m} the variability and the correlation between the period and each interval.
@@ -15,50 +15,29 @@ Likewise, the most variable intervals derived from other time references of the 
 
 On the other hand, intervals related to neuron N2v and N1M are the least variable. N2v is the one least affected by the global activity of the circuit, in terms of its burst duration. Moreover, some of the intervals are very short, or even negative, since the end of a given neuron's burst overlaps the next one's beginning (N1-N2 and N3-N1 delay). This is the case for N1-N2 and N3-N1 delay (4th row, 1st column and 5th row, 1st column, respectively in Fig. \ref{fig:invariant n1m}.b.).  
 
-
-%\begin{figure}[h!]
-%	\begin{minipage}[b]{\textwidth}
+%\begin{figure}[hbt!]
+%	\begin{minipage}[b]{0.45\textwidth}
 %		\centering
-%		\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_boxplot_h.pdf}
-%	%	\caption{}
-%	%	\label{fig:invariant n1m boxplot}
+%		\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_boxplot.pdf}
 %	\end{minipage}
-%	\begin{minipage}[b]{\textwidth}
+%	\begin{minipage}[b]{0.53\textwidth}
 %		\centering
-%		\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
-%		\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_intervals.pdf}%
-%		
-%		\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_delays.pdf}%	
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_intervals.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_delays.pdf}
+%		\end{minipage}
 %	\end{minipage}
 %	\caption{a).Box-plots of the  sequence intervals under N1M neuron stimulation. b) Interval correlations to period for N1M-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays. Linear relationships are quantified by the $R^2$ values of the regression.}
 %	\label{fig:invariant n1m}
 %\end{figure}
-
-
-
-\begin{figure}[hbt!]
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_boxplot.pdf}
-	\end{minipage}
-	\begin{minipage}[b]{0.53\textwidth}
-		\centering
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_intervals.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_delays.pdf}
-		\end{minipage}
-	\end{minipage}
-	\caption{a).Box-plots of the  sequence intervals under N1M neuron stimulation. b) Interval correlations to period for N1M-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays. Linear relationships are quantified by the $R^2$ values of the regression.}
-	\label{fig:invariant n1m}
-\end{figure}
 
 
 
@@ -85,7 +64,7 @@ On the other hand, intervals related to neuron N2v and N1M are the least variabl
 %\end{figure}
 %
 
-\subsubsection{N3t driven variability}
+\subsection{N3t driven variability}
 
 The stimulation protocol was also applied to N3t neuron. In spite that no previous analysis on injecting a current ramp into this neuron has been reported neither experimentally nor in the feeding CPG computational model, due to the connectivity in the circuit, it can be expected that stimulation of N3t will induce variability in the rhythm. The characterization of the sequence intervals in this case are shown in Fig. 
 \ref{fig:invariant n3t boxplot} and the correlation analysis is displayed in Fig. \ref{fig:invariant n3t test17}.
@@ -127,35 +106,35 @@ Figure \ref{fig:invariant n3t test17} plots each interval duration against the p
 %
 
 
-\begin{figure}[hbt!]
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_boxplot.pdf}
-	\end{minipage}
-	\begin{minipage}[b]{0.53\textwidth}
-		\centering
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_durations.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_intervals.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_delays.pdf}
-		\end{minipage}
-	\end{minipage}
-	\caption{a) Box-plots of the sequence intervals under N3t neuron stimulation. b) Interval correlations to Period for N3t-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays}
-	\label{fig:invariant n3t test17}
-\end{figure}
+%\begin{figure}[hbt!]
+%	\begin{minipage}[b]{0.45\textwidth}
+%		\centering
+%		\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_boxplot.pdf}
+%	\end{minipage}
+%	\begin{minipage}[b]{0.53\textwidth}
+%		\centering
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_durations.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_intervals.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_delays.pdf}
+%		\end{minipage}
+%	\end{minipage}
+%	\caption{a) Box-plots of the sequence intervals under N3t neuron stimulation. b) Interval correlations to Period for N3t-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays}
+%	\label{fig:invariant n3t test17}
+%\end{figure}
+%
 
 
 
 
-
-\subsubsection{SO driven variability}
+\subsection{SO driven variability}
 
 The same protocol was implemented with a ramp stimulation applied to SO to induce variability, using the injected current values shown in Table \ref{table:inj values} for each neuron. Events were detected and all intervals were measured (Fig. \ref{fig:intervals}) and their variability was characterized. %This neuron has also been used in previous studies with stimulation protocols both in electrophysiological experiments and in model simulations due to its important role in rhythm activation and modulation. ***se podría quitar, si no hay que poner las referencias otra vez****
 
@@ -197,33 +176,33 @@ Compared to the N1M and N3t stimulation results, there is another difference whe
 %\end{figure}
 %
 
-\begin{figure}[hbt!]
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_boxplot.pdf}
-	\end{minipage}
-	\begin{minipage}[b]{0.53\textwidth}
-		\centering
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_durations.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_intervals.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_delays.pdf}
-		\end{minipage}
-	\end{minipage}
-	\caption{a) Box-plots of the sequence intervals under SO neuron stimulation. b) Interval correlations to Period for SO-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays.}
-	\label{fig:invariant so test19}
-\end{figure}
+%\begin{figure}[hbt!]
+%	\begin{minipage}[b]{0.45\textwidth}
+%		\centering
+%		\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_boxplot.pdf}
+%	\end{minipage}
+%	\begin{minipage}[b]{0.53\textwidth}
+%		\centering
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_durations.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_intervals.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_delays.pdf}
+%		\end{minipage}
+%	\end{minipage}
+%	\caption{a) Box-plots of the sequence intervals under SO neuron stimulation. b) Interval correlations to Period for SO-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays.}
+%	\label{fig:invariant so test19}
+%\end{figure}
 
 
 
-\subsubsection{Intervals relation beyond cycle period}
+\subsection{Time intervals relations cycle-by-cycle beyond period}
 We saw so far the sequential dynamical invariants in terms of strong linear relationships between the distinct intervals in a cycle and the period, however, studying the relations between all intervals can also show interesting information about the temporal variability distribution in the ongoing activity \cite{}. In Figs \ref{fig;model n1m stimulation pairplot} to \ref{fig:model so stimulation pairplot} there is a representation of all possible combinations of the defined intervals. 
 
 
@@ -252,7 +231,7 @@ We saw so far the sequential dynamical invariants in terms of strong linear rela
 \end{figure}
 
 
-\subsubsection{Comparison with 2 phases intervals}
+\subsection{Comparison with 2 phases intervals}
 Although during this section we analyzed the sequential dynamical invariants in for 3 phases, we can also define the intervals for two phases of the neurons, taking as reference for example, N1 and N3. This is the case in the work by \cite{elices_robust_2019}, and in the following section we will also use two phases for some of the recordings were the N2 phase was not possible to define. Therefore, in this subsection we will show an example of the intervals conformed with two phase, to compare and analyze the differences in the dynamical invariants. 
 
 
