@@ -167,48 +167,89 @@ N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase w
 
 
 
-
+\clearpage
+\newpage
 \subsection{Invariants in SO driven activity}
-\paragraph{1. Spontaneous SO modulation recording}
+As we saw before, SO role in the feeding CPG is modulatory, which means, that modifies the rhythm once it is activated. In the model analysis, in section \ref{subsec:so driven} we showed that when the variability was induced modifying SO, the variability distribution changed, equating N1 phase and N3 variability, and consequently increasing the R-squared values in their relation with the period. Therefore, in the living recordings we can expect that the variability cycle-by-cycle is distributed during the modulation of SO, which is connected to N1M and N3t (see Fig. \ref{fig:feeding distribution}). 
+
+In this subsection we will see an example from a spontaneous activity that for two lapses of activity the SO is modulating (this is detected by the inhibition of B4 and activation of B3, in Fig. \ref{fig:SO-spontaneous-driven} this process is represented in the original data. In that figure it can also be seen how during the SO modulation, the activity "stabilizes" with less periods of variability. In Figs \ref{fig:so spontaneous invariants 1},\ref{fig:no so spontaneous invariants} and \ref{fig:so spontaneous invariants 2} the characterization of the variability of the time intervals and their relation to the cycle period is depicted, when SO is modulating, ceases its modulation and then restarts it, respectively. 
+
+
+%\paragraph{1. Spontaneous SO modulation recording}
 % Nota: datos de preparación 4 en la detección está solo n1m y b8, las fases son N1 y N3. 
+ 
+ 
+ \begin{figure}[htbp]
+ 	\centering
+ 	\includegraphics[width=\textwidth]{./img/invariants/SO-spontaneuous-driven.pdf}
+ 	\caption{Representation of the spontaneous recording with lapses of SO modulation. The parts of the recording with yellow background the activity was modulated by SO. From top to bottom, intracellular recording of a neuron from the B4 cluster, B3 motoneuron, B1 motoneuron, B8 motoneuron, N1M interneuron}
+ 	\label{fig:SO-spontaneous-driven}
+ \end{figure}
+ 
  
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals.pdf}
+	\includegraphics[width=\textwidth]{./invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals.pdf}
 	\caption{\textbf{Spontaneous SO neuron driven}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity driven by SO neuron.}
-	\label{fig:so spontaneous invariants}
+	\label{fig:so spontaneous invariants 2}
 \end{figure}
+
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_pairplot.pdf}
+%	\caption{\textbf{Spontaneous SO neuron driven}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity driven by SO neuron.}
+%	\label{fig:so spontaneous invariants pairplot 2}
+%\end{figure}
+% 	
+
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_pairplot.pdf}
-	\caption{\textbf{Spontaneous SO neuron driven}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity driven by SO neuron.}
-	\label{fig:so spontaneous invariants pairplot}
-\end{figure}
- 	
-
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep4_so_no_driven/images/panel_with_intervals.pdf}
-	\caption{\textbf{Spontaneous activity when SO-driven is over}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
+	\includegraphics[width=\textwidth]{./invariants/data/SUSSEX/prep4_so_no_driven/images/panel_with_intervals.pdf}
+	\caption{\textbf{Spontaneous activity when SO-driven ceases}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
 	\label{fig:no so spontaneous invariants}
 \end{figure}
  	 
  
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep4_so_no_driven/images/panel_with_pairplot.pdf}
+%	\caption{\textbf{Spontaneous activity when SO-driven ceases}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
+%	\label{fig:no so spontaneous invariants pairplot}
+%\end{figure}
+
+
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep4_so_no_driven/images/panel_with_pairplot.pdf}
-	\caption{\textbf{Spontaneous activity when SO-driven is over}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
-	\label{fig:no so spontaneous invariants pairplot}
+	\includegraphics[width=\textwidth]{./invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals.pdf}
+	\caption{\textbf{Spontaneous SO neuron modulation restarts}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity driven by SO neuron.}
+	\label{fig:so spontaneous invariants 1}
 \end{figure}
+
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_pairplot.pdf}
+%	\caption{\textbf{Spontaneous SO neuron driven}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity driven by SO neuron.}
+%%	\label{fig:so spontaneous invariants pairplot 2}
+%\end{figure}
+
+
+
  
-\paragraph{2. Stimulated SO recording}
+%\paragraph{2. Stimulated SO recording}
 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/SO_driven/images/panel_with_pairplot.pdf}
+	\includegraphics[width=0.6\textwidth]{./invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_pairplot.pdf}
+	\caption{\textbf{Spontaneous SO neuron driven}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity driven by SO neuron.}
+	\label{fig:so spontaneous invariants pairplot 2}
+\end{figure}
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./invariants/data/SUSSEX/SO_driven/images/panel_with_pairplot.pdf}
 	\caption{\textbf{SO driven stimulation}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG under SO modulatory neuron stimulation.}
 	\label{fig:so stimulation pairplot}
 \end{figure}
