@@ -1,4 +1,4 @@
-When studying temporal structures in neural dynamics, the definition of the time references is a key first point. In the computational analysis in the previous section, the time reference to define the intervals where first and last spike in the burts. In that case, as well as in the case of inter-neurons in \textit{C. maenas} the CPG phases are directly related with the bursting activity of these neurons and the burst can be consistently defined by the first and last spike. However, in the case of \textit{Lymnaea stagnalis}, activity is usually characterized using recordings from both inter-neurons and moto-neurons \parencite{elliott_interactions_1985, staras_pattern-generating_1998, benjamin_distributed_2012}. This leads to the need of a combination of burst references to define the time intervals in the cycles and phases of the CPG. Thus, for this analysis, we will consider the three phases in the CPG, protraction, rasp and swallow, that are associated mainly to N1M, N2v and N3t neurons. Since it is not always possible to record those neurons at the same time (specially N2v that is in the ventral side), we will define them by a combination of motor- and inter-neuron recordings that follow those neurons and represent each phase. For example, in Figure \ref{fig:example lymnaea phases recording} the three phases in the  CPG are marked by a colored background over the recording, note how it can be delimited by the neurons in the circuit but some of the moto-neurons cover several phases, as it is the case of B4 in panel a) or B3 in panel b). Also phases can be defined by the first and last spike, as it is the case for phase N3 and neuron B8, but in other cases as the phase N2, the reference is the hyperpolarization of some neurons, such as the strong inhibition visible in neuron B5 in panel b). Also, depolarization of some neurons carry relevant information, since for example in the case of B1 the "bumps" visible represent the N1 phase, by the connection between N1M and B1. Therefore, to characterize the time sequences in the feeding CPG, we need compound reference from several neural recordings that can be summarized as in Table \ref{table:cpg ref intervals}
+When studying temporal structures in neural dynamics, the definition of the time references is a key first point. In the computational analysis in the previous section, the time reference to define the intervals were first and last spike of each burst. In that case, as in the case of interneurons in \textit{C. maenas} the CPG phases are directly related with the bursting activity of these neurons and the burst can be consistently defined by the first and last spike. However, in the case of \textit{Lymnaea stagnalis}, activity is usually characterized using recordings from both interneurons and motoneurons \parencite{elliott_interactions_1985, staras_pattern-generating_1998, benjamin_distributed_2012}. This leads to the need of a combination of burst references to characterize the phases of the CPG based on the time intervals cycle by cycle. Thus, for this analysis, we will consider the three phases in the CPG, protraction, rasp and swallow, that are associated mainly to N1M, N2v and N3t neurons. Since it is not always possible to record those neurons at the same time (specially N2v that is in the ventral side), we will define them by a combination of interneurons and motoneurons following their activity at each phase. For example, in Figure \ref{fig:example lymnaea phases recording} the three phases in the  CPG are marked by a colored background over the recording, note how it can be delimited by the neurons in the circuit but some of the motoneurons cover several phases, as it is the case of B4 in panel a) or B3 in panel b). Also phases can be defined by the first and last spike, as it is the case for phase N3 and neuron B8, but in other cases as the phase N2, the reference is the hyperpolarization of some neurons, such as the strong inhibition visible in neuron B5 in panel b). Also, depolarization of some neurons carry relevant information, since for example in the case of B1 the "bumps" visible represent the N1 phase, by the connection between N1M and B1. Therefore, to characterize the time sequences in the feeding CPG, we need compound reference from several neural recordings that can be summarized as in Table \ref{table:cpg ref intervals}. Note that, although different time references must be taken into account when reaching conclusions about the time-interval restrictions and analysis, all possible intervals conforming each cycle between the neurons are taking into account in this analysis (see \ref{subsec:intervals}), so the restrictions and analysis are still relevant.
 
 \begin{table}[htb!]
 	\centering
@@ -35,7 +35,7 @@ When studying temporal structures in neural dynamics, the definition of the time
 
 Another key point in the study of the feeding CPG of \textit{L. stagnalis} is that the generation of the rhythm is a combined action of different cells \cite{benjamin_distributed_2012}, not only interneurons but also motoneurons have a role in the activation \parencite{staras_pattern-generating_1998} and modulatory neurons in the buccal and cerebral ganglia are involved in the rhythm. All these factors affect the rhythm and thus the neuronal sequential activation and how variability is distributed among the different intervals cycle by cycle. Also, not all the neurons are involved every time the rhythm is active, and that gives also information about the different contexts in which the rhythm is taking part. For example, the rhythm can be activated by the presence of food or sucrose stimulation, in which case the animal needs to initiate the activity and ingest food, the rhythm is started by the stimulation of the lip nerve that also stimulates N1M. Also, even at the absence of food but when the animal is hungry, the CPG can be activated, in this case with a strong role of N3t as modulator. The modulation of the rhythm is also a key aspect and modulatory neurons as SO or CV1a control the rhythm after its initiation, showed to have distinct alternative roles in the activity \parencite{kemenes_multiple_2001}. 
 
-\begin{figure}[bth!]In this section we will analyze and describe different examples of experiments for the isolated ganglia with intracellular recordings under: spontaneous activity, SO-driven activity spontaneous and induced, medium lip nerve stimulation induced activity and CV1a-driven induced activity.
+\begin{figure}[bth!]
 	\centering
 	\includegraphics[width=\textwidth]{img/invariants/distributed_benjamin_2012.pdf}
 	\caption{Representation of the distributed system of the feeding CPG. Dots indicate inhibitory chemical synapses, bars excitatory chemical synapses and resistor symbols electrotonic (electrical) synapses. Colors indicate the function of the neuron classified in modulatory or initiator (orange and yellow, respectively) and the three phases protraction, rasp and swallow (green, blue and red, respectively). From left to right food detection represented by Lips that stimulate CGC, SO CBIs and N1M neurons and initiate the rhythm. The ongoing activity is then modulated by those neurons but also by OC neurons and N1 and N3t neuron. Some examples of motor neurons are represented on the right side of the panel, associated to each feeding phase. This figure was adapted from Panel C from Figure 1 in \cite{benjamin_distributed_2012} (work under license \href{http://creativecommons.org/licenses/by/2.0}{Creative Commons Attribution})}
@@ -58,122 +58,131 @@ Another key point in the study of the feeding CPG of \textit{L. stagnalis} is th
 %kemenes 2001
 %CV1a by modulating motoneuron burst duration and SO by setting the frequency of the ongoing rhythm
 
+In this section we will analyze and describe different examples of experiments for the isolated ganglia with intracellular recordings under: spontaneous activity, SO-driven activity spontaneous and induced, medium lip nerve stimulation induced activity and CV1a-driven induced activity.
 
-\subsubsection{Invariants in spontaneous activity}
+
+
+\subsection{Invariants in spontaneous activity}
+The spontaneous activity here refers to intracellular recordings of the buccal ganglia after the isolation of the CNS with no chemical or electrical induced stimulation. In that case, since the CPG is able to maintain the activity in an autonomous manner, it keeps the motor activity as if the CNS was not isolated. In this case, although the characterization of the sequential dynamical invariants can be done, their possible functionality association is more complicated, since the context of the movement origin is lost. The study of these sequential restriction in artificial stimulation context can help classify this spontaneous activity, even when the rest of the system is not available. 
+
+Here we analyze three examples of the spontaneous activity, 
 
 \paragraph{Spontaneous Activity Example 1}
 N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
 
 \begin{figure}[htbp]
 	\centering
+	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep2/images/3phases/panel_with_intervals.pdf}
+	\caption{\textbf{Spontaneous case 1}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
+	\label{fig:prep2 invariants}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{./invariants/data/SUSSEX/prep2/images/3phases/panel_with_pairplot.pdf}
+	\caption{\textbf{Spontaneous case 1}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
+	\label{fig:prep2 pairplot invariants}
+\end{figure}
+
+
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep2/images/2phases/panel_with_intervals.pdf}
+%	\caption{\textbf{Spontaneous case2}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
+%	\label{fig:prep2 2phase invariants}
+%\end{figure}
+%
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep2/images/2phases/panel_with_pairplot.pdf}
+%\caption{\textbf{Spontaneous case2}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
+%\label{fig:prep2 2phase invariants pairplot}
+%\end{figure}
+
+\paragraph{Spontaneous Activity Example 2}
+N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B1 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
+Since the reference for N2 here coincides with N1 reference, we display here only the intervals corresponding to N1 and N3 phases, since the intervals that correspond to 3 phases, such as N1-N2 delay or N2-N3 delay, either are already represented in the defined intervals or have a duration close to 0 ms.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep3/images/2phases/panel_with_intervals.pdf}
+	\caption{\textbf{Spontaneous case 2}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
+	\label{fig:prep3 2phases invariants}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep3/images/2phases/panel_with_pairplot.pdf}
+	\caption{\textbf{Spontaneous case 2}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
+	\label{fig:prep3 2phases invariants pairplot}
+\end{figure}
+
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep3/images/3phases/panel_with_intervals.pdf}
+%	\caption{\textbf{Spontaneous case3}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
+%	\label{fig:prep3 invariants}
+%\end{figure}
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep3/images/3phases/panel_with_pairplot.pdf}
+%	\caption{\textbf{Spontaneous case3}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
+%	\label{fig:prep3 invariants pairplot}
+%\end{figure}
+
+
+\paragraph{Spontaneous Activity Example 3}
+N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
+
+\begin{figure}[htbp]
+	\centering
 	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep1/images/3phases/panel_with_intervals.pdf}
-	\caption{\textbf{Spontaneous case1}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
+	\caption{\textbf{Spontaneous case 3}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
 	\label{fig:prep1 invariants}
 \end{figure}
 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep1/images/3phases/panel_with_pairplot.pdf}
-	\caption{\textbf{Spontaneous case1}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
+	\includegraphics[width=\textwidth]{./invariants/data/SUSSEX/prep1/images/3phases/panel_with_pairplot.pdf}
+	\caption{\textbf{Spontaneous case 3}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
 	\label{fig:prep1 invariants pairplot}
 \end{figure}
 
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep1/images/2phases/panel_with_intervals.pdf}
-	\caption{\textbf{Spontaneous case1}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
-	\label{fig:prep1 2 phases invariants}
-\end{figure}
 %
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep1/images/2phases/panel_with_pairplot.pdf}
-	\caption{\textbf{Spontaneous case1}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity.}
-	\label{fig:prep1 2 phases invariants pairplot}
-\end{figure}
-
-\paragraph{Spontaneous Activity Example 2}
-N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep2/images/3phases/panel_with_intervals.pdf}
-	\caption{\textbf{Spontaneous case2}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
-	\label{fig:prep2 invariants}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep2/images/3phases/panel_with_pairplot.pdf}
-	\caption{\textbf{Spontaneous case2}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
-	\label{fig:prep2 pairplot invariants}
-\end{figure}
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep1/images/2phases/panel_with_intervals.pdf}
+%	\caption{\textbf{Spontaneous case1}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
+%	\label{fig:prep1 2 phases invariants}
+%\end{figure}
+%%
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep1/images/2phases/panel_with_pairplot.pdf}
+%	\caption{\textbf{Spontaneous case1}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity.}
+%	\label{fig:prep1 2 phases invariants pairplot}
+%\end{figure}
 
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep2/images/2phases/panel_with_intervals.pdf}
-	\caption{\textbf{Spontaneous case2}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
-	\label{fig:prep2 2phase invariants}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep2/images/2phases/panel_with_pairplot.pdf}
-\caption{\textbf{Spontaneous case2}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
-\label{fig:prep2 2phase invariants pairplot}
-\end{figure}
 
 
-\paragraph{Spontaneous Activity Example 3}
-N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B1 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep3/images/2phases/panel_with_intervals.pdf}
-	\caption{\textbf{Spontaneous case3}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
-	\label{fig:prep3 2phases invariants}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep3/images/2phases/panel_with_pairplot.pdf}
-\caption{\textbf{Spontaneous case3}: Panel of intervals distribution and dynamical invariants for two phases in the CPG for spontaneous activity.}
-\label{fig:prep3 2phases invariants pairplot}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep3/images/3phases/panel_with_intervals.pdf}
-	\caption{\textbf{Spontaneous case3}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
-	\label{fig:prep3 invariants}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep3/images/3phases/panel_with_pairplot.pdf}
-	\caption{\textbf{Spontaneous case3}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity.}
-	\label{fig:prep3 invariants pairplot}
-\end{figure}
-
-
-\subsubsection{Invariants in SO driven activity}
+\subsection{Invariants in SO driven activity}
 \paragraph{1. Spontaneous SO modulation recording}
 % Nota: datos de preparación 4 en la detección está solo n1m y b8, las fases son N1 y N3. 
  
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals.pdf}
-	\caption{\textbf{Spontaneous SO neuron driven}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity driven by SO neuron.}
+	\caption{\textbf{Spontaneous SO neuron driven}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity driven by SO neuron.}
 	\label{fig:so spontaneous invariants}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_pairplot.pdf}
-	\caption{\textbf{Spontaneous SO neuron driven}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG for spontaneous activity driven by SO neuron.}
+	\caption{\textbf{Spontaneous SO neuron driven}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for spontaneous activity driven by SO neuron.}
 	\label{fig:so spontaneous invariants pairplot}
 \end{figure}
  	
@@ -206,7 +215,7 @@ N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase w
 
 
 
-\subsubsection{Invariants in MLN stimulation driven activity}
+\subsection{Invariants in MLN stimulation driven activity}
 The snail's lips are connected to the cerebral ganglia by the MLN (median lip nerves). It is possible to stimulate CPG activity by its stimulation, simulating the initiation of the rhythm in food presence \parencite{staras_electrophysiological_2019}. The data in this recording was stimulated by (4volt 1Hz stim).
 
 
@@ -226,8 +235,6 @@ The snail's lips are connected to the cerebral ganglia by the MLN (median lip ne
 \end{figure}
 
 
-
-
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/MLN_driven/images/_output_pairplot_reset.png}
@@ -236,25 +243,25 @@ The snail's lips are connected to the cerebral ganglia by the MLN (median lip ne
 \end{figure}
 
 
-\subsubsection{Invariants in cva1 stimulation driven activity}
+\subsection{Invariants in cva1 stimulation driven activity}
 CV1a is part of a larger population of CBIs 
 %and the complete map of their locations is shown in Figure 3A. https://static-content.springer.com/esm/art%3A10.1186%2F2042-1001-2-4/MediaObjects/13232_2011_20_MOESM3_ESM.jpeg
 Sucrose drives rhythmic activity in CBIs activating the feeding circuit by the conection
 \paragraph{Example 1}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/CV1a_driven1/images/3phases/panel_with_intervals.pdf}
-	\caption{\textbf{CV1a driven case1}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG under CV1a stimulation.}
-	\label{fig:cv1a 1 3phases}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/CV1a_driven1/images/3phases/panel_with_pairplot.pdf}
-	\caption{\textbf{CV1a driven case1}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG under CV1a stimulation.}
-	\label{fig:cv1a 1 3phases pairplot}
-\end{figure}
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/CV1a_driven1/images/3phases/panel_with_intervals.pdf}
+%	\caption{\textbf{CV1a driven case1}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG under CV1a stimulation.}
+%	\label{fig:cv1a 1 3phases}
+%\end{figure}
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/CV1a_driven1/images/3phases/panel_with_pairplot.pdf}
+%	\caption{\textbf{CV1a driven case1}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG under CV1a stimulation.}
+%	\label{fig:cv1a 1 3phases pairplot}
+%\end{figure}
 
 \begin{figure}[htbp]
 	\centering
@@ -310,19 +317,19 @@ Sucrose drives rhythmic activity in CBIs activating the feeding circuit by the c
 
 \paragraph{Example 4}
 
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/CV1a_driven4/images/3phases/panel_with_intervals.pdf}
-	\caption{\textbf{CV1a driven case 4}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG under CV1a stimulation.}
-	\label{fig:cv1a 4 3phases}
-\end{figure}
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/CV1a_driven4/images/3phases/panel_with_pairplot.pdf}
-	\caption{\textbf{CV1a driven case 4}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG under CV1a stimulation.}
-	\label{fig:cv1a 4 3phases pairplot}
-\end{figure}
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/CV1a_driven4/images/3phases/panel_with_intervals.pdf}
+%	\caption{\textbf{CV1a driven case 4}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG under CV1a stimulation.}
+%	\label{fig:cv1a 4 3phases}
+%\end{figure}
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{./invariants/data/SUSSEX/CV1a_driven4/images/3phases/panel_with_pairplot.pdf}
+%	\caption{\textbf{CV1a driven case 4}: Panel of intervals distribution and dynamical invariants for the three phases in the CPG under CV1a stimulation.}
+%	\label{fig:cv1a 4 3phases pairplot}
+%\end{figure}
 
 \begin{figure}[htbp]
 	\centering
@@ -338,7 +345,7 @@ Sucrose drives rhythmic activity in CBIs activating the feeding circuit by the c
 	\label{fig:cv1a 4 2phases pairplot}
 \end{figure}
 
-
+\subsection{Summary}
 \begin{figure}
 	\includegraphics[width=\textwidth]{./invariants/styled_table_invariants_r-squared.pdf}
 	\caption{Table of $R^2$ values for the linear regression between the period and each interval for all experimental recordings showed in this section.}
