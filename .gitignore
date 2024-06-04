@@ -57,3 +57,9 @@ invariants/data/*/*/images/_signal_intervals_cycle_stretch.pdf
 invariants/data/*/*/images/_signal_intervals_zoom.pdf
 
 invariants/data/*/*/images/_time_cycle.pdf
+
+invariants/data/*/*/images/_output_pairplot_IBI.png
+invariants/data/*/*/images/*/_output_pairplot_IBI.png
+
+invariants/data/*/*/images/_output_pairplot_reset_IBI.png
+invariants/data/*/*/images/*/_output_pairplot_reset_IBI.png
