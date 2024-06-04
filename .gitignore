@@ -47,6 +47,11 @@ invariants/data/*/*/images/_durations.pdf
 invariants/data/*/*/images/_intervals.pdf
 
 invariants/data/*/*/images/_output_pairplot.png
+invariants/data/SUSSEX/*/images/output_pairplot.pdf
+invariants/data/SUSSEX/*/images/*/output_pairplot.pdf
+invariants/data/SUSSEX/*/images/*/output_pairplot_reset.pdf
+invariants/data/SUSSEX/*/images/output_pairplot_reset.pdf
+
 
 invariants/data/*/*/images/_signal_intervals.pdf
 
