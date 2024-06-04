@@ -12,6 +12,7 @@ headers = '''\\documentclass{article}
 \\usepackage{overpic}
 
 \\usepackage[left=0.7in,right=0.7in,top=0.1in]{geometry}
+\\pagenumbering{gobble}
 
 
 \\begin{document}\n'''

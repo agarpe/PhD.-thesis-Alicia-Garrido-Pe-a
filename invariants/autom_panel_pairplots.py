@@ -20,7 +20,7 @@ figure = '''\\begin{figure}[htbp]
    \\centering
    \\begin{minipage}{\\textwidth}
        \\centering
-       \\begin{overpic}[width=\\textwidth]{_output_pairplot.png} % Base image
+       \\begin{overpic}[width=\\textwidth]{output_pairplot.pdf} % Base image
            \\put(50,55){ % Position the second image (70%, 60% of width/height of figure1)
                \\includegraphics[width=0.4\\textwidth]{_signal_intervals_cycle_stretch.pdf} % The overlapping image
            }
@@ -29,29 +29,6 @@ figure = '''\\begin{figure}[htbp]
 \\end{figure}
 \\end{document}
 '''
-
-# figure = '''\\begin{figure}[htbp]
-#    \\raggedleft
-#    \\begin{minipage}[b]{0.85\\textwidth}
-#        \\raggedleft
-#        \\includegraphics[width=\\textwidth]{_time_cycle.pdf}
-#        \\raggedleft
-#        \\includegraphics[width=\\textwidth]{_boxplot_h.pdf}     
-#    \\end{minipage}
-#    \\centering
-#    \\begin{minipage}{\\textwidth}
-#        \\centering
-#        \\begin{overpic}[width=\\textwidth]{_output_pairplot.png} % Base image
-#            \\put(50,55){ % Position the second image (70%, 60% of width/height of figure1)
-#                \\includegraphics[width=0.4\\textwidth]{_signal_intervals_cycle_stretch.pdf} % The overlapping image
-#            }
-#        \\end{overpic}
-#    \\end{minipage}
-# \\end{figure}
-# \\end{document}
-# '''
-
-
 def create_file(path):
 
     print(path)
