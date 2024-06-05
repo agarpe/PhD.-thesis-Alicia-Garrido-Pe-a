@@ -60,16 +60,19 @@ Overall, our results in this subsection show a larger tendency to a frequency in
 \end{figure}
 
 \subsection{Effect of CW-NIR stimulation at different wavelengths}
+To address one of the main questions in infrared laser stimulation, i.e. what is the source of the effect (photo-thermal, photo-electrical, etc.), it is necessary to characterize its effect in different configurations. It is proven that a specific configuration of wavelength, pulse duration and frequency, and intensity, is crucial for an effective neural stimulation, however, the details on what is each parameter tuning or affecting  have not been analyzed in detail. In this subsection we analyze the data from a preliminary study, where we apply 4 different CW lasers with four different wavelengths 808nm, 830nm, 980nm and 1450nm. Following the hypothesis of the strong role of the temperature modification, the first difference between those wavelengths that we need to take into account is the water absorption at each one of them. In Fig. there is a representation of the water absorption curve for different wavelengths. We can classify the wavelengths in this experiment regarding its water absorption in three groups: 808nm and 830nm in the lowest range; 980nm in the first peak and 1450nm with a significant increase of the extinction coeficient. Therefore, the first thing to consider is the difference in the heating capacity of each laser in the surrounding water and the tissue. 
 
 \begin{figure}[hbt]
 	\centering
 	\includegraphics[width=0.6\textwidth]{img/laser/wavelength/water_absoption_wavelength.pdf}
+    \caption{Water absorption for different wavelengths values.}
 \end{figure}
 
+We saw so far that the CW-NIR laser stimulation affects the spike waveform metrics in a reversible manner accelerating it, with a shorter duration, changing its depolarizartion and repolarization but with a minimal or negligible change in the amplitude. Those results, performed with a 830nm laser, correspond to the results depicted here for 830, but also 808nm (see Fig \ref{fig:wavelengths results} first and second row). In the case of 980nm, the change seems larger in every metric (specially regarding the comparison between the laser and the recovery) but particullarly in the amplitude, which present a change that was not commonly visible in the 830nm stimulation. Finally, in the case of the 1450nm lase stimulation, the effect in all metrics is similar, again with a large change in the 980nm case. However, in this last case it is remarkable, that the recovery value was not achieved at the same level, in fact, the spontaneous tonic spiking activity of this prep was damaged after the illumination at this wavelength, which suggest the neuron was damaged after this stimulation. 
+
+%%%%% prueba manteniendo la temperatura de la solución estable. 
+
 \begin{figure}[hbt]
-	\centering
-	\includegraphics[width=0.28\textwidth]{img/laser/wavelength/1450nm.png}
-	\includegraphics[width=0.7\textwidth]{img/laser/wavelength/1450nmmetrics.pdf}
 	\centering
 	\includegraphics[width=0.28\textwidth]{img/laser/wavelength/808nm.png}
 	\includegraphics[width=0.7\textwidth]{img/laser/wavelength/808nmmetrics.pdf}
@@ -80,6 +83,13 @@ Overall, our results in this subsection show a larger tendency to a frequency in
 	\includegraphics[width=0.28\textwidth]{img/laser/wavelength/980nm.png}
 	\includegraphics[width=0.7\textwidth]{img/laser/wavelength/980nmmetrics.pdf}
 	\centering
+	\includegraphics[width=0.28\textwidth]{img/laser/wavelength/1450nm.png}
+	\includegraphics[width=0.7\textwidth]{img/laser/wavelength/1450nmmetrics.pdf}
+	\centering
 	\includegraphics[width=\textwidth]{img/laser/wavelength/allmetrics.pdf}
-	\caption{}
+	\caption{Representation of the effect of sustained laser stimulation at different wavelengths, first to fourth row: 808nm at 105mW, 830nm at 90mW, 980nm at 150mW and 1450nm at 120mW. The left panel in each row is the supperpossition of the spike waveforms aligned to the first point, during a control recording with no stimulation, a laser recording during the illumination at the specific wavelength and a recovery control, again with no stimulation. The four panels in each row correspond to the mean value for each trial of control, laser and recovery for the spike waveform metrics: duration, amplitude, depolarization and repolarization slopes.}
+    \label{fig:wavelengths results}
 \end{figure}
+
+
+\todo{añadir cierre}
