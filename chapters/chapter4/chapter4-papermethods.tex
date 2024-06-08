@@ -89,7 +89,148 @@ The statistical analysis was done in Python 3.6. For the temporal variability st
 
 Thus, all intervals defined in section \ref{subsec:intervals} were measured and their variability was characterized by statistical analysis tools, i.e,  boxplots and linear correlations. For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. \todo{mover a methods generales?}
 
-\subsection{Experimental stimulation}
+\begin{lstlisting}
+	#########  SINGLE INTERVALS
+	# on = 0; off = 1
+	
+	# off1 - on1
+	def get_burst_duration(data):
+	return np.array([b - a for a, b in zip(data[:, 0], data[:, 1])])
+	
+	# on2 - off1
+	def get_burst_interval(data):
+	return np.array([a - b for a, b in zip(data[1:, 0], data[:, 1])])
+	
+	
+	# on2 - on1
+	def get_burst_period(data):
+	return np.array([a - b for a, b in zip(data[1:, 0], data[:, 0])])
+	
+	
+	#########  PAIRED INTERVALS
+	
+	def get_intervals(d1,d2):
+	if d1.size == 0 or d2.size == 0:
+	return [],[]
+	
+	d1d2_interval = np.array([b-a for a,b in zip(d1[:,0],d2[:,0])])
+	d1d2_delay = np.array([b-a for a,b in zip(d1[:,1],d2[:,0])])
+	d2d1_interval = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,0])])
+	d2d1_delay = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,1])])
+	
+	return [d1d2_interval,d1d2_delay],[d2d1_interval,d2d1_delay]
+\end{lstlisting}
+
+
+
+
+\subsection{Experimental recordings and stimulation}
+The experimental recordings analyzed in section \ref{sec:experimental sussex} were performed by Michael Crossley, University of Sussex, and kindly provided for this work. 
+
+Each recording had at least 5 microelectrodes, which allowed to characterize the rhythm based on combinations of different neuron's activity. There are cases of experiments in that section:
+\begin{itemize}
+	\item Spontaneous activity: After the isolation of the CNS, the electrodes impailed in the neuron recorded the spontaneous activity in the CPG, with no further stimulation.
+	\item Nerve electrical stimulation: For the activation of the rhythm it is possible to stimulate the median lip nerve (MLN). The data analyzed there was stimulated by a 4V stimulous at 1Hz. 
+	\item Neuron electrical stimulation: To modulate the CPG rhythm, SO and CV1a neurons where stimulated (in different experiments) by injecting a constant depolarizing current.
+\end{itemize}
+
+%To define each phase, we used different neurons and bursting references, depending on the ones available on the circuit, following intervals definition in table \ref{table:cpg ref intervals}.
+%
+%For each recording each phase was defined as follows:
+%
+%\paragraph{Spontaneous Activity Example 1}
+%N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
+%
+%\paragraph{Spontaneous Activity Example 2}
+%N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B1 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
+%Since the reference for N2 here coincides with N1 reference, we display here only the intervals corresponding to N1 and N3 phases, since the intervals that correspond to 3 phases, such as N1-N2 delay or N2-N3 delay, either are already represented in the defined intervals or have a duration close to 0 ms.
+%
+%\paragraph{Spontaneous Activity Example 3}
+%N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
+%
+%\paragraph{Spontaneous Activity SO modulation}
+%N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
+
+
+
+
 \subsection{Models with chaotic activity}
+
+\subsubsection{LP model by \cite{nowotny_probing_2008}}
+
+The membrane potential of axon and soma compartment, $V_{\text{axon}}$ and $V_{\text{soma}}$ respectively, are described by
+
+\begin{equation}
+	\frac{dV_{\text{axon}}}{dt} = \frac{1}{C_a} \left( -I_{\text{Na}} - I_{\text{Kd}} - I_M - I_{\text{leak,a}} + I_{VV} \right)
+\end{equation}
+
+\begin{equation}
+	\frac{dV_{\text{soma}}}{dt} = \frac{1}{C_s} \left( -I_{\text{Ca}} - I_{\text{KCa}} - I_A - I_h - I_{\text{leak,s}} - I_{VV} + I_{\text{scale}} (I_{\text{DC}} - I_{\text{offset}} + I_{\text{syn}} \right))
+\end{equation}
+
+$I_{\text{offset}} = 2 \, \text{nA}$ stems from the residual coupling at the end of the parameter estimation procedure which introduces a current bias due to differences in baseline voltage of data and model (on top of $V_{\text{shift}}$). $I_{\text{syn}}$ denotes the total incoming synaptic current. All ionic currents except for the ones mentioned explicitly below are given by
+
+\begin{equation}
+	I_x = g_x m^p h^q (V - V_x)
+\end{equation}
+
+where $g_x$ is the maximal conductance of the current, $V$ is the membrane potential of either the axon compartment ($I_{\text{Na}}$, $I_{\text{Kd}}$, and $I_M$) or the soma compartment (all other currents), and $V_x$ is the reversal potential of the current. The activation and inactivation variables are governed by
+
+%\begin{equation}
+%	\frac{dm}{dt} = \alpha_m (1 - m) - \beta_m m
+%\end{equation}
+%
+%\begin{equation}
+%	\frac{dh}{dt} = \alpha_h (1 - h) - \beta_h h
+%\end{equation}
+%
+%for $I_{\text{Na}}$ and $I_{\text{Kd}}$, and
+%
+%\begin{equation}
+%	\frac{dm_x}{dt} = \frac{m_{\infty,x}(V) - m_x}{\tau_{m_x}}
+%\end{equation}
+
+\subsubsection{Non chaotic model \cite{ghigliazza_minimal_2004}}
+\todo{revisar}
+The Ghigliazza and Holmes model for motoneurons is described by the following equations:
+
+1. The membrane potential dynamics of a neuron is given by:
+
+\begin{equation}
+	C_m \frac{dV}{dt} = -\sum I_x + I_{\text{syn}}
+\end{equation}
+
+where \( C_m \) is the membrane capacitance, \( V \) is the membrane potential, \( I_x \) are the various ionic currents, and \( I_{\text{syn}} \) is the synaptic current.
+
+2. The ionic currents \( I_x \) are typically given by:
+
+\begin{equation}
+	I_x = g_x m^p h^q (V - V_x)
+\end{equation}
+
+where \( g_x \) is the maximal conductance, \( m \) and \( h \) are the activation and inactivation variables, \( p \) and \( q \) are the respective powers, and \( V_x \) is the reversal potential of the current.
+
+3. The gating variables \( m \) and \( h \) are governed by first-order kinetics:
+
+\begin{equation}
+	\frac{dm}{dt} = \alpha_m (1 - m) - \beta_m m
+\end{equation}
+
+\begin{equation}
+	\frac{dh}{dt} = \alpha_h (1 - h) - \beta_h h
+\end{equation}
+
+where \( \alpha_m \), \( \beta_m \), \( \alpha_h \), and \( \beta_h \) are voltage-dependent rate constants.
+
+4. For a central pattern generator (CPG), the model includes a set of coupled differential equations to describe the rhythmic activity:
+
+\begin{equation}
+	\frac{d\phi_i}{dt} = \omega_i + \sum_j K_{ij} \sin(\phi_j - \phi_i - \psi_{ij})
+\end{equation}
+
+where \( \phi_i \) is the phase of the \( i \)-th oscillator, \( \omega_i \) is the intrinsic frequency, \( K_{ij} \) is the coupling strength between oscillators \( i \) and \( j \), and \( \psi_{ij} \) is the phase shift.
+
+
+
 \subsection{Hybrot structure}
 
