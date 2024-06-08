@@ -234,3 +234,17 @@ where \( \phi_i \) is the phase of the \( i \)-th oscillator, \( \omega_i \) is 
 
 \subsection{Hybrot structure}
 
+We have designed and implemented a FLC-Hybrot, a hybrot controlled by the neural activity of a living and functional pyloric CPG, to validate the importance of the balance between robustness and flexibility in this circuit, as provided by cycle-by-cycle dynamical invariants present in its dynamics \cite{Elices2019}. With this idea in mind we built an hexapod robot whose legs performed oscillatory motions to move forward. The period and amplitude of these oscillations were determined by the sequential cycle-by-cycle activity of the CPG neurons. At the same time, the hybrot included a light sensor and sent feedback information regarding the light conditions around it back to the neural circuit in the form of an electrical current. These stimuli modified the behaviour of the cells, resulting in a change of the hybrot locomotion, preserving always the required motor coordination, and therefore forming a real-time closed-loop interaction among living and electronic components (Figure \ref{fig:robot_results_summary}). The goal of the FLC-Hybrot is to demonstrate that a dynamical principle of the functional living circuit can be used to coordinate the locomotion with sensory feedback from the robot. In our case, we use the presence of dynamical invariants in the form of robust relationships between the time intervals that build the cycle-by-cycle activity of the CPG, which are sustained under any circumstance even when there are external inputs to the circuit, to modulate the behavior of the robot. \todo{copia pega de paper robot adaptar}
+
+\begin{figure}[h!]
+	\begin{center}
+		% \includegraphics[width=\linewidth]{images/robot/robot_results_summary}
+		\includegraphics[width=\linewidth]{img/invariants/robot/Figure1_experiment_design_v1.png}
+	\end{center}
+	\caption{Representation of the FLC-Hybrot paradigm design. Neural dynamics from a functional living CPG circuit are recorded online and used to coordinate the robot movement in real-time. Activity from the PD neuron is recorded intracellularly (green trace), while the LP bursts are extracted from the nerve's extracellular signal (blue trace). This robot walks through a trial track with interspersed light and shadow regions. When the robot's light sensor detects that it is located under a shadow, it sends feedback current to the living circuit. CPG dynamics change as a reaction to the injected current, thus modifying the robotic locomotion. The following video shows an example of this experiment \url{https://youtu.be/ny2dJGbG8lo}.}
+	\label{fig:robot_results_summary}
+\end{figure}
+
+
+
+
