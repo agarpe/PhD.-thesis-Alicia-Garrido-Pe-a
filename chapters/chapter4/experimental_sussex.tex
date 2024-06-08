@@ -1,15 +1,29 @@
 When studying temporal structures in neural dynamics, the definition of the time references is a key first point. In the computational analysis in the previous section, the time reference to define the intervals were first and last spike of each burst. In that case, as in the case of interneurons in \textit{C. maenas} the CPG phases are directly related with the bursting activity of these neurons and the burst can be consistently defined by the first and last spike. However, in the case of \textit{Lymnaea stagnalis}, activity is usually characterized using recordings from both interneurons and motoneurons \parencite{elliott_interactions_1985, staras_pattern-generating_1998, benjamin_distributed_2012}. This leads to the need of a combination of burst references to characterize the phases of the CPG based on the time intervals cycle by cycle. Thus, for this analysis, we will consider the three phases in the CPG, protraction, rasp and swallow, that are associated mainly to N1M, N2v and N3t neurons. Since it is not always possible to record those neurons at the same time (specially N2v that is in the ventral side), we will define them by a combination of interneurons and motoneurons following their activity at each phase. For example, in Figure \ref{fig:example lymnaea phases recording} the three phases in the  CPG are marked by a colored background over the recording, note how it can be delimited by the neurons in the circuit but some of the motoneurons cover several phases, as it is the case of B4 in panel a) or B3 in panel b). Also phases can be defined by the first and last spike, as it is the case for phase N3 and neuron B8, but in other cases as the phase N2, the reference is the hyperpolarization of some neurons, such as the strong inhibition visible in neuron B5 in panel b). Also, depolarization of some neurons carry relevant information, since for example in the case of B1 the "bumps" visible represent the N1 phase, by the connection between N1M and B1. Therefore, to characterize the time sequences in the feeding CPG, we need compound references from several neural recordings that can be summarized as in Table \ref{table:cpg ref intervals}. Note that, although different time references must be taken into account when reaching conclusions about the time-interval restrictions and analysis, all possible intervals conforming each cycle between the neurons are taking into account in this analysis (see \ref{subsec:intervals}), so the restrictions and analysis are still relevant. The reference to define each time-interval for each recording are described in section \ref{subsec:methods experimental intervals}.
 
 
+\begin{table}[htb!]
+	\centering
+	\begin{tabular}{cl|l|l}
+			\multicolumn{1}{l}{}                                 & \multicolumn{1}{c|}{\textbf{N1-Protraction}} & \multicolumn{1}{c|}{\textbf{N2-Rasp}} & \multicolumn{1}{c}{\textbf{N3-Swallow}} \\ \hline
+			\multicolumn{1}{c|}{\multirow{3}{*}{\textbf{Start}}} & Last spike of N3t/B3                         & Inhibition of B5                      & First spike of B8                       \\
+			\multicolumn{1}{c|}{}                                & Depolarization or first spike in B1          &                                       &                                         \\
+			\multicolumn{1}{c|}{}                                & First spike in B6                            &                                       &                                         \\ \hline
+			\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{End}}}   & Last spike of B5                             & First spike of B8                     & Last spike of N3t/B3                    \\
+			\multicolumn{1}{c|}{}                                & Hyperpolarization in B1 or B6                &                                       &                                        
+		\end{tabular}
+	\caption{Time reference boundaries for the three phases in the feeding CPG}
+	\label{table:cpg ref intervals}
+\end{table}
+
 \begin{figure}[bth!]
 	\centering
-	\begin{minipage}[b]{\textwidth}
+	\begin{minipage}[b]{0.85\textwidth}
 		\makebox[0pt][l]{\hspace*{-130pt}\text{a)}}\\
 		\centering
 		\includegraphics[width=0.9\textwidth]{img/invariants/example_phases_1.pdf}
 	\end{minipage}
 	\vspace{20pt}
-	\begin{minipage}[b]{\textwidth}
+	\begin{minipage}[b]{0.85\textwidth}
 		\makebox[0pt][l]{\hspace*{-130pt}\text{b)}}\\
 		\centering
 		\includegraphics[width=0.9\textwidth]{img/invariants/example_phases_2.pdf}
