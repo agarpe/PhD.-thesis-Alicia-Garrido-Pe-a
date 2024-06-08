@@ -16,55 +16,56 @@
 *.s2rx
 *.smrx
 *.dtvw-cfg
+*.dtvw-*
 
-invariants/data/*/*/images/*/*tex
-invariants/data/*/*/images/*tex
+img/invariants/data/*/*/images/*/*tex
+img/invariants/data/*/*/images/*tex
 
-invariants/data/*/*/images/*/_boxplot.pdf
-invariants/data/*/*/images/*/_boxplot_h.pdf
-invariants/data/*/*/images/*/_boxplot_ibi.pdf
-invariants/data/*/*/images/*/_delays.pdf
-invariants/data/*/*/images/*/_durations.pdf
-invariants/data/*/*/images/*/_intervals.pdf
-invariants/data/*/*/images/*/_output_pairplot.png
-invariants/data/*/*/images/*/_signal_intervals.pdf
-invariants/data/*/*/images/*/_signal_intervals_cycle.pdf
-invariants/data/*/*/images/*/_signal_intervals_cycle_stretch.pdf
-invariants/data/*/*/images/*/_signal_intervals_zoom.pdf
-invariants/data/*/*/images/*/_time_cycle.pdf
-
-
-invariants/data/*/*/images/_boxplot.pdf
-
-invariants/data/*/*/images/_boxplot_h.pdf
-
-invariants/data/*/*/images/_boxplot_ibi.pdf
-
-invariants/data/*/*/images/_delays.pdf
-
-invariants/data/*/*/images/_durations.pdf
-
-invariants/data/*/*/images/_intervals.pdf
-
-invariants/data/*/*/images/_output_pairplot.png
-invariants/data/SUSSEX/*/images/output_pairplot.pdf
-invariants/data/SUSSEX/*/images/*/output_pairplot.pdf
-invariants/data/SUSSEX/*/images/*/output_pairplot_reset.pdf
-invariants/data/SUSSEX/*/images/output_pairplot_reset.pdf
+img/invariants/data/SUSSEX/*/images/*/_boxplot.pdf
+img/invariants/data/SUSSEX/*/images/*/_boxplot_h.pdf
+img/invariants/data/SUSSEX/*/images/*/_boxplot_ibi.pdf
+img/invariants/data/SUSSEX/*/images/*/_delays.pdf
+img/invariants/data/SUSSEX/*/images/*/_durations.pdf
+img/invariants/data/SUSSEX/*/images/*/_intervals.pdf
+img/invariants/data/SUSSEX/*/images/*/_output_pairplot.png
+img/invariants/data/SUSSEX/*/images/*/_signal_intervals.pdf
+img/invariants/data/SUSSEX/*/images/*/_signal_intervals_cycle.pdf
+img/invariants/data/SUSSEX/*/images/*/_signal_intervals_cycle_stretch.pdf
+img/invariants/data/SUSSEX/*/images/*/_signal_intervals_zoom.pdf
+img/invariants/data/SUSSEX/*/images/*/_time_cycle.pdf
 
 
-invariants/data/*/*/images/_signal_intervals.pdf
+img/invariants/data/SUSSEX/*/images/_boxplot.pdf
 
-invariants/data/*/*/images/_signal_intervals_cycle.pdf
+img/invariants/data/SUSSEX/*/images/_boxplot_h.pdf
 
-invariants/data/*/*/images/_signal_intervals_cycle_stretch.pdf
+img/invariants/data/SUSSEX/*/images/_boxplot_ibi.pdf
 
-invariants/data/*/*/images/_signal_intervals_zoom.pdf
+img/invariants/data/SUSSEX/*/images/_delays.pdf
 
-invariants/data/*/*/images/_time_cycle.pdf
+img/invariants/data/SUSSEX/*/images/_durations.pdf
 
-invariants/data/*/*/images/_output_pairplot_IBI.png
-invariants/data/*/*/images/*/_output_pairplot_IBI.png
+img/invariants/data/SUSSEX/*/images/_intervals.pdf
 
-invariants/data/*/*/images/_output_pairplot_reset_IBI.png
-invariants/data/*/*/images/*/_output_pairplot_reset_IBI.png
+img/invariants/data/SUSSEX/*/images/_output_pairplot.png
+img/invariants/data/SUSSEX/*/images/output_pairplot.pdf
+img/invariants/data/SUSSEX/*/images/*/output_pairplot.pdf
+img/invariants/data/SUSSEX/*/images/*/output_pairplot_reset.pdf
+img/invariants/data/SUSSEX/*/images/output_pairplot_reset.pdf
+
+
+img/invariants/data/*/*/images/_signal_intervals.pdf
+
+img/invariants/data/*/*/images/_signal_intervals_cycle.pdf
+
+img/invariants/data/*/*/images/_signal_intervals_cycle_stretch.pdf
+
+img/invariants/data/*/*/images/_signal_intervals_zoom.pdf
+
+img/invariants/data/*/*/images/_time_cycle.pdf
+
+img/invariants/data/*/*/images/_output_pairplot_IBI.png
+img/invariants/data/*/*/images/*/_output_pairplot_IBI.png
+
+img/invariants/data/*/*/images/_output_pairplot_reset_IBI.png
+img/invariants/data/*/*/images/*/_output_pairplot_reset_IBI.png
