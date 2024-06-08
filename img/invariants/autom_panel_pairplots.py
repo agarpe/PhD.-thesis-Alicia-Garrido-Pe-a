@@ -2,7 +2,7 @@ import glob
 import os
 
 
-paths = glob.glob('/home/agarpe/Workspace/tesis/PhD.-thesis-Alicia-Garrido-Pe-a/invariants/data/SUSSEX/*/images/')
+paths = glob.glob('/home/agarpe/Workspace/tesis/PhD.-thesis-Alicia-Garrido-Pe-a/img/invariants/data/SUSSEX/*/images/')
 
 print(paths)
 
