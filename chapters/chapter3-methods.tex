@@ -229,6 +229,49 @@ The 3 inter-neurons described in this circuit have different waveform shapes, de
 Although models where implemented in $C++$ taking advantage of its computational speed, most analysis where performed in Python3, since it is a frequently used tool and libraries as Pandas are very effective for data analysis. 
 Scripts are available at \todo{ add link to git. }
 
+%Detectar eventos --> secuencia
+% Eventos promediados ocultan información --> secuencialidad ciclo a ciclo
+%Métricas 
+
+For the temporal variability study, first the spikes were detected using the change in the derivative during the computation of the model along with a threshold condition. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. 
+
+Thus, all intervals defined in section \ref{subsec:intervals} were measured and their variability was characterized by statistical analysis tools, i.e, boxplots and linear correlations. For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. \todo{Rewrite, reordered}
+
+\begin{lstlisting}
+	#########  SINGLE INTERVALS
+	# on = 0; off = 1
+	
+	# off1 - on1
+	def get_burst_duration(data):
+	return np.array([b - a for a, b in zip(data[:, 0], data[:, 1])])
+	
+	# on2 - off1
+	def get_burst_interval(data):
+	return np.array([a - b for a, b in zip(data[1:, 0], data[:, 1])])
+	
+	
+	# on2 - on1
+	def get_burst_period(data):
+	return np.array([a - b for a, b in zip(data[1:, 0], data[:, 0])])
+	
+	
+	#########  PAIRED INTERVALS
+	
+	def get_intervals(d1,d2):
+	if d1.size == 0 or d2.size == 0:
+	return [],[]
+	
+	d1d2_interval = np.array([b-a for a,b in zip(d1[:,0],d2[:,0])])
+	d1d2_delay = np.array([b-a for a,b in zip(d1[:,1],d2[:,0])])
+	d2d1_interval = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,0])])
+	d2d1_delay = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,1])])
+	
+	return [d1d2_interval,d1d2_delay],[d2d1_interval,d2d1_delay]
+\end{lstlisting}
+
+
+
+
 \section{CW-NIR laser}
 The experimental results presented here were obtained using a continuous-wave (CW) NIR diode laser in single TEM00 operation and 830nm wavelenght output (Integrated Optics 0830L-13A-NI-PT-NF). \begin{wrapfigure}{l}{0.5\textwidth}
     \centering
