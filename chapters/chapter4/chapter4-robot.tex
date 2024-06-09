@@ -1,0 +1,28 @@
+In order to validate the adequate locomotion of the FLC-Hybrot when modulated by the pyloric CPG online behaviour, as well as the living circuit real-time adaptation to the injected feedback, we performed a set of experiments employing a 1.5 meters long trial track. Along this surface there were interspersed segments of lights and shadows. This preliminary study was publised at \cite{amaducci_hybrid_2020,amaducci_controlling_2021}. This configuration caused the FLC-Hybrot to alter its behaviour several times during the experiment due to the injection of current into the PD neuron when it walked under a shadow. The current injected in the cell in a shadow section varied from one experiment to another, according to the neurons response to the stimuli. No current was injected when the robot was located on a luminous area. The following video illustrates one of such experiments \url{https://youtu.be/Dltec7TeGso}.
+
+\begin{figure}[hbt!]
+	\begin{center}
+		\includegraphics[width=0.9\linewidth]{./img/invariants/robot/robot_results_validation}
+	\end{center}
+	\caption{Flexible hybrot adaptation to environmental changes when noticed by the robot sensors and associated coordinated locomotion. When the robot entered a shadow section, it sent sensory feedback to the living CPG in the form of positive electrical current (red trace). Blue and green traces are recordings of the extracellular and intracellular (PD neuron) activity of the circuit and display the change caused by the feedback current injection in the PD neuron, slowing down the CPG rhythm. The oscillatory movement of the robot legs is represented in the brown trace and it can observed that a variation in the CPG rhythm leads to a change in the robotic locomotion, modifying both the period and the amplitude of the oscillation. 
+		%This effect can be seen more clearly in the bottom panel, where both the LP neuron instantaneous bursting period (blue) and the robot legs oscillation period (brown) are plotted together, showing how the latter is modulated by the former.
+	}
+	\label{fig:robot_results_validation}
+\end{figure}
+
+Figure \ref{fig:robot_results_validation} shows the results for one of these tests. An alteration in the neural activity is clearly appreciable when -0.6nA current is inserted into the circuit, causing its rhythm to slow down while also modifying the PD neuron membrane's potential amplitude. This change is immediately reversed as soon as the current goes back to zero, restoring its previous behaviour. Concerning the robot's locomotion, a variation in the legs' oscillation is observed just after the neurons alter their functioning. Despite the successive changes in the amplitude and period of its legs' oscillation, the FLC-Hybrot maintained a coordinated and effective locomotion during the whole experiment. %When both the LP period and the legs oscillation period are represented in the same plot, we can verify that the robot movement is modulated by the neuron's activity.% The same can be seen for the LPPD interval and the amplitude (!REF).
+
+The dynamical invariant present in the pyloric CPG activity, in the form of a linear relation between the LP neuron period and the LPPD interval, was effectively transferred to the robot locomotion. It displayed the same correlation between its legs oscillation period and amplitude, which were modulated by the two previous temporal intervals. Figure \ref{fig:robot_results_invariant} shows a comparison between the living CPG and the robot dynamical invariant, with the later reaching an $R^2$ correlation of 0.87 despite the lack of precision of its servomotors.
+
+\begin{figure}[hbt!]
+	\begin{center}
+		\includegraphics[width=\linewidth]{./img/invariants/robot/robot_results_invariant}
+	\end{center}
+	\caption{\textbf{Left:} dynamical invariant present in the living CPG activity during the validation test, represented as a linear relation between the LP neuron bursting period and the LPPD interval cycle-by-cycle. \textbf{Right:} dynamical invariant present in the FLC-Hybrot locomotion during the validation test, represented as a linear relation between its legs oscillation period and amplitude cycle-by-cycle. The dynamical invariant property is effectively translated from the living CPG to the robot locomotion, codified as: Robot period = LP period, Robot amplitude = LPPD interval * factor.}
+	\label{fig:robot_results_invariant}
+\end{figure}
+
+\todo{copia pega de paper robot adaptar}
+
+\newpage
+\clearpage
