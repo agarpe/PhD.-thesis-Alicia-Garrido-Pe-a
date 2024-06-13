@@ -1,49 +1,43 @@
 \chapter{Materials and Methods}
-This section covers the general information for the materials and methods covered in this thesis and that are common for chapters \ref{c-invariants} and \ref{c-laser}. The methods here presented are also extended in those chapters when necessary.
-
+This chapter will cover the common ground of the materials and methods applied in this thesis and in the results exposed for chapters \ref{c-invariants} and \ref{c-laser}. The methods here presented will be complemented with a specific version of the methods in those two chapters.
 
 \section{The neural system of \textit{Lymnaea stagnalis}}
 \label{sec:lymnaea morphology}
-The neural system of \textit{Lymnaea Stangalis} (the great pond snail) is shown in figure \ref{fig:lymn neural sys diagram}. As in some other mollusks, e.g. {\sl Clione}, the neural system is conformed by several ganglia, each of them controlling (mainly, but not exclusively) some specific function of the snail. Figure \ref{fig:lymn neural sys diagram} shows a labeled image of the different ganglia in this system. All ganglia in the neural system are paired and distributed symmetrically, except from the visceral ganglion (unique) and the parietal, that although symmetrical, the right parietal is larger than left parietal ganglion (see \ref{fig:lymn neural sys diagram}). All ganglia are interconnected by nerves (grey stripes in the image). As mentioned before, each ganglion has an associated behavioral task in the snail. From top to bottom: we find the buccal ganglia (upper pair), which control the buccal muscle involved in the processes of open-rasp-swallow, known as the feeding cycle, initiated by a CPG circuit contained in these ganglia. The two cerebral ganglia (right bellow) are involved in the activation and modulation of many circuits and processes, including the modulation from specific neurons in all ganglia. Located on the sides of the diagram, the pedal ganglia control the snail pedal movements as crawling or swimming, and they are originally joined. The pleural ganglia, which contain sensory neurons, are connected to the mantle. And finally, at the bottom of the diagram, we find the parietal ganglion, involved in the control of the gill (respiratory organ) and the olfactory organ, and the visceral ganglion, connected to organs such as the intestine, the heart, and part of the genital system.
+The neural system of \textit{Lymnaea Stangalis} (the great pond snail) is shown in Fig. \ref{fig:lymn neural sys diagram}. As in some other mollusks, e.g. {\sl Clione}, the neural system is conformed by several ganglia, each of them controlling (mainly, but not exclusively) some specific function of the snail. Figure \ref{fig:lymn neural sys diagram} shows a labeled image of the different ganglia in this system. All ganglia in the neural system are paired and distributed symmetrically, except from the visceral ganglion (unique) and the parietal, that although symmetrical, the right parietal is larger than left parietal ganglion (see \ref{fig:lymn neural sys diagram}). All ganglia are interconnected by nerves (grey stripes in the image). As mentioned before, each ganglion has an associated behavioral task in the snail. From top to bottom: we find the buccal ganglia (upper pair), which control the buccal muscle involved in the processes of open-rasp-swallow, known as the feeding cycle, initiated by a CPG circuit contained in these ganglia. The two cerebral ganglia (right bellow) are involved in the activation and modulation of many circuits and processes, including the modulation from specific neurons in all ganglia. Located on the sides of the diagram, the pedal ganglia control the snail pedal movements as crawling or swimming, and they are originally joined. The pleural ganglia, which contain sensory neurons, are connected to the mantle. And finally, at the bottom of the diagram, we find the parietal ganglion, involved in the control of the gill (respiratory organ) and the olfactory organ, and the visceral ganglion, connected to organs such as the intestine, the heart, and part of the genital system.
 
 
-\begin{figure}[h!]
+\begin{figure}[hbt!]
 	\minipage{0.45\textwidth}
 	\centering
 	\includegraphics[angle=180,width=0.9\linewidth]{img/methods/preparation/buccal_ganglia.JPG}
-	\caption{Lymnaea buccal ganglia.}
+	\vspace{2pt}
+	\includegraphics[width=0.9\linewidth]{img/methods/preparation/RPG.JPG}
+	\caption{\textit{L. stagnalis} buccal ganglia (top) and parietal ganglia and visceral ganglion (bottom).}
 	\label{fig:buccal ganglia}
 	\endminipage
 	\minipage{0.45\textwidth}
 	\centering
 	\includegraphics[width=\linewidth]{img/methods/CNS_diagram.png}
-	\caption{Lymnaea nervous system diagram.}
+	\caption{\textit{L. stagnalis} nervous system diagram representing all ganglia.} 
 	\label{fig:lymn neural sys diagram}
 	\endminipage
 \end{figure}
 
-Neuronal recordings showed in this work are from the CPG in the buccal ganglia (see \ref{c-invariants}) and right parietal ganglia, containing large neurons with tonic firing (see \ref{c-laser}). Both ganglia are showed in detail in figures \ref{fig:buccal ganglia}.
+\todo{mejorar imagen, cambiar ganglion por ganglia}
+Neuronal recordings showed in this work are from the CPG in the buccal ganglia in chapter \ref{c-invariants}) and right parietal ganglia, containing large neurons with tonic firing and a giant electrical couple cell to the visceral ganglia in chapter \ref{c-laser}). Both ganglia are showed in detail in figures \ref{fig:buccal ganglia}.
 
 %%%% In contrast to other systems functionality where motoneurons are CPGs neurons \cite{stomatogastric} ((page 5 review), in Lymnaea nervous system, CPGs and motoneurons are separated groups of neurons. 
 
 
 \section{Feeding CPG in \textit{L. stagnalis}}
-%\input{chapters/methods-paper-modelo}
-
-%For the purpose of this study, the nerves employed for the extracellular recordings are the symmetrical pair of nerves coming out from the buccal ganglia, which were originally connected to the buccal mass. Since these nerves send out the impulses to move the muscles, the neurons whose activity is recorded in the extracellular signals are mostly motoneurons \cite{Benjamin1979a}, not the ones initiating the rhythm but the ones following the CPG neurons. It is important to localize these neurons in the extracellular recording for detecting the rhythm and the patterns. 
-% On the one hand, the feeding rhythm in \textit{Lymnaea} is pretty slow and it is not always active. 
-
 \subsubsection{Lymnaea feeding rhythm}
 
 The feeding activity of the \textit{Lymnaea}, concerning the buccal mass, is classified in three main steps: Rest, protraction, rasp and swallow. This sequence of buccal movements in the snail is generated by the motor neurons distributed in the ganglia. Each of these phases is leaded by one interneuron from the CPG: N1M, N2v, N3t, and followed by the motoneurons associated to them. This is a complex distributed system where motoneurons do not exclusively follow the interneurons but are also implied in the feeding cycle activation \cite{staras_pattern-generating_1998}. In this circuit there are also some modulatory neurons implied such as SO neuron (in the same buccal ganglia) or CGC (in the cerebral ganglia). 
 
 Hence, an initial resting state, where the CPG as well as the moto-neurons have no activity, may change due to a sensory input. This input, received in the presence of food or during hunger, is handled in the cerebral ganglia generating activity and changing the SO tonic spiking during resting (which was inhibiting the CPG) to a bursting mode, meaning the start of the feeding cycle.
 
-
-This CPG circuit can be studied in a disected preparation, since snail's neurons are active after the isolation of the system. Specially, the CPG rhythm is maintained after its activation and it is generated in an autonomous way by the neurons in the circuit. However, due to the slow dynamics of the system and the nature of the experimental setting there are different ways to initiate the rhythm. In \textit{Lymnaea} literature, several options are proposed to solve this issue. The first solution is stimulating the neurons responsible for the initiation of the feeding rhythm, such as the SO modulator neuron on the buccal ganglia or also the CBC, CVs neurons, located on brain ganglia. Stimulating these cells usually activates the target circuits \cite{benjamin_distributed_2012}. However, the access to these neurons is not always easy and it might be necessary to keep them in constant stimulation. Another option for activation discussed in the literature is appliying octopamine. Some neurons in the buccal ganglia are sensitive to octopamine and, as a result, this procedure activates the rhythm \cite{vehovszky_octopamine-containing_2004}. Alternatively, in a semi-intact preparation, it can be applied sucrose to activate the rhythm \cite{vavoulis_computational_2007,vehovszky_octopamine-containing_2004,straub_endogenous_2002}. As a foresighted option, controlling the snails' feeding and selecting the first animal approaching the food seems to be effective for obtaining the feeding rhythm, with up to 80\% of success \cite{Elliott1991}.\todo{del tfm, quitar?}
-
-
-
+This CPG circuit can be studied in a dissected preparation, since snail's neurons are active for a long time after the isolation of the system. Specially, the CPG rhythm is maintained after its activation and it is generated in an autonomous way by the neurons in the circuit. However, due to the slow dynamics of the system and the nature of the experimental setting there are different ways to initiate the rhythm. In \textit{Lymnaea} literature, several options are proposed to solve this issue. The first solution is stimulating the neurons responsible for the initiation of the feeding rhythm, such as the SO modulator neuron on the buccal ganglia or also the CBC, CVs neurons, located on brain ganglia. Stimulating these cells usually activates the target circuits \cite{benjamin_distributed_2012}. However, the access to these neurons is not always easy and it might be necessary to keep them in constant stimulation. Another option for activation discussed in the literature is applying octopamine. Some neurons in the buccal ganglia are sensitive to octopamine and, as a result, this procedure activates the rhythm \cite{vehovszky_octopamine-containing_2004}. Alternatively, in a semi-intact preparation, it can be applied sucrose to activate the rhythm \cite{vavoulis_computational_2007,vehovszky_octopamine-containing_2004,straub_endogenous_2002}. Similar to this approach but performing the complete dissection it is the stimulation of the Medium Lip Nerve (MLN), that simulates the lip stimulation. 
+The recordings analyzed in chapter \ref{c-invariants} are either spontaneous activity or electrical stimulation in CV1a or SO neuron, or the Medium Lip Nerve (MLN).
 
 \section{Electrophysiology in \textit{Lymnaea Stagnalis}}
 
@@ -51,96 +45,22 @@ This CPG circuit can be studied in a disected preparation, since snail's neurons
 In this thesis, intraceullular neuronal recordings have been carried out in the mollusk \textit{Lymnaea Stagnalis}. Beyond the advantages of invertebrates discussed in section \ref{c-intro-invertebrates} -- its easy accessible neural system, the size and resistance of its neurons to electrode impaling, the great pond snail's neural system is detailed described and so it is the feeding CPG which has been the model of study for chapter \ref{c-invariants} in this work. Also its slow dynamics, are convenient when studying the sequential evolution of the modulation, as in the case of the laser stimulation described along chapter \ref{c-laser}. 
 
 The technique followed for the neural activity acquisition was intracellular recordings with filled with 3 M $KCl$ sharp electrodes, % in Figure \ref{fig:membranepotential recording} there is a scheme of the potential measurement. Está en la intro.
- In this technique, a glass micropippete penetrates the cell to record its activity, with a minimal damage on the cell, and the membrane potential is then recorded using a DC amplifier (ELC-03M, NPI Electronic, Hauptstrasse, Tamm, Germany). Micropippetes were pulled using a Sutter Instruments puller (Model P-97) (see Figure \ref{fig:electrode}). Membrane potential was recorded and recordings were acquired at 10 KHz using an A/D board (PCI-625 with a BNC-2090A DAQ device, National Instruments).
-
-To facilitate the access to the cell, the sheath above it was reduced using protease (Sigma XVII) over the ganglion for $\sim$1 min and then washed with fresh saline. In order to record cell signals extra- and intracellularly, it is necessary to have full access to the neural system. Although there is an option to keep the buccal mass and do a semi-intact preparation \parencite{staras_cellular_1999} in this work the neural system (ganglia and nerves) was fully isolated (see \cite{garrido-pena_tfm_2022} for more details). The preparation was immersed in a saline solution (in mM: 51.3 $NaCl$, 1.7 $KCl$, 1.5 $MgCl_2\cdot6H_2O$, 4.1 $CaCl_2\cdot2H_2O$, 5 $HEPES$, corrected to pH 7.8 with 4 $M$ $NaOH$). All procedures followed the European Commission and Universidad Autónoma de Madrid animal treatment guidelines.
+ In this technique, a glass micropippete penetrates the cell to record its activity, with a minimal damage on the cell, and the membrane potential is then recorded using a DC amplifier (ELC-03M, NPI Electronic, Hauptstrasse, Tamm, Germany). Glass micropippetes were pulled using a Sutter Instruments puller (Model P-97) (see Figure \ref{fig:electrode}). Membrane potential was recorded and recordings were acquired at 10 KHz using an A/D board (PCI-625 with a BNC-2090A DAQ device, National Instruments).
 
 \begin{figure}[hbt!]
 	\centering
-	\begin{minipage}{0.4\textwidth}
-		\centering
-		\includegraphics[angle=180,width=0.99\linewidth]{img/methods/IMG00027.jpg}
-		\caption{\textit{Lymnaea stagnalis} neural system isolated.}
-		\label{fig:preparation}
-	\end{minipage}
-	\hfill
-	\centering
-	\begin{minipage}{0.4\textwidth}
-		\centering
-		\includegraphics[width=0.99\linewidth]{img/methods/preparation/electrode4_zoom.jpg}
-		\caption{Example of a sharp micro-electrode glass}
-		\label{fig:electrode}
-	\end{minipage}
+	\includegraphics[width=0.6\linewidth]{img/methods/preparation/electrode4_zoom.jpg}
+	\caption{Example of a sharp micro-electrode glass in the SUTTER puller.}
+	\label{fig:electrode}
 \end{figure}
+
+To facilitate the access to the cell, the sheath above it was reduced using protease (Sigma XVII) over the ganglion for $\sim$1 min and then washed with fresh saline. In order to record cell signals extra- and intracellularly, it is necessary to have full access to the neural system (see \cite{garrido-pena_tfm_2022} for more details). The preparation was immersed in a saline solution (in mM: 51.3 $NaCl$, 1.7 $KCl$, 1.5 $MgCl_2\cdot6H_2O$, 4.1 $CaCl_2\cdot2H_2O$, 5 $HEPES$, corrected to pH 7.8 with 4 $M$ $NaOH$). All procedures followed the European Commission and Universidad Autónoma de Madrid animal treatment guidelines.
+
+The recordings analyzed in \ref{sec:experimental sussex} were carried out in a equivalent procedure by Michael Crossley in the University of Sussex. 
 
 
 \section{Conductance based models}
-For the theoretical analyses in this work, there have been used simulations of conductance-based models. As discussed in section \ref{computational neuroscience}, these models are based on a specific combination of ionic channels with a dynamic dependent on time that reproduces the Voltage value in the membrane at each time instant. There are many types of models and descriptions, depending on the specific combination of channels. Models used in this work, for both chapters \ref{c-invariants} and \ref{c-laser}, are description of neurons in \textit{Lymnaea stagnalis} for a neuron in cerebral ganglia, CGC \parencite{vavoulis_balanced_2010} and neurons in the feeding CPG in the buccal ganglia --SO, N1M, N2v, N3t, \parencite{vavoulis_computational_2007}. The first one, simulates a tonic firing and shoulder shape spike waveform, similar to the activity in some neurons in the right parietal ganglion. The second model is a detailed description of the CPG circuit with a combination of two-compartments neurons and a gradual synapse, that allows sufficient flexibility in the circuit to induce variability in the model --this will be discussed in detail in section \ref{c-invariant-models}. Equations \ref{eq:CGC}-\ref{eq:synapse} describe these to models. 
-
-\subsection{CGC neuron model}
- This model is described by six different ionic channels: Persistent and transient sodium currents ($I_{NaP}$, $I_{NaT}$), transient and delayed rectifier potassium currents ($I_A$, $I_D$), and a low-voltage-activated and high-voltage-activated calcium currents ($I_{LVA}$, $I_{HVA}$), described by Eqs. \ref{eq:voltage} to \ref{eq:channels}. \todo{añadir para qué es cada corriente}
- 
-  \begin{equation}
- 	C_m\frac{dV}{dt} = I_{inj} - I_{NaT} - I_{NaP} - I_{A} - I_{D} - I_{LVA} - I_{HVA},
- 	\label{eq:voltage}
- \end{equation}
- 
- \begin{equation}
- 	I_{NaT} = g_{NaT} m_{{\infty}}^3 h (V - E_{Na}),
- \end{equation}
- \begin{equation}
- 	I_{NaP} = g_{NaP} r^3 (V - E_{Na}),
- \end{equation}
- \begin{equation}
- 	I_{A} = g_{A} a^4 b (V - E_{K}),
- \end{equation}
- \begin{equation}
- 	I_{D} = g_{D} n^4 (V - E_{K}),
- 	% \label{eq:channels}
- \end{equation}
- \begin{equation}
- 	I_{LVA} = g_{LVA} c_{{\infty}}^3 d_{{\infty}} (V - E_{Ca}),
- \end{equation}
- \begin{equation}
- 	I_{HVA} = g_{HVA} e^3 f (V - E_{Ca}).
- 	\label{eq:channels}
- \end{equation}
-
-Inactivation and activation dynamic variables $r,a,n,e$ and $h,b,f$ are defined by:
-\begin{equation}
-	\frac{dx}{dt} = \frac{x_{\infty}-x}{\tau_x},
-	\end{equation}
-where $x = h,r,a,b,n,e$ or $f$ and $x_{\infty}$ and $tau_x$ are defined by:
-
-\begin{equation}
-	x_{\infty} = {(1+exp(\frac{V_H^x-V}{V_S^x}))}^{-1}
-\end{equation}
-
-See Supplementary Material in \cite{vavoulis_balanced_2010} for more details. 
-
-The implementation of this model is available at Neun library \href{https://github.com/GNB-UAM/neun}{github.com/GNB-UAM/neun} (VavoulisCGCModel).
-
-\begin{figure}[htb!]
-	\centering
-	\includegraphics[width=\textwidth]{img/laser/cgc-model-simulation.pdf}
-	\caption{Simulation of the CGC-model representing the voltage dynamics during an action potential and the corresponding ionic currents defined in the model ($I_{\textrm{NaP}}$,$I_{\textrm{NaT}}$, $I_{\textrm{A}}$, $I_{\textrm{D}}$, $I_{\textrm{LVA}}$,$I_{\textrm{HVA}}$). The units in the $y$-axis are specified in the legend.}
-	\label{fig:model cgc currents}
-\end{figure}
-
-
-\subsubsection{Temperature dependence description in the model}
-\label{sec:model equations temperature}
-To simulate the temperature dependency in the neuronal activity, a $Q_{10}$ factor was incorporated to every dynamical equation in the model (i.e., conductances and activation gates). $Q_{10}$ represents temperature sensitivity in each channel and it was included as a new factor as shown in Eqs. \ref{Q10_conductance} and \ref{Q10_gates}, with $i=Na_T,Na_P,A,D,LVA,HVA$ for Eq. \ref{Q10_conductance} and $i=h,r,a,b,n,d,e,f$ for Eq. \ref{Q10_gates}. The capacitance was also defined as temperature dependent ($C_T$) with a linear relation to the difference of temperature: 
-
-\begin{equation}g_i(T)=\bar{g}_i{Q^i_{10}}^{\frac{T-T_0}{10}},
-	\label{Q10_conductance}
-\end{equation}
-\begin{equation}\phi_i(T)=\bar{\phi}_i{Q^i_{10}}^{\frac{T-T_0}{10}},
-	\label{Q10_gates}\end{equation}
-\begin{equation}C_T=c_0 + c_0 \gamma(T-T_0).\end{equation}
-
-
-where $\bar{g}_i$, $\bar{\phi}_i$, $c_0$ are the original values used in the model and $\gamma = 0.05$.
+For the theoretical analyses in this work, there have been used simulations of conductance-based models. As discussed in section \ref{sec:computational neuroscience}, these models are based on a specific combination of ionic channels with a dynamic dependent on time that reproduces the Voltage value in the membrane at each time instant. There are many types of models and descriptions, depending on the specific combination of channels. Models used in this work, for both chapters \ref{c-invariants} and \ref{c-laser}, are description of neurons in \textit{Lymnaea stagnalis} for the neurons in the feeding CPG in the buccal ganglia --SO, N1M, N2v, N3t, \parencite{vavoulis_computational_2007} and for a neuron in cerebral ganglia, CGC \parencite{vavoulis_balanced_2010}. The first one is a detailed description of the CPG circuit with a combination of two-compartments neurons and a gradual synapse, that allows sufficient flexibility in the circuit to induce variability in the model --this will be discussed in detail in section \ref{sec:invariants-models}. The second model simulates a tonic firing and shoulder shape spike waveform, similar to the activity in some neurons in the right parietal ganglion characterized in chapter \ref{c-laser}.
 
 \subsection{Feeding CPG model}
 \label{sec:CPG model}
@@ -156,30 +76,6 @@ The Vavoulis et al. description of the individual neurons considers a two-compar
 	\tau_m\frac{dV_A}{dt} = -i_{L,A} - i_{NaT} - i_K - i_{ec,A}
 	\label{eq:axon}
 \end{equation}
-
-
-\begin{figure}
-\centering
-\begin{minipage}[t]{0.45\textwidth}
-	\raggedright
-	(a) \par
-	\vspace{75pt}
-	\includegraphics[width=\textwidth]{methods/invariants-model/figure1a.eps}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.45\textwidth}
-	\raggedright
-	(b) \par
-	\includegraphics[width=\textwidth]{methods/invariants-model/figure1b.eps}
-\end{minipage}
-	\caption{\textbf{Panel (a)}. Ionic channel distribution in the two-compartment description for the individual neurons in the Vavoulis et al. model \cite{Vavoulis2007} used in this study. At the soma: $I_{ACh}$, acetylcholine ionic channel; $I_{NaL}$, slowly inactivating sodium
-		ionic channel;$I_T$, low-threshold calcium current; $I_{inj}$, injected current; $I_{L,S}$, leakage current in the soma; $I_{syn}$, synaptic current. At the axon: $I_{NaT}$, fast inactivating sodium current; $I_K$, delayed rectifier potassium current; $I_{L,A}$, leakage current in the axon. The electrical couplings are described as $I_{ec,S}=g_{ec}(V_S-V_A)$ and $I_{ec,A}=g_{ec}(V_A-V_S)$, respectively, being $g_{ec}$ the coupling conductance. The color for each $I_X$ current represents the CPG neuron that includes it at the soma,  N1M, N2v and N3t, respectively, as shown in panel (b). 
-		%cambios
-		\textbf{Panel (b)}. Connection scheme for the {\sl Lymnaea} feeding CPG circuit model. For details on the ionic channel current descriptions and associated parameters, see \cite{Vavoulis2007}. The colors indicating each neuron in the circuit match those in the representation of their corresponding somatic membrane potential traces throughout the paper. 
-	}
-	\label{fig:CPG diagram 2 compartments}
-\end{figure}
-
-\vspace{0.3in}
 
 \noindent Here we follow the notation of~\cite{Vavoulis2007} where $\tau_m$ represents the time constant of the membrane (in ms) given by the ratio of the membrane capacitance (in nF) and the leakage conductance (in $\mu$S).  In equations \ref{eq:soma} and \ref{eq:axon}, $i$ variables (given in mV) are the product of the corresponding currents (in nA) times the passive input resistance given in M$\Omega$.
 %, $i=I*R$, where  $R$ is given in M$\Omega$.
@@ -214,28 +110,117 @@ Individual neurons following the previous description are connected by graded sy
 
 \noindent where index $j$ runs over all presynaptic neurons and \(\gamma_{syn,j}, E_{syn,j},\tau_{syn},V_{pre_{V_S}}\) are the product of input resistance and maximal synaptic conductance, the synaptic reversal potential, the synaptic time constant and the presynaptic potential, respectively. 
 
+The 3 inter-neurons described in this circuit have different waveform shapes, determined by their corresponding ionic channel and the axon connectivity, in Fig. \ref{fig:model simulation} there is an example of a simulation with all neurons in the circuit. First, N1M voltage characteristics are provided by an acetylcholine sensitive channel (\(i_{ACh} = 200 * p^3 * (V_S + 30)\)), which causes the gradual spiking frequency increase as well as the visible plateau, i.e., the slow wave is sustained before hyperpolarization. On the other hand, N2v has a slowly inactivating sodium channel (\(i_{NaL} = 2 * p^3 * q^3 * (V_S-55)\)), which causes the slow depolarization in this neuron. N2v neuron has a lower spiking frequency caused by the conductance value given for the axial $g_{ec}$ linking the two compartments, which is much lower in this cell. Finally, the N3t neuron has the particularity of a post inhibitory rebound, which generates an initial fast spiking followed by a decrease in the firing rate as the burst evolves. This latter property is caused by a low-threshold calcium channel (\( i_T = 3.27 * p^3 * q *(V_S-80)\)). SO neuron has no \(I_X\) channel (in contrast to N1M, N2v and N3t neurons) so its activity is the result of the combination of the common ionic channels in the axon and the soma.
 
-\begin{figure}[h!]
+
+\begin{figure}[htb!]
 	\centering
-	\includegraphics[width=\linewidth]{methods/invariants-model/figure2.eps}
+	\begin{minipage}[t]{0.45\textwidth}
+		\raggedright
+		(a) \par
+		\vspace{65pt}
+		\centering
+		\includegraphics[width=\textwidth]{methods/invariants-model/figure1a.eps}
+	\end{minipage}\hfill
+	\begin{minipage}[t]{0.35\textwidth}
+		\raggedright
+		(b) \par
+		\centering
+		\includegraphics[width=\textwidth]{methods/invariants-model/figure1b.eps}
+	\end{minipage}
+	\caption{\textbf{Panel (a)}. Ionic channel distribution in the two-compartment description for the individual neurons in the Vavoulis et al. model used in this study. At the soma: $I_{ACh}$, acetylcholine ionic channel; $I_{NaL}$, slowly inactivating sodium
+		ionic channel;$I_T$, low-threshold calcium current; $I_{inj}$, injected current; $I_{L,S}$, leakage current in the soma; $I_{syn}$, synaptic current. At the axon: $I_{NaT}$, fast inactivating sodium current; $I_K$, delayed rectifier potassium current; $I_{L,A}$, leakage current in the axon. The color for each $I_X$ current represents the CPG neuron that includes it at the soma,  N1M, N2v and N3t, respectively. \textbf{Panel (b)}. Connection scheme for the {\sl Lymnaea} feeding CPG circuit model. The colors indicating each neuron in the circuit match those in the representation of their corresponding somatic membrane potential traces in section \ref{sec:CPG model}. 
+	}
+	\label{fig:CPG diagram 2 compartments}
+\end{figure}
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{methods/invariants-model/figure2.eps}
 	\caption{Triphasic feeding rhythm as produced by the circuit CPG model described in Fig. \ref{fig:CPG diagram 2 compartments}. In this simulation, $i_{inj}$ values applied to each neuron are 8.5, 6, 2 and 0 mV, respectively.}
 	\label{fig:model simulation}
 \end{figure}
 
-The 3 inter-neurons described in this circuit have different waveform shapes, determined by their corresponding ionic channel and the axon connectivity, in Fig. \ref{fig:model simulation}  \todo{quitar marcos} there is an example of a simulation with all neurons in the circuit. First, N1M voltage characteristics are provided by an acetylcholine sensitive channel (\(i_{ACh} = 200 * p^3 * (V_S + 30)\)), which causes the gradual spiking frequency increase as well as the visible plateau, i.e., the slow wave is sustained before hyperpolarization. On the other hand, N2v has a slowly inactivating sodium channel (\(i_{NaL} = 2 * p^3 * q^3 * (V_S-55)\)), which causes the slow depolarization in this neuron. N2v neuron has a lower spiking frequency caused by the conductance value given for the axial $g_{ec}$ linking the two compartments, which is much lower in this cell. Finally, the N3t neuron has the particularity of a post inhibitory rebound, which generates an initial fast spiking followed by a decrease in the firing rate as the burst evolves. This latter property is caused by a low-threshold calcium channel (\( i_T = 3.27 * p^3 * q *(V_S-80)\)). SO neuron has no \(I_X\) channel (in contrast to N1M, N2v and N3t neurons) so its activity is the result of the combination of the common ionic channels in the axon and the soma.
+
+
+\subsection{CGC neuron model}
+This model is described by six different ionic channels: Persistent and transient sodium currents ($I_{NaP}$, $I_{NaT}$), that primarily drive depolarization and action potential initiation; transient and delayed rectifier potassium currents ($I_A$, $I_D$), key for repolarization and contribute to the shoulder shape waveform in this neuron (specially $I_D$); and a low-voltage-activated and high-voltage-activated calcium currents ($I_{LVA}$, $I_{HVA}$), which are crucial for both immediate excitability and long-term plasticity. These channels are described by Eqs. \ref{eq:voltage} to \ref{eq:channels}. 
+
+\begin{equation}
+C_m\frac{dV}{dt} = I_{inj} - I_{NaT} - I_{NaP} - I_{A} - I_{D} - I_{LVA} - I_{HVA},
+\label{eq:voltage}
+\end{equation}
+
+\begin{equation}
+I_{NaT} = g_{NaT} m_{{\infty}}^3 h (V - E_{Na}),
+\end{equation}
+\begin{equation}
+I_{NaP} = g_{NaP} r^3 (V - E_{Na}),
+\end{equation}
+\begin{equation}
+I_{A} = g_{A} a^4 b (V - E_{K}),
+\end{equation}
+\begin{equation}
+I_{D} = g_{D} n^4 (V - E_{K}),
+% \label{eq:channels}
+\end{equation}
+\begin{equation}
+I_{LVA} = g_{LVA} c_{{\infty}}^3 d_{{\infty}} (V - E_{Ca}),
+\end{equation}
+\begin{equation}
+I_{HVA} = g_{HVA} e^3 f (V - E_{Ca}).
+\label{eq:channels}
+\end{equation}
+
+Inactivation and activation dynamic variables $r,a,n,e$ and $h,b,f$ are defined by:
+\begin{equation}
+\frac{dx}{dt} = \frac{x_{\infty}-x}{\tau_x},
+\end{equation}
+where $x = h,r,a,b,n,e$ or $f$ and $x_{\infty}$ and $tau_x$ are defined by:
+
+\begin{equation}
+x_{\infty} = {(1+exp(\frac{V_H^x-V}{V_S^x}))}^{-1}
+\end{equation}
+
+See Supplementary Material in \cite{vavoulis_balanced_2010} for more details. 
+
+The implementation of this model is available at Neun library \href{https://github.com/GNB-UAM/neun}{github.com/GNB-UAM/neun} (VavoulisCGCModel).
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=\textwidth]{img/laser/cgc-model-simulation.pdf}
+	\caption{Simulation of the CGC-model representing the voltage dynamics during an action potential and the corresponding ionic currents defined in the model ($I_{\textrm{NaP}}$,$I_{\textrm{NaT}}$, $I_{\textrm{A}}$, $I_{\textrm{D}}$, $I_{\textrm{LVA}}$,$I_{\textrm{HVA}}$). The units in the $y$-axis are specified in the legend.}
+	\label{fig:model cgc currents}
+\end{figure}
+
+
+\subsubsection{Temperature dependence description in the model}
+\label{sec:model equations temperature}
+To simulate the temperature dependency in the neuronal activity, a $Q_{10}$ factor was incorporated to every dynamical equation in the model (i.e., conductances and activation gates). $Q_{10}$ represents temperature sensitivity in each channel and it was included as a new factor as shown in Eqs. \ref{Q10_conductance} and \ref{Q10_gates}, with $i=Na_T,Na_P,A,D,LVA,HVA$ for Eq. \ref{Q10_conductance} and $i=h,r,a,b,n,d,e,f$ for Eq. \ref{Q10_gates}. The capacitance was also defined as temperature dependent ($C_T$) with a linear relation to the difference of temperature: 
+
+\begin{equation}g_i(T)=\bar{g}_i{Q^i_{10}}^{\frac{T-T_0}{10}},
+\label{Q10_conductance}
+\end{equation}
+\begin{equation}\phi_i(T)=\bar{\phi}_i{Q^i_{10}}^{\frac{T-T_0}{10}},
+\label{Q10_gates}\end{equation}
+\begin{equation}C_T=c_0 + c_0 \gamma(T-T_0).\end{equation}
+
+
+where $\bar{g}_i$, $\bar{\phi}_i$, $c_0$ are the original values used in the model and $\gamma = 0.05$.
 
  
 \section{Neural data analysis}
-Although models where implemented in $C++$ taking advantage of its computational speed, most analysis where performed in Python3, since it is a frequently used tool and libraries as Pandas are very effective for data analysis. 
-Scripts are available at \todo{ add link to git. }
-
 %Detectar eventos --> secuencia
 % Eventos promediados ocultan información --> secuencialidad ciclo a ciclo
-%Métricas 
+%Métricas
 
-For the temporal variability study, first the spikes were detected using the change in the derivative during the computation of the model along with a threshold condition. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. 
+To analyze the recordings of intracellular signals and the outputs of the models simulations, we relied on the detection of single events, mainly spikes and then we either defined time-intervals for the CPG rhythm or analyze each single spike based on metrics as in chapter \ref{c-laser}. The detection of these references allowed us to study the sequentiality of neural dynamics at different time-scales. Also, we focused on each event and cycle, avoiding the averaging of the results, since we consider this hinders information in the activity, such as the sequential activation cycle-by-cycle. 
 
-Thus, all intervals defined in section \ref{subsec:intervals} were measured and their variability was characterized by statistical analysis tools, i.e, boxplots and linear correlations. For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. \todo{Rewrite, reordered}
+For the study of the time-intervals variability and the presence os sequential dynamical invariants, the spikes of the recordings and model simulation of the bursting activity were detected using the change in the derivative along with a voltage threshold condition, i.e., all peaks over a voltage value were considered action potential peaks. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. In some recordings this temporal reference was adjusted to the needs of the data available, this will be specified in the corresponding section \ref{sec:experimental sussex}.
+
+All intervals defined in section \ref{subsec:intervals} were defined by the events in the ini and end of the burst, the time-intervals described were characterized as follows:
+
+%For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. 
 
 \begin{lstlisting}
 	#########  SINGLE INTERVALS
@@ -243,33 +228,104 @@ Thus, all intervals defined in section \ref{subsec:intervals} were measured and 
 	
 	# off1 - on1
 	def get_burst_duration(data):
-	return np.array([b - a for a, b in zip(data[:, 0], data[:, 1])])
+		return np.array([b - a for a, b in zip(data[:, 0], data[:, 1])])
 	
 	# on2 - off1
 	def get_burst_interval(data):
-	return np.array([a - b for a, b in zip(data[1:, 0], data[:, 1])])
-	
-	
+		return np.array([a - b for a, b in zip(data[1:, 0], data[:, 1])])
+		
 	# on2 - on1
 	def get_burst_period(data):
-	return np.array([a - b for a, b in zip(data[1:, 0], data[:, 0])])
-	
-	
+		return np.array([a - b for a, b in zip(data[1:, 0], data[:, 0])])
+		
 	#########  PAIRED INTERVALS
-	
 	def get_intervals(d1,d2):
-	if d1.size == 0 or d2.size == 0:
-	return [],[]
+		if d1.size == 0 or d2.size == 0:
+			return [],[]
+			
+		d1d2_interval = np.array([b-a for a,b in zip(d1[:,0],d2[:,0])])
+		d1d2_delay = np.array([b-a for a,b in zip(d1[:,1],d2[:,0])])
+		d2d1_interval = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,0])])
+		d2d1_delay = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,1])])
 	
-	d1d2_interval = np.array([b-a for a,b in zip(d1[:,0],d2[:,0])])
-	d1d2_delay = np.array([b-a for a,b in zip(d1[:,1],d2[:,0])])
-	d2d1_interval = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,0])])
-	d2d1_delay = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,1])])
-	
-	return [d1d2_interval,d1d2_delay],[d2d1_interval,d2d1_delay]
+		return [d1d2_interval,d1d2_delay],[d2d1_interval,d2d1_delay]
 \end{lstlisting}
 
+On the other hand, in the recordings and model simulations of the tonic firing activity of large cells in the right parietal ganglia, regarding the stereotyped spike waveform it was enough with a voltage threshold to detect the events in the sequence, and to analyze the waveoform after the detection of the events, each one was extended N milliseconds left and right, defining segments of signal that capture the shape of the waveform. The characterization of that waveform was carried by defining four metrics: the duration, amplitude and depolarization and repolarization slopes, implemented as follows:
 
+\begin{lstlisting}
+def get_spike_duration(spike,dt,tol=2, thres_val=0.5, max_dur = 5, v_scale=1): 
+	spike = spike[~np.isnan(spike)]
+	
+	peaks, properties = find_peaks(spike, prominence=1*v_scale, width=20)
+	
+	#Warning: this may fail for not centered waveforms	
+	if len(peaks)>1: # in case spike has several peaks, gets mid one.
+		mid_peak = np.isclose(len(spike)//2, peaks, atol=10)
+		peaks = peaks[mid_peak]
+	results_half = peak_widths(spike, peaks, rel_height=thres_val)
+	
+	try: 
+		duration_vals = np.array([results_half[2][0], results_half[3][0]])
+		th = results_half[1]
+	except Exception as e:
+		duration_vals = np.array([])
+		th = 0
+	
+	if duration_vals.size == 0: #Safety comprobation
+		return (0,0),th
+	else:
+		return (duration_vals[0]*dt,duration_vals[-1]*dt),th
+	
+def get_spike_duration_value(waveform, dt, plot=False, v_scale=1):
+	dur_refs,th = get_spike_duration(waveform, dt, plot=plot, v_scale=v_scale)
+	duration = dur_refs[1]-dur_refs[0]
+	return duration
+
+# Description: 
+# 	Recives spike values and return the amplitude value measured as the distance between
+#	maximum and minimum voltage value.
+# Parameters:
+# 	spike voltage values
+# 	dt time rate
+# Return:
+#	amplitude
+def get_spike_amplitude(spike,dt, v_scale=1):
+	spike = spike[~np.isnan(spike)] 
+	mx_value = np.max(spike) #maximum V value (spike)
+	mn_value = np.min(spike) #minimum V value (spike)
+
+	return mx_value-mn_value
+
+# Description: 
+# 	Recives spike values and return the increasing and decreasing slope values at the 
+#	two points matching a threshold in "the middle" of the spike maximum and minimum voltage value.
+# Parameters:
+# 	spike voltage values
+# 	dt time rate
+# 	n_points: number of points around position to calculate slope
+#   slope_position: where to calculate slope: defalult value, mid of spike.
+# Return:
+#	depolarization slope, repolarization slope 
+
+def get_slope(spike,dt,n_points=10, slope_position=0.5, plot=False, v_scale=1):
+	spike = spike[~np.isnan(spike)] 
+	mid_ps,th = get_spike_duration(spike,dt,thres_val=slope_position, v_scale=v_scale)
+	indx1 = int(mid_ps[0]/dt) #From ms to point ref
+	indx2 = int(mid_ps[1]/dt) #From ms to point ref
+	
+	scale = int(0.1/dt)
+	n_points *= scale
+	
+	n_ms = n_points*dt
+	
+	slope1 = (spike[indx1+n_points]-spike[indx1-n_points])/(n_ms*2) 
+	slope2 = (spike[indx2+n_points]-spike[indx2-n_points])/(n_ms*2)
+
+	return (slope1,slope2)
+\end{lstlisting}
+
+Finally, model were implemented in $C++$ taking advantage of its computational speed and most analysis where performed in Python3, since it is a frequently used tool and libraries such as Pandas are very effective for data analysis. Scripts used in this work are available at \href{https://github.com/agarpe/neural-dynamics-utils}{github.com/agarpe/neural-dynamics-utils} and all conductance-based models are included in Neun \href{https://github.com/agarpe/neural-dynamics-utils}{github.com/agarpe/neural-dynamics-utils}
 
 
 \section{CW-NIR laser}
