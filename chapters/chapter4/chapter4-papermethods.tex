@@ -39,6 +39,8 @@ This is illustrated in Fig. \ref{fig:intervals}, where single neuron intervals a
 	\item \textbf{NeuronX-NeuronY delay}, being the time lapse between the burst end of a neuron X and the burst beginning of neuron Y. (end X to start Y).
 \end{enumerate}
 
+Note that it is also possible to define those intervals only with the references from two neurons. For example, the intervals conformed based on N1 and N3 intervals would be: N1N3 and N3N1 intervals and N1N3 and N3N1 delay. Note that the intervals corresponding to the third neuron are enclosed in the others defined, e.g., in this example N2 burst and N2N1 delay would be contained in N1N3 delay. This consideration allows the characterization of the variability cycle-by-cycle in cases where it is not possible to define time references for the three neurons in the circuit. 
+
 \subsection{Inducing variability in the model by current injection}
 \label{subsec:inj protocol}
 The spiking-bursting activity of the model CPG neurons can be modulated by using an additional current injection on each cell, implemented in the \(i_{inj}\) term of equation (\ref{eq:soma}), as performed in many experimental protocols. Depending on the current value applied, the corresponding neuron dynamics changes. While for N2v a change in this injection corresponds to a change in burst frequency (i.e. the number of bursts increases/decreases), for the rest of the neurons in the model a change in \(i_{inj}\) affects burst duration for N3t and SO, and the length of the depolarization phase in N1M.
@@ -80,47 +82,10 @@ Therefore, we used a current ramp protocol to induce variability in the CPG mode
 \caption{List of \(i_{inj}\) values that yield realistic bursting rhythms for each neuron in the model CPG used in the stimulation protocols reported in this paper. The left section of the table displays the \(i_{inj}\) values applied to each neuron (columns) during each simulation condition (rows). Ramp values on the right section refer to the minimum and maximum values of the ramp variable $c$ in each simulation, increasing \(i_{inj}\) in the specified step every 4.6 seconds (the approximate duration of two N3t burst) to induce variability.} \label{table:inj values}
 \end{table}
 
-
-
-
-\subsection{Model simulation specifications and statistical analysis}\todo{añadir en métodos generales o ampliarlo también a experimental}
 Simulations of \cite{vavoulis_computational_2007} model were implemented in C++. The code of the feeding CPG model implementation is available at \href{github.com/GNB-UAM/CPG-feeding-Lymnaea}{https://github.com/GNB-UAM/CPG-feeding-Lymnaea}. This model was also included in Neun library in a Github repository \href{github.com/GNB-UAM/Neun}{https://github.com/GNB-UAM/Neun}. Each simulation had the duration of two consecutive cycles of up and down ramps as the one shown in Fig. \ref{fig:complete ramp example} using the parameters described in Table \ref{table:inj values}. The number of bursts in each simulation was approximately 140 (this number slightly depends on the neuron stimulated). Parameter values such as reversal potentials and synaptic conductances were the same ones specified in \cite{Vavoulis2007}.
-The statistical analysis was done in Python 3.6. For the temporal variability study, first the spikes were detected using the change in the derivative during the computation of the model along with a threshold condition. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. 
 
-Thus, all intervals defined in section \ref{subsec:intervals} were measured and their variability was characterized by statistical analysis tools, i.e,  boxplots and linear correlations. For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. \todo{mover a methods generales?}
 
-\begin{lstlisting}
-	#########  SINGLE INTERVALS
-	# on = 0; off = 1
-	
-	# off1 - on1
-	def get_burst_duration(data):
-	return np.array([b - a for a, b in zip(data[:, 0], data[:, 1])])
-	
-	# on2 - off1
-	def get_burst_interval(data):
-	return np.array([a - b for a, b in zip(data[1:, 0], data[:, 1])])
-	
-	
-	# on2 - on1
-	def get_burst_period(data):
-	return np.array([a - b for a, b in zip(data[1:, 0], data[:, 0])])
-	
-	
-	#########  PAIRED INTERVALS
-	
-	def get_intervals(d1,d2):
-	if d1.size == 0 or d2.size == 0:
-	return [],[]
-	
-	d1d2_interval = np.array([b-a for a,b in zip(d1[:,0],d2[:,0])])
-	d1d2_delay = np.array([b-a for a,b in zip(d1[:,1],d2[:,0])])
-	d2d1_interval = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,0])])
-	d2d1_delay = np.array([a-b for a,b in zip(d1[1:,0],d2[:-1,1])])
-	
-	return [d1d2_interval,d1d2_delay],[d2d1_interval,d2d1_delay]
-\end{lstlisting}
-
+% \subsection{Model simulation specifications and statistical analysis}\todo{añadir en métodos generales o ampliarlo también a experimental}
 
 
 
@@ -233,17 +198,28 @@ where \( \phi_i \) is the phase of the \( i \)-th oscillator, \( \omega_i \) is 
 
 
 \subsection{Hybrot structure}
+The experimental paradigm designed in order to test the correct behavior and locomotion of the FLC-Hybrot --FLC stands for Functional Living Circuit-- established a real-time closed-loop interaction between the robot and a living pyloric CPG of \textit{Carcinus maenas} \cite{elices_robust_2019}. During the experiment, the FLC-Hybrot had to walk through a straight and flat lane, with no obstacles, along which there were interspersed sections with lights and shadows. Neural activity was recorded online from the living circuit and used to modulate the robot movement. At the same time, feedback current was injected into the living circuit when the robot's light-sensor detected a shadow.
 
-We have designed and implemented a FLC-Hybrot, a hybrot controlled by the neural activity of a living and functional pyloric CPG, to validate the importance of the balance between robustness and flexibility in this circuit, as provided by cycle-by-cycle dynamical invariants present in its dynamics \cite{Elices2019}. With this idea in mind we built an hexapod robot whose legs performed oscillatory motions to move forward. The period and amplitude of these oscillations were determined by the sequential cycle-by-cycle activity of the CPG neurons. At the same time, the hybrot included a light sensor and sent feedback information regarding the light conditions around it back to the neural circuit in the form of an electrical current. These stimuli modified the behaviour of the cells, resulting in a change of the hybrot locomotion, preserving always the required motor coordination, and therefore forming a real-time closed-loop interaction among living and electronic components (Figure \ref{fig:robot_results_summary}). The goal of the FLC-Hybrot is to demonstrate that a dynamical principle of the functional living circuit can be used to coordinate the locomotion with sensory feedback from the robot. In our case, we use the presence of dynamical invariants in the form of robust relationships between the time intervals that build the cycle-by-cycle activity of the CPG, which are sustained under any circumstance even when there are external inputs to the circuit, to modulate the behavior of the robot. \todo{copia pega de paper robot adaptar}
+Top panel of Figure \ref{fig:robot_results_setup} shows an illustration of the experimental setup for the FLC-Hybrot implementation with all its main components. A computer was employed to serve as nexus between both the robot and the biological elements and was in charge of executing a periodic real-time loop (Figure \ref{fig:robot_results_setup}A), inside of which the following tasks were performed:
+\begin{enumerate}
+	\item First, it read the CPG neurons electrophysiological signals from the DAQ device, that at the same came through the amplifiers (Figure \ref{fig:robot_results_setup}B) after being recorded online from the living preparation (Figure \ref{fig:robot_results_setup}C).
+	\item From this acquired data it extracted, online, the duration of the temporal intervals of the cycle-by-cycle CPG activity, which were then sent to the robot's controller via Bluetooth.
+	\item In the opposite direction, it received the robot's light-sensor data through the same Bluetooth connection.
+	\item If this data indicated that the robot was located under a shadow at that moment, then it sent feedback to the DAQ device in the form of electric current. This current was injected into the neurons, delivered by the amplifier, altering their behavior.
+\end{enumerate}
+
+All these operations were repeated while the robot traversed the trial track (Figure \ref{fig:robot_results_setup}D). Robot's locomotion was determined by its legs oscillation, so we utilized video tracking tools to capture their movement during the experiment (Figure \ref{fig:robot_results_setup}E). Two electrodes were used in order to measure the pyloric CPG activity. First, an extracellular electrode picked up all the surrounding neurons' activity. In this signal, the spikes and bursts of the LP neuron were clearly recognizable due to their larger amplitude. One of the PD neurons' membrane potential was recorded using an intracellular electrode. A second intracellular electrode was used to inject the feedback current into a PD neuron to implement the robotic sensory feedback (Figure \ref{fig:robot_results_setup}F).
 
 \begin{figure}[h!]
 	\begin{center}
-		% \includegraphics[width=\linewidth]{images/robot/robot_results_summary}
-		\includegraphics[width=\linewidth]{img/invariants/robot/Figure1_experiment_design_v1.png}
+		\includegraphics[width=0.65\linewidth]{img/invariants/robot/robot_results_setup.png}
 	\end{center}
-	\caption{Representation of the FLC-Hybrot paradigm design. Neural dynamics from a functional living CPG circuit are recorded online and used to coordinate the robot movement in real-time. Activity from the PD neuron is recorded intracellularly (green trace), while the LP bursts are extracted from the nerve's extracellular signal (blue trace). This robot walks through a trial track with interspersed light and shadow regions. When the robot's light sensor detects that it is located under a shadow, it sends feedback current to the living circuit. CPG dynamics change as a reaction to the injected current, thus modifying the robotic locomotion. The following video shows an example of this experiment \url{https://youtu.be/ny2dJGbG8lo}.}
-	\label{fig:robot_results_summary}
+	\caption{\textbf{Top panel:} illustration of the experimental setup for the FLC-Hybrot implementation: A) Computer that controls the closed-loop interaction between the living CPG and the robot. B) DAQ and signal amplifiers; C) Microscope; D) Testing track with light and shadows regions. \textbf{Middle panel:} detail of the elements of the setup: E) Hexapod robot, receives the neural information from the computer and sends back the sensory feedback through a Bluetooth connection; F) \textit{In vitro} pyloric CPG preparation with three electrodes, one to record extracellular activity from the nerve which includes the activity from the LP neuron (blue), one to record intracellular activity from the PD neuron (green) and another to introduce the feedback current into a PD neuron (red). Electrodes and computer are connected through the DAQ device. \textbf{Bottom panel:} detail of the elements of the robot and the preparation. PD neuron (intracellular recording, green trace) and LP neuron (extracted from the extracellular recording, blue trace) behavior is analyzed online by the computer and used to modulate the movement of the robot. Meanwhile, robot's light sensor detects the presence of light or shadow over it and the Arduino board sends that information to the computer, which injects feedback current into the PD neuron (red trace).}
+	\label{fig:robot_results_setup}
 \end{figure}
+
+
+
 
 
 

@@ -18,6 +18,9 @@
 *.dtvw-cfg
 *.dtvw-*
 
+*.asc
+*.pkl
+
 img/invariants/data/*/*/images/*/*tex
 img/invariants/data/*/*/images/*tex
 
@@ -28,11 +31,11 @@ img/invariants/data/SUSSEX/*/images/*/_delays.pdf
 img/invariants/data/SUSSEX/*/images/*/_durations.pdf
 img/invariants/data/SUSSEX/*/images/*/_intervals.pdf
 img/invariants/data/SUSSEX/*/images/*/_output_pairplot.png
-img/invariants/data/SUSSEX/*/images/*/_signal_intervals.pdf
-img/invariants/data/SUSSEX/*/images/*/_signal_intervals_cycle.pdf
-img/invariants/data/SUSSEX/*/images/*/_signal_intervals_cycle_stretch.pdf
-img/invariants/data/SUSSEX/*/images/*/_signal_intervals_zoom.pdf
-img/invariants/data/SUSSEX/*/images/*/_time_cycle.pdf
+img/invariants/data/*/*/images/*/_signal_intervals.pdf
+img/invariants/data/*/*/images/*/_signal_intervals_cycle.pdf
+img/invariants/data/*/*/images/*/_signal_intervals_cycle_stretch.pdf
+img/invariants/data/*/*/images/*/_signal_intervals_zoom.pdf
+img/invariants/data/*/*/images/*/_time_cycle.pdf
 
 
 img/invariants/data/SUSSEX/*/images/_boxplot.pdf
