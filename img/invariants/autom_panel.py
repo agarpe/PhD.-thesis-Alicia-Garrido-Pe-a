@@ -18,24 +18,34 @@ headers = '''\\documentclass{article}
 \\begin{document}\n'''
 
 figure = '''    \\begin{figure}[htbp]
+    \\centering
+    \\begin{minipage}[b]{\\textwidth}
         \\centering
-        \\begin{minipage}[b]{\\textwidth}
+        \\begin{overpic}[width=\\textwidth,height=0.1\\textheight]{_signal_intervals_zoom.png}
+            \\put(0,12){\\large\\textbf{a)}}
+        \\end{overpic}
+        \\begin{overpic}[width=\\textwidth]{_signal_intervals_cycle.pdf}
+            \\put(0,15){\\large\\textbf{b)}}
+        \\end{overpic}
+        \\begin{overpic}[width=\\textwidth]{_time_cycle.pdf}
+            \\put(0,27){\\large\\textbf{c)}}
+        \\end{overpic}
+    \\end{minipage}
+    \\centering
+    \\begin{minipage}[b]{\\textwidth}
+        \\begin{minipage}[b]{0.45\\textwidth}
             \\centering
-            \\includegraphics[width=\\textwidth,height=0.1\\textheight]{_signal_intervals_zoom.pdf}
-            \\includegraphics[width=\\textwidth]{_signal_intervals_cycle.pdf}
-            \\includegraphics[width=\\textwidth]{_time_cycle.pdf}
+            \\begin{overpic}[width=\\textwidth]{_boxplot.pdf}
+                \\put(0,98.5){\\large\\textbf{d)}}
+            \\end{overpic}
         \\end{minipage}
-        \\centering
-        \\begin{minipage}[b]{\\textwidth}
-            \\begin{minipage}[b]{0.45\\textwidth}
+        \\begin{minipage}[b]{0.53\\textwidth}
+            \\centering
+            \\begin{minipage}[b]{\\textwidth}
                 \\centering
-                \\includegraphics[width=\\textwidth]{_boxplot.pdf}
-            \\end{minipage}
-            \\begin{minipage}[b]{0.53\\textwidth}
-                \\centering
-                \\begin{minipage}[b]{\\textwidth}
-                    \\centering
-                    \\includegraphics[width=\\textwidth]{_durations.pdf}
+                \\begin{overpic}[width=\\textwidth]{_durations.pdf}
+                    \\put(0,33){\\large\\textbf{e)}}
+                \\end{overpic}
                 \\end{minipage}\\
                 \\begin{minipage}[b]{\\textwidth}
                     \\centering
