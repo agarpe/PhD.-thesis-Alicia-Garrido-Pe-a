@@ -21,7 +21,7 @@ convert_to_bytes() {
 # Read and filter the input file
 valid_lines=()
 while IFS= read -r line; do
-    if [[ "$line" =~ ^[^\ ]+\ -\ [0-9]+\.[0-9]+\ (KB|MB)$ ]]; then
+    if [[ "$line" =~ ^[^\ ]+\ -\ [0-9]+\.[0-9]+\ (KB|MB|bytes)\ -\ used\ in\ .+$ ]]; then
         valid_lines+=("$line")
     fi
 done < "$input_file"
@@ -35,4 +35,3 @@ done | sort -n | awk '{$1=""; print $0}')
 
 # Output the sorted lines
 echo "$sorted_lines"
-
