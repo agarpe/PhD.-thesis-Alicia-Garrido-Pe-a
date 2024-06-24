@@ -1,15 +1,26 @@
 \documentclass[11pt,a4paper,twoside]{book} %scrbook book report
-
+\usepackage{hyperref}  % Necesario para manejar los enlaces
  \usepackage[
  backend=biber,
  style=apa,
 % sorting=ynt
+	backref=true,         % Habilitar backref
+	backrefstyle=none,    % Controla el formato de las referencias a las páginas
+	hyperref=true,         % Habilitar hyperref
  ]{biblatex}
  
  \addbibresource{own-bib.bib}
  \addbibresource{thesis_references.bib}
  \addbibresource{laser-references.bib}
 
+
+% Configuración de hyperref
+\hypersetup{
+	colorlinks=true,    % Habilita el coloreado de los enlaces
+	linkcolor=blue,     % Color de los enlaces internos
+	citecolor=blue,     % Color de las citas
+	urlcolor=blue       % Color de los enlaces externos
+}
 
 
 % Essential packages
