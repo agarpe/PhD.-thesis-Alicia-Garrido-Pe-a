@@ -1,14 +1,46 @@
 \documentclass[11pt,a4paper,twoside]{book} %scrbook book report
 \usepackage{hyperref}  % Necesario para manejar los enlaces
- \usepackage[
- backend=biber,
- style=apa,
-% sorting=ynt
-	backref=true,         % Habilitar backref
-	backrefstyle=none,    % Controla el formato de las referencias a las páginas
-	hyperref=true,         % Habilitar hyperref
- ]{biblatex}
- 
+\usepackage[
+backend=biber,
+style=apa,
+%sorting=none,
+backref=true,         % Habilitar backref
+backrefstyle=none,    % Controla el formato de las referencias a las páginas
+hyperref=true,         % Habilitar hyperref
+]{biblatex}
+
+% Add the ISSN field for journal articles
+\DeclareBibliographyDriver{article}{%
+	\usebibmacro{bibindex}%
+	\usebibmacro{begentry}%
+	\usebibmacro{author/editor+others/translator+others}%
+	\setunit{\labelnamepunct}\newblock
+	\usebibmacro{title}%
+	\newunit
+	\printlist{language}%
+	\newunit\newblock
+	\usebibmacro{byauthor}%
+	\newunit
+	\usebibmacro{journal+issuetitle}%
+	\newunit
+	\usebibmacro{byeditor+others}%
+	\newunit
+	\printfield{year}\newunit
+	\printfield{volume}\newunit
+	\printfield{number}\newunit
+	\printfield{pages}\newunit
+	\newunit\newblock
+	\printfield{issn} % This will now include the ISSN field
+	\newunit\newblock
+	\usebibmacro{doi+eprint+url}%
+	\newunit\newblock
+	\usebibmacro{pageref}%
+	\newunit\newblock
+	\usebibmacro{related}%
+	\usebibmacro{finentry}%
+}
+
+
  \addbibresource{own-bib.bib}
  \addbibresource{thesis_references.bib}
  \addbibresource{laser-references.bib}
@@ -247,9 +279,9 @@
 \begin{refsection}[own-bib.bib]
 \nocite{*}
 
-\printbibliography[heading={subbibliography},title={Journal Publications},type=article,keyword=journal]
+\printbibliography[heading={subbibliography},title={Journal Publications},keyword=journal]
 
-\printbibliography[heading={subbibliography},title={Conference Proceedings},type=article,keyword=conference]
+\printbibliography[heading={subbibliography},title={International Conference Contributions},keyword=conference]
 
 
 \end{refsection}
