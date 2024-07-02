@@ -1,0 +1,270 @@
+\documentclass[11pt,a4paper,twoside]{book} %scrbook book report
+\usepackage{hyperref}  % Necesario para manejar los enlaces
+\usepackage[
+backend=biber,
+style=apa,
+% sorting=ynt
+backref=true,         % Habilitar backref
+backrefstyle=none,    % Controla el formato de las referencias a las páginas
+hyperref=true,         % Habilitar hyperref
+]{biblatex}
+
+\addbibresource{own-bib.bib}
+\addbibresource{thesis_references.bib}
+\addbibresource{laser-references.bib}
+
+
+% Configuración de hyperref
+\hypersetup{
+	colorlinks=true,    % Habilita el coloreado de los enlaces
+	linkcolor=blue,     % Color de los enlaces internos
+	citecolor=blue,     % Color de las citas
+	urlcolor=blue       % Color de los enlaces externos
+}
+
+
+% Essential packages
+\usepackage{amsmath, amssymb, amsthm} % AMS Packages
+\usepackage{graphicx,color}           % Packages for graphics and color
+\usepackage{geometry}
+\PassOptionsToPackage{printonlyused,smaller}{acronym}
+\usepackage{acronym}
+% Optional customization packages
+\usepackage{lmodern}                  % Custom fonts
+\usepackage[T1]{fontenc}              % Ensure correct font encoding
+\usepackage{mathptmx}              % Times New Roman Font accross the document
+
+\usepackage{subfigure}
+%\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{multirow}
+
+\usepackage{multicol}
+
+\usepackage{url}
+
+\usepackage{listings}
+
+%\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\ttfamily\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+
+\lstset{style=mystyle}
+\lstset{language=Python}
+
+% Customising chapter headings - sectsty.pdf
+\usepackage{sectsty}
+\chapterfont{\Large\sc\centering}
+\chaptertitlefont{\centering}
+\subsubsectionfont{\centering}
+
+\usepackage[hang, small, bf, margin=0pt, tableposition=bottom]{caption}
+\setlength{\abovecaptionskip}{10pt}   % Custom captions
+
+\captionsetup{
+	justification=justified, % Center the caption label and first line
+	format=plain, % Standard format
+	singlelinecheck=false, % Disable single line centering
+	indention=0pt
+}
+
+% Tables
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+
+\usepackage{todonotes}
+
+\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\definecolor{Gray}{gray}{0.83}
+
+\newcolumntype{x}{>{\columncolor{Gray}}c}
+\newcolumntype{y}{>{\columncolor{white}}c}
+
+% Page layout
+\parindent 0pt
+\parskip 1ex
+\renewcommand{\baselinestretch}{1.49}
+\numberwithin{equation}{section}
+\renewcommand{\bibname}{References}
+\renewcommand{\contentsname}{Contents}
+\pagenumbering{roman}
+
+
+\newcommand{\acrolabel}[1]{\makebox[3cm][l]{\textbf{#1}}}
+\newenvironment{acronyms}{\begin{list}{}{\renewcommand{\makelabel}{\acrolabel}}}{\end{list}}
+
+% \includeonly{tex/chapter1}          % Option to generate specific chapters
+
+% Customising headers - fancyhdr.pdf
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{}
+\lhead{\nouppercase{\textsc{\leftmark}}}
+\renewcommand{\headrulewidth}{0pt}
+\makeatletter
+\renewcommand{\chaptermark}[1]{\markboth{\textsc{\@chapapp}\ \thechapter:\ #1}{}}
+\makeatother
+
+
+% Hyperreferencing and citations
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=blue,
+	filecolor=blue,
+	linkcolor=blue,
+	urlcolor=blue
+}
+
+% Section symbol
+\usepackage{cleveref}
+\crefname{section}{\S}{\S\S}
+\Crefname{section}{\S}{\S\S}
+\crefname{subsection}{\S}{\S\S}
+\Crefname{subsection}{\S}{\S\S}
+
+% packages from lymnaea paper
+\usepackage{tabu}
+\usepackage{adjustbox}
+\usepackage{booktabs}% for better rules in the table
+% \usepackage{graphicx}
+% \usepackage{subfigure}
+% \usepackage{subcaption}
+%\usepackage{color}
+%\usepackage{colortbl}
+%\usepackage{soul}
+%\usepackage{listings}
+%\lstloadlanguages{Java,XML}
+%\lstset{frame=lines}
+%\usepackage{./styles/astron}
+%\usepackage{xspace}
+%\usepackage[leqno]{amsmath}
+%\usepackage{hyperref}
+%\usepackage{sfmath}
+%\usepackage{setspace} 
+\usepackage{./styles/nust}
+
+\graphicspath{{./img/}{./figs/}}
+
+\title{Characterization of the sequential nature of neuronal dynamics: Experimental recordings, computational models and novel stimulation neurotechnology}
+
+%\subtitle{A sub-title}
+
+\author{Alicia Garrido Peña}
+
+\degree{\EPS} % MSCSE, MSCCS %% Degree Title and It's abbreviation
+\school{\EPS} %SChool abbreviation and Full Name
+
+\adviser{Pablo Varona Martínez}
+
+\regno{Doctorado en Ingeniería Informatica y Telecomunicaciones}
+\adviserAffiliation{Departamento Ingeniería Informática}
+
+\date{August 2024}
+
+% \setcounter{tocdepth}{2}
+% \setstretch{1.1}
+% \linespread{1.1}
+
+
+\geometry{margin=1in,top=1in, bottom=1in, includefoot, headheight=13.6pt}
+
+\begin{document}
+	
+	% % Set custom margins for the title page
+	% \maketitle
+	%
+	% % Set custom margins for the title page
+	% \newgeometry{inner=1in,outer=1.2in,top=1in, bottom=0.8in, includefoot, headheight=13.6pt}
+	% % \input{Preface/Approval}
+	% % \input{Preface/Acceptance}
+	% % \input{Preface/Dedication}
+	% \newpage
+	% \clearpage
+	% \newpage
+	% %\input{Preface/OrginalityCertificate}
+	% \input{Preface/Acknowldgment}
+	% \newpage
+	% \clearpage
+	% \vfill
+	% {\centering \large \textit{``That is all as it should be, for in a question like this truth is only to be had by laying together many
+			% 		varieties of error.'' - Virginia Woolf}\par}
+	%
+	% \vfill
+	% \input{Preface/Abstract}
+	%
+	%
+	% \tableofcontents
+	% \listoftables
+	% \listoffigures
+	% %\input{Acronym}
+	%
+	% \newpage
+	% % \lstlistoflistings
+	%
+	%
+	%
+	%\resetpagenumbering
+	%
+	% \input{chapters/chapter1}
+	% \input{chapters/chapter2}
+	% \input{chapters/chapter3-methods}
+	%\input{chapters/chapter4-invariants}
+	% \input{chapters/chapter5-laser}
+	% \input{chapters/chapter6-conclusion}
+	%
+	%
+	%\printbibliography
+	
+	
+	%\begin{appendix}
+	\centering\huge\textbf{{List of Publications Related to the PhD Thesis}}\\
+	\large{\textbf{PhD Candidate:} Alicia Garrido Peña}\\
+	\large{\textbf{Advisor:} Pablo Varona Martinez}
+	% \section{Research Publications}
+	
+	\begin{refsection}[own-bib.bib]
+		\nocite{*}
+		
+		\printbibliography[heading={subbibliography},title={Journal Publications},type=article,keyword=journal]
+		
+		\printbibliography[heading={subbibliography},title={Journal Publications from Conference Contributions},type=article,keyword=conference-published]
+		
+		\printbibliography[heading={subbibliography},title={Conference Contributions},type=article,keyword=conference]
+		
+		
+	\end{refsection}
+	%\chapter{Supplementary figures for chapter 4}
+	%
+	%\input{appendixA}
+	
+	\pagenumbering{gobble}
+	%\input{misc/notes}
+	% \include{misc/checklistb}
+	
+	
+	%\end{appendix}
+\end{document}
