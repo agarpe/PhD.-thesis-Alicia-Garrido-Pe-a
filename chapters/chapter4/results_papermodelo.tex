@@ -1,6 +1,6 @@
 In this section we will investigate the cycle-by-cycle sequential restrictions found in \cite{elices_robust_2019} in a computational model, the detailed reproduction of the activity allows to study in detail the mechanisms associated to the circuit and the time-interals relations. We used the feeding CPG model description of \cite{vavoulis_dynamic_2007}, which even though it does not have a chaotic mode, the model is flexible enough to adapt the variability of one of the neurons. Following the current injection protocol defined in section \ref{subsec:inj protocol}, N1M, N3t and SO neurons in the model were stimulated for our analysis of the sequence interval variability. Using this induced variability we were able to explore the presence of sequential dynamical invariants under different scenarios. The effect on injecting a current ramp on N2v is not reported here since it leads to lower variability than the other cases. In all simulations, we could test the robustness of the rhythm while inducing the external perturbation that evoked variability in the search for dynamical invariants. The results summarized and adapted for this section were published in \cite{garrido-pena_characterization_2021}.
 
-First we saw in the simulations is that the model of the feeding CPG faithfully reproduces the activity of the main neurons involved in the generation of its triphasic rhythm \parencite{vavoulis_dynamical_2007}. This includes their waveforms and the relationships between the cycle period and the duration of several intervals reported in \parencite{Elliott1991}. Note that, since there was not a description of a chaotic mode, all the rhythms explored here were analyzed from induced stimulation, not by simulating spontaneous activity. This was a restriction when exploring spontaneous activity, since the circuit needed to be altered by one of the neurons, simulating a extended experimental protocol, but still altering the circuit in a predefined way. Also, other phenomena reported in the pyloric CPG experimental work, were there was a "reset" in the inter-cycle dynamics of the dynamical invariants, could not be explored in this model, since the ramp value was progressive (see Apendix Fig. \ref{fig:N1M stimulation pairplot reset} for a representation of this non-reset output). All this will be illustrated in the following Section \ref{sec:experimental sussex} with experimental recordings and other options to reproduce the functional variability will be discussed in Sec. \ref{sec:model variability}
+First we saw in the simulations is that the model of the feeding CPG faithfully reproduces the activity of the main neurons involved in the generation of its triphasic rhythm \parencite{Vavoulis2007}. This includes their waveforms and the relationships between the cycle period and the duration of several intervals reported in \parencite{Elliott1991}. Note that, since there was not a description of a chaotic mode, all the rhythms explored here were analyzed from induced stimulation, not by simulating spontaneous activity. This was a restriction when exploring spontaneous activity, since the circuit needed to be altered by one of the neurons, simulating a extended experimental protocol, but still altering the circuit in a predefined way. Also, other phenomena reported in the pyloric CPG experimental work, were there was a "reset" in the inter-cycle dynamics of the dynamical invariants, could not be explored in this model, since the ramp value was progressive (see Apendix Fig. \ref{fig:N1M stimulation pairplot reset} for a representation of this non-reset output). All this will be illustrated in the following Section \ref{sec:experimental sussex} with experimental recordings and other options to reproduce the functional variability will be discussed in Sec. \ref{sec:model variability}
 
 \subsection{N1M driven variability}
 \label{subsec:n1m driven}
@@ -168,77 +168,59 @@ We saw so far the sequential dynamical invariants in terms of strong linear rela
 	\label{fig:model so stimulation pairplot}
 \end{figure}
 
-
-\subsection{Comparison with two- phase intervals}
-Although during this section we analyzed the sequential dynamical invariants in for three phases, we can also define the intervals for two phases of the neurons, taking as reference for example, N1 and N3. This is the case in the work by \cite{elices_robust_2019}, and in the following section we will also use two phases for some of the recordings were the N2 phase was not possible to characterize out of the intracellular recordings. In Figure \ref{fig:invariant n1m model 2 phases} there is a comparison of the linear relations and different intervals conforming the sequence when the references are in N1, N2 and N3 or only for N1 and N3.
-
-\todo{añadir los intervalos, sino no se ve...}
-
 %
-%\begin{figure}[htbp]
-%	\centering
-%	\includegraphics[width=\textwidth]{./invariants/data/MODEL/n1m_driven/images/2phases/_output_pairplot.png}
-%	\caption{\textbf{N1M stimulation}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for activity when N1M is stimulated.}
-%	\label{fig:model n1m stimulation pairplot 2phases}
-%\end{figure}
-
-
-
-\begin{figure}[hbt!]
-	\begin{minipage}[b]{0.53\textwidth}
-		\centering
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_intervals.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_delays.pdf}
-		\end{minipage}
-	\end{minipage}
-	\begin{minipage}[b]{0.45\textwidth}
-		\centering
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/2phases/_durations.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/2phases/_intervals.pdf}
-		\end{minipage}\
-		\begin{minipage}[b]{\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/2phases/_delays.pdf}
-		\end{minipage}
-	
-		\vspace{50pt}
-	\end{minipage}
-	\caption{a).Box-plots of the  sequence intervals under N1M neuron stimulation. b) Interval correlations to period for N1M-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays. Linear relationships are quantified by the $R^2$ values of the regression.}
-	\label{fig:invariant n1m model 2 phases}
-\end{figure}
-
-
-
-
+%\subsection{Comparison with two- phase intervals}
+%Although during this section we analyzed the sequential dynamical invariants in for three phases, we can also define the intervals for two phases of the neurons, taking as reference for example, N1 and N3. This is the case in the work by \cite{elices_robust_2019}, and in the following section we will also use two phases for some of the recordings were the N2 phase was not possible to characterize out of the intracellular recordings. In Figure \ref{fig:invariant n1m model 2 phases} there is a comparison of the linear relations and different intervals conforming the sequence when the references are in N1, N2 and N3 or only for N1 and N3.
 %
+%When we only consider two phases, we have less possible combinations and the time-intervals that would correspond to the third neuron are contained in the resulting ones. For example as we can see in Fig. \ref{fig:invariant n1m model 2 phases}a), N2N3 delay would be represented by N1N3 delay; N2 burst duration is included in the N2N3 interval. So when analyzing the presence of dynamical invariants we need to take this restriction into account, for the 
 %
-%\begin{figure}[htbp]
-%	\centering
-%	\includegraphics[width=\textwidth]{./invariants/data/MODEL/n3t_driven/images/2phases/_output_pairplot.png}
-%	\caption{\textbf{N3t stimulation}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for activity when N3t is stimulated.}
-%	\label{fig:model n3t stimulation pairplot 2phases}
-%\end{figure}
-%
-%
-%\begin{figure}[htbp]
-%	\centering
-%	\includegraphics[width=\textwidth]{./invariants/data/MODEL/so_driven/images/2phases/_output_pairplot.png}
-%	\caption{\textbf{SO stimulation}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for activity when SO is stimulated.}
-%	\label{fig:model so stimulation pairplot 2phases}
+%\begin{figure}[hbt!]
+%	\begin{minipage}[b]{0.9\textwidth}
+%		\raggedleft
+%		\begin{minipage}[b]{0.53\textwidth}
+%			\raggedleft
+%			\includegraphics[width=\textwidth]{methods-paper-modelo/Intervals_figure_complete.png}
+%		\end{minipage}
+%		\centering 
+%		\begin{minipage}[b]{0.3\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{methods-paper-modelo/Intervals_figure_complete_2_phases.png}
+%		\end{minipage}	
+%	\end{minipage}\\
+%	\begin{minipage}[b]{0.53\textwidth}
+%		\centering
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_durations.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_intervals.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_delays.pdf}
+%		\end{minipage}
+%	\end{minipage}
+%	\begin{minipage}[b]{0.45\textwidth}
+%		\centering
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/2phases/_durations.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/2phases/_intervals.pdf}
+%		\end{minipage}\
+%		\begin{minipage}[b]{\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/2phases/_delays.pdf}
+%		\end{minipage}
+%	
+%		\vspace{50pt}
+%	\end{minipage}
+%	\caption{a) Representation of the intervals for each cycle when considering three or two phases. b) Interval correlations to period for SO-driven simulation for 3 phases. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays (Data shown in Fig. \ref{fig:invariant n1m}). c) Interval correlations to period for N1M-driven simulation for 2 phases. First row: Burst duration. Second row: Two-neuron intervals. Third row: Two-neuron delays. For b) and c) the linear relationships are quantified by the $R^2$ values of the regression.}
+%	\label{fig:invariant n1m model 2 phases}
 %\end{figure}
 
 
