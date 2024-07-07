@@ -6,7 +6,7 @@
 La neurociencia es un campo amplio y desafiante de la ciencia. Enfrenta preguntas cruciales, tales como el estudio de los mecanismos neuronales subyacentes a la actividad cerebral, cómo pueden esos mecanismos resultar en la cognición o el comportamiento humano, cómo se procesa y transfiere la información a través de la actividad neuronal, cómo se generan las enfermedades neuronales y cómo podemos detectarlas y tratarlas. 
 Estas preguntas y muchas más han sido problemas abiertos que han intrigado a la comunidad científica desde los primeros pasos en el campo. La neurociencia nació como una disciplina a partir de la anatomía, la fisiología, la bioquímica y la biofísica. Como un campo amplio, se aborda desde distintas perspectivas y usualmente se hace referencia a él por sus subcampos, por ejemplo, Neurobiología, Neurofarmacología, Neurociencia Clínica, Neurociencia del Desarrollo, Neurociencia de Sistemas, Neurociencia Cognitiva, Neurociencia Computacional, Neurotecnología, etc. Todos estos campos tienen como objetivo explicar o reparar la función cerebral, ya sea en su totalidad o en partes. Utilizan diferentes técnicas y enfoques, algunos de los cuales dan lugar a campos completamente nuevos, como la Neuroimagen.
 
-No podemos pensar o discutir sobre neurociencia sin destacar el trabajo de Santiago Ramón y Cajal, crucial en los primeros pasos para comprender el cerebro \parencite{ramon_y_cajal_textura_1899,de_carlos_historical_2007,de_castro_editorial_2016,delgado-garcia_cajal_2015,de_castro_cajal_2019}. La idea de la "doctrina de la neurona" fue un impulso en el estudio del cerebro, explicando y describiendo la estructura de células individuales llamadas \textit{neuronas} que son capaces de conectarse y, por lo tanto, comunicarse mediante \textit{sinapsis}. La Figura \ref{cajal-neuron spanish} muestra uno de los dibujos de Cajal que describe un circuito cerebeloso.
+No podemos pensar o discutir sobre neurociencia sin destacar el trabajo de Santiago Ramón y Cajal, crucial en los primeros pasos para comprender el cerebro \parencite{ramon_y_cajal_textura_1899,de_carlos_historical_2007,de_castro_editorial_2016,delgado-garcia_cajal_2015,de_castro_cajal_2019}. La idea de la "doctrina de la neurona" fue un impulso en el estudio del cerebro, explicando y describiendo la estructura de células individuales llamadas \textit{neuronas} que son capaces de conectarse y, por lo tanto, comunicarse mediante \textit{sinapsis}. La Figura \ref{fig:cajal-neuron spanish} muestra uno de los dibujos de Cajal que describe un circuito cerebeloso.
 
 \begin{figure}[htb!]
 	\centering
@@ -14,7 +14,7 @@ No podemos pensar o discutir sobre neurociencia sin destacar el trabajo de Santi
 	% https://es.wikipedia.org/wiki/Doctrina_de_la_neurona#/media/Archivo:CajalCerebellum.jpg
 	% https://microbioblog.es/la-fascinante-historia-de-la-reazione-nera
 	\caption{Representación de las neuronas del cerebelo por Ramón y Cajal.}
-	\label{cajal-neuron spanish}
+	\label{fig:cajal-neuron spanish}
 \end{figure}
 
 %Desde ese punto de partida ha habido hallazgos importantes en los tipos y estructuras de neuronas, como las células gliales \ref{}.
@@ -58,27 +58,23 @@ Tradicionalmente, los códigos neuronales se han estudiado centrándose en la ac
 
 \subsection{Dinámicas de redes}
 
-Aunque el análisis de la actividad de una sola neurona es importante para caracterizar su dinámica, cuando se habla de procesamiento de información y comportamiento, también es crucial estudiar la dinámica general del circuito. Un circuito de neuronas se define por células nerviosas interconectadas por sinapsis. Existen dos tipos principales de sinapsis en el sistema nervioso: conexiones eléctricas y químicas, como se muestra en la Fig. \ref{fig
-}. La principal diferencia entre ellas radica en cómo se lleva a cabo la comunicación. Las sinapsis químicas ocurren mediante la mediación de \textit{neurotransmisores}, donde una neurona presináptica libera estas moléculas que se unen a los neuroreceptores para producir una alteración en la neurona postsináptica. Por lo tanto, esta conexión es asimétrica y unidireccional, mientras que en las sinapsis eléctricas encontramos una conexión simétrica y bidireccional. En estas sinapsis, las neuronas están casi unidas por una estructura llamada \textit{unión estrecha} (\textit{gap junction}), que "conduce" ambas neuronas en una estructura tisular que limita la fuga al espacio extracelular. Esta comunicación permite que la carga eléctrica fluya de una neurona a otra y es más rápida que las sinapsis químicas, que, en comparación, no tienen retraso. La actividad de las neuronas acopladas eléctricamente suele ser sincrónica \parencite{levitan_neuron_2002}.
+Aunque el análisis de la actividad de una sola neurona es importante para caracterizar su dinámica, cuando se habla de procesamiento de información y comportamiento, también es crucial estudiar la dinámica general del circuito. Un circuito de neuronas se define por células nerviosas interconectadas por sinapsis. Existen dos tipos principales de sinapsis en el sistema nervioso: conexiones eléctricas y químicas, como se muestra en la Fig. \ref{fig:synapse-types spanish}. La principal diferencia entre ellas radica en cómo se lleva a cabo la comunicación. Las sinapsis químicas ocurren mediante la mediación de \textit{neurotransmisores}, donde una neurona presináptica libera estas moléculas que se unen a los neuroreceptores para producir una alteración en la neurona postsináptica. Por lo tanto, esta conexión es asimétrica y unidireccional, mientras que en las sinapsis eléctricas encontramos una conexión simétrica y bidireccional. En estas sinapsis, las neuronas están casi unidas por una estructura llamada \textit{unión estrecha} (\textit{gap junction}), que "conduce" ambas neuronas en una estructura tisular que limita la fuga al espacio extracelular. Esta comunicación permite que la carga eléctrica fluya de una neurona a otra y es más rápida que las sinapsis químicas, que, en comparación, no tienen retraso. La actividad de las neuronas acopladas eléctricamente suele ser sincrónica \parencite{levitan_neuron_2002}.
 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=\linewidth]{img/intro/synapses.pdf}
 	\caption{Representación de tipos de sinapsis. Izquierda: Ejemplo de sinapsis eléctrica entre dos células y diagrama de unión estrecha (Adaptado de \href{https://commons.wikimedia.org/wiki/File:Gap_cell_junction-en.svg}{Wikimedia Commons}). Derecha: Ejemplo de estructura de sinapsis química (Adaptado de \href{https://commons.wikimedia.org/wiki/File:Synapse_diag1.svg}{Wikimedia Commons})}
-	\label{fig
-	}
+	\label{fig:synapse-types spanish}
 \end{figure}
 
-En los circuitos neuronales, las células pueden estar conectadas por uno o ambos tipos de sinapsis químicas y eléctricas, y generalmente también están conectadas a otros circuitos o neuronas moduladoras. La Figura \ref{fig
-	circuits} ilustra dos ejemplos de circuitos a nivel celular y macroscópico. En este contexto, se forman sistemas complejos de redes de redes, que pueden funcionar a diferentes escalas temporales y pueden participar en una o varias funcionalidades. Esta interconexión de redes y, a un nivel más bajo, de células, conduce a activaciones secuenciales y transferencias de acciones en secuencias de secuencias.
+En los circuitos neuronales, las células pueden estar conectadas por uno o ambos tipos de sinapsis químicas y eléctricas, y generalmente también están conectadas a otros circuitos o neuronas moduladoras. La Figura \ref{fig:neural circuits spanish} ilustra dos ejemplos de circuitos a nivel celular y macroscópico. En este contexto, se forman sistemas complejos de redes de redes, que pueden funcionar a diferentes escalas temporales y pueden participar en una o varias funcionalidades. Esta interconexión de redes y, a un nivel más bajo, de células, conduce a activaciones secuenciales y transferencias de acciones en secuencias de secuencias.
 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=0.64\textwidth]{img/intro/cpg diagram.png}
 	\includegraphics[width=0.35\textwidth]{img/intro/The_Human_Connectome.png}
 	\caption{Izquierda: Esquema del circuito gástrico y pilórico de \textit{Carcinus Maenas} \parencite{huerta_topology_2001}. Derecha: Conectoma en el cerebro humano renderizado a partir de 20 sujetos (Por Andreashorn - Trabajo propio,\href{https://commons.wikimedia.org/w/index.php?curid=41581320}{CC BY-SA 4.0})}
-	\label{fig
-		circuits}
+	\label{fig:neural circuits spanish}
 \end{figure}
 
 \section{La naturaleza secuencial de la dinámica neuronal}
@@ -93,23 +89,20 @@ Sin embargo, no está claro cómo procesa exactamente el cerebro el tiempo. En c
 	\centering
 	\includegraphics[width=0.7\textwidth]{img/intro/time scale/time-scale-feeding.pdf}
 	\caption{Ilustración del proceso de alimentación secuencial en diferentes escalas de tiempo en {\sl Lymnaea stagnalis}.}
-	\label{fig:scale feeding spanish}
+	\label{fig:time-scale feeding spanish}
 \end{figure}
 
-La actividad secuencial en el cerebro va desde la escala de sub-milisegundos hasta días (la escala temporal de los ritmos circadianos \parencite{mauk_neural_2004}). La Figura \ref{fig
-	scale feeding} muestra un ejemplo ilustrativo de la naturaleza secuencial de la actividad neuronal en diferentes escalas en la generación de actividad motora coordinada en la alimentación de un caracol. A la escala de sub-milisegundos, hay un flujo de iones que genera una secuencia de activación de canales iónicos, que en la escala de milisegundos produce potenciales de acción. La combinación de ellos en forma de ráfagas rítmicas, activa los músculos correspondientes en la escala de segundos y genera el movimiento secuencial necesario para alimentarse: abrir la boca, raspar el alimento y tragar, que se repite a lo largo del día.
+La actividad secuencial en el cerebro va desde la escala de sub-milisegundos hasta días (la escala temporal de los ritmos circadianos \parencite{mauk_neural_2004}). La Figura \ref{fig:time-scale feeding spanish} muestra un ejemplo ilustrativo de la naturaleza secuencial de la actividad neuronal en diferentes escalas en la generación de actividad motora coordinada en la alimentación de un caracol. A la escala de sub-milisegundos, hay un flujo de iones que genera una secuencia de activación de canales iónicos, que en la escala de milisegundos produce potenciales de acción. La combinación de ellos en forma de ráfagas rítmicas, activa los músculos correspondientes en la escala de segundos y genera el movimiento secuencial necesario para alimentarse: abrir la boca, raspar el alimento y tragar, que se repite a lo largo del día.
 
 El estudio de la dinámica de los potenciales de acción y la interacción entre los canales iónicos y las sinapsis es crucial, ya que es una parte clave en cualquier proceso cerebral, y no puede separarse del conjunto. La alteración de la dinámica de estos canales en diferentes sitios a lo largo de la neurona puede afectar las entradas/salidas sinápticas, cómo se comunican las neuronas y el proceso resultante. Los canales iónicos son el punto de partida de las señales eléctricas subyacentes a la actividad de la red neuronal, y su mal funcionamiento puede contribuir a trastornos neuronales \parencite{kecskes_editorial_2023}. Por lo tanto, comprender la actividad cerebral no solo a gran escala sino también desde la etapa de generación de dinámicas de voltaje puede ser crucial para una comprensión real y completa de los sistemas neuronales. Su estudio también puede ayudar a distinguir entre la modulación a corto y largo plazo, un aspecto clave en la plasticidad neuronal y la aplicación de técnicas neuromoduladoras \parencite{chambers_light-activated_2008,burke_modulation_2019}.
 
-Es importante explorar los mecanismos que permiten mantener una actividad secuencial robusta a pesar de los cambios en el contexto y la variabilidad subyacente en la dinámica neuronal. Los potenciales de acción y las ráfagas pueden clasificarse según su forma de onda y la actividad de disparo agrupada. Sin embargo, en esos subgrupos hay una alta intra-variabilidad, donde, por ejemplo, la actividad de ráfagas puede diferir en forma y duración, es decir, en el número de picos en una ráfaga. La Figura \ref{fig
-	variability} muestra un ejemplo de la variabilidad en la forma de onda y la duración de la ráfaga para una secuencia de varias ráfagas.
+Es importante explorar los mecanismos que permiten mantener una actividad secuencial robusta a pesar de los cambios en el contexto y la variabilidad subyacente en la dinámica neuronal. Los potenciales de acción y las ráfagas pueden clasificarse según su forma de onda y la actividad de disparo agrupada. Sin embargo, en esos subgrupos hay una alta intra-variabilidad, donde, por ejemplo, la actividad de ráfagas puede diferir en forma y duración, es decir, en el número de picos en una ráfaga. La Figura \ref{fig:burst variability spanish} muestra un ejemplo de la variabilidad en la forma de onda y la duración de la ráfaga para una secuencia de varias ráfagas.
 
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.6\textwidth]{img/intro/burst_variability.pdf}
 	\caption{Superposición de ráfagas en diferentes instantes de tiempo alineadas por el primer pico en la ráfaga para grabaciones intracelulares de una neurona LP en el CPG estomatogástrico.}
-	\label{fig
-		variability}
+	\label{fig:burst variability spanish}
 \end{figure}
 
 El estudio de esta variabilidad revela factores clave en la secuencialidad y cómo se mantiene a pesar de diferentes modulaciones intrínsecas o externas. Este es el caso, por ejemplo, de los invariantes dinámicos secuenciales, es decir, relaciones robustas entre intervalos de tiempo que conforman una secuencia neuronal, al analizar la actividad ciclo a ciclo \parencite{reyes_artificial_2008,elices_robust_2019,garrido-pena_characterization_2021,berbel_emergence_2024}. Estos invariantes dinámicos secuenciales pueden tener un papel crucial para entender la coordinación de la actividad secuencial y el equilibrio entre la robustez y la flexibilidad requerida para una función efectiva en muchos procesos cerebrales \parencite{tatsuno_analysis_2015,ullen_neural_2003,zimnik_independent_2021,zhou_neural_2020,dragoi_cell_2020}. Discutiremos en detalle este fenómeno en el CPG de alimentación de \textit{Lymnaea stagnalis} en el capítulo \ref{c-invariants}.\\
@@ -121,7 +114,7 @@ La Neurociencia Computacional es un subcampo de la neurociencia que utiliza téc
 
 Una parte importante de la Neurociencia Computacional es la descripción de sistemas neurales con modelos teóricos y la reproducción de fenómenos clave mediante la simulación del modelo. La simulación de la actividad neural es una herramienta poderosa para explorar la dinámica neuronal, sus fuentes biofísicas, los posibles mecanismos subyacentes en la señalización neuronal y el complejo procesamiento de la información observada. Su fuerza radica en la accesibilidad completa a las variables del modelo, el rango típicamente extenso de parámetros ajustables en el modelo que se pueden explorar y la capacidad para evaluar el papel de elementos distintos en el sistema o circuito incluyéndolos o excluyéndolos de las simulaciones. Aunque los modelos no pueden sustituir completamente la investigación en sistemas vivos, sí nos acercan a la comprensión de la dinámica neuronal compleja, siendo una alternativa rápida, eficaz y de bajo costo para los avances científicos. Además, los modelos son un complemento esencial para la neurociencia experimental, alcanzando descripciones detalladas donde los enfoques experimentales como la electrofisiología tienen limitaciones debido a la siempre presente observabilidad parcial.
 
-Los modelos pueden clasificarse según su nivel de descripción, es decir, qué nivel de simplificación/abstracción se utiliza, el detalle de la estructura/fenómeno que se modela y el tamaño de la red, o su capacidad para reproducir la actividad neural observada, por ejemplo, dinámicas caóticas. La Figura \ref{fig:models-classification} ilustra este tipo de clasificación, con ejemplos de modelos de grandes redes como \cite{potjans_cell-type_2014,bezaire_interneuronal_2016}, de células individuales pero aún detallados como en \cite{smith_dendritic_2013}, y descripciones más abstractas como la propuesta en \cite{izhikevich_simple_2003}. En cuanto al nivel de descripción, en los diferentes modelos biofísicos siempre hay una elección entre la descripción detallada de las no linealidades, canales y propiedades de excitación, y la eficiencia en la computación. En esta línea, los investigadores pueden elegir entre modelos basados en conductancia \cite{hodgkin_quantitative_1952}, ricos en la descripción de no linealidades, o modelos dinámicos simplificados \cite{hindmarsh_model_1984,fitzhugh_impulses_1961}, que típicamente representan no linealidades con simplificaciones polinomiales (ver \cite{torres_modeling_2012} para una revisión de diferentes niveles de modelado neuronal).
+Los modelos pueden clasificarse según su nivel de descripción, es decir, qué nivel de simplificación/abstracción se utiliza, el detalle de la estructura/fenómeno que se modela y el tamaño de la red, o su capacidad para reproducir la actividad neural observada, por ejemplo, dinámicas caóticas. La Figura \ref{fig:models-classification spanish} ilustra este tipo de clasificación, con ejemplos de modelos de grandes redes como \cite{potjans_cell-type_2014,bezaire_interneuronal_2016}, de células individuales pero aún detallados como en \cite{smith_dendritic_2013}, y descripciones más abstractas como la propuesta en \cite{izhikevich_simple_2003}. En cuanto al nivel de descripción, en los diferentes modelos biofísicos siempre hay una elección entre la descripción detallada de las no linealidades, canales y propiedades de excitación, y la eficiencia en la computación. En esta línea, los investigadores pueden elegir entre modelos basados en conductancia \cite{hodgkin_quantitative_1952}, ricos en la descripción de no linealidades, o modelos dinámicos simplificados \cite{hindmarsh_model_1984,fitzhugh_impulses_1961}, que típicamente representan no linealidades con simplificaciones polinomiales (ver \cite{torres_modeling_2012} para una revisión de diferentes niveles de modelado neuronal).
 
 \begin{figure}[bth!]
 \centering
@@ -148,11 +141,11 @@ En esta tesis, todas las grabaciones experimentales se han apoyado en simulacion
 \label{fig:clamp circuit spanish}
 \end{figure}
 
-En estos modelos, la simulación de la actividad eléctrica neuronal se basa en la descripción matemática de diferentes canales iónicos en el circuito, cuya dinámica también está bien definida por compuertas de activación. Primero, hay una descripción matemática de la dependencia del voltaje en el tiempo, como se describe en la ecuación \ref{eq:voltage ions}:
+En estos modelos, la simulación de la actividad eléctrica neuronal se basa en la descripción matemática de diferentes canales iónicos en el circuito, cuya dinámica también está bien definida por compuertas de activación. Primero, hay una descripción matemática de la dependencia del voltaje en el tiempo, como se describe en la ecuación \ref{eq:voltage ions spanish}:
 
 \begin{equation}
 C_m \frac{dV}{dt} = I - \sum I_{x},
-\label{eq:voltage ions}:
+\label{eq:voltage ions spanish}:
 \end{equation}
 
 donde \( V \) es el potencial de membrana, \( I \) es una corriente externa, por ejemplo, un estímulo externo o una corriente sináptica, \( I_{x} \) es la descripción de la corriente para cada canal involucrado en la generación del potencial de acción, por ejemplo, sodio, potasio, calcio (\( I_K \), \( I_{Na} \), \( I_{Ca} \)).
@@ -167,12 +160,12 @@ donde \( g_x \) es la conductancia correspondiente del canal, \( E_x \) es el po
 Las compuertas de activación suelen tener una tendencia exponencial y están definidas por dinámicas de activación e inactivación, también dependientes del voltaje y el tiempo. Siguen la estructura en la ecuación \ref{eq:alpha-beta spanish}:
 
 \begin{equation}
-\label{eq:alpha-beta}
 \frac{dm}{dt} = \frac{m_{\infty} - m}{\tau_m}
+\label{eq:alpha-beta spanish}
 \end{equation}
 
 \section{Estudios de animales vertebrados e invertebrados}
-\label{c-intro-invertebrates}
+\label{c-intro-invertebrates spanish}
 El estudio de la dinámica neural y el comportamiento se lleva a cabo utilizando muchos modelos animales diferentes. Aparte de los modelos dominantes de roedores, ha habido hallazgos invaluables utilizando invertebrados, como en genética y biología del desarrollo en \textit{C. elegans} \parencite{brenner_genetics_1974}, \textit{pececillos} \parencite{streisinger_production_1981} y \textit{Drosophila} \parencite{nusslein-volhard_mutations_1980}; dinámica neural en \textit{Aplysia} \parencite{wachtel_direct_1967} o \textit{Loligo} \parencite{HODGKIN1952}, actividad motora en \textit{Panulirus} \parencite{SELVERSTON1976} y \textit{Carcinus maenas} \parencite{eisen_mechanisms_1982} o \textit{Lymnaea stagnalis} \parencite{Benjamin1979b}, el principal modelo animal en esta tesis. Además de estos ejemplos, estos modelos animales se han utilizado en una amplia variedad de campos, incluidos estudios conductuales, ecotoxicología, evolución, modelado de enfermedades humanas, etc. \parencite{romanova_animal_2018}.
 
 A pesar de las diferencias cerebrales entre invertebrados y mamíferos, existen muchas características universales de los sistemas nerviosos que pueden extrapolarse a los humanos. Debemos tener en cuenta que cualquier modelo animal sigue siendo un marco de investigación, con diferencias respecto al enfoque real de estudio --el cerebro humano-- y como modelo, existen diferencias en la estructura, incluso dentro de las especies de mamíferos \parencite{preuss_taking_2000}. Por lo tanto, mediante el uso de modelos computacionales o explorando más especies animales, se puede establecer una verdad fundamental para los aspectos que conforman la dinámica neuronal y del comportamiento.
@@ -184,7 +177,7 @@ Entre las ventajas de usar invertebrados, vale la pena mencionar el fácil acces
 Aparte de los posibles avances en la ciencia desde un punto de vista productivista, los modelos de invertebrados también pueden cerrar la brecha entre recursos y ciencia, permitiendo que los laboratorios y países de bajos ingresos hagan ciencia. Estos modelos animales suelen ser más baratos de obtener y mantener, y generalmente hay posibilidad de criar colonias propias. Esto hace que su uso sea ampliable y rompe algunas barreras económicas en la ciencia, donde los países de altos ingresos suelen centralizar la producción científica con fuertes convenciones \parencite{castillo_spineless_2017,stephan_how_2015}.
 
 \subsubsection{\textit{Lymnaea stagnalis}, el gran caracol de estanque}
-En esta tesis, exploramos el sistema nervioso del gran caracol de estanque, \textit{Lymnaea stagnalis} (ver Fig. \ref{fig:snail}). Este molusco ha sido un caso importante de estudio desde finales del siglo XX, cuando se utilizó ampliamente para estudiar procesos neurobiológicos y el funcionamiento del sistema nervioso. Este esfuerzo a lo largo del tiempo llevó a una descripción detallada de la ganglia bucal, incluyendo los tres principales interneuronas que la conforman \parencite{benjamin_snail_1989,benjamin_morphology_1979,rose_relationship_1979,brierley_behavioral_1997} y las neuronas modulatorias que influyen en la actividad de la CPG como las neuronas SO y CGC en la ganglia cerebral \parencite{rose_interneuronal_1981,mccrohan_patterns_1980,kemenes_multiple_2001}. Además de la ganglia bucal, otras neuronas en diferentes ganglias también están bien identificadas, con características específicas como el acoplamiento eléctrico o neuronas que contienen dopamina como en la ganglia parietal derecha \parencite{benjamin_electrotonic_1986,winlow_multiple_1981}.
+En esta tesis, exploramos el sistema nervioso del gran caracol de estanque, \textit{Lymnaea stagnalis} (ver Fig. \ref{fig:snail spanish}). Este molusco ha sido un caso importante de estudio desde finales del siglo XX, cuando se utilizó ampliamente para estudiar procesos neurobiológicos y el funcionamiento del sistema nervioso. Este esfuerzo a lo largo del tiempo llevó a una descripción detallada de la ganglia bucal, incluyendo los tres principales interneuronas que la conforman \parencite{benjamin_snail_1989,benjamin_morphology_1979,rose_relationship_1979,brierley_behavioral_1997} y las neuronas modulatorias que influyen en la actividad de la CPG como las neuronas SO y CGC en la ganglia cerebral \parencite{rose_interneuronal_1981,mccrohan_patterns_1980,kemenes_multiple_2001}. Además de la ganglia bucal, otras neuronas en diferentes ganglias también están bien identificadas, con características específicas como el acoplamiento eléctrico o neuronas que contienen dopamina como en la ganglia parietal derecha \parencite{benjamin_electrotonic_1986,winlow_multiple_1981}.
 
 
 \begin{figure}[htb!]
@@ -192,7 +185,7 @@ En esta tesis, exploramos el sistema nervioso del gran caracol de estanque, \tex
 		\centering
 		\includegraphics[width=\linewidth]{img/intro/lymnaea.png} 
 		\caption{Imagen of \textit{Lymnaea Stagnalis}}
-		\label{fig:snail}
+		\label{fig:snail spanish}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.65\textwidth}
