@@ -28,8 +28,6 @@ With this simulation we obtained the results showed in Figure \ref{fig:activity 
 
 \subsection{Experimental activity-dependent stimulation}
 
-%\todo{cambio de orden con la anterior: reescribir intro}
-
 Here we propose a closed-loop stimulation protocol where we can differentiate between the phases of the action potential and illuminate the neurons only at certain intervals of the spike generation dynamics. In this protocol, the laser illumination was controlled by a mechanical shutter triggered by the prediction of events in the voltage signal. A real-time software system ran the prediction algorithm and triggered the illumination for short periods of time at different phases of the spike generation when distinct channels were active (see Sec. \ref{sect:methods-activity-dependent} and Fig. \ref{fig:activity dependent protocol}). The prediction of the events was computed by two algorithms, one based on a voltage threshold updated at each spike peak occurrence and a second one that calculated the voltage area from the hyperpolarization (minimum) to the next hyperpolarization. Based on this prediction the illumination was triggered at the specified time before the spike occurrence (see Sec. \ref{sect:methods-activity-dependent} for details in these algorithms). The implementation of these algorithms is available as a module for the real-time open-source system RTXI \parencite{patel_hard_2017} in \href{github.com/GNB-UAM/spike_predictor}{https://github.com/GNB-UAM/spike\_predictor}.
 
 \begin{figure}[htb!]
