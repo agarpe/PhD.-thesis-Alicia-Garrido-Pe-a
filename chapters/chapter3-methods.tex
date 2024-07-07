@@ -23,7 +23,6 @@ The neural system of \textit{Lymnaea Stangalis} (the great pond snail) is shown 
 	\endminipage
 \end{figure}
 
-%\todo{mejorar imagen, cambiar ganglion por ganglia}
 Neuronal recordings showed in this work are from the CPG in the buccal ganglia in chapter \ref{c-invariants}) and right parietal ganglia, containing large neurons with tonic firing and a giant electrical couple cell to the visceral ganglia in chapter \ref{c-laser}). Both ganglia are showed in detail in figures \ref{fig:buccal ganglia}.
 
 %%%% In contrast to other systems functionality where motoneurons are CPGs neurons \cite{stomatogastric} ((page 5 review), in Lymnaea nervous system, CPGs and motoneurons are separated groups of neurons. 
@@ -87,7 +86,7 @@ On the other hand, fast channels are part of the axon compartment: a fast inacti
 The model cells as described above are not endogenously bursters so to achieve bursting activity, a distinct constant value of  \(i_{inj}\) is applied to the cells. 
 
 The CPG topology scheme is shown in Fig. \ref{fig:CPG diagram 2 compartments}, where the connections between neurons are represented by dashed or solid lines, depending on whether the connection is slow or fast, respectively, and filled or empty circles at their end denoting the direction and the effect on the postsynaptic neuron: excitation (empty circles) or inhibition (filled circles).
-Individual neurons following the previous description are connected by graded synapses, defined by equations \ref{eq:syn1}-\ref{eq:syn2} \parencite{Vavoulis2007}. The differential point of a graded synapse is that it is dependent on voltage values and time, many synapses models used are just dependent on a trigger voltage value, that activates the synapse (see chapter \ref{c-intro-synapses} for details). This model of synapse allows dynamical adaptation of neurons in the circuit to maintain the rhythm despite the variability. %\todo{discutir en el capítulo}
+Individual neurons following the previous description are connected by graded synapses, defined by equations \ref{eq:syn1}-\ref{eq:syn2} \parencite{Vavoulis2007}. The differential point of a graded synapse is that it is dependent on voltage values and time, many synapses models used are just dependent on a trigger voltage value, that activates the synapse (see chapter \ref{c-intro-synapses} for details). This model of synapse allows dynamical adaptation of neurons in the circuit to maintain the rhythm despite the variability. 
 
 \begin{equation}
 	i_{syn} = \sum_j \gamma_{syn,j} s_j (V_S - E_{syn,j})
