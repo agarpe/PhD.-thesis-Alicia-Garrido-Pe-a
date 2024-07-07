@@ -125,3 +125,17 @@ Thus, the percentage change in waveform from the model simulations, as described
 Here, \textit{value} represents the percentage change in the model simulation for a specific metric, while \textit{Vmin} and \textit{Vmax} represent $\mu_{MEC}-2\sigma_{MEC}$ and $\mu_{MEC}+2\sigma_{MEC}$ respectively, with $\mu_{MEC}$ and $\sigma_{MEC}$ being the specific mean and standard deviation corresponding to the metric specified in \textit{value}. Since all changes are in absolute value, the lower bound for Vmin is 0.
 
 All data analyses were performed in Python, the scripts are available in \href{https://github.com/GNB-UAM/Garrido-Pena_Modulation-neural-dynamics-by-CW-NIR-stimulation}{github.com/GNB-UAM/Garrido-Pena\_Modulation-neural-dynamics-by-CW-NIR-stimulation}.
+
+
+\section{Temperature estimation for analyzing laser neuromodulation}
+\label{sec:temperature-estimation}
+To estimate the CW-NIR laser induced temperature change, we used the open-pipette method employed in previous experimental studies to measure the temperature variation during the illumination \parencite{li_temporal_2013, rabbitt_heat_2016,brown_thermal_2020, brown_response_2021}. We calibrated the resistance and temperature relation using a thermistor (EPCOS, 10$k\Omega$) to measure the temperature in the preparation solution in the range from 23ºC to 29ºC. We used two protocols:  injecting a constant current to calculate the resistance change from the voltage recording, and injecting pulses of a specific current value. From the resulting recording slope of the linear regression, we computed the conversion from voltage to temperature. For the estimation of the temperature change during the laser stimulation, we measured the voltage change during short intervals of laser illumination and the temperature value at its saturation plateau. This estimation is represented in Fig. \ref{fig:temperature estimation}.
+
+
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/laser/temperature_estimation.pdf}
+	\caption{Open-pipette temperature estimation method. Each row in the panel represents pulsed and continuous current delivery for the estimation, respectively. For both examples: left column, temperature and voltage relation. Right column filtered mean of voltage recordings from short illumination intervals in the pipette. }
+	\label{fig:temperature estimation}
+\end{figure}

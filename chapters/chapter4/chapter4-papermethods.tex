@@ -85,7 +85,7 @@ Therefore, we used a current ramp protocol to induce variability in the CPG mode
 Simulations of \cite{vavoulis_computational_2007} model were implemented in C++. The code of the feeding CPG model implementation is available at \href{github.com/GNB-UAM/CPG-feeding-Lymnaea}{https://github.com/GNB-UAM/CPG-feeding-Lymnaea}. This model was also included in Neun library in a Github repository \href{github.com/GNB-UAM/Neun}{https://github.com/GNB-UAM/Neun}. Each simulation had the duration of two consecutive cycles of up and down ramps as the one shown in Fig. \ref{fig:complete ramp example} using the parameters described in Table \ref{table:inj values}. The number of bursts in each simulation was approximately 140 (this number slightly depends on the neuron stimulated). Parameter values such as reversal potentials and synaptic conductances were the same ones specified in \cite{Vavoulis2007}.
 
 
-% \subsection{Model simulation specifications and statistical analysis}\todo{añadir en métodos generales o ampliarlo también a experimental}
+% \subsection{Model simulation specifications and statistical analysis}%\todo{añadir en métodos generales o ampliarlo también a experimental}
 
 
 
@@ -157,7 +157,7 @@ where $g_x$ is the maximal conductance of the current, $V$ is the membrane poten
 %\end{equation}
 
 \subsubsection{Non chaotic model \cite{ghigliazza_minimal_2004}}
-\todo{revisar}
+%\todo{revisar}
 The Ghigliazza and Holmes model for motoneurons is described by the following equations:
 
 1. The membrane potential dynamics of a neuron is given by:
@@ -199,6 +199,7 @@ where \( \phi_i \) is the phase of the \( i \)-th oscillator, \( \omega_i \) is 
 
 
 \subsection{Hybrot structure}
+\label{sec:robot setup}
 The experimental paradigm designed in order to test the correct behavior and locomotion of the FLC-Hybrot --FLC stands for Functional Living Circuit-- established a real-time closed-loop interaction between the robot and a living pyloric CPG of \textit{Carcinus maenas} \cite{elices_robust_2019}. During the experiment, the FLC-Hybrot had to walk through a straight and flat lane, with no obstacles, along which there were interspersed sections with lights and shadows. Neural activity was recorded online from the living circuit and used to modulate the robot movement. At the same time, feedback current was injected into the living circuit when the robot's light-sensor detected a shadow.
 
 Top panel of Figure \ref{fig:robot_results_setup} shows an illustration of the experimental setup for the FLC-Hybrot implementation with all its main components. A computer was employed to serve as nexus between both the robot and the biological elements and was in charge of executing a periodic real-time loop (Figure \ref{fig:robot_results_setup}A), inside of which the following tasks were performed:
