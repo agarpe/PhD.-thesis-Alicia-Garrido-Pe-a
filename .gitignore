@@ -24,18 +24,18 @@
 img/invariants/data/*/*/images/*/*tex
 img/invariants/data/*/*/images/*tex
 
-img/invariants/data/SUSSEX/*/images/*/_boxplot.pdf
-img/invariants/data/SUSSEX/*/images/*/_boxplot_h.pdf
-img/invariants/data/SUSSEX/*/images/*/_boxplot_ibi.pdf
-img/invariants/data/SUSSEX/*/images/*/_delays.pdf
-img/invariants/data/SUSSEX/*/images/*/_durations.pdf
-img/invariants/data/SUSSEX/*/images/*/_intervals.pdf
+img/invariants/data/SUSSEX/*/images/*/_boxplot.*
+img/invariants/data/SUSSEX/*/images/*/_boxplot_h.*
+img/invariants/data/SUSSEX/*/images/*/_boxplot_ibi.*
+img/invariants/data/SUSSEX/*/images/*/_delays.*
+img/invariants/data/SUSSEX/*/images/*/_durations.*
+img/invariants/data/SUSSEX/*/images/*/_intervals.*
 img/invariants/data/SUSSEX/*/images/*/_output_pairplot.png
-img/invariants/data/*/*/images/*/_signal_intervals.pdf
-img/invariants/data/*/*/images/*/_signal_intervals_cycle.pdf
-img/invariants/data/*/*/images/*/_signal_intervals_cycle_stretch.pdf
-img/invariants/data/*/*/images/*/_signal_intervals_zoom.pdf
-img/invariants/data/*/*/images/*/_time_cycle.pdf
+img/invariants/data/*/*/images/*/_signal_intervals.*
+img/invariants/data/*/*/images/*/_signal_intervals_cycle.*
+img/invariants/data/*/*/images/*/_signal_intervals_cycle_stretch.*
+img/invariants/data/*/*/images/*/_signal_intervals_zoom.*
+img/invariants/data/*/*/images/*/_time_cycle.*
 
 
 img/invariants/data/SUSSEX/*/images/_boxplot.pdf
@@ -57,15 +57,15 @@ img/invariants/data/SUSSEX/*/images/*/output_pairplot_reset.pdf
 img/invariants/data/SUSSEX/*/images/output_pairplot_reset.pdf
 
 
-img/invariants/data/*/*/images/_signal_intervals.pdf
+img/invariants/data/*/*/images/_signal_intervals.*
 
-img/invariants/data/*/*/images/_signal_intervals_cycle.pdf
+img/invariants/data/*/*/images/_signal_intervals_cycle.*
 
-img/invariants/data/*/*/images/_signal_intervals_cycle_stretch.pdf
+img/invariants/data/*/*/images/_signal_intervals_cycle_stretch.*
 
-img/invariants/data/*/*/images/_signal_intervals_zoom.pdf
+img/invariants/data/*/*/images/_signal_intervals_zoom.*
 
-img/invariants/data/*/*/images/_time_cycle.pdf
+img/invariants/data/*/*/images/_time_cycle.*
 
 img/invariants/data/*/*/images/_output_pairplot_IBI.png
 img/invariants/data/*/*/images/*/_output_pairplot_IBI.png
