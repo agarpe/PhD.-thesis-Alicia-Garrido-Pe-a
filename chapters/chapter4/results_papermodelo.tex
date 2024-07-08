@@ -143,7 +143,8 @@ Compared to the N1M and N3t stimulation results, there is another difference whe
 
 
 \subsection{Time intervals relations cycle-by-cycle beyond period}
-We saw so far the sequential dynamical invariants in terms of strong linear relationships between the distinct intervals in a cycle and the period, however, studying the relations between all intervals can also show interesting information about the temporal variability distribution in the ongoing activity. In Figs \ref{fig:model n1m stimulation pairplot} to \ref{fig:model so stimulation pairplot} there is a representation of all possible combinations of the defined intervals for the three scenarios of induced variability showed in this section. In this extended representation of the relations cycle-by-cycle we can see that there are more intervals presenting strong linear relations, besides of the periods. Some of them are intervals that are contained in others, as the case of N1-BD and N1-N2 interval and have similar durations, and so they are more likely to have a strong linear relation between them. However, there are other intervals that, as it is the case of the period, although they share part of the time-interval, they are not correlated, since they are not the variable part, as it is the case of N2-BD with N1-N2. This disctintion can help disect the source of variability and its distribution when an interval is related to the period. Also, the further study of linear relation between some intervals (as N1-BD and N3-BD) that do not share time-interval, can show significant information about the ongoing activity cycle-by-cycle.
+We saw so far the sequential dynamical invariants in terms of strong linear relationships between the distinct intervals in a cycle and the period, however, studying the relations between all possible combinations between intervals can also show interesting information about the temporal variability distribution in the ongoing activity. In Figs \ref{fig:model n1m stimulation pairplot} to \ref{fig:model so stimulation pairplot} there is a representation of all these combinations of the defined intervals for the three scenarios of induced variability (current in N1M, N3t or SO) showed in this section. In this extended representation of the relations cycle-by-cycle we can see that there are more intervals presenting strong linear relations, besides of the periods. Some of them are intervals that are contained in others, as the case of N1-BD and N1-N2 interval and have similar durations, and so they are more likely to have a strong linear relation between them. However, there are other intervals that, as it is the case of the period, although they share part of the time-interval, they are not correlated, since they are not the variable part, as it is the case of N2-BD with N1-N2. This disctintion can help disect the source of variability and its distribution when an interval is related to the period. Also, the further study of linear relation between some intervals (as N1-BD and N3-BD) that do not share time-interval, can show significant information about the ongoing activity cycle-by-cycle. This representation can also show non-linear relation between the intervals as we can see in some plots in the case of SO (Fig. \ref{fig:model so stimulation pairplot}), observed in the pyloric CPG in modeling and experimental scenarios \parencite{berbel_emergence_2024}.
+
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{./invariants/data/MODEL/n1m_driven/images/3phases/output_pairplot.pdf}
@@ -154,29 +155,32 @@ We saw so far the sequential dynamical invariants in terms of strong linear rela
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{./invariants/data/MODEL/n3t_driven/images/3phases/output_pairplot.pdf}
-	\caption{\textbf{N3t stimulation}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for activity when N3t is stimulated.}
+	\caption{\textbf{N3t stimulation}: Pairplot with all possible combination between time intervals within a cycle.}
 	\label{fig:model n3t stimulation pairplot}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{./invariants/data/MODEL/so_driven/images/3phases/output_pairplot.pdf}
-	\caption{\textbf{SO stimulation}: Panel of intervals distribution and dynamical invariants for the two phases in the CPG for activity when SO is stimulated.}
+	\caption{\textbf{SO stimulation}: Pairplot with all possible combination between time intervals within a cycle.}
 	\label{fig:model so stimulation pairplot}
 \end{figure}
 
 %
 \subsection{Comparison with two-phase intervals}
-Although during this section we analyzed the sequential dynamical invariants in for three phases, we can also define the intervals for two phases of the neurons, taking as reference for example, N1 and N3. This is the case in the work by \cite{elices_robust_2019}, and in the following section we will also use two phases for some of the recordings were the N2 phase was not possible to characterize out of the intracellular recordings. In Figure \ref{fig:invariant n1m model 2 phases} there is a comparison of the linear relations and different intervals conforming the sequence when the references are in N1, N2 and N3 (as we have shown so far) or only for N1 and N3.
+During this section we analyzed the sequential dynamical invariants in for three phases, bur we can also define the intervals for two phases of the neurons, taking as reference for example, N1 and N3. This is the case in the work by \cite{elices_robust_2019}, and in the following section we will also use two phases for some of the recordings were the N2 phase was not possible to characterize out of the intracellular recordings. In Figure \ref{fig:invariant n1m model 2 phases} there is a comparison of the linear relations and different intervals conforming the sequence when the references are in N1, N2 and N3 (as we have shown so far) or only for N1 and N3.
 
-When we only consider two phases, we have less possible combinations and the time-intervals that would correspond to the third neuron are contained in the resulting ones. For example as we can see in Fig. \ref{fig:invariant n1m model 2 phases}a), N2N3 delay would be represented by N1N3 delay; N2 burst duration is included in the N2N3 interval. So when analyzing dynamical invariants in two-phase intervals each interval is more informative of the relation.
+When we only consider two phases, we have less possible combinations and the time-intervals that would correspond to the third neuron are contained in the resulting ones. For example as we can see in Fig. \ref{fig:invariant n1m model 2 phases}a), N2N3 delay would be represented by N1N3 delay; N2 burst duration is included in the N2N3 interval. So when analyzing dynamical invariants in two-phase intervals each interval is more informative of the variability constrains cycle-by-cycle. 
 
 \begin{figure}[hbt!]
 	\begin{minipage}[b]{0.9\textwidth}
 		\raggedleft
 		\begin{minipage}[b]{0.53\textwidth}
 			\raggedleft
-			\includegraphics[width=\textwidth]{methods-paper-modelo/Intervals_figure_complete.png}
+			\begin{overpic}[width=\textwidth]{methods-paper-modelo/Intervals_figure_complete.png}
+				\put(0,40){\large\textbf{a)}}
+			\end{overpic}
+%			\includegraphics[width=\textwidth]{methods-paper-modelo/Intervals_figure_complete.png}
 		\end{minipage}
 		\centering 
 		\begin{minipage}[b]{0.3\textwidth}
@@ -188,7 +192,9 @@ When we only consider two phases, we have less possible combinations and the tim
 		\centering
 		\begin{minipage}[b]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
+			\begin{overpic}[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
+				\put(0,35){\large\textbf{b)}}
+			\end{overpic}
 		\end{minipage}\
 		\begin{minipage}[b]{\textwidth}
 			\centering
@@ -203,7 +209,9 @@ When we only consider two phases, we have less possible combinations and the tim
 		\centering
 		\begin{minipage}[b]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/2phases/_durations.pdf}
+			\begin{overpic}[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/2phases/_durations.pdf}
+				\put(0,50){\large\textbf{c)}}
+		\end{overpic}
 		\end{minipage}\
 		\begin{minipage}[b]{\textwidth}
 			\centering
@@ -216,7 +224,7 @@ When we only consider two phases, we have less possible combinations and the tim
 	
 		\vspace{50pt}
 	\end{minipage}
-	\caption{a) Representation of the intervals for each cycle when considering three or two phases. b) Interval correlations to period for SO-driven simulation for 3 phases. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays (Data shown in Fig. \ref{fig:invariant n1m}). c) Interval correlations to period for N1M-driven simulation for 2 phases. First row: Burst duration. Second row: Two-neuron intervals. Third row: Two-neuron delays. For b) and c) the linear relationships are quantified by the $R^2$ values of the regression.}
+	\caption{a) Representation of the intervals for each cycle when considering three or two phases (left and right, respectively). b) Interval correlations to period for SO-driven simulation for 3 phases. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays (Data shown in Fig. \ref{fig:invariant n1m}). c) Interval correlations to period for N1M-driven simulation for 2 phases. First row: Burst duration. Second row: Two-neuron intervals. Third row: Two-neuron delays. For b) and c) the linear relationships are quantified by the $R^2$ values of the regression.}
 	\label{fig:invariant n1m model 2 phases}
 \end{figure}
 
