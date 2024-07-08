@@ -44,7 +44,7 @@ figure = '''    \\begin{figure}[htbp]
             \\begin{minipage}[b]{\\textwidth}
                 \\centering
                 \\begin{overpic}[width=\\textwidth]{_durations.pdf}
-                    \\put(0,33){\\large\\textbf{e)}}
+                    \\put(0,55){\\large\\textbf{e)}}
                 \\end{overpic}
                 \\end{minipage}\\
                 \\begin{minipage}[b]{\\textwidth}
@@ -65,10 +65,19 @@ figure = '''    \\begin{figure}[htbp]
 def create_file(path):
     print("Creating file ", path+"panel_with_intervals.tex")
     file_name = path+'panel_with_intervals.tex'
+
+    # Check if "2phases" is in the path and modify the figure string if needed
+    if "3phases" in path:
+        modified_figure = figure.replace('\\put(0,55){\\large\\textbf{e)}', '\\put(0,33){\\large\\textbf{e)}')
+    else:
+        modified_figure = figure
+
+
+
     with open(file_name,'w') as file:
         file.write(headers)
         file.write("\\graphicspath{ { %s } }\n"%path)
-        file.write(figure)
+        file.write(modified_figure)
 
     # print('pdflatex -synctex=interaction=nonstopmode %s'%file_name)
     os.system('cd %s'%path)
