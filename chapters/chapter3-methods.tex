@@ -25,7 +25,7 @@ The neural system of \textit{Lymnaea stangalis} (the great pond snail) is shown 
 
 Neuronal recordings showed in this work are from the CPG in the buccal ganglia in chapter \ref{c-invariants} and right parietal ganglia, containing large neurons with tonic firing and a giant electrical couple cell to the visceral ganglia in chapter \ref{c-laser}. Both ganglia are showed in detail in Fig. \ref{fig:buccal ganglia}.
 
-%%%% In contrast to other systems functionality where motoneurons are CPGs neurons \cite{stomatogastric} ((page 5 review), in Lymnaea nervous system, CPGs and motoneurons are separated groups of neurons. 
+%%%% In contrast to other systems functionality where motoneurons are CPGs neurons \textcite{stomatogastric} ((page 5 review), in Lymnaea nervous system, CPGs and motoneurons are separated groups of neurons. 
 
 
 \section{Feeding CPG in \textit{Lymnaea stagnalis}}
@@ -56,7 +56,7 @@ The technique followed for the neural activity acquisition was intracellular rec
 \end{figure}
 %todo: marcar con un circulo
 
-To facilitate the access to the cell, the sheath above it was reduced using protease (Sigma XVII) over the ganglion for $\sim$1 min and then washed with fresh saline. In order to record cell signals extra- and intracellularly, it is necessary to have full access to the neural system (see \cite{garrido-pena_tfm_2022} for more details). The preparation was immersed in a saline solution (in mM: 51.3 $NaCl$, 1.7 $KCl$, 1.5 $MgCl_2\cdot6H_2O$, 4.1 $CaCl_2\cdot2H_2O$, 5 $HEPES$, corrected to pH 7.8 with 4 $M$ $NaOH$). All procedures followed the European Commission and Universidad Autónoma de Madrid animal treatment guidelines.
+To facilitate the access to the cell, the sheath above it was reduced using protease (Sigma XVII) over the ganglion for $\sim$1 min and then washed with fresh saline. In order to record cell signals extra- and intracellularly, it is necessary to have full access to the neural system (see \textcite{garrido-pena_tfm_2022} for more details). The preparation was immersed in a saline solution (in mM: 51.3 $NaCl$, 1.7 $KCl$, 1.5 $MgCl_2\cdot6H_2O$, 4.1 $CaCl_2\cdot2H_2O$, 5 $HEPES$, corrected to pH 7.8 with 4 $M$ $NaOH$). All procedures followed the European Commission and Universidad Autónoma de Madrid animal treatment guidelines.
 
 The recordings analyzed in \ref{sec:experimental sussex} were carried out in a equivalent procedure by Michael Crossley in the University of Sussex. 
 
@@ -66,7 +66,7 @@ For the theoretical analyses in this work, simulations of conductance-based mode
 
 \subsection{Feeding CPG model}
 \label{sec:CPG model equations}
-The Vavoulis et al. description of the individual neurons considers a two-compartment model to represent the soma and the axon as  differentiated structures coupled by an axial resistance \cite{vavoulis_dynamic_2007}. This separation of the soma and the axon is used to regulate the interaction between the fast and slow dynamics in the model. The slow dynamics are located at the soma, whereas the fast dynamics are included in the axon compartment. This distributed formalism is represented in Fig. \ref{fig:CPG diagram 2 compartments}a., where each circle represents either soma or axon, containing the different ionic currents for each one. The description of the voltage dynamics is provided for soma (equation \ref{eq:soma}) and axon (\ref{eq:axon}) compartments:
+The Vavoulis et al. description of the individual neurons considers a two-compartment model to represent the soma and the axon as  differentiated structures coupled by an axial resistance \textcite{vavoulis_dynamic_2007}. This separation of the soma and the axon is used to regulate the interaction between the fast and slow dynamics in the model. The slow dynamics are located at the soma, whereas the fast dynamics are included in the axon compartment. This distributed formalism is represented in Fig. \ref{fig:CPG diagram 2 compartments}a., where each circle represents either soma or axon, containing the different ionic currents for each one. The description of the voltage dynamics is provided for soma (equation \ref{eq:soma}) and axon (\ref{eq:axon}) compartments:
 
 \begin{equation}
 	\tau_m\frac{dV_S}{dt} = i_{inj} - i_{L,S} - i_X - i_{ec,S} - i_{syn} \\,
@@ -79,12 +79,12 @@ The Vavoulis et al. description of the individual neurons considers a two-compar
 	\label{eq:axon}
 \end{equation}
 
-\noindent Here we follow the notation of \cite{vavoulis_dynamic_2007} where $\tau_m$ represents the time constant of the membrane (in ms) given by the ratio of the membrane capacitance (in nF) and the leakage conductance (in $\mu$S).  In equations \ref{eq:soma} and \ref{eq:axon}, $i$ variables (given in mV) are the product of the corresponding currents (in nA) times the passive input resistance given in M$\Omega$.
+\noindent Here we follow the notation of \textcite{vavoulis_dynamic_2007} where $\tau_m$ represents the time constant of the membrane (in ms) given by the ratio of the membrane capacitance (in nF) and the leakage conductance (in $\mu$S).  In equations \ref{eq:soma} and \ref{eq:axon}, $i$ variables (given in mV) are the product of the corresponding currents (in nA) times the passive input resistance given in M$\Omega$.
 %, $i=I*R$, where  $R$ is given in M$\Omega$.
 
 The soma compartment contains a slow current $I_X$ whose ionic nature depends on the specific CPG neuron described (see Fig.~\ref{fig:CPG diagram 2 compartments}a.). Thus, $I_X$  represents one channel, either $I_{ACh}$, $I_{NaL}$ or $I_{T}$, responsible of the specific slow dynamics associated with neurons N1M, N2v and N3t, respectively.  Along with the slow ionic channel and the leakage channel  $I_{L,S}$, the soma compartment also receives the synaptic current $I_{syn}$ and the injection current $I_{inj}$. All currents are explained in detail below.
 
-On the other hand, fast channels are part of the axon compartment: a fast inactivating sodium current $I_{NaT}$ and a delayed rectifier potassium current $I_{K}$. These channels, along with the axon leakage channel  $I_{L,A}$ follow the definition in \cite{HODGKIN1952} model.
+On the other hand, fast channels are part of the axon compartment: a fast inactivating sodium current $I_{NaT}$ and a delayed rectifier potassium current $I_{K}$. These channels, along with the axon leakage channel  $I_{L,A}$ follow the definition in \textcite{HODGKIN1952} model.
 
 The model cells as described above are not endogenously bursters so to achieve bursting activity, a distinct constant value of  \(i_{inj}\) is applied to the cells. 
 
@@ -185,7 +185,7 @@ where $x = h,r,a,b,n,e$ or $f$ and $x_{\infty}$ and $tau_x$ are defined by:
 x_{\infty} = {(1+exp(\frac{V_H^x-V}{V_S^x}))}^{-1}
 \end{equation}
 
-See Supplementary Material in \cite{vavoulis_balanced_2010} for more details. 
+See Supplementary Material in \textcite{vavoulis_balanced_2010} for more details. 
 
 The implementation of this model is available at Neun library \href{https://github.com/GNB-UAM/neun}{github.com/GNB-UAM/neun} (VavoulisCGCModel).
 
@@ -254,20 +254,31 @@ All intervals defined in section \ref{subsec:intervals} were defined by the even
 		return [d1d2_interval,d1d2_delay],[d2d1_interval,d2d1_delay]
 \end{lstlisting}
 
-On the other hand, in the recordings and model simulations of the tonic firing activity of large cells in the right parietal ganglia, regarding the stereotyped spike waveform it was enough with a voltage threshold to detect the events in the sequence, and to analyze the waveoform after the detection of the events, each one was extended N milliseconds left and right, defining segments of signal that capture the shape of the waveform. The characterization of that waveform was carried by defining four metrics: the duration, amplitude and depolarization and repolarization slopes, implemented as follows:
+On the other hand, to analyze the date from recordings and model simulations of the tonic firing activity used for the analysis of the CW-NIR laser we based on the spike waveform. To detect the spike times, it was usually enough with a voltage threshold to detect the events in the sequence --regarding the stereotyped spike waveform. To analyze the waveoform after the detection of the events, each time event in the voltage signal one was extended N milliseconds left and right, defining segments that capture the shape of the waveform. The characterization of that waveform was carried by defining four metrics: duration, amplitude, and depolarization and repolarization slopes. The characterization of these metrics was implemented as follows:
 
 \begin{lstlisting}
-def get_spike_duration(spike,dt,tol=2, thres_val=0.5, max_dur = 5, v_scale=1): 
+	# Description: 
+	# 	Recives spike voltage values and return the time values to get the duration time 
+	#	measured at the mid point of the spike waveform 
+	# Parameters:
+	# 	spike: voltage values
+	# 	dt: time rate
+	# 	thres_val: voltage value where to measure the duration. By the fault mid point. 
+	#	v_scale: scale of the voltage, assumes mV
+	# Return:
+	#	time points at middle point of the spike waveform. 
+def get_spike_duration(spike,dt, thres_val=0.5, v_scale=1): 
 	spike = spike[~np.isnan(spike)]
 	
 	peaks, properties = find_peaks(spike, prominence=1*v_scale, width=20)
 	
-	#Warning: this may fail for not centered waveforms	
 	if len(peaks)>1: # in case spike has several peaks, gets mid one.
 		mid_peak = np.isclose(len(spike)//2, peaks, atol=10)
 		peaks = peaks[mid_peak]
 	results_half = peak_widths(spike, peaks, rel_height=thres_val)
 	
+	
+	# get the two time points corresponding to the waveform at midpoint
 	try: 
 		duration_vals = np.array([results_half[2][0], results_half[3][0]])
 		th = results_half[1]
@@ -280,6 +291,9 @@ def get_spike_duration(spike,dt,tol=2, thres_val=0.5, max_dur = 5, v_scale=1):
 	else:
 		return (duration_vals[0]*dt,duration_vals[-1]*dt),th
 	
+# Description:
+# 	Calls get_spike_duration function and returns a single time value of the duration
+# 	with the difference of the two points returned by the previous function.
 def get_spike_duration_value(waveform, dt, plot=False, v_scale=1):
 	dur_refs,th = get_spike_duration(waveform, dt, plot=plot, v_scale=v_scale)
 	duration = dur_refs[1]-dur_refs[0]
@@ -328,7 +342,7 @@ def get_slope(spike,dt,n_points=10, slope_position=0.5, plot=False, v_scale=1):
 	return (slope1,slope2)
 \end{lstlisting}
 
-Finally, model were implemented in $C++$ taking advantage of its computational speed and most analysis where performed in Python3, since it is a frequently used tool and libraries such as Pandas are very effective for data analysis. Scripts used in this work are available at \href{https://github.com/agarpe/neural-dynamics-utils}{github.com/agarpe/neural-dynamics-utils} and all conductance-based models are included in Neun \href{https://github.com/agarpe/neural-dynamics-utils}{github.com/agarpe/neural-dynamics-utils}
+Finally, the model were implemented in $C++$ taking advantage of its computational speed. Most analysis were performed in Python3, since it is a frequently used tool and libraries such as Pandas are very effective for data analysis. Scripts used in this work are available at \href{https://github.com/agarpe/neural-dynamics-utils}{github.com/agarpe/neural-dynamics-utils} and all conductance-based models are included in Neun \href{https://github.com/GNB-UAM/Neun}{github.com/GNB-UAM/Neun}
 
 
 \section{CW-NIR laser}
