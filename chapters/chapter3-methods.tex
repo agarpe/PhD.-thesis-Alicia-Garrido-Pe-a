@@ -112,7 +112,7 @@ Individual neurons following the previous description are connected by graded sy
 
 \noindent where index $j$ runs over all presynaptic neurons and \(\gamma_{syn,j}, E_{syn,j},\tau_{syn},V_{pre_{V_S}}\) are the product of input resistance and maximal synaptic conductance, the synaptic reversal potential, the synaptic time constant and the presynaptic potential, respectively. 
 
-The three inter-neurons described in this circuit have different waveform shapes, determined by their corresponding ionic channel and the axon connectivity, in Fig. \ref{fig:model simulation} there is an example of a simulation with all neurons in the circuit. First, N1M voltage characteristics are provided by an acetylcholine sensitive channel (\(i_{ACh} = 200 * p^3 * (V_S + 30)\)), which causes the gradual spiking frequency increase as well as the visible plateau, i.e., the slow wave is sustained before hyperpolarization. On the other hand, N2v has a slowly inactivating sodium channel (\(i_{NaL} = 2 * p^3 * q^3 * (V_S-55)\)), which causes the slow depolarization in this neuron. N2v neuron has a lower spiking frequency caused by the conductance value given for the axial $g_{ec}$ linking the two compartments, which is much lower in this cell. Finally, the N3t neuron has the particularity of a post inhibitory rebound, which generates an initial fast spiking followed by a decrease in the firing rate as the burst evolves. This latter property is caused by a low-threshold calcium channel (\( i_T = 3.27 * p^3 * q *(V_S-80)\)). SO neuron has no \(I_X\) channel (in contrast to N1M, N2v and N3t neurons) so its activity is the result of the combination of the common ionic channels in the axon and the soma.
+The three inter-neurons described in this circuit have different waveform shapes, determined by their corresponding ionic channel and the axon connectivity, in Fig. \ref{fig:model simulation} there is an example of a simulation with all neurons in the circuit. First, N1M voltage characteristics are provided by an acetylcholine sensitive channel (\(i_{ACh} = 200 * p^3 * (V_S + 30)\)), which causes the gradual spiking frequency increase as well as the visible plateau, i.e., the slow wave is sustained before hyperpolarization. On the other hand, N2v has a slowly inactivating sodium channel (\(i_{NaL} = 2 * p^3 * q^3 * (V_S-55)\)), which causes the slow depolarization in this neuron. N2v neuron has a lower spiking frequency caused by the conductance value given for the axial $g_{ec}$ linking the two compartments, which is much lower in this cell. Finally, the N3t neuron has the particularity of a post inhibitory rebound, which generates an initial fast spiking followed by a decrease in the firing rate as the burst evolves. This latter property is caused by a low-threshold calcium channel (\( i_T = 3.27 * p^3 * q *(V_S-80)\)). SO neuron has no particular  \(I_X\) channel (in contrast to N1M, N2v, and N3t neurons) so its activity is the result of the combination of the common ionic channels in the axon and the soma.
 
 
 \begin{figure}[htb!]
@@ -217,11 +217,11 @@ where $\bar{g}_i$, $\bar{\phi}_i$, $c_0$ are the original values used in the mod
 % Eventos promediados ocultan información --> secuencialidad ciclo a ciclo
 %Métricas
 
-To analyze the recordings of intracellular signals and the outputs of the models simulations, we relied on the detection of single events, mainly spikes and then we either defined time-intervals for the CPG rhythm or analyze each single spike based on metrics as in chapter \ref{c-laser}. The detection of these references allowed us to study the sequentiality of neural dynamics at different time-scales. Also, we focused on each event and cycle, avoiding the averaging of the results, since we consider this hinders information in the activity, such as the sequential activation cycle-by-cycle. 
+To analyze the recordings of intracellular signals and the outputs of the models simulations, we relied on the detection of single events, mainly spikes. Then we either defined time-intervals for the CPG rhythm or analyze each single spike based on metrics as in chapter \ref{c-laser}. The detection of these time references (e.g., the duration of a spike or the firts and last spike in a burst) allowed us to study the sequentiality of neural dynamics at different time-scales. Also, we focused on each event and cycle, avoiding the averaging of the results, since we consider this hinders information in the activity, such as the sequential activation cycle-by-cycle. 
 
-For the study of the time-intervals variability and the presence os sequential dynamical invariants, the spikes of the recordings and model simulation of the bursting activity were detected using the change in the derivative along with a voltage threshold condition, i.e., all peaks over a voltage value were considered action potential peaks. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. In some recordings this temporal reference was adjusted to the needs of the data available, this will be specified in the corresponding section \ref{sec:experimental sussex}.
+For the study of the time-intervals variability and the presence of sequential dynamical invariants, the spikes of the recording were detected by a voltage threshold, i.e., all peaks over a voltage value were considered action potential peaks and spikes in the model simulation of the bursting activity were detected using the change in the derivative along with a similar voltage threshold condition. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. In some recordings this temporal reference was adjusted to the needs of the data available, this will be specified in the corresponding section \ref{sec:experimental sussex}.
 
-All intervals defined in section \ref{subsec:intervals} were defined by the events in the ini and end of the burst, the time-intervals described were characterized as follows:
+All intervals defined in section \ref{subsec:intervals} were defined by the events in the \textit{init} and \textit{end} of the burst, the time-intervals described were characterized as follows:
 
 %For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. 
 
@@ -229,15 +229,15 @@ All intervals defined in section \ref{subsec:intervals} were defined by the even
 	#########  SINGLE INTERVALS
 	# on = 0; off = 1
 	
-	# off1 - on1
+	# off1 - on1 of the burst duration
 	def get_burst_duration(data):
 		return np.array([b - a for a, b in zip(data[:, 0], data[:, 1])])
 	
-	# on2 - off1
+	# on2 - off1 of one burst and the next one, respectively
 	def get_burst_interval(data):
 		return np.array([a - b for a, b in zip(data[1:, 0], data[:, 1])])
 		
-	# on2 - on1
+	# on2 - on1 of one burst and the next one, respectively
 	def get_burst_period(data):
 		return np.array([a - b for a, b in zip(data[1:, 0], data[:, 0])])
 		
