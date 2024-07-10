@@ -2,7 +2,7 @@
 \subsection{Time references, intervals and CPG sequence}
 \label{subsec:intervals}
 The variability study addressed in this chapter is based on the characterization of cycle-by-cycle intervals in the rhythm produced by the model CPG.
-In our analysis of variability, we assess the presence of linear relationships between the intervals that build the sequence and the cycle-by-cycle period to characterize and unveil similar dynamical invariants as those found in the stomatogastric CPG \cite{elices_robust_2019}. 
+In our analysis of variability, we assess the presence of linear relationships between the intervals that build the sequence and the cycle-by-cycle period to characterize and unveil similar dynamical invariants as those found in the stomatogastric CPG \textcite{elices_robust_2019}. 
 The intervals here analyzed can be measured for any three neurons following a robust triphasic rhythm. In this paper N1, N2 and N3 represent the feeding CPG phases, represented in the model by interneurons N1M, N2v and N3t, respectively and in the experimental data by different combinations of moto- and interneurons.
 
 \begin{figure}[hbt!]
@@ -53,7 +53,7 @@ The spiking-bursting activity of the model CPG neurons can be modulated by using
 	\label{fig:complete ramp example}
 \end{figure}
 
-Whilst the single neuron model descriptions have no intrinsic variability, the effect produced by the modulation of the injected current in each neuron induces variability into the circuit, which allows characterizing the sequence intervals and the period, the associated robustness of the rhythm and the presence of dynamical invariants. Such stimulation has been used previously in the living circuit, as reported by \cite{Elliott1991}. The authors of this work showed that it is possible to activate the feeding CPG with variability caused by current injection into individual cells in the circuit. CPG rhythms obtained under this type of stimulation differ depending on which neuron is being stimulated. To induce variability in the model we used a ramp protocol resulting in circuit time-interval variations as in Fig. \ref{fig:complete ramp example}.
+Whilst the single neuron model descriptions have no intrinsic variability, the effect produced by the modulation of the injected current in each neuron induces variability into the circuit, which allows characterizing the sequence intervals and the period, the associated robustness of the rhythm and the presence of dynamical invariants. Such stimulation has been used previously in the living circuit, as reported by \textcite{Elliott1991}. The authors of this work showed that it is possible to activate the feeding CPG with variability caused by current injection into individual cells in the circuit. CPG rhythms obtained under this type of stimulation differ depending on which neuron is being stimulated. To induce variability in the model we used a ramp protocol resulting in circuit time-interval variations as in Fig. \ref{fig:complete ramp example}.
 
 % Even though this CPG model do not present intrinsic variability, thanks to the current \(i_{inj}\), variability is induced into the model, effectively changing burst duration. This current injection has also been used in Lymnaea preparation in living elements, stimulating N1M and SO, obtaining rhythm. Neural sequences obtained after the stimulation differ one another depending on which neuron is being stimulated. 
 
@@ -82,7 +82,7 @@ Therefore, we used a current ramp protocol to induce variability in the CPG mode
 \caption{List of \(i_{inj}\) values that yield realistic bursting rhythms for each neuron in the model CPG used in the stimulation protocols reported in this paper. The left section of the table displays the \(i_{inj}\) values applied to each neuron (columns) during each simulation condition (rows). Ramp values on the right section refer to the minimum and maximum values of the ramp variable $c$ in each simulation, increasing \(i_{inj}\) in the specified step every 4.6 seconds (the approximate duration of two N3t burst) to induce variability.} \label{table:inj values}
 \end{table}
 
-Simulations of \cite{vavoulis_computational_2007} model were implemented in C++. The code of the feeding CPG model implementation is available at \href{github.com/GNB-UAM/CPG-feeding-Lymnaea}{https://github.com/GNB-UAM/CPG-feeding-Lymnaea}. This model was also included in Neun library in a Github repository \href{github.com/GNB-UAM/Neun}{https://github.com/GNB-UAM/Neun}. Each simulation had the duration of two consecutive cycles of up and down ramps as the one shown in Fig. \ref{fig:complete ramp example} using the parameters described in Table \ref{table:inj values}. The number of bursts in each simulation was approximately 140 (this number slightly depends on the neuron stimulated). Parameter values such as reversal potentials and synaptic conductances were the same ones specified in \cite{Vavoulis2007}.
+Simulations of \textcite{vavoulis_computational_2007} model were implemented in C++. The code of the feeding CPG model implementation is available at \href{github.com/GNB-UAM/CPG-feeding-Lymnaea}{https://github.com/GNB-UAM/CPG-feeding-Lymnaea}. This model was also included in Neun library in a Github repository \href{github.com/GNB-UAM/Neun}{https://github.com/GNB-UAM/Neun}. Each simulation had the duration of two consecutive cycles of up and down ramps as the one shown in Fig. \ref{fig:complete ramp example} using the parameters described in Table \ref{table:inj values}. The number of bursts in each simulation was approximately 140 (this number slightly depends on the neuron stimulated). Parameter values such as reversal potentials and synaptic conductances were the same ones specified in \textcite{Vavoulis2007}.
 
 \subsection{Experimental recordings and stimulation}
 \label{subsec:methods experimental intervals}
@@ -115,7 +115,7 @@ N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase w
 \subsection{Models with chaotic activity}
 \label{sec:model variability equations}
 As we presented in the introduction there are some models that are able to reproduce variability without the introduction of gaussian noise. These models reproduce a deterministic chaos which is usefull to reproduce the biological stochasticity. In this subsection we find the equations of the models used in \ref{sec:model variability} to represent variable and non-variable activity.
-\subsubsection{LP model by \cite{nowotny_probing_2008}}
+\subsubsection{LP model by \textcite{nowotny_probing_2008}}
 
 The membrane potential of axon and soma compartment, $V_{\text{axon}}$ and $V_{\text{soma}}$ respectively, are described by
 
@@ -149,7 +149,7 @@ where $g_x$ is the maximal conductance of the current, $V$ is the membrane poten
 %	\frac{dm_x}{dt} = \frac{m_{\infty,x}(V) - m_x}{\tau_{m_x}}
 %\end{equation}
 
-\subsubsection{Non chaotic model \cite{ghigliazza_minimal_2004}}
+\subsubsection{Non chaotic model \textcite{ghigliazza_minimal_2004}}
 The Ghigliazza and Holmes model for motoneurons is described by the following equations:
 
 1. The membrane potential dynamics of a neuron is given by:
@@ -192,7 +192,7 @@ where \( \phi_i \) is the phase of the \( i \)-th oscillator, \( \omega_i \) is 
 
 \subsection{Hybrot structure}
 \label{sec:robot setup}
-The experimental paradigm designed in order to test the correct behavior and locomotion of the FLC-Hybrot --FLC stands for Functional Living Circuit-- established a real-time closed-loop interaction between the robot and a living pyloric CPG of \textit{Carcinus maenas} \cite{elices_robust_2019}. During the experiment, the FLC-Hybrot had to walk through a straight and flat lane, with no obstacles, along which there were interspersed sections with lights and shadows. Neural activity was recorded online from the living circuit and used to modulate the robot movement. At the same time, feedback current was injected into the living circuit when the robot's light-sensor detected a shadow.
+The experimental paradigm designed in order to test the correct behavior and locomotion of the FLC-Hybrot --FLC stands for Functional Living Circuit-- established a real-time closed-loop interaction between the robot and a living pyloric CPG of \textit{Carcinus maenas} \textcite{elices_robust_2019}. During the experiment, the FLC-Hybrot had to walk through a straight and flat lane, with no obstacles, along which there were interspersed sections with lights and shadows. Neural activity was recorded online from the living circuit and used to modulate the robot movement. At the same time, feedback current was injected into the living circuit when the robot's light-sensor detected a shadow.
 
 Top panel of Figure \ref{fig:robot_results_setup} shows an illustration of the experimental setup for the FLC-Hybrot implementation with all its main components. A computer was employed to serve as nexus between both the robot and the biological elements and was in charge of executing a periodic real-time loop (Figure \ref{fig:robot_results_setup}A), inside of which the following tasks were performed:
 \begin{enumerate}
