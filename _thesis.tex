@@ -163,10 +163,16 @@ hyperref=true,         % Habilitar hyperref
 \makeatletter
 \renewcommand{\chaptermark}[1]{\markboth{\textsc{\@chapapp}\ \thechapter:\ #1}{}}
 \makeatother
+\lfoot{\textit{A. Garrido Peña, PhD thesis}}
 
-\fancyfoot[L]{\footnotesize A. Garrido Peña, PhD thesis} % Set your name in the center of the footer
-
-
+% Redefine the plain style to match the fancy style
+\fancypagestyle{plain}{
+	\fancyhf{} % clear all header and footer fields
+	\rhead{}
+	\lhead{\nouppercase{\textsc{\leftmark}}}
+	\renewcommand{\headrulewidth}{0pt}
+	\lfoot{\textit{A. Garrido Peña, PhD thesis}}
+}
 
 % Hyperreferencing and citations
 \usepackage{hyperref}
@@ -242,20 +248,22 @@ hyperref=true,         % Habilitar hyperref
  % \input{Preface/Acceptance}
  % \input{Preface/Dedication}
  \newpage
- \clearpage
- \newpage
- %\input{Preface/OrginalityCertificate}
- \input{Preface/Acknowldgment}
  \newpage
  \clearpage
  \vfill
+ \vspace{100pt}
  {\centering \large \textit{``That is all as it should be, for in a question like this truth is only to be had by laying together many
- 		varieties of error.'' - Virginia Woolf}\par}
+ 		varieties of error.'' - Virginia Woolf. A room of one's own}\par}
 
  \vfill
  \input{Preface/Abstract}
  \input{Preface/Resumen}
 
+
+\clearpage
+\newpage
+%\input{Preface/OrginalityCertificate}
+\input{Preface/Acknowledgments}
 
  \tableofcontents
  \listoftables
