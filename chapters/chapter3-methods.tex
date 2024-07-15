@@ -3,27 +3,32 @@ This chapter will cover the common ground of the materials and methods applied i
 
 \section{The neural system of \textit{Lymnaea stagnalis}}
 \label{sec:lymnaea morphology}
-The neural system of \textit{Lymnaea stangalis} (the great pond snail) is shown in Fig. \ref{fig:lymn neural sys diagram}. As in some other mollusks, e.g. {\sl Clione limacina}, the neural system is conformed by several ganglia, each of them controlling (mainly, but not exclusively) some specific function of the snail. Figure \ref{fig:lymn neural sys diagram} shows a labeled image of the different ganglia in this system. All ganglia in the neural system are paired and distributed symmetrically, except from the visceral ganglion (unique) and the parietal, that although symmetrical, the right parietal is larger than left parietal ganglion (see Fig. \ref{fig:lymn neural sys diagram}). All ganglia are interconnected by nerves (grey stripes in the Figure). As mentioned before, each ganglion has an associated behavioral task in the snail. From top to bottom: we find the buccal ganglia (upper pair), which control the buccal muscle involved in the processes of protraction-rasp-swallow, known as the feeding cycle, initiated by a CPG circuit contained in these ganglia. The two cerebral ganglia (right below) are involved in the activation and modulation of specific neurons in the ganglia, as well as many other neural circuits and processes. Located on the sides of the diagram, the pedal ganglia control the snail pedal movements as crawling or swimming. The pleural ganglia, which contain sensory neurons, are connected to the mantle. Finally, at the bottom of the diagram, we find the parietal ganglion --involved in the control of the gill (respiratory organ) and the olfactory organ-- and the visceral ganglion --connected to organs such as the intestine, the heart, and part of the genital system.
+The neural system of \textit{Lymnaea stangalis} (the great pond snail) is shown in Fig. \ref{fig:lymn neural sys}.a. As in some other mollusks, e.g. {\sl Clione limacina}, the neural system is composed of several ganglia, each of them controlling (mainly, but not exclusively) some specific function of the snail. Figure \ref{fig:lymn neural sys}.a) shows a labeled image of the different ganglia in this system. Ganglia in the neural system are paired and distributed symmetrically, except from the visceral ganglion (unique) and the parietal, which is larger in the right side compared to that in the left side (see Fig. \ref{fig:lymn neural sys}.a). All ganglia are interconnected by nerves (gray areas in the Figure). As mentioned before, each ganglion has an associated behavioral task in the snail. From top to bottom, we find first the buccal ganglia (upper pair), which control the buccal muscle involved in the processes of open-rasp-swallow, known as the feeding cycle, initiated by a CPG circuit contained in these ganglia. The two cerebral ganglia (center bottom) are involved in the activation and modulation of specific neurons, as well as neural circuits and processes. Located on the sides of the diagram, the pedal ganglia control the snail pedal movements as crawling or swimming. The pleural ganglia, which contain sensory neurons, are connected to the mantle. Finally, at the bottom of the diagram, we find the parietal ganglion --involved in the control of the gill (the respiratory organ) and the olfactory organ-- and the visceral ganglion --connected to organs such as the intestine, the heart, and part of the genital system.
 
 
 \begin{figure}[hbt!]
-	\minipage{0.45\textwidth}
-	\centering
-	\includegraphics[width=0.9\linewidth]{img/methods/preparation/RPG.JPG}
-	\vspace{6pt}
-	\includegraphics[angle=180,width=0.9\linewidth]{img/methods/preparation/buccal_ganglia.JPG}
-	\caption{\textit{L. stagnalis} buccal ganglia (top panel) and parietal ganglia and visceral ganglion (bottom panel).}
-	\label{fig:buccal ganglia}
-	\endminipage
-	\minipage{0.45\textwidth}
-	\centering
-	\includegraphics[width=\linewidth]{img/methods/CNS_diagram.png}
-	\caption{\textit{L. stagnalis} nervous system diagram representing all ganglia.} 
-	\label{fig:lymn neural sys diagram}
-	\endminipage
+    \minipage{0.45\textwidth}
+    \centering
+    \begin{overpic}[width=\linewidth]{img/methods/CNS_diagram.png}
+        \put(2,98){\huge\textbf{a}}
+    \end{overpic}
+    \endminipage
+    \centering
+    \minipage{0.45\textwidth}
+    \centering
+    \begin{overpic}[angle=180,width=0.9\linewidth]{img/methods/preparation/buccal_ganglia.JPG}
+        \put(0,120){\huge\textbf{b}}
+    \end{overpic}
+    \vspace{6pt}
+    \begin{overpic}[width=0.9\linewidth]{img/methods/preparation/RPG.JPG}
+        \put(2,98){\huge\textbf{b}}
+    \end{overpic}
+    \endminipage
+    \caption{Neural system of \textit{Lymnaea stagnalis}. a) Diagram of the neural system labeled for all ganglia. b) Top panel: photograph of the buccal ganglia. Bottom panel: photograph of the parietal ganglia and visceral ganglion.}
+    \label{fig:lymn neural sys}
 \end{figure}
 
-Neuronal recordings showed in this work are from the CPG in the buccal ganglia in chapter \ref{c-invariants} and right parietal ganglia, containing large neurons with tonic firing and a giant electrical couple cell to the visceral ganglia in chapter \ref{c-laser}. These ganglia are showed in detail in Fig. \ref{fig:buccal ganglia}.
+Neuronal recordings shown in this work are from the CPG in the buccal ganglia in chapter \ref{c-invariants}. In chapter \ref{c-laser} the recordings are from the right parietal ganglia (RPG), containing large neurons with tonic firing and a pair of electrically coupled giant cells in the RPG and visceral ganglia. These ganglia are illustrated in Fig. \ref{fig:lymn neural sys}b.
 
 %%%% In contrast to other systems functionality where motoneurons are CPGs neurons \textcite{stomatogastric} ((page 5 review), in Lymnaea nervous system, CPGs and motoneurons are separated groups of neurons. 
 
@@ -31,11 +36,11 @@ Neuronal recordings showed in this work are from the CPG in the buccal ganglia i
 \section{Feeding CPG in \textit{Lymnaea stagnalis}}
 \subsubsection{Lymnaea feeding rhythm}
 
-The feeding activity of the \textit{L. stagnalis}, concerning the buccal mass, is classified in three main steps:protraction, rasp and swallow, alternating with states of "rest". This sequence of buccal movements in the snail is generated by the motor neurons distributed in the ganglia. Each of these phases is associated to the activation of one interneuron from the CPG: N1M, N2v, N3t, and followed by the motoneurons associated to them. This is a complex distributed system where motoneurons do not exclusively follow the interneurons but are also implied in the feeding cycle activation \parencite{staras_patterngenerating_1998}. In this circuit there are also some modulatory neurons implied such as SO neuron (in the same buccal ganglia) or CGC (in the cerebral ganglia). An initial resting state, where the CPG as well as the moto-neurons have no activity, may change due to a sensory input.
+The feeding activity of the \textit{L. stagnalis}, concerning the buccal mass, is classified in three main steps: protraction, rasp and swallow, alternating with states of "rest". This sequence of buccal movements in the snail is generated by the motoneurons distributed in the ganglia. Each of these phases is associated to the activation of one interneuron from the CPG: N1M, N2v, N3t, and followed by the motoneurons associated to them. This is a complex distributed system where motoneurons do not exclusively follow the interneurons but are also implied in the feeding cycle activation \parencite{staras_patterngenerating_1998}. In this circuit, there are also some modulatory neurons involved such as the SO neuron (in the same buccal ganglia) or the CGC neuron (in the cerebral ganglia). Initial resting states, where the CPG as well as the motoneurons have no activity, may change due to a sensory input.
 
 %\todo{revisar}% This input, received in the presence of food or during hunger, is handled in the cerebral ganglia generating activity and changing the SO tonic spiking during resting (which was inhibiting the CPG) to a bursting mode, meaning the start of the feeding cycle.
 
-This CPG circuit can be studied in a dissected preparation, since snail's neurons are active for a long time after the isolation of the system. Specially, the CPG rhythm is maintained after its activation and it is generated in an autonomous way by the neurons in the circuit. However, due to the slow dynamics of the system and the nature of the experimental setting there are different ways to initiate the rhythm. Previous literature in \textit{L. stagnalis} proposed several solutions to this problem. The first solution is stimulating the neurons responsible for the initiation of the feeding rhythm, such as the SO modulator neuron on the buccal ganglia or the CBC, CVs neurons, located on brain ganglia \parencite{benjamin_distributed_2012}. However, the access to these neurons is not always easy and it might be necessary to keep them in constant stimulation. Another option for activation discussed in the literature is applying octopamine. Some neurons in the buccal ganglia are sensitive to octopamine and, as a result, this procedure activates the rhythm \parencite{vehovszky_octopaminecontaining_2004}. Alternatively, in a semi-intact preparation, it can be applied sucrose to activate the rhythm \parencite{vavoulis_dynamic_2007,vehovszky_octopaminecontaining_2004,straub_endogenous_2002}. Similar to this approach but performing the complete dissection it is the stimulation of the Medium Lip Nerve (MLN), that simulates the lip stimulation. 
+This CPG circuit can be studied in a dissected preparation, since snail neurons are active for a long time after the isolation of the system. Particularly, the CPG rhythm is maintained after its activation and it is generated autonomously by the neurons in the circuit. However, due to the slow dynamics of the system and the nature of the experimental setting, different ways to initiate the rhythm are also available for researchers. Previous literature in \textit{L. stagnalis} proposed several solutions to this problem. The first solution is stimulating the neurons responsible for the initiation of the feeding rhythm, such as the SO modulator neuron on the buccal ganglia, the CBC, or the CVs neurons, located on brain ganglia \parencite{benjamin_distributed_2012}. However, the access to these neurons is not always easy and it might be necessary to keep them in constant stimulation. Another option for activation discussed in the literature is applying octopamine. Some neurons in the buccal ganglia are sensitive to octopamine and, as a result, this procedure activates the rhythm \parencite{vehovszky_octopaminecontaining_2004}. Alternatively, in a semi-intact preparation, it can be applied sucrose to activate the rhythm \parencite{vavoulis_dynamic_2007,vehovszky_octopaminecontaining_2004,straub_endogenous_2002}. Similar to this approach but performing the complete dissection it is the stimulation of the Medium Lip Nerve (MLN), that simulates the lip stimulation. 
 The recordings analyzed in chapter \ref{c-invariants} are either spontaneous activity or electrical stimulation in CV1a or SO neuron, or the Medium Lip Nerve (MLN).
 
 \section{Electrophysiology in \textit{Lymnaea stagnalis}}
