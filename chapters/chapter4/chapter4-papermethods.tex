@@ -86,12 +86,12 @@ Simulations of \textcite{vavoulis_dynamic_2007} model were implemented in C++. T
 
 \subsection{Experimental recordings and stimulation}
 \label{subsec:methods experimental intervals}
-The experimental recordings analyzed in section \ref{sec:experimental sussex} were performed by Michael Crossley, University of Sussex, and kindly provided for this work. 
+The experimental recordings analyzed in section \ref{sec:experimental sussex} were performed by Michael Crossley, University of Sussex, and were kindly provided for this work. 
 
 Each recording had at least 5 microelectrodes, which allowed to characterize the rhythm based on combinations of different neuron's activity. There are cases of experiments in that section:
 \begin{itemize}
-	\item Spontaneous activity: After the isolation of the CNS, the electrodes impailed in the neuron recorded the spontaneous activity in the CPG, with no further stimulation.
-	\item Nerve electrical stimulation: For the activation of the rhythm it is possible to stimulate the median lip nerve (MLN). The data analyzed there was stimulated by a 4V stimulous at 1Hz. 
+	\item Spontaneous activity: After the isolation of the CNS, the electrodes impaled in the neuron recorded the spontaneous activity in the CPG, with no further stimulation.
+	\item Nerve electrical stimulation: For the activation of the rhythm it is possible to stimulate the median lip nerve (MLN). The data analyzed there was stimulated by a 4V stimulus at 1Hz. 
 	\item Neuron electrical stimulation: To modulate the CPG rhythm, SO and CV1a neurons where stimulated (in different experiments) by injecting a constant depolarizing current.
 \end{itemize}
 
@@ -114,43 +114,43 @@ N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase w
 
 \subsection{Models with chaotic activity}
 \label{sec:model variability equations}
-As we presented in the introduction there are some models that are able to reproduce variability without the introduction of gaussian noise. These models reproduce a deterministic chaos which is usefull to reproduce the biological stochasticity. In this subsection we include the equations of the models used in \ref{sec:model variability} to represent variable and non-variable activity.
+As we discussed in the introduction, there are several models that are able to reproduce intrinsic variability in the voltage dynamics without the introduction of stochastic noise. These models produce deterministic chaos which is useful to reproduce observed biological variability. In this subsection, we include the equations of the models used in \ref{sec:model variability} to represent variable and non-variable voltage activity.
 \subsubsection{LP model by \textcite{nowotny_probing_2008} with chaotic activity}
 
-The membrane potential of axon and soma compartment, $V_{\text{axon}}$ and $V_{\text{soma}}$ respectively, are described by
+To illustrate the variability displayed by chaotic models, in Sec. \ref{sec:model variability} we used the model by \textcite{nowotny_probing_2008}, that reproduces the activity of LP neuron in the pyloric CPG. The membrane potential of the axon and soma compartments, $V_{\text{axon}}$ and $V_{\text{soma}}$ respectively, are described in this model by the following equations:
 
 \begin{equation}
 	\frac{dV_{\text{axon}}}{dt} = \frac{1}{C_a} \left( -I_{\text{Na}} - I_{\text{Kd}} - I_M - I_{\text{leak,a}} + I_{VV} \right)
 \end{equation}
 
 \begin{equation}
-	\frac{dV_{\text{soma}}}{dt} = \frac{1}{C_s} \left( -I_{\text{Ca}} - I_{\text{KCa}} - I_A - I_h - I_{\text{leak,s}} - I_{VV} + I_{\text{scale}} (I_{\text{DC}} - I_{\text{offset}} + I_{\text{syn}} \right))
+	\frac{dV_{\text{soma}}}{dt} = \frac{1}{C_s} \left( -I_{\text{Ca}} - I_{\text{KCa}} - I_A - I_h - I_{\text{leak,s}} - I_{VV} \right)
 \end{equation}
 
-$I_{\text{offset}} = 2 \, \text{nA}$ stems from the residual coupling at the end of the parameter estimation procedure which introduces a current bias due to differences in baseline voltage of data and model (on top of $V_{\text{shift}}$). $I_{\text{syn}}$ denotes the total incoming synaptic current. All ionic currents except for the ones mentioned explicitly below are given by
+All ionic currents except for the ones mentioned explicitly below are given by:
 
 \begin{equation}
 	I_x = g_x m^p h^q (V - V_x)
 \end{equation}
 
-where $g_x$ is the maximal conductance of the current, $V$ is the membrane potential of either the axon compartment ($I_{\text{Na}}$, $I_{\text{Kd}}$, and $I_M$) or the soma compartment (all other currents), and $V_x$ is the reversal potential of the current. The activation and inactivation variables are governed by
+where $g_x$ is the maximal conductance of the current, $V$ is the membrane potential of either the axon compartment ($I_{\text{Na}}$, $I_{\text{Kd}}$, and $I_M$) or the soma compartment (the rest of the ionic currents), and $V_x$ is the ionic reversal potential. The activation and inactivation variables are described by:
 
-%\begin{equation}
-%	\frac{dm}{dt} = \alpha_m (1 - m) - \beta_m m
-%\end{equation}
-%
-%\begin{equation}
-%	\frac{dh}{dt} = \alpha_h (1 - h) - \beta_h h
-%\end{equation}
-%
-%for $I_{\text{Na}}$ and $I_{\text{Kd}}$, and
-%
-%\begin{equation}
-%	\frac{dm_x}{dt} = \frac{m_{\infty,x}(V) - m_x}{\tau_{m_x}}
-%\end{equation}
+\begin{equation}
+	\frac{dm}{dt} = \alpha_m (1 - m) - \beta_m m
+\end{equation}
+
+\begin{equation}
+	\frac{dh}{dt} = \alpha_h (1 - h) - \beta_h h
+\end{equation}
+
+for $I_{\text{Na}}$ and $I_{\text{Kd}}$, and
+
+\begin{equation}
+	\frac{dm_x}{dt} = \frac{m_{\infty,x}(V) - m_x}{\tau_{m_x}}
+\end{equation}
 
 \subsubsection{Non chaotic model by \textcite{ghigliazza_minimal_2004}}
-The Ghigliazza and Holmes model for motoneurons is described by the following equations:
+The Ghigliazza and Holmes model \parencite{ghigliazza_minimal_2004} for motoneurons is described by the following equations:
 
 1. The membrane potential dynamics of a neuron is given by:
 
@@ -188,13 +188,11 @@ where \( \alpha_m \), \( \beta_m \), \( \alpha_h \), and \( \beta_h \) are volta
 
 where \( \phi_i \) is the phase of the \( i \)-th oscillator, \( \omega_i \) is the intrinsic frequency, \( K_{ij} \) is the coupling strength between oscillators \( i \) and \( j \), and \( \psi_{ij} \) is the phase shift.
 
-
-
 \subsection{Hybrot structure}
 \label{sec:robot setup}
-The experimental paradigm designed in order to test the correct behavior and locomotion of the FLC-Hybrot --FLC stands for Functional Living Circuit-- established a real-time closed-loop interaction between the robot and a living pyloric CPG of \textit{Carcinus maenas} \parencite{elices_robust_2019}. During the experiment, the FLC-Hybrot had to walk through a straight and flat lane, with no obstacles, along which there were interspersed sections with lights and shadows. Neural activity was recorded online from the living circuit and used to modulate the robot movement. At the same time, feedback current was injected into the living circuit when the robot's light-sensor detected a shadow.
+The experimental paradigm designed in order to test the correct behavior and locomotion of the FLC-Hybrot --FLC stands for Functional Living Circuit \parencite{soetard_dynamical_2023}-- established a real-time closed-loop interaction between the robot and a living pyloric CPG of \textit{Carcinus maenas} \parencite{elices_robust_2019}. During the experiment, the FLC-Hybrot had to walk through a straight and flat lane, with no obstacles, along which there were interspersed sections with lights and shadows. Neural activity was recorded online from the living circuit and used to modulate the robot movement. At the same time, feedback current was injected into the living circuit when the robot's light-sensor detected a shadow.
 
-Top panel of Figure \ref{fig:robot_results_setup} shows an illustration of the experimental setup for the FLC-Hybrot implementation. In the real-time configuration, a computer was the link between the robot and the living preparation(Fig. \ref{fig:robot_results_setup}A). The processes taking part during the real-time protocol were:
+Top panel of Figure \ref{fig:robot_results_setup} shows an illustration of the experimental setup for the FLC-Hybrot implementation. In the real-time configuration, a computer was the link between the robot and the living preparation (Fig. \ref{fig:robot_results_setup}A). The processes taking part during the real-time protocol were:
 \begin{enumerate}
 	\item First, reading the online signals through the DAQ device received from the amplifiers (Fig. \ref{fig:robot_results_setup}B) recorded from CPG neurons in the living preparation (Figure \ref{fig:robot_results_setup}C).
 	\item Extracting from the signal, on real-time, the duration of the temporal intervals of the cycle-by-cycle CPG activity and sending them to the robot's controller via Bluetooth.
