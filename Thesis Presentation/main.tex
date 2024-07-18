@@ -74,17 +74,21 @@
 	\uncover<4-4>{\hspace{50pt} To minimal circuits}
 \end{frame}
 
-\begin{frame}{Neuronal and networks dynamics}
-	\only<1>{Neuronal electrical activity is often described in terms of the evolution of membrane voltage caused by the flow of ionic channels between the inside and outside of the cell}
+\begin{frame}{Neuronal and Networks Dynamics}
+	\only<1>{Neuronal electrical activity is often described in terms of the evolution of membrane voltage caused by the flow of ionic channels between the inside and outside of the cell.}
 	
-	\uncover<2->{Depending on the channels that conform the neuron and the circuit it is immersed in, the activity is different}
+	\uncover<2->{Depending on the channels that constitute the neuron and the circuit it is immersed in, the activity varies.}
+	\vfill
+	\uncover<3->{In terms of the spike waveform:}
+	\uncover<3->{\begin{center}
+			\includegraphics[width=0.7\textwidth]{intro/spike-types.pdf}
+	\end{center}}
 	
-	\uncover<3->{\includegraphics[width=0.7\textwidth]{intro/spike-types.pdf}}
-	\uncover<3->{\\In terms of the spike waveform}
-%	\hfill
-	\uncover<4->{\includegraphics[width=0.7\textwidth]{intro/spike_activity-types.pdf}}
-	\uncover<4->{\\and the type of spiking activity: tonic firing, bursting...}
-	
+	\uncover<4->{\vfill}
+	\uncover<4->{And the type of spiking activity: tonic firing, bursting, etc.}
+	\uncover<4->{\begin{center}
+			\includegraphics[width=0.7\textwidth]{intro/spike_activity-types.pdf}
+	\end{center}}
 \end{frame}
 
 \begin{frame}{The sequential nature of neural dynamics}
@@ -92,8 +96,10 @@
 			\begin{column}{0.6\textwidth}
 				\begin{itemize}
 					\item<1->{There are sequential processes at different time-scales.} 
-					\item<3->{Another bullet point.}
-					\item<4->{And another one.}
+					\item<3->{Many behaviors and actions are governed by sequential processes}
+					\item<4->{Motor control, speech, decision making, etc. }
+%					\item<5->{Studying sequential activity at different scales is crucial for a complete comprehension of neural systems.}
+					\item<5->{Sequential dynamical invariants might have a crucial role in neural coordination to autonomously establish a balance between the robustness and flexibility required for effective function.}
 				\end{itemize}
 			\end{column}
 			\begin{column}{0.45\textwidth}
@@ -101,10 +107,54 @@
 			\end{column}
 		\end{columns}
 	 
- 	\end{frame}
+\end{frame}
 
 \begin{frame}{Studying neural dynamics in computational models}
+	\begin{itemize}
+		\item<1-8>{Computational models are powerful tools to study neural dynamics}
+		\item<2-8>{Advantages}
+		\begin{itemize}
+			\item<3-8>Full accessibility to the 
+			\item<4-8>Detailed reproduction of the living activity
+		\end{itemize}
+		\item<5-8>{Limitations}
+		\begin{itemize}
+			\item<6-8>{Restricted variability}
+			\item<7-8>{The description may depend on the information about the living system}
+		\end{itemize}
+	\end{itemize}
 \end{frame}
+
+\begin{frame}{Studying neural dynamics in computational models}
+	\uncover<1->{\textbf{Conductace-based models}}
+	 \uncover<1-2>{
+		\begin{table}[h!]
+			\resizebox{\textwidth}{!}{%
+				\begin{tabular}{lccc}
+					Voltage equation                                                                 & \multicolumn{3}{c}{$C \frac{dV}{dt} = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)$}                                                                                                                                  \\ \hline
+					& \multicolumn{2}{c}{Activation variables}                                                                                                                              & Inactivation variable                                        \\ \hline
+					\multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}gating \\ variables\end{tabular}} & \multicolumn{1}{c|}{$\frac{dm(t)}{dt}=\frac{m_{\infty}(V(t))-m(t)}{\tau_m(V(t))}$} & \multicolumn{1}{c|}{$\frac{dn(t)}{dt}=\frac{n_{\infty}(V(t))-n(t)}{\tau_n(V(t))}$} & $\frac{dh(t)}{dt}=\frac{h_{\infty}(V(t))-h(t)}{\tau_h(V(t))}$ \\ \hline
+				\end{tabular}%
+			}
+	\end{table}}
+
+\end{frame}
+
+\begin{frame}{Studying neural dynamics in computational models}
+	\uncover<1->{\textbf{Conductace-based models}}	
+	\\
+	\uncover<3-4>{By different combinations of ionic channels we can achive different activities and waveform shapes}
+	\uncover<4>{\includegraphics[width=\linewidth]{intro/spike-types model.pdf}}
+
+\end{frame}
+
+\begin{frame}{Studying neural dynamics in computational models}
+	\uncover<1->{\textbf{Conductace-based models\\}}
+	\only<5-6>{By modeling synapses we can model whole circuits by connecting single modeled neurons.\\}
+	\only<6>{\centering\includegraphics[width=0.7\linewidth]{intro/cpg.pdf}}
+\end{frame}
+
+
 \begin{frame}{Vertebrate and invertebrate animal studies}
 \end{frame}
 \begin{frame}{Neural stimulation}
