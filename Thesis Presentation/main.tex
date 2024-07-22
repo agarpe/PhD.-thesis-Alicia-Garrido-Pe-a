@@ -131,7 +131,7 @@
 			\item<1-8>{Computational models are powerful tools to study neural dynamics}
 			\item<2-8>{Advantages}
 			\begin{itemize}
-				\item<3-8>Full accessibility to the 
+				\item<3-8>Full accessibility to the system
 				\item<4-8>Detailed reproduction of the living activity
 			\end{itemize}
 			\item<5-8>{Limitations}
@@ -160,13 +160,13 @@
 	\only<12-13>{
 	\textbf{Conductance-based models}
 	\\
-	\uncover<12->{By different combinations of ionic channels we can achive different activities and waveform shapes}
+	\uncover<12->{By \textbf{different combinations of ionic channels} we can achieve \textbf{different activities and waveform shapes}}
 	\uncover<13>{\includegraphics[width=\linewidth]{intro/spike-types model.pdf}}
 	}
 
 \only<14-15>{
 	\textbf{Conductace-based models\\}
-	\uncover<14->{By modeling synapses we can model whole circuits by connecting single modeled neurons.\\}
+	\uncover<14->{By \textbf{modeling synapses} we can model whole \textbf{circuits} by connecting single modeled neurons.\\}
 	\uncover<15>{\centering\includegraphics[width=0.7\linewidth]{intro/cpg.pdf}}
 }
 \end{frame}
@@ -194,7 +194,7 @@
 			\column{0.6\textwidth}
 			\vspace{-4cm} % Adjust this value to align the text as needed
 			\begin{itemize}
-				\item<8>In this thesis we work with the neural system of \textit{Lymanea stagnalis}.
+				\item<8->In this thesis we work with the neural system of \textit{Lymanea stagnalis}.
 				\item<9>A pond snail whose system is well studied and described.
 			\end{itemize}
 		\end{columns}
@@ -212,14 +212,14 @@
 	}
 	\only<4->{We can classify them based on: 
 	\begin{itemize}
-		\item<5-> The change in the system: Invasive / \textcolor<12>{red}{non-invasive}
+		\item<5-> The change in the system: Invasive / \textcolor<13>{red}{non-invasive}
 		\item<6-> The source of the stimulation: 
 			\begin{itemize}
 				\item<7->{Chemical}
 				\item<8->\textcolor<12>{red}{Electrical}
 				\item<9->{Magnetic}
 				\item<10->{Mechanical}
-				\item<11->\textcolor<12>{red}{Optical}			
+				\item<11->\textcolor<13>{red}{Optical}			
 			\end{itemize}
 	\end{itemize}	
 }
@@ -230,27 +230,29 @@
 \begin{frame}{Motivation and Objectives}
 	\begin{enumerate}
 		\only<1-6>{
-		\item<1-> To explore the sequential nature of neuronal dynamics at distinct description levels.
-		\item<2-> To study sequence interval variability constraints and relationships in neural models and living circuits.
-		\item<3-> To analyze the feeding CPG of \textit{Lymnaea stagnalis} to provide evidence of the universality of sequential dynamical invariants found in the pyloric CPG by:
-		\begin{enumerate}
-			\item<4-> Characterizing the sequential invariants cycle-by-cycle in a bursting CPG model.
-			\item<5-> Analyzing intracellular recordings with spontaneous activity and with different rhythm initiation stimulation protocols.
-		\end{enumerate}
-		\item<6-> To illustrate the possible functionality of sequential dynamical invariants in biohybrid robotics.
-	}
-	\only<7-11>{
-		\item<7-> To test the capability of CW-NIR laser stimulation to modulate neuronal dynamics by:
-		\begin{enumerate}
-			\item<8-> Characterizing the CW-NIR effect in the spike waveform dynamics.
-			\item<9-> Analyzing the ability of this neurotechnology to change the spiking rate and the circuit dynamics.
-		\end{enumerate}
-		\item<10-> To study the possible biophysical candidates underlying the CW-NIR effect in model simulations.
-		\item<11-> To design and implement a new technique for CW-NIR stimulation in closed-loop.
-	}
+			\item<1-> To explore the \textbf{sequential nature of neuronal dynamics} at distinct description levels.
+			\item<2-> To study \textbf{sequence interval variability} constraints and relationships in neural models and living circuits.
+			\item<3-> To analyze the feeding CPG of \textit{Lymnaea stagnalis} to provide evidence of the\textbf{ universality of sequential dynamical invariants} found in the pyloric CPG by:
+			\begin{enumerate}
+				\item<4-> Characterizing the sequential invariants cycle-by-cycle in a bursting CPG model.
+				\item<5-> Analyzing intracellular recordings with spontaneous activity and with different rhythm initiation stimulation protocols.
+			\end{enumerate}
+			\item<6-> To illustrate the possible \textbf{functionality} of sequential dynamical invariants in biohybrid robotics.
+		}
+		\only<7-11>{
+			\setcounter{enumi}{4}
+			\item<7-> To test the capability of \textbf{CW-NIR laser stimulation to modulate} neuronal dynamics by:
+			\begin{enumerate}
+				\item<8-> Characterizing the CW-NIR effect in the spike waveform dynamics.
+				\item<9-> Analyzing the ability of this neurotechnology to change the spiking rate and the circuit dynamics.
+			\end{enumerate}
+			\item<10-> To study the possible \textbf{biophysical candidates} underlying the CW-NIR effect in model simulations.
+			\item<11-> To design and implement a \textbf{new technique} for CW-NIR stimulation in \textbf{closed-loop}.
+		}
 	\end{enumerate}
-
+	
 \end{frame}
+
 
 \section[Sequential Dynamical Invariants]{Sequential constrains in CPG circuits:
 	Dynamical invariants}
@@ -263,6 +265,7 @@
 			\item<3->{Present in vertebrates and invertebrates}
 			\item<4->{Flexible enough to adapt the rhythm to the variability keeping a robust sequential activity}
 		\end{itemize}
+		\includegraphics[width=\textwidth]{invariants/variability/sequences_in_cpgs.pdf}
 	}
 	\only<5->{
 		\begin{columns}
@@ -298,10 +301,9 @@
 		\end{itemize}}
 	\begin{figure}[h!]
 		\centering
-		\movie[label=pyloric video,width=\textwidth,poster=false,autostart=false,showcontrols,loop] 
+		\movie[label=pyloric video,width=\textwidth,poster=false,autostart=true,showcontrols,loop] 
 		{\includegraphics[width=\textwidth]{Movies/elices_invariants.png}}{Movies/elices_invariants.mp4}
-	\end{figure}	
-	
+	\end{figure}		
 \end{frame}
 
 \begin{frame}{Feeding CPG of \textit{Lymnaea stagnalis}}
@@ -348,32 +350,38 @@
 
 \begin{frame}{Computational Approach: Model description}
 	\begin{columns}
-		\begin{column}{0.6\textwidth}
+		\begin{column}{0.5\textwidth}
 			\begin{itemize}
-%				\item<1->Feeding CPG Model (Vavoulis et al.)​
-%				\item<1->Conductance-based model. ​
-%				\item<1->Specific waveforms and gradual synapse.
-%				\item<1->Two compartments.​
-				\item<1-> Feeding CPG Model
+				\item<1->(Vavoulis et al.)
+				\item<1->Conductance-based model.
+				\item<1->Specific waveforms and gradual synapse.
+				\item<1->Two compartments.
+				\item<1->Feeding CPG Model.
 			\end{itemize}
 		\end{column}
-		\begin{column}{0.4\textwidth}
+		\begin{column}{0.5\textwidth}
 			\includegraphics[width=\textwidth]{methods/invariants-model/figure2.eps}
 		\end{column}
 	\end{columns}
-		\includegraphics[width=\textwidth]{methods/invariants-model/figure1a.eps}
+		\vspace{4pt}
+		\centering
+		\includegraphics[width=0.6\textwidth]{methods/invariants-model/figure1a.eps}
 \end{frame}
 
 
 
 \begin{frame}{Computational Approach: Ramp stimulation protocol}
+	\includegraphics[width=\textwidth]{methods-paper-modelo/circuit_w_current.pdf}
 \end{frame}
 
 \begin{frame}{Cycle-by-cycle restrictions}
-	Video
+	\movie[label=model_invariants_video,width=\textwidth,poster,autostart,borderwidth=-5pt,showcontrols,loop] 
+	{\includegraphics[width=\textwidth]{Movies/n3_n2_no_invariant.png}}{Movies/n3_n2_no_invariant.mp4}
 \end{frame}
 
 \begin{frame}{N1M stimulation}
+	\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_with_intervals.pdf}
+	
 \end{frame}
 
 
@@ -382,7 +390,22 @@
 
 
 \begin{frame}{Models with chaotic activity}
-	\includegraphics[width=\textwidth]{invariants/distributed_benjamin_2012.png}
+	Variability in models is usually limited. The variability can be induced by a current ramp as in this case, but with a chaotic activity the variability could be more realistic. 
+	\vspace{8pt}
+	\begin{columns}
+		\uncover<2>{
+			\begin{column}{0.5\textwidth}
+				Neuronal recording variability
+				\includegraphics[width=\textwidth]{invariants/variability/lp_burst_variability.png}
+			\end{column}
+		}
+		\uncover<3>{
+			\begin{column}{0.5\textwidth}
+				Model simulation with chaotic activity
+				\includegraphics[width=\textwidth]{invariants/variability/TN-burst_variability.png}
+			\end{column}
+		}
+	\end{columns}
 \end{frame}
 
 
@@ -438,6 +461,26 @@
 \end{frame}
 
 \begin{frame}{Robot}
+%	\begin{figure}[h!]
+%		\centering
+%		\href{https://youtu.be/ny2dJGbG8lo&t=120s}{
+%			\includegraphics[width=\textwidth]{invariants/robot/Figure1_experiment_design_v1.png}
+%		}
+%		\caption{Pyloric video starting at 2 minutes}
+%	\end{figure}
+
+	\includemedia[
+	width=\textwidth,
+	height=0.5625\textwidth,  % 16:9 aspect ratio
+	activate=pageopen,
+	flashvars={
+		modestbranding=1 % no YouTube logo in control bar
+		autoplay=1
+		&rel=0 % don't show related videos
+	}
+]{\includegraphics{invariants/robot/Figure1_experiment_design_v1.png}}{https://youtu.be/ny2dJGbG8lo}
+%	]{\includegraphics{invariants/robot/Figure1_experiment_design_v1.png}}{https://youtu.be/ny2dJGbG8lo&t=120s}
+%\caption{Robot demo}
 \end{frame}
 
 
@@ -449,7 +492,7 @@
 \end{frame}
 
 
-\begin{frame}{Effect on single neurons dyamics}
+\begin{frame}{Effect on single neurons dynamics}
 \end{frame}
 
 
