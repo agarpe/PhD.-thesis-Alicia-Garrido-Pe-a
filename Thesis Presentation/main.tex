@@ -336,15 +336,40 @@
 
 
 
-\begin{frame}{Charaterization of the time-intervals cycle-by-cycle}
+\begin{frame}{Characterization of the time-intervals cycle-by-cycle}
+	\only<2-3>{
+	To analyze the dynamics of the sequential activity cycle-by-cycle we need to define time references to characterize the time-intervals in the sequence.
+	\vspace{5pt}
 	\begin{columns}
+		\uncover<2->{
 		\begin{column}{0.4\textwidth}
 			\includegraphics[width=\textwidth]{Images/time-references.png}
 		\end{column}
+	}
+	\uncover<3->{
 		\begin{column}{0.6\textwidth}
 			\includegraphics[width=\textwidth]{methods-paper-modelo/figure4a.eps}
 		\end{column}
+	}
 	\end{columns}
+	}
+	\uncover<4->{We can also define intervals combining the time references of two bursts}
+	\only<4>{
+		\includegraphics[width=\textwidth]{Images/Intervals_figure_complete_only_intervals_n1.pdf}
+	}
+
+	\only<5>{
+		\includegraphics[width=\textwidth]{Images/Intervals_figure_complete_only_intervals_n1-delay.pdf}
+	}
+	\only<6>{
+	\includegraphics[width=\textwidth]{Images/Intervals_figure_complete_only_intervals_n2.pdf}
+	}	
+	\only<7>{
+		\includegraphics[width=\textwidth]{Images/Intervals_figure_complete_only_intervals_n3.pdf}
+	}
+
+	
+
 \end{frame}
 
 
@@ -371,7 +396,8 @@
 
 
 \begin{frame}{Computational Approach: Ramp stimulation protocol}
-	\includegraphics[width=\textwidth]{methods-paper-modelo/circuit_w_current.pdf}
+	\centering
+	\includegraphics[width=0.8\textwidth]{methods-paper-modelo/circuit_w_current.pdf}
 \end{frame}
 
 \begin{frame}{Cycle-by-cycle restrictions}
@@ -380,12 +406,60 @@
 \end{frame}
 
 \begin{frame}{N1M stimulation}
-	\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_with_intervals.pdf}
+	\begin{figure}[hbt!]
+		\begin{minipage}[b]{0.36\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_boxplot.pdf}
+		\end{minipage}
+		\begin{minipage}[b]{0.44\textwidth}
+			\centering
+			\begin{minipage}[b]{\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
+			\end{minipage}\
+			\begin{minipage}[b]{\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_intervals.pdf}
+			\end{minipage}\
+			\begin{minipage}[b]{\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_delays.pdf}
+			\end{minipage}
+		\end{minipage}
+%		\caption{\textbf{N1M stimulation:} a) Box-plots of the  sequence intervals under N1M neuron stimulation. b) Interval correlations to period for N1M-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays. Linear relationships are quantified by the $R^2$ values of the linear regression.}
+%		\label{fig:invariant n1m}
+	\end{figure}
 	
 \end{frame}
 
 
 \begin{frame}{SO stimulation}
+			
+			\begin{figure}[hbt!]
+				\begin{minipage}[b]{0.36\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_boxplot.pdf}
+				\end{minipage}
+				\begin{minipage}[b]{0.44\textwidth}
+					\centering
+					\begin{minipage}[b]{\textwidth}
+						\centering
+						\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_durations.pdf}
+					\end{minipage}\
+					\begin{minipage}[b]{\textwidth}
+						\centering
+						\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_intervals.pdf}
+					\end{minipage}\
+					\begin{minipage}[b]{\textwidth}
+						\centering
+						\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_delays.pdf}
+					\end{minipage}
+				\end{minipage}
+%				\caption{\textbf{SO stimulation: }a) Box-plots of the sequence intervals under SO neuron stimulation. b) Interval correlations to Period for SO-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays.}
+%				\label{fig:invariant so}
+			\end{figure}
+			
+			
 \end{frame}
 
 
@@ -411,53 +485,149 @@
 
 
 \begin{frame}{Experimental approach}
-	\includegraphics[width=\textwidth]{invariants/distributed_benjamin_2012.png}
+	\only<1-2>{
+	\begin{itemize}
+		\item<1-2>Are sequential invariants present also in the experimental recordings? 
+		\item<2-2>Do the invariants change under different stimulation conditions?
+	\end{itemize}
+}
+		
+		\only<3->{
+			Previous studies point to the linear relation between some phases and the period 
+			\includegraphics[width=\linewidth]{Images/elliot_n_andrew.png}
+			\tiny{Elliott, C. J. H., \& Andrew, T. (1991). Temporal Analysis of Snail Feeding Rhythms: A Three-Phase Relaxation Oscillator. Journal of Experimental Biology, 157(1), 391–408. Figure 5.}
+		}
+	
+\end{frame}
+
+\begin{frame}{Distributed system of \textit{L. stagnalis}}
+	\only<1>{
+		\includegraphics[width=\textwidth]{invariants/distributed_benjamin_2012.png}
+		\tiny{Benjamin, P. R. (2012). Distributed network organization underlying feeding behavior in the mollusk Lymnaea. Neural Systems \& Circuits, 2(1), 1–16. https://doi.org/10.1186/2042-1001-2-4}
+			
+	}
+
+	\only<2>{
+		\includegraphics[width=\textwidth]{Images/distributed_benjamin_2012_modelstim.pdf}
+		\tiny{Benjamin, P. R. (2012). Distributed network organization underlying feeding behavior in the mollusk Lymnaea. Neural Systems \& Circuits, 2(1), 1–16. https://doi.org/10.1186/2042-1001-2-4}
+	}
+
+
+	\only<3>{
+		\includegraphics[width=\textwidth]{Images/distributed_benjamin_2012_electrophys_so.pdf}
+		\tiny{Benjamin, P. R. (2012). Distributed network organization underlying feeding behavior in the mollusk Lymnaea. Neural Systems \& Circuits, 2(1), 1–16. https://doi.org/10.1186/2042-1001-2-4}
+	}
+	\only<4>{
+	\includegraphics[width=\textwidth]{Images/distributed_benjamin_2012_electrophys_mln.pdf}
+	\tiny{Benjamin, P. R. (2012). Distributed network organization underlying feeding behavior in the mollusk Lymnaea. Neural Systems \& Circuits, 2(1), 1–16. https://doi.org/10.1186/2042-1001-2-4}
+	}
+	\only<5>{
+	\includegraphics[width=\textwidth]{Images/distributed_benjamin_2012_electrophys_cv1a.pdf}
+	\tiny{Benjamin, P. R. (2012). Distributed network organization underlying feeding behavior in the mollusk Lymnaea. Neural Systems \& Circuits, 2(1), 1–16. https://doi.org/10.1186/2042-1001-2-4}
+	}
+
 \end{frame}
 
 
 
 \begin{frame}{Spontaneous activity}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_with_intervals.pdf}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/panel_with_intervals.pdf}
-		\end{column}
-	\end{columns}
+	\only<1>{	
+		\begin{columns}
+			\begin{column}{0.6\textwidth}
+				\centering Case 1
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_variability.pdf}
+			\end{column}
+			\begin{column}{0.6\textwidth}
+				\centering Case 2
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/panel_variability.pdf}
+			\end{column}
+		\end{columns}
+	}
+	\only<2>{
+		\begin{columns}
+			\begin{column}{0.6\textwidth}
+				\centering Case 1
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_with_intervals_boxplot_invariants.pdf}
+			\end{column}
+			\begin{column}{0.6\textwidth}
+				\centering Case 2
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/panel_with_intervals_boxplot_invariants.pdf}
+			\end{column}
+		\end{columns}
+	}
 \end{frame}
 
 
 \begin{frame}{SO driven activity}
+\only<1>{	
 	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/panel_with_intervals.pdf}
+		\begin{column}{0.6\textwidth}
+			\centering SO driven by stimulation
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/panel_variability.pdf}
 		\end{column}
-		\begin{column}{0.5\textwidth}
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals.pdf}
+		\begin{column}{0.6\textwidth}
+			\centering SO spontaneous driven
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_variability.pdf}
 		\end{column}
 	\end{columns}
+}
+\only<2>{
+	\begin{columns}
+		\begin{column}{0.6\textwidth}
+			\centering SO driven by stimulation
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/panel_with_intervals_boxplot_invariants.pdf}
+		\end{column}
+		\begin{column}{0.6\textwidth}
+			\centering SO spontaneous driven
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
+		\end{column}
+	\end{columns}
+}
+
 \end{frame}
 
 
 
 \begin{frame}{MLN driven activity}
 	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/panel_with_intervals.pdf}
-		\end{column}
+		\uncover<1->{
+			\begin{column}{0.6\textwidth}
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/panel_variability.pdf}
+			\end{column}
+		}
+		\uncover<2>{
+			\begin{column}{0.5\textwidth}
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/panel_with_intervals_boxplot_invariants.pdf}
+			\end{column}
+		}
 	\end{columns}
 \end{frame}
 
 \begin{frame}{CV1 driven activity}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/panel_with_intervals.pdf}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-		\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/panel_with_intervals.pdf}
-		\end{column}
-	\end{columns}
+	\only<1>{	
+		\begin{columns}
+			\begin{column}{0.6\textwidth}
+				\centering CV1a driven by electrical stimulation. Case 1
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/panel_variability.pdf}
+			\end{column}
+			\begin{column}{0.6\textwidth}
+				\centering CV1a driven by electrical stimulation. Case 2
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/panel_variability.pdf}
+			\end{column}
+		\end{columns}
+	}
+	\only<2>{
+		\begin{columns}
+			\begin{column}{0.6\textwidth}
+				\centering CV1a driven by electrical stimulation. Case 1
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/panel_with_intervals_boxplot_invariants.pdf}
+			\end{column}
+			\begin{column}{0.6\textwidth}
+				\centering CV1a driven by electrical stimulation. Case 2
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/panel_with_intervals_boxplot_invariants.pdf}
+			\end{column}
+		\end{columns}
+	}
 \end{frame}
 
 \begin{frame}{Robot}
@@ -468,62 +638,179 @@
 %		}
 %		\caption{Pyloric video starting at 2 minutes}
 %	\end{figure}
+\movie[label=CPG activity,width=0.7\textwidth,poster=false,autostart=false,showcontrols,loop] 
+{\includegraphics[width=0.7\textwidth]{invariants/robot/Figure1_experiment_design_v1.png}}{Movies/GNB Hybrot with living CPG.mp4}
+\end{frame}
 
-	\includemedia[
-	width=\textwidth,
-	height=0.5625\textwidth,  % 16:9 aspect ratio
-	activate=pageopen,
-	flashvars={
-		modestbranding=1 % no YouTube logo in control bar
-		autoplay=1
-		&rel=0 % don't show related videos
-	}
-]{\includegraphics{invariants/robot/Figure1_experiment_design_v1.png}}{https://youtu.be/ny2dJGbG8lo}
-%	]{\includegraphics{invariants/robot/Figure1_experiment_design_v1.png}}{https://youtu.be/ny2dJGbG8lo&t=120s}
-%\caption{Robot demo}
+
+\begin{frame}{Summary of results}
+	\includegraphics[width=0.8\textwidth]{Images/invariants_summary.png}
 \end{frame}
 
 
 \section[CW-NIR Neuromodulation]{CW-NIR laser as an effective neuromodulation technique}
 \begin{frame}{Current findings}
+	\begin{itemize}
+		\item{Laser stimulation accelerates neural activity.}
+		\item{Most studies use pulsed laser and general dynamics}
+		\item{Open questions:}
+		\begin{itemize}
+			\item Source of the effect: Photothermal, Photomechanical ...
+			\item Biophysical candidates: Capacitance, TRPV-4 
+		\end{itemize}
+	\end{itemize}
+
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\centering
+			Clinical applications\\
+			\includegraphics[width=0.8\textwidth]{Images/saucedo.png} \tiny{Figure 2 from Saucedo, C. L.et al (2021). Brain Stimulation, 14(2), 440–449. https://doi.org/10.1016/j.brs.2021.02.011}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			Stimulation technique\\
+			\includegraphics[width=\textwidth]{Images/liang.png} \tiny{Figure 6A from Liang, S.et al. (2009). Cell Biochemistry and Biophysics, 53(1), 33–42. https://doi.org/10.1007/s12013-008-9035-2
+			}
+		\end{column}	
+	\end{columns}
+	
+	
 \end{frame}
 \begin{frame}{Experimental setup}
-	\includegraphics[width=\textwidth]{methods/laser-setup_labels.png}
+	\centering
+	\includegraphics[width=0.8\textwidth]{methods/laser-setup_labels.png}
 \end{frame}
 
-
-\begin{frame}{Effect on single neurons dynamics}
+\begin{frame}{Sustained stimulation protocol}
+	\begin{columns}
+		\begin{column}{0.65\textwidth}
+			\begin{itemize}
+				\item {The neuron was illuminated during the intracellular recording.}
+				\item {The illumination lasted 1-3 min.}
+				\item {We recorded a control before and after the illumination.}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.35\textwidth}
+			\includegraphics[width=\textwidth]{laser/laser-beam.pdf}
+		\end{column}
+	\end{columns} 
+	\vspace{10pt}
+	\centering
+	\includegraphics[width=0.8\textwidth]{laser/trial-protocol.pdf}
 \end{frame}
 
+\begin{frame}{Spike Waveform Characterization}
+	\centering
+	To characterize the change in the spike dynamics we defined waveform metrics. 
+	\includegraphics[width=\textwidth]{laser/spike_metrics.pdf}
+\end{frame}
 
 \begin{frame}{Modulation of the spike waveform}
 	\includegraphics[width=\textwidth]{laser/Figure2.png}
 \end{frame}
 
 \begin{frame}{Effect on the firing rate}
-	\includegraphics[width=\textwidth]{laser/frequency.pdf}
+	\centering
+	\includegraphics[width=\textwidth]{laser/frequency-small.pdf}
 \end{frame}
 
 
 \begin{frame}{Effect on a minimal circuit}
-	\includegraphics[width=\textwidth]{Images/electrical.png}
+	
+	\includegraphics[width=0.3\textwidth]{Images/electrical_ganglia.png}
+	\\
+	\includegraphics[width=\textwidth]{Images/electrical_result.png}
+	\\
+	The stimulation of electrically coupled neurons, showed a first approximation to the capacity of the laser illumination to modulate neural dynamics. 
+	
+	
+	
 \end{frame}
 
+%\begin{frame}{Biophysical candidates}
+%		There are distinct candidates under discussion
+%		\begin{itemize}
+%			\item{Fast activation of ionic currents	($K^+$,$Na^+$). \tiny{\textit{Li, X., et al. (2013). Cell Biochemistry and Biophysics, 67(3), 1409–1419.}}}
+%			\item{Change in capacitance. \tiny{\textit{Shapiro, M. G., et al. (2012). Nature Communications, 3(1), 1–11.}}}
+%			\item{Temperature receptor channels TRPV \tiny{\textit{Albert, E. S., et al. (2012). Journal of Neurophysiology, 107(12), 3227–3234}}.
+%			}
+%			\item{$Ca^{+2}$ transient \tiny{\textit{Dittami, G. M., et al. (2011). The Journal of Physiology, 589(Pt 6), 1295–1306.}}}
+%			
+%		\end{itemize}
+%\end{frame}
 
-\begin{frame}{Model analysis to explore candidates}
+\begin{frame}{Model analysis to explore biophysical candidates}
+	
+	\only<1>{\begin{equation}
+		C_m\frac{dV}{dt} = I_{inj} - I_{NaT} - I_{NaP} - I_{A} - I_{D} - I_{LVA} - I_{HVA}
+		\end{equation}
+		\includegraphics[width=\textwidth]{laser/cgc-model-simulation.pdf}}
+	\only<2->{
+		Each candidate generated a change in the waveform, but each one fitted the experimental change only partly.\\	
+		\vspace{10pt}
+		\includegraphics[width=\textwidth]{Images/model_candidates.png}\\
+
+		\uncover<3>{
+		\vspace{10pt}
+		The computational model study shows that no modulation of an individual candidate but a combination of them can explain the experimental quantification}
+	}
 \end{frame}
 
 \begin{frame}{Model with temperature description}
+	Including temperature dependency in the model by a $Q_{10}$ factor showed the closest representation of the observed experimental modulation.\\ 
+	\vspace{10pt}
+	\centering
+	\includegraphics[width=\textwidth]{laser/Figure5.pdf}\\
+	
+	\uncover<2>{Temperature change plays a key role to explain the laser stimulation effect.}
 \end{frame}
 
 
-\begin{frame}{Activity-dependent stimulation}
+\begin{frame}{Activity-dependent stimulation protocol}
+	\centering
+	\only<1>{
+	\includegraphics[width=\textwidth]{laser/activity_dependent_protocol.pdf}
+	}
+	\only<2>{
+	\includegraphics[width=0.8\textwidth]{Images/pulse-10ms.pdf}
+	}
+	\only<3>{
+	\includegraphics[width=0.8\textwidth]{Images/pulse-50ms.pdf}
+	}
+	\only<4>{
+	\includegraphics[width=0.8\textwidth]{Images/pulse50ms.pdf}
+	}
 \end{frame}
 
+\begin{frame}{Activity-dependent stimulation effect}
+	\centering
+	\includegraphics[width=\textwidth]{Images/activity-dependent results.png}
+\end{frame}
 
-\section{Conclusion}
+\begin{frame}{Summary of results}
+	\centering
+	\includegraphics[width=0.9\textwidth]{Images/laser_summary.png}
+\end{frame}
 
-    \begin{frame}{Conclusion}
+\section{Conclusions}
+    \begin{frame}{Conclusions}
+    	\begin{itemize}
+    		\only<1>{
+    		\item{The study of neural sequences at multiple spatial and temporal scales can provide\textbf{ novel insights to relate neural dynamics and behavior}.}
+    		\item{We have \textbf{hinted the universality of sequential dynamical invariants} in experimental and modeling data in the feeding CPG.}
+    		\item{Dynamical invariants can be \textbf{indicators of the functional distribution} of variability in the CPG.}
+    		\item{\textbf{Novel neurotechnologies} can contribute to identifying and exploiting the sequential nature of neural information processing.}
+    		}
+	    	\only<2>{
+	    		\item{Sustained CW-NIR laser illumination\textbf{ asymmetrically accelerates action potential} dynamics and \textbf{the spiking rate }on single neurons.}
+	    		\item{A model study of the effect of CW-NIR showed that \textbf{no biophysical candidate alone could fully reproduce the observed modulation} and the global modulation through \textbf{temperature change} in the simulation was\textbf{ the closest approximation }to it.}
+	   			\item{The \textbf{closed-loop protocol} unveiled the CW-laser \textbf{effect at different phases of the neuron dynamics}.}
+	    		\item{The results discussed in this thesis in the context of neural sequences can also have \textbf{strong implications} in the field of neurorrehabilitation, robotics, and artificial intelligence.}
+	    	}
+    	\end{itemize}
+    	
+%    	
+
     \end{frame}
 %}
 %\setbeamercolor{background canvas}{bg=violet}
