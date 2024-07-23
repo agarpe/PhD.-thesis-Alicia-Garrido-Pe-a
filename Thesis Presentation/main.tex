@@ -94,7 +94,7 @@
 \begin{frame}{Neuronal and Networks Dynamics}
 	\only<1>{Neuronal electrical activity is often described in terms of the evolution of membrane voltage caused by the flow of ionic channels between the inside and outside of the cell.}
 	
-	\uncover<2->{Depending on the channels that constitute the neuron and the circuit it is immersed in, the activity varies.}
+	\only<2->{Depending on the channels that constitute the neuron and the circuit it is immersed in, the activity varies.
 	\vfill
 	\uncover<3->{In terms of the spike waveform:}
 	\uncover<3->{\begin{center}
@@ -106,6 +106,7 @@
 	\uncover<4->{\begin{center}
 			\includegraphics[width=0.7\textwidth]{intro/spike_activity-types.pdf}
 	\end{center}}
+}
 \end{frame}
 
 \begin{frame}{The sequential nature of neural dynamics}
@@ -273,8 +274,8 @@
 			\begin{column}{0.75\textwidth}
 				\begin{itemize}
 					\item<5->{Non-open topologies}
-					\item<6->{Based on mutual inhibition}
-					\item<7->{Temporal sequences maintained cycle-by-cycle}
+					\item<5->{Based on mutual inhibition}
+					\item<5->{Temporal sequences maintained cycle-by-cycle}
 				\end{itemize}
 			\end{column}
 			% Second column in the first row
@@ -286,22 +287,22 @@
 		% Second row
 		\begin{figure}[h!]
 			\centering
-			\movie[label=CPG activity,width=0.7\textwidth,poster=false,autostart=false,showcontrols,loop] 
+			\movie[label=CPG activity,width=0.7\textwidth,poster=false,autostart=true,showcontrols,loop] 
 			{\includegraphics[width=0.7\textwidth]{intro/CPG.pdf}}{Movies/CPG_activity_slow.mp4}
 		\end{figure}		
 	}
 \end{frame}
 
 \begin{frame}{Temporal constrains: Sequential Dynamical invariants}
-	\only<1-4>{
+
 		\begin{itemize}
 			\item<1->Recently found in pyloric CPG (experimental study). (Elices et al.)
-			\item<2->Specific intervals that build the sequence are highly correlated cycle-by-cycle.
-			\item<3->Consistent under high variability induced situations (Ethanol).
-		\end{itemize}}
+			\item<1->Specific intervals that build the sequence are highly correlated cycle-by-cycle.
+			\item<1->Consistent under high variability induced situations (Ethanol).
+		\end{itemize}
 	\begin{figure}[h!]
 		\centering
-		\movie[label=pyloric video,width=\textwidth,poster=false,autostart=true,showcontrols,loop] 
+		\movie[label=pyloric video,width=\textwidth,poster=false,autostart=true,start=120s,showcontrols,loop] 
 		{\includegraphics[width=\textwidth]{Movies/elices_invariants.png}}{Movies/elices_invariants.mp4}
 	\end{figure}		
 \end{frame}
@@ -313,8 +314,8 @@
 				Triphasic rhythm:
 				\begin{itemize}
 					\item<1->{N1 phase $\rightarrow$ Protraction}
-					\item<2->{N2 phase $\rightarrow$ Rasp}
-					\item<3->{N3 phase $\rightarrow$ Swallow}
+					\item<1->{N2 phase $\rightarrow$ Rasp}
+					\item<1->{N3 phase $\rightarrow$ Swallow}
 				\end{itemize}
 			\end{column}
 			% Second column in the first row
@@ -533,11 +534,11 @@
 \begin{frame}{Spontaneous activity}
 	\only<1>{	
 		\begin{columns}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\centering Case 1
 				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_variability.pdf}
 			\end{column}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\centering Case 2
 				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/panel_variability.pdf}
 			\end{column}
@@ -545,11 +546,11 @@
 	}
 	\only<2>{
 		\begin{columns}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\centering Case 1
 				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_with_intervals_boxplot_invariants.pdf}
 			\end{column}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\centering Case 2
 				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/panel_with_intervals_boxplot_invariants.pdf}
 			\end{column}
@@ -561,11 +562,11 @@
 \begin{frame}{SO driven activity}
 \only<1>{	
 	\begin{columns}
-		\begin{column}{0.6\textwidth}
+		\begin{column}{0.5\textwidth}
 			\centering SO driven by stimulation
 			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/panel_variability.pdf}
 		\end{column}
-		\begin{column}{0.6\textwidth}
+		\begin{column}{0.5\textwidth}
 			\centering SO spontaneous driven
 			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_variability.pdf}
 		\end{column}
@@ -573,11 +574,11 @@
 }
 \only<2>{
 	\begin{columns}
-		\begin{column}{0.6\textwidth}
+		\begin{column}{0.5\textwidth}
 			\centering SO driven by stimulation
 			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/panel_with_intervals_boxplot_invariants.pdf}
 		\end{column}
-		\begin{column}{0.6\textwidth}
+		\begin{column}{0.5\textwidth}
 			\centering SO spontaneous driven
 			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
 		\end{column}
@@ -591,7 +592,7 @@
 \begin{frame}{MLN driven activity}
 	\begin{columns}
 		\uncover<1->{
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/panel_variability.pdf}
 			\end{column}
 		}
@@ -606,11 +607,11 @@
 \begin{frame}{CV1 driven activity}
 	\only<1>{	
 		\begin{columns}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\centering CV1a driven by electrical stimulation. Case 1
 				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/panel_variability.pdf}
 			\end{column}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\centering CV1a driven by electrical stimulation. Case 2
 				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/panel_variability.pdf}
 			\end{column}
@@ -618,11 +619,11 @@
 	}
 	\only<2>{
 		\begin{columns}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\centering CV1a driven by electrical stimulation. Case 1
 				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/panel_with_intervals_boxplot_invariants.pdf}
 			\end{column}
-			\begin{column}{0.6\textwidth}
+			\begin{column}{0.5\textwidth}
 				\centering CV1a driven by electrical stimulation. Case 2
 				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/panel_with_intervals_boxplot_invariants.pdf}
 			\end{column}
@@ -630,16 +631,13 @@
 	}
 \end{frame}
 
-\begin{frame}{Robot}
-%	\begin{figure}[h!]
-%		\centering
-%		\href{https://youtu.be/ny2dJGbG8lo&t=120s}{
-%			\includegraphics[width=\textwidth]{invariants/robot/Figure1_experiment_design_v1.png}
-%		}
-%		\caption{Pyloric video starting at 2 minutes}
-%	\end{figure}
-\movie[label=CPG activity,width=0.7\textwidth,poster=false,autostart=false,showcontrols,loop] 
-{\includegraphics[width=0.7\textwidth]{invariants/robot/Figure1_experiment_design_v1.png}}{Movies/GNB Hybrot with living CPG.mp4}
+\begin{frame}{Study of functional the role of dynamical invariants in a Hybrot}
+\only<1>{
+\centering
+\movie[label=Robot,width=\textwidth,poster=false,autostart=true,showcontrols,loop] 
+{\includegraphics[width=\textwidth]{invariants/robot/Figure1_experiment_design_v1.png}}{Movies/GNB Hybrot with living CPG.mp4}
+}
+\only<2>{\centering\includegraphics[width=\textwidth]{invariants/robot/robot_results_invariant.png}}
 \end{frame}
 
 
@@ -659,7 +657,7 @@
 			\item Biophysical candidates: Capacitance, TRPV-4 
 		\end{itemize}
 	\end{itemize}
-
+	\vspace{10pt}
 	\begin{columns}
 		\begin{column}{0.5\textwidth}
 			\centering
@@ -694,7 +692,7 @@
 			\includegraphics[width=\textwidth]{laser/laser-beam.pdf}
 		\end{column}
 	\end{columns} 
-	\vspace{10pt}
+	\vspace{15pt}
 	\centering
 	\includegraphics[width=0.8\textwidth]{laser/trial-protocol.pdf}
 \end{frame}
@@ -702,6 +700,7 @@
 \begin{frame}{Spike Waveform Characterization}
 	\centering
 	To characterize the change in the spike dynamics we defined waveform metrics. 
+	\vspace{10pt}
 	\includegraphics[width=\textwidth]{laser/spike_metrics.pdf}
 \end{frame}
 
@@ -717,14 +716,16 @@
 
 \begin{frame}{Effect on a minimal circuit}
 	
-	\includegraphics[width=0.3\textwidth]{Images/electrical_ganglia.png}
-	\\
-	\includegraphics[width=\textwidth]{Images/electrical_result.png}
-	\\
-	The stimulation of electrically coupled neurons, showed a first approximation to the capacity of the laser illumination to modulate neural dynamics. 
-	
-	
-	
+	\begin{columns}
+		\begin{column}{0.3\textwidth}
+			\includegraphics[width=\textwidth]{Images/electrical_ganglia.png}
+		\end{column}
+	\vspace{15pt}
+		\begin{column}{0.7\textwidth}
+			The stimulation of electrically coupled neurons, showed a first approximation to the capacity of the laser illumination to modulate neural dynamics. 
+		\end{column}
+	\end{columns}
+	\includegraphics[width=0.8\textwidth]{Images/electrical_result.png}	
 \end{frame}
 
 %\begin{frame}{Biophysical candidates}
