@@ -124,20 +124,22 @@ Los modelos pueden clasificarse según su nivel de descripción, es decir, qué 
 
 \subsection{Modelos basados en conductancia}
 
-En esta tesis, todos los registros experimentales se han complementado con simulaciones mediante modelos basados en conductancia. Estos se definen como descripciones matemáticas de la dinámica de los canales iónicos, basadas en su conductancia dependiente del voltaje. El estudio pionero de \textcite{hodgkin_quantitative_1952} definió ecuaciones dinámicas basadas en el circuito eléctrico equivalente de las propiedades eléctricas de las neuronas en el axón gigante del calamar, ver Fig. \ref{fig:electrical circuit spanish}. Este circuito también se puede utilizar para describir la configuración de registro intracelular, donde la pipeta se incluye como una corriente adicional compensada por el electrodo en la solución (ver Fig. \ref{fig:clamp circuit spanish}).
+En esta tesis, todos los registros experimentales se han complementado con simulaciones mediante modelos basados en conductancia. Estos se definen como descripciones matemáticas de la dinámica de los canales iónicos, basadas en su conductancia dependiente del voltaje. El estudio pionero de \textcite{hodgkin_quantitative_1952} definió ecuaciones dinámicas basadas en el circuito eléctrico equivalente de las propiedades eléctricas de las neuronas en el axón gigante del calamar, ver Fig. \ref{fig:clamp circuit spanish}.a). Este circuito también se puede utilizar para describir la configuración de registro intracelular, donde la pipeta se incluye como una corriente adicional compensada por el electrodo en la solución (ver Fig. \ref{fig:clamp circuit spanish}.b).
+
 
 \begin{figure}[htb!]
-\centering
-\includegraphics[width=0.7\textwidth]{./img/intro/electrical_circuit.pdf}
-\caption{Circuito eléctrico que describe el potencial de membrana en un modelo de neurona basado en conductancia.}
-\label{fig:electrical circuit spanish}
-\end{figure}
-
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.7\textwidth]{./img/intro/intracellular_recording_circuit.pdf}
-\caption{Circuito eléctrico que representa el esquema para registros intracelulares.}
-\label{fig:clamp circuit spanish}
+	\centering
+	\begin{overpic}[width=0.7\linewidth]{./img/intro/electrical_circuit.pdf}
+		\put(-2,70){\large\textbf{a)}}
+	\end{overpic}
+	\\
+	\vspace{40pt}
+	\centering
+	\begin{overpic}[width=0.7\linewidth]{./img/intro/intracellular_recording_circuit.pdf}
+		\put(-2,70){\large\textbf{b)}}
+	\end{overpic}
+	\caption{a) Circuito eléctrico que describe el potencial de membrana en un modelo de neurona basado en conductancia. b) Circuito eléctrico que representa el esquema para registros intracelulares.}
+	\label{fig:clamp circuit spanish}
 \end{figure}
 
 En estos modelos, la simulación de la actividad eléctrica neuronal se basa en la descripción matemática de diferentes canales iónicos en el circuito, cuya dinámica también está bien definida por compuertas de activación. Primero, hay una descripción matemática de la dependencia del voltaje en el tiempo, como se describe en la ecuación \ref{eq:voltage ions spanish}:

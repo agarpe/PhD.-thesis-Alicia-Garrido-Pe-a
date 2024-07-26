@@ -154,22 +154,22 @@ Models can be classified by their level of description, i.e., their level of sim
 \end{figure}
 \subsection{Conductance-based models}
 
-In this thesis, all experimental recordings have been supported with simulations of conductance-based models. They are  mathematical descriptions of the ionic channel dynamics based on their voltage-dependent conductance. The pioneer study by \textcite{hodgkin_quantitative_1952} defined dynamical equations based on the equivalent electrical circuit of the neuronal membrane of the giant squid axon, see Fig.  \ref{fig:electrical circuit}. This modeled circuit is also used to describe the intracellular recording configuration, where the pipette is included as an extra current compensated by the electrode in the bath (see Fig. \ref{fig:clamp circuit}).
+In this thesis, all experimental recordings have been supported with simulations of conductance-based models. They are  mathematical descriptions of the ionic channel dynamics based on their voltage-dependent conductance. The pioneer study by \textcite{hodgkin_quantitative_1952} defined dynamical equations based on the equivalent electrical circuit of the neuronal membrane of the giant squid axon, see Fig. \ref{fig:clamp circuit}.a). This modeled circuit is also used to describe the intracellular recording configuration, where the pipette is included as an extra current compensated by the electrode in the bath (see Fig. \ref{fig:clamp circuit}.b).
 
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{./img/intro/electrical_circuit.pdf}
-	\caption{Electrical circuit describing the membrane voltage in a conductance-based neuron model.}
-	\label{fig:electrical circuit}
-\end{figure}
-
-\begin{figure}[htb!]
+	\begin{overpic}[width=0.7\linewidth]{./img/intro/electrical_circuit.pdf}
+		\put(-2,70){\large\textbf{a)}}
+	\end{overpic}
+	\\
+	\vspace{40pt}
 	\centering
-	\includegraphics[width=0.7\textwidth]{./img/intro/intracellular_recording_circuit.pdf}
-	\caption{Electrical circuit representing the scheme for intracellular recordings.}
+	\begin{overpic}[width=0.7\linewidth]{./img/intro/intracellular_recording_circuit.pdf}
+		\put(-2,70){\large\textbf{b)}}
+	\end{overpic}
+	\caption{a) Electrical circuit describing the membrane voltage in a conductance-based neuron model. b) Electrical circuit representing the scheme for intracellular recordings.}
 	\label{fig:clamp circuit}
 \end{figure}
-
 
 In these models, the simulation of neural electrical activity is based on the mathematical description of different ionic channels in the circuit, whose dynamics are well defined by activation gates. First, there is a mathematical description of the voltage dependency on time, as described by the equation \ref{eq:voltage ions}:
 
