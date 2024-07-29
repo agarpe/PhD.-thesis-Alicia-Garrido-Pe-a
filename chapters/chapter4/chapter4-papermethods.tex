@@ -114,10 +114,10 @@ N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase w
 
 \subsection{Models with chaotic activity}
 \label{sec:model variability equations}
-As we discussed in the introduction, there are several models that are able to reproduce intrinsic variability in the voltage dynamics without the introduction of stochastic noise. These models produce deterministic chaos which is useful to reproduce observed biological variability. In this subsection, we include the equations of the models used in \ref{sec:model variability} to represent variable and non-variable voltage activity.
+As we discussed in the introduction, there are several models that are able to reproduce intrinsic variability in the voltage dynamics without the introduction of stochastic noise. These models produce deterministic chaos which is useful to reproduce observed biological variability. In this subsection, we include the equations of the models used in Sec. \ref{sec:model variability} to represent variable and non-variable voltage activity.
 \subsubsection{LP model by \textcite{nowotny_probing_2008} with chaotic activity}
 
-To illustrate the variability displayed by chaotic models, in Sec. \ref{sec:model variability} we used the model by \textcite{nowotny_probing_2008}, that reproduces the activity of LP neuron in the pyloric CPG. The membrane potential of the axon and soma compartments, $V_{\text{axon}}$ and $V_{\text{soma}}$ respectively, are described in this model by the following equations:
+To illustrate the variability displayed by chaotic models, in Sec. \ref{sec:model variability} we used the model by \textcite{nowotny_probing_2008}, which reproduces the activity of LP neuron in the pyloric CPG. The membrane potential of the axon and soma compartments, $V_{\text{axon}}$ and $V_{\text{soma}}$ respectively, are described in this model by the following equations:
 
 \begin{equation}
 	\frac{dV_{\text{axon}}}{dt} = \frac{1}{C_a} \left( -I_{\text{Na}} - I_{\text{Kd}} - I_M - I_{\text{leak,a}} + I_{VV} \right)
@@ -148,6 +148,8 @@ for $I_{\text{Na}}$ and $I_{\text{Kd}}$, and
 \begin{equation}
 	\frac{dm_x}{dt} = \frac{m_{\infty,x}(V) - m_x}{\tau_{m_x}}
 \end{equation}
+
+for the rest of the currents indicated by $x$.
 
 The simulations with this model were performed using the code originally published by the authors. The code is freely available at \href{https://modeldb.science/116957}{https://modeldb.science/116957}.
 
@@ -200,8 +202,8 @@ The experimental paradigm designed in order to test the correct behavior and loc
 
 Top panel of Figure \ref{fig:robot_results_setup} shows an illustration of the experimental setup for the FLC-Hybrot implementation. In the real-time configuration, a computer was the link between the robot and the living preparation (Fig. \ref{fig:robot_results_setup}A). The processes taking part during the real-time protocol were:
 \begin{enumerate}
-	\item First, reading the online signals through the DAQ device received from the amplifiers (Fig. \ref{fig:robot_results_setup}B) recorded from CPG neurons in the living preparation (Figure \ref{fig:robot_results_setup}C).
-	\item Extracting from the signal, on real-time, the duration of the temporal intervals of the cycle-by-cycle CPG activity and sending them to the robot's controller via Bluetooth.
+	\item First, reading the online signals received from the amplifiers through the DAQ device (Fig. \ref{fig:robot_results_setup}B), which were recorded from CPG neurons in the living preparation (Figure \ref{fig:robot_results_setup}C).
+	\item Extracting from the signal, in real-time, the duration of the temporal intervals of the cycle-by-cycle CPG activity and sending them to the robot's controller via Bluetooth.
 	\item In the communication from the robot to the computer, the robot's light-sensor data was sent through the same Bluetooth connection.
 	\item When the data indicated that the robot was located under a shadow a signal was sent back to the DAQ. At that moment, a current was injected into the neurons altering their behavior.
 \end{enumerate}
@@ -212,7 +214,7 @@ All these operations were repeated while the robot traversed the trial track (Fi
 	\begin{center}
 		\includegraphics[width=0.65\linewidth]{img/invariants/robot/robot_results_setup.png}
 	\end{center}
-	\caption{\textbf{Top panel:} illustration of the experimental setup for the FLC-Hybrot implementation: A) Computer that controls the closed-loop interaction between the living CPG and the robot. B) DAQ and signal amplifiers; C) Microscope; D) Testing track with light and shadows regions. \textbf{Middle panel:} detail of the elements of the setup: E) Hexapod robot, receives the neural information from the computer and sends back the sensory feedback through a Bluetooth connection; F) \textit{In vitro} pyloric CPG preparation with three electrodes, one to record extracellular activity from the nerve which includes the activity from the LP neuron (blue), one to record intracellular activity from the PD neuron (green) and another to introduce the feedback current into a PD neuron (red). Electrodes and computer are connected through the DAQ device. \textbf{Bottom panel:} detail of the elements of the robot and the preparation. PD neuron (intracellular recording, green trace) and LP neuron (extracted from the extracellular recording, blue trace) behavior is analyzed online by the computer and used to modulate the movement of the robot. Meanwhile, robot's light sensor detects the presence of light or shadow over it and the Arduino board sends that information to the computer, which injects feedback current into the PD neuron (red trace).}
+	\caption{Hybrot experiment design \textbf{Top panel:} illustration of the experimental setup for the FLC-Hybrot implementation: A) Computer that controls the closed-loop interaction between the living CPG and the robot. B) DAQ and signal amplifiers; C) Microscope; D) Testing track with light and shadow regions. \textbf{Middle panel:} detail of the elements of the setup: E) Hexapod robot, receives the neural information from the computer and sends back the sensory feedback through a Bluetooth connection; F) \textit{In vitro} pyloric CPG preparation with three electrodes, one to record extracellular activity from the nerve which includes the activity from the LP neuron (blue), one to record intracellular activity from the PD neuron (green) and another to introduce the feedback current into a PD neuron (red). Electrodes and computer are connected through the DAQ device. \textbf{Bottom panel:} detail of the elements of the robot and the preparation. PD neuron (intracellular recording, green trace) and LP neuron (extracted from the extracellular recording, blue trace) behavior is analyzed online by the computer and used to modulate the movement of the robot. Meanwhile, robot's light sensor detects the presence of light or shadow over it and the Arduino board sends that information to the computer, which injects feedback current into the PD neuron (red trace) accordingly.}
 	\label{fig:robot_results_setup}
 \end{figure}
 
