@@ -50,7 +50,7 @@ If spikes are considered minimal pieces of information when coding in neural act
 \begin{figure}[htb!]
     \centering
     \includegraphics[width=\linewidth]{img/intro/spike_activity-types.png}
-    \caption{Examples of different types of neuronal spiking activity. a) two simultaneous intracellular recordings in \textit{Lymnaea stagnalis} showing tonic firing at two different frequencies. b) Example of bursting activity from \textit{Lymnaea stagnalis}. c) Example of bursting activity from PD neuron from \textit{Carcinus maenas}.}
+    \caption{Examples of different types of neuronal spiking activity. a) Two simultaneous intracellular recordings in \textit{Lymnaea stagnalis} showing tonic firing at two different frequencies. b) Example of bursting activity from \textit{Lymnaea stagnalis}. c) Example of bursting activity from PD neuron from \textit{Carcinus maenas}.}
     \label{fig:spike_activity-types}
 \end{figure}
 
@@ -75,7 +75,7 @@ Neurons can be connected by several types of both chemical and electrical synaps
     \centering
     \includegraphics[width=0.64\textwidth]{img/intro/cpg diagram.png}
     \includegraphics[width=0.35\textwidth]{img/intro/The_Human_Connectome.png}
-    \caption{Left. Gastric and pyloric CPG connection scheme of crustacean, probably the best known circuits in neuroscience research \parencite{huerta_topology_2001}. Right. Conectome in human brain rendered from 20 subjects showing the complexity in the conectivity of a larger network (By Andreashorn \href{https://commons.wikimedia.org/w/index.php?curid=41581320}{CC BY-SA 4.0}).}
+    \caption{Left. Gastric and pyloric CPG connection scheme of crustacean, probably the best known circuits in neuroscience research \parencite{huerta_topology_2001}. Right. Conectome in human brain rendered from 20 subjects showing the complexity in the connectivity of a larger network (By Andreashorn \href{https://commons.wikimedia.org/w/index.php?curid=41581320}{CC BY-SA 4.0}).}
     \label{fig:neural circuits}
 \end{figure}
 
@@ -193,11 +193,11 @@ These gates usually have a nonlinear (exponential tendency) description dependen
 	\frac{dm}{dt} = \frac{m_{\infty,i}-m_i}{\tau_{m,i}}
 \end{equation}
 
-where $\tau_{m,i}$ are  relaxation time constants which are usually voltage-dependent and modeled using sigmoid or Gaussian functions. Note that $m$ was used here but this formula  also applies to inactivation variables. 
+where $\tau_{m,i}$ are  relaxation time constants which are usually voltage-dependent and modeled using Sigmoid or Gaussian functions. Note that $m$ was used here but this formula  also applies to inactivation variables. 
 
 
 Following the Hodgkin and Huxley formalism, 
-the equations that describe the voltage dynamics and the conductance dynamics of the active channels (Na and K) in the circuit shown in Fig. \ref{fig:electrical circuit} are described in table \ref{table:hh-equations}.
+the equations that describe the voltage dynamics and the conductance dynamics of the active channels (Na and K) in the circuit shown in Fig. \ref{fig:clamp circuit}a) are described in table \ref{table:hh-equations}.
 
 \begin{table}[h!]
 	\begin{tabular}{lccc}
@@ -205,7 +205,7 @@ the equations that describe the voltage dynamics and the conductance dynamics of
 		& \multicolumn{2}{c}{Activation variables}                                                                                                                              & Inactivation variable                                        \\ \hline
 		\multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}gating \\ variables\end{tabular}} & \multicolumn{1}{c|}{$\frac{dm(t)}{dt}=\frac{m_{\infty}(V(t))-m(t)}{\tau_m(V(t))}$} & \multicolumn{1}{c|}{$\frac{dn(t)}{dt}=\frac{n_{\infty}(V(t))-n(t)}{\tau_n(V(t))}$} & $\frac{dh(t)}{dt}=\frac{h_{\infty}(V(t))-h(t)}{\tau_h(V(t))}$ \\ \hline
 	\end{tabular}
-	\caption{Equations of Hodgkin and Huxley formalism for the Voltage equation and gating variables}
+	\caption{Equations of Hodgkin and Huxley formalism for the Voltage and gating variables}
  \label{table:hh-equations}
 \end{table}
 
