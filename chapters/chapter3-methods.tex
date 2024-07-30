@@ -220,9 +220,7 @@ To analyze the recordings of intracellular signals and the outputs of the models
 
 For the study of the time-intervals variability and the presence of sequential dynamical invariants, the spikes of the recording were detected by a voltage threshold, i.e., all peaks over a voltage value were considered action potential peaks and spikes in the model simulation of the bursting activity were detected using the change in the derivative along with a similar voltage threshold condition. Then, bursts were identified from the temporal structure of the spikes, and intervals were characterized by the timing of the first and last spike in each burst. In some recordings these temporal references were adjusted to the needs of the data available, this will be specified in the corresponding section \ref{sec:experimental sussex}.
 
-All intervals defined in section \ref{subsec:intervals} were defined by the events in the \textit{beginning} and \textit{end} of the burst, the time-intervals described were characterized as follows:
-
-%For the boxplots, the Python library matplotlib.pyplot used each cycle-by-cycle interval duration. Linear regression from sklearn Python library was used to quantify the relation of the sequence intervals to the instantaneous period of each cycle. 
+All intervals defined in section \ref{subsec:intervals} were defined by the spike events at the \textit{beginning} and \textit{end} of each burst. The quantification of the sequential time-intervals was implemented in \textit{Python} as follows:
 
 \begin{lstlisting}
 	#########  SINGLE INTERVALS

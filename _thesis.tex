@@ -9,6 +9,15 @@ backrefstyle=none,    % Controla el formato de las referencias a las páginas
 hyperref=true,         % Habilitar hyperref
 ]{biblatex}
 
+\AtEveryBibitem{
+    \clearfield{urlyear}
+    \clearfield{urlmonth}
+    \clearfield{month}
+    \clearfield{url}
+    \clearfield{issn}
+}
+
+
 % Add the ISSN field for journal articles
 \DeclareBibliographyDriver{article}{%
 	\usebibmacro{bibindex}%
@@ -39,6 +48,13 @@ hyperref=true,         % Habilitar hyperref
 	\usebibmacro{related}%
 	\usebibmacro{finentry}%
 }
+
+% \usepackage{natbib}
+
+%  \usepackage[
+%  backref=true,
+% hyperref=true,
+%  ]{apalike}
 
  \addbibresource{own-bib.bib}
  \addbibresource{thesis_references.bib}
@@ -224,7 +240,7 @@ hyperref=true,         % Habilitar hyperref
 
 \adviser{Pablo Varona Martínez}
 
-\regno{Doctorado en Ingeniería Informatica y Telecomunicaciones}
+\regno{Doctorado en Ingeniería Informatica y de Telecomunicación}
 \adviserAffiliation{Departamento Ingeniería Informática}
 
 \date{July 2024}
@@ -284,9 +300,14 @@ hyperref=true,         % Habilitar hyperref
  \input{chapters/chapter6-conclusion}
  \input{chapters/chapter6-conclusion_spanish}
 
-
+% \bibliographystyle{plain}
+% \bibliography{thesis_references}
 \printbibliography
 
+% %\bibliographystyle\{unsrt\}   % Plain, ordenado por aparacicion en el documento
+
+% \bibliographystyle{apalike-ejor}  % Citas APA \textbackslash{}bibliography\{bibliography1, bibliography2, bibliography3, biblio\_gnb, biblio\_models, biblio\_hybrid, biblio\_laser, biblio\_robot, biblio\_invariant\}
+% \bibliography{thesis_references}
 
 \begin{appendix}
 \chapter{Publications}
