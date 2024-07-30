@@ -252,6 +252,57 @@ Finally, Fig. \ref{fig:cv1a pairplot comparison} depicts the plots for 2 phases 
 	\label{fig:cv1a pairplot comparison}
 \end{figure}
 
+\subsection{Summary of changes in the invariants due to the stimulation}
+Figure \ref{fig:results summary} shows the time-intervals relation for four examples for each simultaion case studied in this section. We can see that the relations between the intervals change as the source of the stimulation changes (including the case of spontaneous activity). In the case of the spontaneous activity there is a dynamical invariant in the N3 phase intervals, e.g., see the strong correlation between N3 burst duration and the period; while there is no relation between N1 or N2 phases. When the stimulation is induced by SO we can see a change in the distribution of the variability, being N1 the strongest one related to the period, but N3 presenting also some tendency to a linear relation. When stimulating MLN and CV1 the strongest correlation was in N1 with no relation of N3 phase to the period (in contrast to the SO-driven results). MLN case showed a clear and strong linear relation to the period in a large range of values of the duration of the time-intervals, i.e., for low values of the intervals duration there were also low values for the period duration. 
+
+Each of these case represent a different source of modulation or initiation in the rhythm. The spontaneous case might be during a hunger phase with no food, with longer phases of N3 activation but constant intervals for N1 (protraction) and N2 (rasp) phases. SO modulation is associated to sucrose stimulus, changing the importance of each phase, enhancing the protraction, as it is the case of MLN, when the stimulus of the lip might prioritize an effective protraction activity. Also, CV1a modulatory neuron used for the rhythm activation presented a distribution between the protraction (N1) and swallow (N3) phases. This redistribution indicated by the changes in the sequential dynamical invariants point to the relation of the variability and the functional context of the feeding motor activity.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{\textwidth}
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\begin{overpic}[width=\textwidth]{img/invariants/data/SUSSEX/Summary/output_pairplot_spon.pdf} % Base image
+		\put(50,55){ % Position the second image (70%, 60% of width/height of figure1)
+			\includegraphics[width=0.5\textwidth]{img/invariants/data/SUSSEX/Summary/distributed_benjamin_2012_spon.png} % The overlapping image
+		}
+		\end{overpic}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\begin{overpic}[width=\textwidth]{img/invariants/data/SUSSEX/Summary/output_pairplot_so.pdf} % Base image
+			\put(50,55){ % Position the second image (70%, 60% of width/height of figure1)
+				\includegraphics[width=0.5\textwidth]{img/invariants/data/SUSSEX/Summary/distributed_benjamin_2012_so.png} % The overlapping image
+			}
+		\end{overpic}
+	\end{minipage}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\begin{overpic}[width=\textwidth]{img/invariants/data/SUSSEX/Summary/output_pairplot_mln.pdf} % Base image
+			\put(50,55){ % Position the second image (70%, 60% of width/height of figure1)
+				\includegraphics[width=0.5\textwidth]{img/invariants/data/SUSSEX/Summary/distributed_benjamin_2012_mln.png} % The overlapping image
+			}
+		\end{overpic}
+	\end{minipage}	
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\begin{overpic}[width=\textwidth]{img/invariants/data/SUSSEX/Summary/output_pairplot_cv1a.pdf} % Base image
+			\put(50,55){ % Position the second image (70%, 60% of width/height of figure1)
+				\includegraphics[width=0.5\textwidth]{img/invariants/data/SUSSEX/Summary/distributed_benjamin_2012_cv1a.png} % The overlapping image
+			}
+		\end{overpic}
+	\end{minipage}
+\end{minipage}
+
+\caption{Summary of the results showed for different rhythm modulations. Each pairplot shows all possible combinations, the upper diagram shows the neuron stimulated for each case. The examples shown here correspond to (from top left to right): Spontaneous activity example 1 (Fig. \ref{fig:prep2 invariants}), SO induced modulation (Fig. \ref{fig:so induced invariants}), MLN stimulation (Fig. \ref{fig:mln stimulation}) and CVa1 stimulation (Fig. \ref{fig:cv1a 1 2phases}).}
+\label{fig:results summary}
+	
+\end{figure}
+
+\clearpage
 
 \subsection{Invariant reseting}
 There is another important feature of the sequential dynamical invariants reported in \textcite{elices_robust_2019}: there is no relation between time intervals belonging to different cycles. In the model the study of this phenomena was not possible since the current ramp provided a gradual change of the time-intervals duration and so forcing all intervals correlated in a period to be also correlated in the next one (see Appendix Fig. \ref{fig:N1M stimulation pairplot reset}). 
