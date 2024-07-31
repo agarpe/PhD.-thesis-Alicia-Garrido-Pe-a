@@ -2,8 +2,8 @@
 \subsection{Time references, intervals and CPG sequence}
 \label{subsec:intervals}
 The variability study addressed in this chapter is based on the characterization of cycle-by-cycle intervals in the rhythm produced by the model CPG.
-In our analysis of variability, we assess the presence of linear relationships between the intervals that build the sequence and the cycle-by-cycle period to characterize and unveil similar dynamical invariants as those found in the stomatogastric CPG \parencite{elices_robust_2019}. 
-The intervals here analyzed can be measured for any two or three neurons following a robust triphasic rhythm. In the feeding CPG, N1, N2 and N3 represent the three phases, represented in the model by interneurons N1M, N2v and N3t, respectively and in the experimental data by different combinations of moto- and interneurons (see Sec. \ref{subsec:methods experimental intervals}).
+In our analysis of variability, we assess the presence of linear relationships between the intervals that build the sequence to characterize and unveil similar dynamical invariants as those found in the stomatogastric CPG \parencite{elices_robust_2019}. 
+The intervals here analyzed can be measured for any two or three neurons following a robust triphasic rhythm. In the feeding CPG, N1, N2 and N3 represent the three phases, represented in the model by interneurons N1M, N2v and N3t, respectively, and in the experimental data by different combinations of moto- and interneurons (see Sec. \ref{subsec:methods experimental intervals}).
 
 \begin{figure}[hbt!]
 	\centering
@@ -33,13 +33,13 @@ The intervals here analyzed can be measured for any two or three neurons followi
 Figure \ref{fig:intervals} shows the intervals described from single neuron intervals and intervals defined between two neurons. The definition of each interval is as follows:
 \begin{enumerate}
 	\item \textbf{Burst Duration (BD)}, measured as the time interval between the first and the last spike of the burst (start to end in the trace of a given neuron).
-	\item \textbf{Inter Burst Interval (IBI)}, characterized as the difference between the last spike of a burst and the first one of the next one (end to start in the trace of a given neuron).
-	\item \textbf{Period}, which covers the bursts from the three neurons and correspond to a cycle. It is measured as the distance between the first spike of one burst in a neuron and the first spike of the next one on that neuron (start to start).
+	\item \textbf{Inter Burst Interval (IBI)}, characterized as the time difference between the last spike of a burst and the first one of the next one (end to start in the trace of a given neuron).
+	\item \textbf{Period}, which covers the bursts from the three neurons and correspond to a cycle. It is measured as the time interval between the first spike of one burst in a neuron and the first spike of the next one on that neuron (start to start).
 	\item \textbf{NeuronX-NeuronY interval}, this interval is measured from the start of the burst of neuron X to the start of the burst of neuron Y (start X to start Y).
 	\item \textbf{NeuronX-NeuronY delay}, being the time lapse between the burst end of a neuron X and the burst beginning of neuron Y. (end X to start Y).
 \end{enumerate}
 
-Note that it is also possible to define those intervals only with the references from two neurons. For example, the intervals conformed based on N1 and N3 intervals would be: N1N3 and N3N1 intervals and N1N3 and N3N1 delay. The intervals corresponding to the third neuron are enclosed in the others defined, e.g., in this example N2 burst and N2N1 delay would be contained in N1N3 delay. This consideration allows the characterization of the variability cycle-by-cycle in cases where it is not possible to define time references for the three neurons in the circuit. 
+Note that it is also possible to define those intervals only with the references from two neurons. For example, the intervals defined based on N1 and N3 time references would be: N1N3 and N3N1 intervals and N1N3 and N3N1 delay. The intervals corresponding to the third neuron are enclosed in the others defined, e.g., in this example N2 burst and N2N1 delay would be contained in N1N3 delay. This consideration allows the characterization of the cycle-by-cycle variability in cases where it is not possible to define time references for the three neurons in the circuit. 
 
 \subsection{Inducing variability in the model by current injection}
 \label{subsec:inj protocol}
@@ -53,7 +53,7 @@ The spiking-bursting activity of the model CPG neurons can be modulated by using
 	\label{fig:complete ramp example}
 \end{figure}
 
-Whilst the single neuron model descriptions have no intrinsic variability, the effect produced by the modulation of the injected current in each neuron induces variability into the circuit, which allows characterizing the sequence intervals and the period, the associated robustness of the rhythm and the presence of dynamical invariants. Such stimulation has been used previously in the living circuit, as reported by \textcite{elliott_temporal_1991}. The authors of this work showed that it is possible to activate the feeding CPG with variability caused by current injection into individual cells in the circuit. CPG rhythms obtained under this type of stimulation differ depending on which neuron is being stimulated. To induce variability in the model we used a ramp protocol resulting in circuit time-interval variations as in Fig. \ref{fig:complete ramp example}.
+Whilst the single neuron model descriptions have no intrinsic variability, the effect produced by the modulation of the injected current in each neuron induces variability into the circuit, which allows characterizing the sequence intervals and the period, the associated robustness of the rhythm and the presence of dynamical invariants. Such stimulation has been used previously in the living circuit, as reported by \textcite{elliott_temporal_1991}. The authors of this work showed that it is possible to activate the feeding CPG with variability caused by current injection into individual cells in the circuit. CPG rhythms obtained under this type of stimulation differ depending on which neuron is being stimulated. To induce variability in the model we used a ramp protocol resulting in circuit time-interval variations as shown in Fig. \ref{fig:complete ramp example}.
 
 % Even though this CPG model do not present intrinsic variability, thanks to the current \(i_{inj}\), variability is induced into the model, effectively changing burst duration. This current injection has also been used in Lymnaea preparation in living elements, stimulating N1M and SO, obtaining rhythm. Neural sequences obtained after the stimulation differ one another depending on which neuron is being stimulated. 
 
@@ -64,7 +64,7 @@ When value \(i_{inj}\) is increased on neuron SO, its burst duration becomes lon
 
 Neuron N3t also shows variable burst duration when an evolving current is injected. When \(i_{inj}\) value on N3t is larger, its burst duration increases, elongating the N1M depolarization phase.  
 
-Finally, when current is applied to N2v the effect on its burst duration or the burst duration of the rest of the neurons is rather small. However, \(i_{inj}\) % current 
+Finally, when current is applied to N2v, the effect on its burst duration or the burst duration of the rest of the neurons is rather small. However, \(i_{inj}\) % current 
 modulates N2v burst frequency through the hyperpolarization phase. 
 
 %cambios
@@ -88,29 +88,22 @@ Simulations of \textcite{vavoulis_dynamic_2007} model were implemented in C++. T
 \label{subsec:methods experimental intervals}
 The experimental recordings analyzed in section \ref{sec:experimental sussex} were performed by Michael Crossley, University of Sussex, and were kindly provided for this work. 
 
-Each recording had at least 5 microelectrodes, which allowed to characterize the rhythm based on combinations of different neuron's activity. There are cases of experiments in that section:
+Each recording had at least 5 microelectrodes, which allowed to characterize the rhythm based on combinations of different neuron's activity. The experiments discussed in that section correspond to:
 \begin{itemize}
-	\item Spontaneous activity: After the isolation of the CNS, the electrodes impaled in the neuron recorded the spontaneous activity in the CPG, with no further stimulation.
-	\item Nerve electrical stimulation: For the activation of the rhythm it is possible to stimulate the median lip nerve (MLN). The data analyzed there was stimulated by a 4V stimulus at 1Hz. 
+	\item Spontaneous activity: After the isolation of the CNS, the electrodes impaled in the neurons recorded the spontaneous activity in the CPG, with no further stimulation.
+	\item Nerve electrical stimulation: For the activation of the rhythm, it is possible to stimulate the median lip nerve (MLN). The data analyzed in this case corresponds to a 4V stimulus at 1Hz. 
 	\item Neuron electrical stimulation: To modulate the CPG rhythm, SO and CV1a neurons where stimulated (in different experiments) by injecting a constant depolarizing current.
 \end{itemize}
 
-To define each phase, we used different neurons and bursting references, depending on the ones available on the circuit, following intervals definition in table \ref{table:cpg ref intervals}.
+To define each phase, we used different neurons and bursting references, depending on the ones available on the circuit, following the interval definitions in table \ref{table:cpg ref intervals}.
 
-For each recording each phase was characterized as follows:
-
-\paragraph{Spontaneous Activity Example 1}
-N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
-
-\paragraph{Spontaneous Activity Example 2}
-N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B1 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
-Since the reference for N2 here coincides with N1 reference, we display here only the intervals corresponding to N1 and N3 phases, since the intervals that correspond to 3 phases, such as N1-N2 delay or N2-N3 delay, either are already represented in the defined intervals or have a duration close to 0 ms.
-
-\paragraph{Spontaneous Activity Example 3}
-N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
-
-\paragraph{Spontaneous Activity SO modulation}
-N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. 
+For each recording, each phase was characterized as follows:
+\begin{itemize}
+    \item Spontaneous Activity Example 1 and 3: N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B5 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8 that replicates the N3t duration. 
+    \item Spontaneous Activity Example 2: N1 phase was analyzed from B1 activity (bursting and depolarization); N2 phase was analyzed from B1 hyperpolarization, which has a strong inhibition from N2v; N3 phase was analyzed from the bursting activity of B8, that replicates the N3t duration. Since the reference for N2 here coincides with N1 reference, we display here only the intervals corresponding to N1 and N3 phases, the intervals that correspond to three phases, such as N1-N2 delay or N2-N3 delay, either are already represented in the defined intervals or have a duration close to 0 ms.
+    \item SO driven by stimulation and spontaneous activity: N1 phase was analyzed from B1 activity (bursting and depolarization) and N3 phase was analyzed from the bursting activity of B8 that replicates the N3t duration. N2 phase could not be clearly defined.
+    \item MLN driven and CV1a driven 1-4: N1 phase was analyzed from N1M activity by a threshold helped by the derivative of the signal; N3 phase was analyzed from the bursting activity of B8 (analogously to the cases above). In CV1a stimulation for cases 1 and 3, N2 phase was also characterized from the inhibition of N1M. 
+\end{itemize}
 
 \subsection{Models with chaotic activity}
 \label{sec:model variability equations}
