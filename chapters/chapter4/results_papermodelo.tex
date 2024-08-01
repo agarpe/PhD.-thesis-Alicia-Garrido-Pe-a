@@ -10,13 +10,18 @@ N1M neuron can be stimulated using ramp protocols in living preparations \parenc
 \begin{figure}[hbt!]
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_boxplot.pdf}
+    \begin{overpic}[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_boxplot.pdf}
+		\put(0,100){\large\textbf{a)}}
+    \end{overpic}
 	\end{minipage}
 	\begin{minipage}[b]{0.53\textwidth}
 		\centering
 		\begin{minipage}[b]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
+    \begin{overpic}[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
+		\put(0,35){\large\textbf{b)}}
+    \end{overpic}
+			% \includegraphics[width=\textwidth]{invariants/data/MODEL/n1m_driven/images/3phases/_durations.pdf}
 		\end{minipage}\
 		\begin{minipage}[b]{\textwidth}
 			\centering
@@ -50,30 +55,22 @@ The stimulation protocol was also applied to N3t neuron. Although no previous an
 %In fact, we can expect a similar result to N1M-driven simulation because of their bidirectional connectivity see Fig. \ref{fig:CPG diagram}.  ***dicutir si es siméterica o no *****
 
 
-Results shown in Fig. \ref{fig:invariants n3t}.a) indicate that the largest variability is present in the same intervals related to N3t burst duration, as when the stimulation was delivered to N1M. However, in this simulation we observe that N1M had a lower variability while N3t had a higher variability with respect to the previous condition. 
-%: N1M decreased its variability while N3t has increased it *****discutir***. 
-In contrast, N2v-BD maintained its variability, as well as all the derived intervals containing this burst duration.
-
-Note that N3-N1 delay, which is the interval from the end of the N3t burst to the beginning of N1M burst, shows negative values. This means that neuron N1M started earlier than the end of N3t in every cycle. Whilst this was also present in N1M-driven activity simulations, here the variability of this interval is much higher, leading to a larger overlapping.
-% N2v maintains its variability, being this interval and all the intervals related to it the least variable. Hence, in the distribution of the activity in the circuits between the neurons, the main negotiation is between N1M and N3t, distributing the variability and the period leading between they both. ***esto también lo tenemos que pulir un poco****
-
-Figure \ref{fig:invariants n3t}.b) plots each interval duration against the period. As in the previous condition, the dynamical invariants (i.e., intervals presenting a strong correlation to the period) show up in the intervals related to N3 phase, which were the ones presenting also the highest variability, whereas those intervals that do not participate in dynamical invariants are the ones related to N1M and mostly N2v (the least variable ones). 
-
-
-%The linear relationships regarding the least variable intervals (related to N2v and N1M burst durations), also present similar results to those discussed above when the rhythm was driven by N1M. Hence, the intervals most correlated are the ones with higher variability, whereas those intervals that do not participate in dynamical invariants, are the ones related to N1M and mostly N2v (the least variable ones).
-%***revisar redundancia***
-
-
 \begin{figure}[hbt!]
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_boxplot.pdf}
+    \begin{overpic}[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_boxplot.pdf}
+		\put(0,100){\large\textbf{a)}}
+    \end{overpic}
+		% \includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_boxplot.pdf}
 	\end{minipage}
 	\begin{minipage}[b]{0.53\textwidth}
 		\centering
 		\begin{minipage}[b]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_durations.pdf}
+   \begin{overpic}[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_durations.pdf}
+       \put(0,35){\large\textbf{b)}}
+   \end{overpic}
+			% \includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_durations.pdf}
 		\end{minipage}\
 		\begin{minipage}[b]{\textwidth}
 			\centering
@@ -88,6 +85,20 @@ Figure \ref{fig:invariants n3t}.b) plots each interval duration against the peri
 	\label{fig:invariants n3t}
 \end{figure}
 
+Results shown in Fig. \ref{fig:invariants n3t}.a) indicate that the largest variability is present in the same intervals related to N3t burst duration, as when the stimulation was delivered to N1M. However, in this simulation we observe that N1M had a lower variability while N3t had a higher variability with respect to the previous condition. 
+%: N1M decreased its variability while N3t has increased it *****discutir***. 
+In contrast, N2v-BD maintained its variability, as well as all the derived intervals containing this burst duration.
+
+Note that N3-N1 delay, which is the interval from the end of the N3t burst to the beginning of N1M burst, shows negative values. This means that neuron N1M started earlier than the end of N3t in every cycle. Whilst this was also present in N1M-driven activity simulations, here the variability of this interval is much higher, leading to a larger overlapping.
+% N2v maintains its variability, being this interval and all the intervals related to it the least variable. Hence, in the distribution of the activity in the circuits between the neurons, the main negotiation is between N1M and N3t, distributing the variability and the period leading between they both. ***esto también lo tenemos que pulir un poco****
+
+Figure \ref{fig:invariants n3t}.b) plots each interval duration against the period. As in the previous condition, the dynamical invariants (i.e., intervals presenting a strong correlation to the period) show up in the intervals related to N3 phase, which were the ones presenting also the highest variability, whereas those intervals that do not participate in dynamical invariants are the ones related to N1M and mostly N2v (the least variable ones). 
+
+
+%The linear relationships regarding the least variable intervals (related to N2v and N1M burst durations), also present similar results to those discussed above when the rhythm was driven by N1M. Hence, the intervals most correlated are the ones with higher variability, whereas those intervals that do not participate in dynamical invariants, are the ones related to N1M and mostly N2v (the least variable ones).
+%***revisar redundancia***
+
+
 
 
 
@@ -100,13 +111,19 @@ The same protocol was implemented with a ramp stimulation applied to SO to induc
 \begin{figure}[hbt!]
 	\begin{minipage}[b]{0.45\textwidth}
 		\centering
-		\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_boxplot.pdf}
+    \begin{overpic}[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_boxplot.pdf}
+       \put(0,100){\large\textbf{a)}}
+    \end{overpic}
+		% \includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_boxplot.pdf}
 	\end{minipage}
 	\begin{minipage}[b]{0.53\textwidth}
 		\centering
 		\begin{minipage}[b]{\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_durations.pdf}
+   \begin{overpic}[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_durations.pdf}
+       \put(0,35){\large\textbf{b)}}
+   \end{overpic}
+			% \includegraphics[width=\textwidth]{invariants/data/MODEL/so_driven/images/3phases/_durations.pdf}
 		\end{minipage}\
 		\begin{minipage}[b]{\textwidth}
 			\centering

@@ -348,6 +348,7 @@ def get_slope(spike,dt,n_points=10, slope_position=0.5, plot=False, v_scale=1):
 
 	return (slope1,slope2)
 \end{lstlisting}
+\vspace{-10pt}
 
 Finally, the models were implemented in C++ taking advantage of its computational speed. Most analyses were performed in Python3, since it is a frequently used tool and libraries such as Pandas are very effective for data analysis. Some spike detection analysis of the intracellular recordings of the CPG were performed in the visual analysis tool DataView \parencite{heitler_dataview_2007}. Scripts used in this work are available at \href{https://github.com/agarpe/neural-dynamics-utils}{github.com/agarpe/neural-dynamics-utils} and all conductance-based models are included in Neun \href{https://github.com/GNB-UAM/Neun}{github.com/GNB-UAM/Neun}
 
