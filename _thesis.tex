@@ -3,43 +3,17 @@
 \usepackage[
 backend=biber,
 style=apa,
-sorting=nyt,
-backref=true,         % Habilitar backref
-backrefstyle=none,    % Controla el formato de las referencias a las páginas
-hyperref=true,         % Habilitar hyperref
+sortcites=true,   % Enable sorting of multiple citations in one \cite command
+defernumbers=true,% Defer numbering until the bibliography is processed
+backref=true,     % Enable backref
+backrefstyle=none,% Control the format of the back references
+hyperref=true,    % Enable hyperref
+sorting=nyt       % Set default sorting to nyt (name, year, title) for bibliography
 ]{biblatex}
 
-%
-%% Add the ISSN field for journal articles
-%\DeclareBibliographyDriver{article}{%
-%	\usebibmacro{bibindex}%
-%	\usebibmacro{begentry}%
-%	\usebibmacro{author/editor+others/translator+others}%
-%	\setunit{\labelnamepunct}\newblock
-%	\usebibmacro{title}%
-%	\newunit
-%	\printlist{language}%
-%	\newunit\newblock
-%	\usebibmacro{byauthor}%
-%	\newunit
-%	\usebibmacro{journal+issuetitle}%
-%	\newunit
-%	\usebibmacro{byeditor+others}%
-%	\newunit
-%	\printfield{year}\newunit
-%	\printfield{volume}\newunit
-%	\printfield{number}\newunit
-%	\printfield{pages}\newunit
-%	\newunit\newblock
-%	\printfield{issn} % This will now include the ISSN field
-%	\newunit\newblock
-%	\usebibmacro{doi+eprint+url}%
-%	\newunit\newblock
-%	\usebibmacro{pageref}%
-%	\newunit\newblock
-%	\usebibmacro{related}%
-%	\usebibmacro{finentry}%
-%}
+% Apply the custom sorting scheme for in-text citations globally
+%\AtEveryCitekey{\defcounter{maxnames}{200}} % Ensure all names are included in citations
+\ExecuteBibliographyOptions{sorting=ynt}
 
 % \addbibresource{own-bib.bib}
  \addbibresource{thesis_references.bib}
@@ -260,9 +234,12 @@ hyperref=true,         % Habilitar hyperref
  \input{chapters/chapter6-conclusion}
  \input{chapters/chapter6-conclusion_spanish}
 
-
-
-\printbibliography
+%\bibliographystyle{apa}
+%\bibliography{thesis_references}
+\begin{refcontext}[sorting=nyt]
+	\printbibliography
+\end{refcontext}
+%\printbibliography
 
 \begin{appendix}
 \chapter{Publications}
