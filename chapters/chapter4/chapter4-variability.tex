@@ -1,7 +1,7 @@
 Bursting dynamics has been extensively studied in a wide variety of neural systems and theoretical models~\parencite{coombes2005bursting,izhikevich_dynamical_2007,Zendenrust18}, as it is instrumental for many brain functions, including motor coordination and cognitive performance, and can be related to both healthy and pathological states. Neuronal models in computational neuroscience often reproduce key functional features of their biological counterparts. However, they also present limitations such as their poor ability to mimic the observed intrinsic variability of living neurons, particularly in membrane potential waveforms and in collective adaptive dynamics. Biophysical models typically produce stereotyped fixed membrane potential depolarization and repolarization waveforms, and restricted dynamical flexibility as compared to those observed in experimental recordings. Variability in the activity of living neurons has been proven to play an important role in relevant information processing tasks, e.g. see  \parencite{Stein2005, renart_variability_2014, Waschke2021}. We have seen in this chapter the importance of variability in the presence of sequential dynamical invariants in bursting activity, and the limitations of studying them in a model when the variability is induced by a current ramp stimulation. Variability in models is usually induced by Gaussian noise, but this disregards the importance of functional variability in  neurons, as in several cases observed variability is not only a cause of stochasticity  but of a functional dynamical  outcome. 
 
 In this section, we will describe bursting variability characteristics in experimental recordings, not only regarding the sequence time-intervals but also their waveforms. We will compare this variability with that of classical models and models able to produce chaotic activity. 
-Figure \ref{fig:lp-pd burst variability} shows examples of  bursting and waveform variability in  intracellular recordings of LP and PD neurons in the pyloric CPG of \textit{Carcinus maenas}. In both neurons, we can appreciate large variability in  burst shape and duration, including variability in the hyperpolarization.
+Figure \ref{fig:lp-pd burst variability} shows examples of  bursting and waveform variability in  intracellular recordings of LP and PD neurons in the pyloric CPG of \textit{Carcinus maenas}. In both neurons, we can appreciate large variability in the burst shape and duration, including variability in the hyperpolarization.
 
 \begin{figure}[hbt]
 	\centering
@@ -15,7 +15,7 @@ Figure \ref{fig:lp-pd burst variability} shows examples of  bursting and wavefor
 	\label{fig:lp-pd burst variability}
 \end{figure}
 
-Although specific models can faithfully reproduce overall activity and voltage waveform  of living neurons, they usually fail on reproducing the intrinsic and collective variability that we observe in electrophysiological recordings. This is the case for example of \textcite{ghigliazza_minimal_2004b} or \textcite{vavoulis_dynamic_2007} models, represented in Fig. \ref{fig:model burst no variability}. Although the waveform shape is accurate for many purposes, the functional variability is hindered, and the models produce tonic and steady bursting activity. 
+Although specific models can faithfully reproduce the overall activity and voltage waveform  of living neurons, they usually fail on reproducing the intrinsic and collective variability that we observe in electrophysiological recordings. This is the case for example of \textcite{ghigliazza_minimal_2004b} or \textcite{vavoulis_dynamic_2007} models, represented in Fig. \ref{fig:model burst no variability}. Although the waveform shape is accurate for many purposes, the functional variability is hindered, and the models steady bursting activity. 
 
 \begin{figure}[hbt]
 	\centering
@@ -31,7 +31,8 @@ Although specific models can faithfully reproduce overall activity and voltage w
 
 
 
-In section \ref{sec:CPG model equations}, we saw that variability can be induced by including a current ramp.  Although this methodology can produce bursting  variability, when studying the activity cycle-by-cycle, it hinders the functional variability of spontaneous activity. 
+In section \ref{sec:CPG model equations}, we saw that variability can be induced by including a current ramp.  Although this methodology can produce bursting  variability, when studying the activity cycle-by-cycle, it hinders the functional variability of spontaneous activity. Figure \ref{fig:model burst variability}.a) shows an example of a model with chaotic mode, displaying variability in the duration, the waveform shape and the hyperpolarization, in contrast to the example of N1M neuron when inducing variability by a current ramp (panel b) in that Figure), that displays a moderate variability. 
+%todo revisar
 
 
 \begin{figure}[hbt]

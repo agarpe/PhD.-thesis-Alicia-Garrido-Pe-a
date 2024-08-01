@@ -5,7 +5,7 @@ After the isolation of the \textit{Lymnaea stagnalis} neural system, we searched
 Once the target neuron was identified, the laser was set-up. A lens with focal distance of $f$=50mm was used and no polarizer was installed on the optical path. Guided with the microscope camera, the laser spot was located and then placed first over the ganglion and subsequently over the specific neuron where the electrode was recording the activity. 
 At this point, the laser was focused with the micro-manipulator adjusting the focal distance. Finally, the laser power was increased to the above mentioned value for the experiments.
 
-Once the laser spot was over the neuron while the membrane voltage was simultaneously recorded at the soma with the intracellular electrode, we followed the protocol described below to measure the effect of the CW-NIR laser on the activity of the neuron:
+Once the laser spot was over the neuron while the membrane voltage was simultaneously recorded at the soma with the intracellular electrode, we followed the protocol described below and depicted in Fig. \ref{fig:protocol scheme} to measure the effect of the CW-NIR laser on the activity of the neuron:
 
 \begin{figure}[htb!]
 	\includegraphics[width=\textwidth]{img/laser/trial-protocol.pdf}
@@ -129,13 +129,9 @@ All data analyses were performed in Python, the scripts are available in \href{h
 
 \section{Temperature estimation for analyzing laser neuromodulation}
 \label{sec:temperature-estimation}
-To estimate the CW-NIR laser induced temperature change, we used the open-pipette method employed in previous experimental studies to measure the temperature variation during the illumination \parencite{li_temporal_2013, rabbitt_heat_2016,brown_thermal_2020, brown_response_2021}. We calibrated the resistance and temperature relation using a thermistor (EPCOS, 10$k\Omega$) to measure the temperature in the preparation solution in the range from 23ºC to 29ºC. We used two protocols:  injecting a constant current to calculate the resistance change from the voltage recording, and injecting pulses of a specific current value. From the resulting recording slope of the linear regression, we computed the conversion from voltage to temperature. For the estimation of the temperature change during the laser stimulation, we measured the voltage change during short intervals of laser illumination and the temperature value at its saturation plateau. This estimation is represented in Fig. \ref{fig:temperature estimation}.
-
-
-
-\begin{figure}[htb!]
+To estimate the CW-NIR laser induced temperature change, we used the open-pipette method employed in previous experimental studies to measure the temperature variation during the illumination \parencite{li_temporal_2013, rabbitt_heat_2016,brown_thermal_2020, brown_response_2021}. We calibrated the resistance and temperature relation using a thermistor (EPCOS, 10$k\Omega$) to measure the temperature in the preparation solution in the range from 23ºC to 29ºC. \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{img/laser/temperature_estimation.pdf}
 	\caption{Open-pipette temperature estimation method. Each row in the panel represents pulsed and continuous current delivery for the estimation, respectively. For both examples: left column, temperature and voltage relation. Right column filtered mean of voltage recordings from short illumination intervals in the pipette. }
 	\label{fig:temperature estimation}
-\end{figure}
+\end{figure}We used two protocols:  injecting a constant current to calculate the resistance change from the voltage recording, and injecting pulses of a specific current value. From the resulting recording slope of the linear regression, we computed the conversion from voltage to temperature. For the estimation of the temperature change during the laser stimulation, we measured the voltage change during short intervals of laser illumination and the temperature value at its saturation plateau. This estimation is represented in Fig. \ref{fig:temperature estimation}.
