@@ -82,6 +82,7 @@
 \begin{frame}{Neuroscience}
 	\only<1>{\centering\includegraphics[width=0.8\textwidth]{intro/neurosciences.pdf}}
 %	\only<2>{\includegraphics[width=\textwidth]{intro/neurosciences_focus.pdf}}
+%TODO licensed not isenced
 \end{frame}
 \begin{frame}{Approach}
 	\begin{itemize}
@@ -99,6 +100,7 @@
 \end{frame}
 
 \begin{frame}{Neuronal and Networks Dynamics}
+	\note{Say if they are recordings and which are those}
 	\only<1>{Neuronal electrical activity is often described in terms of the evolution of membrane voltage caused by the flow of ionic channels between the inside and outside of the cell.}
 	
 	\only<2->{Depending on the channels that constitute the neuron and the circuit it is immersed in, the activity varies.
@@ -112,6 +114,7 @@
 	\uncover<4->{And the type of spiking activity: tonic firing, bursting, etc.}
 	\uncover<4->{\begin{center}
 			\includegraphics[width=0.7\textwidth]{intro/spike_activity-types.pdf}
+			%TODO no se ven los picos
 	\end{center}}
 }
 \end{frame}
@@ -120,9 +123,9 @@
 	 \begin{columns}
 			\begin{column}{0.6\textwidth}
 				\begin{itemize}
-					\item<1->{There are sequential processes at different time-scales.} 
+					\item<1->{There are sequential processes at different time-scales.} \note{activation of iones and molecules -> dynamics of ions and molecules}
 					\item<3->{Many behaviors and actions are governed by sequential processes}
-					\item<4->{In humans: Motor control, speech, decision making, etc. }
+					\item<4->{In humans: Motor control, speech, etc. } %decision making out pq too much para comparar con caracoles.
 %					\item<5->{Studying sequential activity at different scales is crucial for a complete comprehension of neural systems.}
 					\item<5->{Study of sequential activity might have a crucial role in neural coordination to autonomously establish a balance between the robustness and flexibility required for effective motor function.}
 				\end{itemize}
@@ -131,6 +134,8 @@
 				\uncover<2->{\includegraphics[width=\textwidth]{intro/time scale/time-scale-feeding.pdf}}
 			\end{column}
 		\end{columns}
+	\note{information about the neural system: partial information available form the neural system.
+	}
 	 
 \end{frame}
 \begin{frame}{Studying neural dynamics in computational models}
@@ -149,7 +154,7 @@
 			\end{itemize}
 		\end{itemize}
 	}
-	
+	%TODO dividir en dos!
 	\only<10-11>{
 		\textbf{Conductance-based models}
 		\uncover<11>{\begin{table}[h!]
@@ -177,6 +182,7 @@
 	\uncover<14->{By \textbf{modeling synapses} we can model whole \textbf{circuits} by connecting single modeled neurons.\\}
 	\uncover<15>{\centering\includegraphics[width=0.7\linewidth]{intro/cpg.pdf}}
 }
+%TODO add Hodking/Vavoulis references to the spikes. 
 \end{frame}
 
 
@@ -202,7 +208,7 @@
 			\column{0.6\textwidth}
 			\vspace{-4cm} % Adjust this value to align the text as needed
 			\begin{itemize}
-				\item<8->In this thesis we work with the neural system of \textit{Lymanea stagnalis}.
+				\item<8->In this thesis we work with the neural system of \textit{Lymnaea stagnalis}.
 				\item<9>A pond snail whose system is well studied and described.
 			\end{itemize}
 		\end{columns}
@@ -231,6 +237,7 @@
 			\end{itemize}
 	\end{itemize}	
 }
+%TODO añadir figuras (mucho texto)
 		
 \end{frame}
 
@@ -333,12 +340,14 @@
 			\end{column}
 		}
 		\end{columns}
+	%TODO Video pantalla completa y señalar a la boca
 \end{frame}
 
 
 
 \begin{frame}{Computational and Experimental approach}
 	\includegraphics[width=\textwidth]{Images/experimental-computational.pdf})
+		%TODO tener cuidado de decir "experimental techniques"
 \end{frame}
 
 
@@ -411,6 +420,7 @@
 \begin{frame}{Cycle-by-cycle restrictions}
 	\movie[label=model_invariants_video,width=\textwidth,poster,autostart,borderwidth=-5pt,showcontrols,loop] 
 	{\includegraphics[width=\textwidth]{Movies/n3_n2_no_invariant.png}}{Movies/n3_n2_no_invariant.mp4}
+	\note{dejar claro valores del que no varía y qué intervalo no está relacionado.}
 \end{frame}
 
 \begin{frame}{N1M stimulation}
@@ -466,7 +476,7 @@
 %				\caption{\textbf{SO stimulation: }a) Box-plots of the sequence intervals under SO neuron stimulation. b) Interval correlations to Period for SO-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays.}
 %				\label{fig:invariant so}
 			\end{figure}
-			
+			% TODO probar invariantes cuadrados para ampliar pantalla
 			
 \end{frame}
 
@@ -488,6 +498,7 @@
 			\end{column}
 		}
 	\end{columns}
+	%TODO añadir "registro LP" y Nowotny et al. 
 \end{frame}
 
 
@@ -504,6 +515,11 @@
 			\includegraphics[width=\linewidth]{Images/elliot_n_andrew.png}
 			\tiny{Elliott, C. J. H., \& Andrew, T. (1991). Temporal Analysis of Snail Feeding Rhythms: A Three-Phase Relaxation Oscillator. Journal of Experimental Biology, 157(1), 391–408. Figure 5.}
 		}
+	\note{WE ANALYZE ALL INTERVALS, dejar clara aportación
+	Linear relationships with the interval -> linear relatioships with the cycle period 
+}
+	%TODO separar en dos
+	
 	
 \end{frame}
 
@@ -562,6 +578,7 @@
 			\end{column}
 		\end{columns}
 	}
+%TODO arregar, poner etiquetas a ,b, c y que se vea todo
 \end{frame}
 
 
@@ -589,7 +606,8 @@
 			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
 		\end{column}
 	\end{columns}
-}
+}	
+%TODO poner Diagrama en pequeñito para referencia
 
 \end{frame}
 
@@ -608,6 +626,7 @@
 			\end{column}
 		}
 	\end{columns}
+%TODO poner Diagrama en pequeñito para referencia
 \end{frame}
 
 \begin{frame}{CV1 driven activity}
@@ -635,6 +654,7 @@
 			\end{column}
 		\end{columns}
 	}
+%TODO poner Diagrama en pequeñito para referencia
 \end{frame}
 
 \begin{frame}{Study of functional the role of dynamical invariants in a Hybrot}
@@ -644,6 +664,7 @@
 {\includegraphics[width=\textwidth]{invariants/robot/Figure1_experiment_design_v1.png}}{Movies/GNB Hybrot with living CPG.mp4}
 }
 \only<2>{\centering\includegraphics[width=\textwidth]{invariants/robot/robot_results_invariant.png}}
+\note{Solución de inteniería, 'mas biologico'´} 
 \end{frame}
 
 
@@ -658,7 +679,7 @@
 \begin{frame}{Current findings}
 	\begin{itemize}
 		\item{Laser stimulation accelerates neural activity.}
-		\item{Most studies use pulsed laser and general dynamics}
+		\item{Most studies use pulsed laser and general dynamics} \note{Por qué pulsado y pq aqui no}
 		\item{Open questions:}
 		\begin{itemize}
 			\item Source of the effect: Photothermal, Photomechanical ...
@@ -719,6 +740,7 @@
 \begin{frame}{Effect on the firing rate}
 	\centering
 	\includegraphics[width=\textwidth]{laser/frequency-small.pdf}
+	%TODO añadir título
 \end{frame}
 
 
@@ -755,6 +777,8 @@
 		C_m\frac{dV}{dt} = I_{inj} - I_{NaT} - I_{NaP} - I_{A} - I_{D} - I_{LVA} - I_{HVA}
 		\end{equation}
 		\includegraphics[width=\textwidth]{laser/cgc-model-simulation.pdf}}
+	%TODO eje y
+	%TODO dividir en dos
 	\only<2->{
 		Each candidate generated a change in the waveform, but each one fitted the experimental change only partly.\\	
 		\vspace{10pt}
@@ -764,6 +788,7 @@
 		\vspace{10pt}
 		The computational model study shows that no modulation of an individual candidate but a combination of them can explain the experimental quantification}
 	}
+%TODO aumentar resolucion imagenes potenciales
 \end{frame}
 
 \begin{frame}{Model with temperature description}
@@ -790,6 +815,7 @@
 	\only<4>{
 	\includegraphics[width=0.8\textwidth]{Images/pulse50ms.pdf}
 	}
+\note{Mencionar importancia protocolo para ritmos}
 \end{frame}
 
 \begin{frame}{Activity-dependent stimulation effect}
@@ -800,6 +826,8 @@
 \begin{frame}{Summary of results}
 	\centering
 	\includegraphics[width=0.9\textwidth]{Images/laser_summary.png}
+	%TODO "Case study"
+	%TODO baja resolucion (mejorar)
 \end{frame}
 
 \section{Conclusions}
@@ -820,8 +848,9 @@
     	\end{itemize}
     	
 %    	
-
+	%TODO revisar con las finales de la tesis
     \end{frame}
+%TODO aadir referencias
 %}
 %\setbeamercolor{background canvas}{bg=violet}
 \setbeamercolor{background canvas}{bg=CCNUMaize}
