@@ -81,7 +81,7 @@
 \section{Introduction}
 \begin{frame}{Neuroscience}
 	\only<1>{\centering\includegraphics[width=0.8\textwidth]{intro/neurosciences.pdf}}
-%TODO licensed not isenced
+
 \end{frame}
 \begin{frame}{Approach}
 	\begin{itemize}
@@ -170,27 +170,40 @@
 	}
 	}
 
+\end{frame}
+\begin{frame}{Studying neural dynamics in computational models}
 
-	\only<1-13>{
+	\only<1-2>{
 	\textbf{Conductance-based models}
 	\\
-	\uncover<12->{By \textbf{different combinations of ionic channels} we can achieve \textbf{different activities and waveform shapes}}
-	\uncover<13>{\includegraphics[width=\linewidth]{intro/spike-types model.pdf}}
-	}
+	\uncover<1->{By \textbf{different combinations of ionic channels} we can achieve \textbf{different activities and waveform shapes\\\vspace{4pt}}}
+	\uncover<2>{\includegraphics[width=\linewidth]{intro/spike-types model.pdf}
+	
+	\begin{columns}
+		\begin{column}{0.57\textwidth}
+			\centering
+			\small{Hodgkin and Huxley (1952)}
+		\end{column}
+		\begin{column}{0.57\textwidth}
+			\centering
+			\small{Vavoulis et al. (2010)}
+		\end{column}
+	\end{columns}
+	}}
+\end{frame}
+\begin{frame}{Studying neural dynamics in computational models}
 
-\only<14-15>{
-	\textbf{Conductace-based models\\}
-	\uncover<14->{By \textbf{modeling synapses} we can model whole \textbf{circuits} by connecting single modeled neurons.\\}
-	\uncover<15>{\centering\includegraphics[width=0.7\linewidth]{intro/cpg.pdf}}
-}
-%TODO add Hodking/Vavoulis references to the spikes. 
+	\textbf{Conductance-based models\\}
+	By \textbf{modeling synapses} we can model whole \textbf{circuits} by connecting single modeled neurons.\\
+	\uncover<1>{\centering\includegraphics[width=0.7\linewidth]{intro/cpg.pdf}}
+
 \end{frame}
 
 
 \begin{frame}{Vertebrate and invertebrate animal studies}
 	\only<1-7>{
 	\begin{itemize}
-	\item<1->In addition to the well known vertebrate models, there have been invaluable findings using invertebrates.
+	\item<1->In addition to the well-known vertebrate models, there have been invaluable findings using invertebrates.
 	\item<2->There are many universal characteristics of nervous systems and behaviors that can be extrapolated to humans.
 	\item<3->Using invertebrates as animal models have different advantages:
 		\begin{itemize}
@@ -201,7 +214,9 @@
 		\end{itemize}
 	\end{itemize}
 }
-	\only<8->{
+\end{frame}
+\begin{frame}{Vertebrate and invertebrate animal studies}
+
 		\begin{columns}[t]
 			\column{0.4\textwidth}
 			\includegraphics[width=\linewidth]{intro/lymnaea.png}
@@ -209,8 +224,8 @@
 			\column{0.6\textwidth}
 			\vspace{-4cm} % Adjust this value to align the text as needed
 			\begin{itemize}
-				\item<8->In this thesis we work with the neural system of \textit{Lymnaea stagnalis}.
-				\item<9>A pond snail whose system is well studied and described.
+				\item<1->In this thesis we work with the neural system of \textit{Lymnaea stagnalis}.
+				\item<2>A pond snail whose system is well studied and described.
 			\end{itemize}
 		\end{columns}
 	}
