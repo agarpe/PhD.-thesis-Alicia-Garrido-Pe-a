@@ -41,7 +41,7 @@
 
 % Uncomment one of these to show notes in the compiled presentation
 % \setbeameroption{show notes} % Shows notes below slides
- \setbeameroption{show notes on second screen=right} % Shows notes on the second screen
+% \setbeameroption{show notes on second screen=right} % Shows notes on the second screen
 
 
 %\def\meetingname{Alicia Garrido Peña. PhD thesis Presentation}
@@ -81,7 +81,6 @@
 \section{Introduction}
 \begin{frame}{Neuroscience}
 	\only<1>{\centering\includegraphics[width=0.8\textwidth]{intro/neurosciences.pdf}}
-%	\only<2>{\includegraphics[width=\textwidth]{intro/neurosciences_focus.pdf}}
 %TODO licensed not isenced
 \end{frame}
 \begin{frame}{Approach}
@@ -139,25 +138,27 @@
 	 
 \end{frame}
 \begin{frame}{Studying neural dynamics in computational models}
-	\only<1-8>{
+	\only<1-7>{
 		\begin{itemize}
-			\item<1-8>{Computational models are powerful tools to study neural dynamics}
-			\item<2-8>{Advantages}
+			\item<1-7>{Computational models are powerful tools to study neural dynamics}
+			\item<2-7>{Advantages}
 			\begin{itemize}
-				\item<3-8>Full accessibility to the system
-				\item<4-8>Detailed reproduction of the living activity
+				\item<3-7>Full accessibility to the system
+				\item<4-7>Detailed reproduction of the living activity
 			\end{itemize}
-			\item<5-8>{Limitations}
+			\item<5-7>{Limitations}
 			\begin{itemize}
-				\item<6-8>{Restricted variability}
-				\item<7-8>{The description may depend on the information about the living system}
+				\item<6-7>{Restricted variability}
+				\item<7>{The description may depend on the information about the living system}
 			\end{itemize}
 		\end{itemize}
 	}
+\end{frame}
+\begin{frame}{Studying neural dynamics in computational models}
 	%TODO dividir en dos!
-	\only<10-11>{
+	\only<-1>{
 		\textbf{Conductance-based models}
-		\uncover<11>{\begin{table}[h!]
+		\uncover<1>{\begin{table}[h!]
 			\resizebox{\textwidth}{!}{%
 				\begin{tabular}{lccc}
 					Voltage equation                                                                 & \multicolumn{3}{c}{$C \frac{dV}{dt} = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)$}                                                                                                                                  \\ \hline
@@ -170,7 +171,7 @@
 	}
 
 
-	\only<12-13>{
+	\only<1-13>{
 	\textbf{Conductance-based models}
 	\\
 	\uncover<12->{By \textbf{different combinations of ionic channels} we can achieve \textbf{different activities and waveform shapes}}
