@@ -576,27 +576,57 @@
 
 
 \begin{frame}{Spontaneous activity}
+	
 	\only<1>{	
-		\begin{columns}
-			\begin{column}{0.57\textwidth}
-				\centering Case 1
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_variability_zoom.pdf}
-			\end{column}
-			\begin{column}{0.57\textwidth}
-				\centering Case 2
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/panel_variability_zoom.pdf}
-			\end{column}
-		\end{columns}
+		\centering
+		\begin{minipage}[c]{0.1\textwidth} % Adjust width for the label column
+			\centering
+			\rotatebox{90}{\small{Case 1}}
+		\end{minipage}%
+		\begin{minipage}[c]{0.85\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX//prep2/images/3phases/_signal_intervals_zoom.png}\\
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/_time_cycle.pdf}
+		\end{minipage}
+		
+%		\vspace{0.5cm} % Add some space between the image sets
+		
+		\begin{minipage}[c]{0.1\textwidth} % Adjust width for the label column
+			\centering
+			\rotatebox{90}{\small{Case 2}}
+		\end{minipage}%
+		\begin{minipage}[c]{0.85\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/_signal_intervals_zoom.png}\\
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/_time_cycle.pdf}
+		\end{minipage}
+		
 	}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%% Boxplot
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\only<2>{
+%		\centering \small{Case 1}				
+%		\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/_boxplot_h.pdf}
+%
+%		\centering \small{Case 2}
+%		\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/_boxplot_h.pdf}
+%
+%	}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%%% Correlations
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\only<2>{
 		\begin{columns}
 			\begin{column}{0.5\textwidth}
-				\centering Case 1
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_with_intervals_boxplot_invariants.pdf}
+				\centering \small{Case 1\\}	\includegraphics[width=0.85\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/_durations.pdf}	\includegraphics[width=0.9\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/_intervals.pdf}	\includegraphics[width=0.9\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/_delays.pdf}
+				%				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep2/images/3phases/panel_with_intervals_boxplot_invariants.pdf}
 			\end{column}
 			\begin{column}{0.5\textwidth}
-				\centering Case 2
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/panel_with_intervals_boxplot_invariants.pdf}
+				\centering \small{Case 2\\}	\includegraphics[width=0.85\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/_durations.pdf}	\includegraphics[width=0.9\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/_intervals.pdf}	\includegraphics[width=0.9\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/_delays.pdf}
+	%			\centering Case 2
+	%			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep3/images/3phases/panel_with_intervals_boxplot_invariants.pdf}
 			\end{column}
 		\end{columns}
 	}
@@ -606,26 +636,48 @@
 
 \begin{frame}{SO driven activity}
 \only<1>{	
-	\begin{columns}
-		\begin{column}{0.57\textwidth}
-			\centering SO driven by stimulation
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/panel_variability_zoom.pdf}
-		\end{column}
-		\begin{column}{0.57\textwidth}
-			\centering SO spontaneous driven
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_variability_zoom.pdf}
-		\end{column}
-	\end{columns}
+		\centering
+		\begin{minipage}[c]{0.1\textwidth} % Adjust width for the label column
+			\centering
+			\rotatebox{90}{\small{Induced SO driven}}
+		\end{minipage}%
+		\begin{minipage}[c]{0.85\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/_signal_intervals_zoom.png}\\
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/_time_cycle.pdf}
+		\end{minipage}
+		
+%		\vspace{0.5cm} % Add some space between the image sets
+		
+		\begin{minipage}[c]{0.1\textwidth} % Adjust width for the label column
+			\centering
+			\rotatebox{90}{\small{Spontaneous SO driven}}
+		\end{minipage}%
+		\begin{minipage}[c]{0.85\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/_signal_intervals_zoom.png}\\
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/_time_cycle.pdf}
+		\end{minipage}
+
 }
 \only<2>{
 	\begin{columns}
 		\begin{column}{0.5\textwidth}
-			\centering SO driven by stimulation
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/panel_with_intervals_boxplot_invariants.pdf}
+%			\centering \small{SO driven by stimulation}
+%			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/panel_with_intervals_boxplot_invariants.pdf}
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/_boxplot_h.pdf}
+			\centering
+				\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/SO_driven/images/_durations.pdf}	\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/SO_driven/images/_intervals.pdf}	\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/SO_driven/images/_delays.pdf}
 		\end{column}
 		\begin{column}{0.5\textwidth}
-			\centering SO spontaneous driven
-			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
+%			\centering \small{SO spontaneous driven}
+%		\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/_boxplot_h.pdf}
+			\centering
+				\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/_durations.pdf}	\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/_intervals.pdf}	\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/_delays.pdf}	
+			
+%			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
+%			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
 		\end{column}
 	\end{columns}
 }	
@@ -635,49 +687,122 @@
 
 
 
+%\begin{frame}{MLN driven activity}
+%	\begin{columns}
+%		\uncover<1->{
+%			\begin{column}{0.58\textwidth}
+%				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/panel_variability_zoom.pdf}
+%			\end{column}
+%		}
+%		\uncover<2>{
+%			\begin{column}{0.5\textwidth}
+%				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/panel_with_intervals_boxplot_invariants.pdf}
+%			\end{column}
+%		}
+%	\end{columns}
+%%TODO poner Diagrama en pequeñito para referencia
+%\end{frame}
+
+
 \begin{frame}{MLN driven activity}
 	\begin{columns}
 		\uncover<1->{
-			\begin{column}{0.58\textwidth}
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/panel_variability_zoom.pdf}
+			\begin{column}{0.7\textwidth}
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/_signal_intervals_zoom.png}
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/_signal_intervals_cycle.pdf}
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/_time_cycle.pdf}
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/_boxplot_h.pdf}
 			\end{column}
 		}
 		\uncover<2>{
-			\begin{column}{0.5\textwidth}
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/panel_with_intervals_boxplot_invariants.pdf}
+			\begin{column}{0.4\textwidth}
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/_durations.pdf}	\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/_intervals.pdf}	\includegraphics[width=\textwidth]{invariants/data/SUSSEX/MLN_driven/images/_delays.pdf}
 			\end{column}
 		}
 	\end{columns}
-%TODO poner Diagrama en pequeñito para referencia
+	%TODO poner Diagrama en pequeñito para referencia
 \end{frame}
 
-\begin{frame}{CV1 driven activity}
+
+
+\begin{frame}{CV1a driven activity}
 	\only<1>{	
-		\begin{columns}
-			\begin{column}{0.57\textwidth}
-				\centering CV1a driven by electrical stimulation. Case 1
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/panel_variability_zoom.pdf}
-			\end{column}
-			\begin{column}{0.57\textwidth}
-				\centering CV1a driven by electrical stimulation. Case 2
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/panel_variability_zoom.pdf}
-			\end{column}
-		\end{columns}
+		\centering
+		\begin{minipage}[c]{0.1\textwidth} % Adjust width for the label column
+			\centering
+			\rotatebox{90}{\small{CV1a driven (1)}}
+		\end{minipage}%
+		\begin{minipage}[c]{0.85\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/_signal_intervals_zoom.png}\\
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/_time_cycle.pdf}
+		\end{minipage}
+		
+		%		\vspace{0.5cm} % Add some space between the image sets
+		
+		\begin{minipage}[c]{0.1\textwidth} % Adjust width for the label column
+			\centering
+			\rotatebox{90}{\small{CV1a driven (2)}}
+		\end{minipage}%
+		\begin{minipage}[c]{0.85\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/_signal_intervals_zoom.png}\\
+			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/_time_cycle.pdf}
+		\end{minipage}
+		
 	}
 	\only<2>{
 		\begin{columns}
 			\begin{column}{0.5\textwidth}
-				\centering CV1a driven by electrical stimulation. Case 1
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/panel_with_intervals_boxplot_invariants.pdf}
+				%			\centering \small{CV1a driven (1)}
+				%			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/SO_driven/images/panel_with_intervals_boxplot_invariants.pdf}
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/_boxplot_h.pdf}
+				\centering
+				\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/_durations.pdf}	\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/_intervals.pdf}	\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/_delays.pdf}
 			\end{column}
 			\begin{column}{0.5\textwidth}
-				\centering CV1a driven by electrical stimulation. Case 2
-				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/panel_with_intervals_boxplot_invariants.pdf}
+				%			\centering \small{CV1a driven (2)}
+				%		\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
+				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/_boxplot_h.pdf}
+				\centering
+				\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/_durations.pdf}	\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/_intervals.pdf}	\includegraphics[width=0.8\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/_delays.pdf}	
+				
+				%			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
+				%			\includegraphics[width=\textwidth]{invariants/data/SUSSEX/prep4_so_driven_2/images/panel_with_intervals_boxplot_invariants.pdf}
 			\end{column}
 		\end{columns}
-	}
-%TODO poner Diagrama en pequeñito para referencia
+	}	
+	%TODO poner Diagrama en pequeñito para referencia
+	
 \end{frame}
+%
+%\begin{frame}{CV1 driven activity}
+%	\only<1>{	
+%		\begin{columns}
+%			\begin{column}{0.57\textwidth}
+%				\centering CV1a driven by electrical stimulation. Case 1
+%				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/panel_variability_zoom.pdf}
+%			\end{column}
+%			\begin{column}{0.57\textwidth}
+%				\centering CV1a driven by electrical stimulation. Case 2
+%				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/panel_variability_zoom.pdf}
+%			\end{column}
+%		\end{columns}
+%	}
+%	\only<2>{
+%		\begin{columns}
+%			\begin{column}{0.5\textwidth}
+%				\centering CV1a driven by electrical stimulation. Case 1
+%				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven1/images/2phases/panel_with_intervals_boxplot_invariants.pdf}
+%			\end{column}
+%			\begin{column}{0.5\textwidth}
+%				\centering CV1a driven by electrical stimulation. Case 2
+%				\includegraphics[width=\textwidth]{invariants/data/SUSSEX/CV1a_driven2/images/panel_with_intervals_boxplot_invariants.pdf}
+%			\end{column}
+%		\end{columns}
+%	}
+%%TODO poner Diagrama en pequeñito para referencia
+%\end{frame}
 
 \begin{frame}{Study of functional the role of dynamical invariants in a Hybrot}
 \only<1>{
