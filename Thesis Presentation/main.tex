@@ -196,7 +196,7 @@
 
 	\textbf{Conductance-based models\\}
 	By \textbf{modeling synapses} we can model whole \textbf{circuits} by connecting single modeled neurons.\\
-	\uncover<1>{\centering\includegraphics[width=0.7\linewidth]{intro/cpg.pdf}}
+	\only<1>{\centering\includegraphics[width=0.7\linewidth]{Images/cpg1.pdf}}	\only<2>{\centering\includegraphics[width=0.7\linewidth]{Images/cpg2.pdf}}	\only<3>{\centering\includegraphics[width=0.7\linewidth]{Images/cpg.pdf}}
 	%TODO hacer que aparezca cada modelo de neurona x click.
 
 \end{frame}
@@ -270,7 +270,6 @@
 			
 	\end{itemize}	
 }
-%todo DONE añadir figuras (mucho texto)
 		
 \end{frame}
 
@@ -335,13 +334,9 @@
 			\end{column}
 		\end{columns}
 		
-		% Second row
-		\begin{figure}[h!]
-			\centering
-			\movie[label=CPG activity,width=0.7\textwidth,poster=false,autostart=true,showcontrols,loop] 
-			{\includegraphics[width=0.7\textwidth]{intro/CPG.pdf}}{Movies/CPG_activity_slow.mp4}
-		\end{figure}	
-	%TODO arreglar tamaño video	
+		\movie[label=CPG activity, width=\textwidth, height=0.3\textwidth, poster=false, autostart=true, showcontrols=false, loop]
+		{\includegraphics[width=1pt,height=1pt]{Movies/placeholder.png}}{Movies/CPG_activity_slow_trim.mp4}
+
 \end{frame}
 
 \begin{frame}{Temporal constrains: Sequential Dynamical invariants}
@@ -353,10 +348,9 @@
 		\end{itemize}
 	\begin{figure}[h!]
 		\centering
-		\movie[label=pyloric video,width=\textwidth,poster=false,autostart=true,start=120s,showcontrols,loop]
-		{\includegraphics[width=\textwidth]{Movies/elices_invariants.png}}{Movies/elices_invariants.mp4}
+		\movie[label=pyloric video,width=\textwidth, height=0.5\textheight,poster=false,autostart=true,showcontrols=false,loop]
+		{\includegraphics[width=1pt,height=1pt]{Movies/placeholder.png}}{Movies/elices_invariants_muted_trim.mp4}
 	\end{figure}
-%TODO arreglar tamaño video
 \end{frame}
 
 \begin{frame}{Feeding CPG of \textit{Lymnaea stagnalis}}
@@ -366,18 +360,11 @@
 	\centering
 	N1 phase $\rightarrow$ N2 phase $\rightarrow$ N3 phase \\
 	Protraction $\rightarrow$ Rasp $\rightarrow$ Swallow\\
-	\vspace{3pt}
+	\vspace{10pt}
 	
-	\movie[label=cpg video,width=\textwidth,autostart,loop] 
-	{\includegraphics[width=\textwidth]{Images/CPG-lymnaea_v2_mejorado.png}}{Movies/CPG-lymnaea_v2_mejorado.mp4}
+	\movie[label=cpg video,width=\textwidth, height=0.5\textheight,poster=false,autostart=true,showcontrols=false,loop]
+	{\includegraphics[width=1pt,height=1pt]{Movies/placeholder.png}}{Movies/CPG-lymnaea_v2_mejorado_trim.mp4}
 
-%	\begin{itemize}
-%		\item<1->{N1 phase $\rightarrow$ Protraction}
-%		\item<1->{N2 phase $\rightarrow$ Rasp}
-%		\item<1->{N3 phase $\rightarrow$ Swallow}
-%	\end{itemize}
-
-	%TODO Video pantalla completa y señalar a la boca
 \end{frame}
 
 
@@ -535,7 +522,6 @@
 			\end{column}
 		}
 	\end{columns}
-	%TODO DONE añadir "registro LP" y Nowotny et al. 
 \end{frame}
 
 
@@ -699,7 +685,7 @@
 		\end{column}
 	\end{columns}
 }	
-%TODO done poner Diagrama en pequeñito para referencia
+%todo DONE poner Diagrama en pequeñito para referencia
 %TODO resaltar con color o algo?
 
 \end{frame}
@@ -745,7 +731,7 @@
 		}
 	\end{columns}
 }
-	%TODO done poner Diagrama en pequeñito para referencia
+	%todo DONE poner Diagrama en pequeñito para referencia
 	%TODO resaltar con color o algo?
 \end{frame}
 
@@ -802,7 +788,7 @@
 			\end{column}
 		\end{columns}
 	}	
-	%TODO DONE poner Diagrama en pequeñito para referencia
+	%todo DONE poner Diagrama en pequeñito para referencia
 	%TODO resaltar con color o algo?
 	
 \end{frame}
@@ -1030,6 +1016,7 @@
 	   			\item<7->{The \textbf{closed-loop protocol} unveiled the CW-laser \textbf{effect at different phases of the neuron dynamics}.}
 	    		\item<8->{The results discussed in this thesis in the context of neural sequences can also have \textbf{strong implications} in the field of neurorrehabilitation, robotics, and artificial intelligence.}
 	    	}
+%    	The combination of experimental and computational approaches showed the wide range of possibilities that real-time closed-loop protocols provide for effective sequential modulation. The study of neural sequences at multiple spatial and temporal scales can provide novel insights to relate neural dynamics and behavior. Novel neurotechnologies can contribute to identifying and exploiting the sequential nature of neural information processing in multiple nervous systems. The results discussed in this thesis in the context of neural sequences can also have strong implications in the field of neurorrehabilitation, robotics, and artificial intelligence derived from the understanding of sequential dynamical invariants.
     	\end{itemize}
     	
 %    	
