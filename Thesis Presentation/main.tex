@@ -205,7 +205,7 @@
 \begin{frame}{Vertebrate and invertebrate animal studies}
 	\only<1-7>{
 	\begin{itemize}
-	\item<1->In addition to the well-known vertebrate models, there have been invaluable findings using invertebrates.
+	\item<1->In addition to the well-known vertebrate models, there have been invaluable findings in invertebrate models.
 	\item<2->There are many universal characteristics of nervous systems and behaviors that can be extrapolated to humans.
 	\item<3->Using invertebrates as animal models have different advantages:
 		\begin{itemize}
@@ -225,6 +225,7 @@
 			
 			\column{0.6\textwidth}
 			\vspace{-4cm} % Adjust this value to align the text as needed
+			\raggedleft
 			\begin{itemize}
 				\item<1->In this thesis we work with the neural system of \textit{Lymnaea stagnalis}.
 				\item<2>A pond snail whose system is well studied and described.
@@ -244,18 +245,32 @@
 	}
 	\only<4->{We can classify them based on: 
 	\begin{itemize}
-		\item<5-> The change in the system: Invasive / \textcolor<13>{red}{non-invasive}
-		\item<6-> The source of the stimulation: 
-			\begin{itemize}
-				\item<7->{Chemical}
-				\item<8->\textcolor<12>{red}{Electrical}
-				\item<9->{Magnetic}
-				\item<10->{Mechanical}
-				\item<11->\textcolor<13>{red}{Optical}			
-			\end{itemize}
+		\item<5-> The change in the system: Invasive / non-invasive
+		\item<6-> The source of the stimulation:\\ 
+%			\begin{columns}
+%				\begin{column}{0.3\textwidth}
+%					\begin{itemize}
+%						\item<7->{Chemical}
+%						\item<8->\textcolor<12>{red}{Electrical}
+%						\item<9->{Magnetic}
+%						\item<10->{Mechanical}
+%						\item<11->\textcolor<13>{red}{Optical}			
+%					\end{itemize}
+%				\end{column}
+%				\begin{column}{0.7\textwidth}
+					\centering
+					\uncover<7->{\includegraphics[width=0.2\textwidth]{Images/chemical_stim.pdf}}
+					\uncover<8->{\includegraphics[width=0.2\textwidth]{Images/electrical_stim.pdf}}
+					\\
+					\uncover<9->{\includegraphics[width=0.2\textwidth]{Images/magnetic_stim.pdf}}
+					\uncover<10->{\includegraphics[width=0.2\textwidth]{Images/mechanical_stim.pdf}}
+					\uncover<11->{\includegraphics[width=0.2\textwidth]{Images/optical_stim.pdf}}
+%				\end{column}
+%			\end{columns}
+			
 	\end{itemize}	
 }
-%TODO añadir figuras (mucho texto)
+%todo DONE añadir figuras (mucho texto)
 		
 \end{frame}
 
@@ -937,22 +952,28 @@
 
 \begin{frame}{Model analysis to explore biophysical candidates}
 	
-	\only<1>{\begin{equation}
+	\only<1>{
+		
+		\centering
+		\begin{equation}
 		C_m\frac{dV}{dt} = I_{inj} - I_{NaT} - I_{NaP} - I_{A} - I_{D} - I_{LVA} - I_{HVA}
 		\end{equation}
+		\\
+		\vspace{5pt}
+		\centering
 		\includegraphics[width=\textwidth]{laser/cgc-model-simulation.pdf}}
-	%TODO eje y
-	%TODO dividir en dos
-	\only<2->{
-		Each candidate generated a change in the waveform, but each one fitted the experimental change only partly.\\	
-		\vspace{10pt}
-		\includegraphics[width=\textwidth]{Images/model_candidates.png}\\
+	%TODO eje y	
+\end{frame}
 
-		\uncover<3>{
-		\vspace{10pt}
-		The computational model study shows that no modulation of an individual candidate but a combination of them can explain the experimental quantification}
-	}
-%TODO aumentar resolucion imagenes potenciales
+\begin{frame}{Model analysis to explore biophysical candidates}
+	Each candidate generated a change in the waveform, but each one fitted the experimental change only partly.\\	
+	\vspace{10pt}
+	\includegraphics[width=\textwidth]{Images/model_candidates.png}\\
+
+	\uncover<1>{
+	\vspace{10pt}
+	The computational model study shows that no modulation of an individual candidate but a combination of them can explain the experimental quantification}
+%todo DONE ? aumentar resolucion imagenes potenciales
 \end{frame}
 
 \begin{frame}{Model with temperature description}

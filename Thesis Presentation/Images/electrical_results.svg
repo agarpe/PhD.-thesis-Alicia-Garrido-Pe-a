@@ -25,8 +25,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.72444962"
-     inkscape:cx="3184.4864"
-     inkscape:cy="403.75478"
+     inkscape:cx="3119.6096"
+     inkscape:cy="579.06028"
      inkscape:window-width="1920"
      inkscape:window-height="1024"
      inkscape:window-x="1920"
@@ -46,7 +46,10 @@
        height="75.97348"
        id="page1"
        margin="0"
-       bleed="0" /></sodipodi:namedview><defs
+       bleed="0"
+       inkscape:export-filename="electrical_result.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" /></sodipodi:namedview><defs
      id="defs1"><clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath5"><path
