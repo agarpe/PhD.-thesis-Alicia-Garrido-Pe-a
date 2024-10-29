@@ -14,6 +14,10 @@
 
 \usepackage{hyperref}
 \usepackage{cancel}
+
+\usepackage[backend=biber,style=alphabetic]{biblatex} % Use biblatex for bibliography
+\addbibresource{tesis presentation.bib} % Your .bib file
+
 % \hypersetup{colorlinks=true, 
 %     linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
 %     citecolor=black,        % color of links to bibliography
@@ -55,6 +59,12 @@
 % \institute[Michigan]{}
 \institute[EPS-UAM]{Escuela Politécnica Superior.\\ Universidad Autónoma de Madrid}
 \date[\mydate]{\meetingname\\08-11-2024}
+
+%% Set up footline to show current frame and total frames
+%\setbeamertemplate{footline}[frame number]
+
+% Declare a new counter to store the number of main frames
+\newcounter{mainframecount}
 
 \begin{document}
 	
@@ -1041,6 +1051,10 @@
 	\end{itemize}
 	
 \end{frame}
+
+\begin{frame}{References}
+	\printbibliography
+\end{frame}
 %TODO aadir referencias
 %}
 %\setbeamercolor{background canvas}{bg=violet}
@@ -1052,4 +1066,29 @@
 \includegraphics[width=0.25\textwidth]{Images/logo_uam-white.png}
 \includegraphics[width=0.25\textwidth]{Images/logo_eps-white.png}
 \end{frame}
+
+
+% Save the current number of frames into the new counter
+\setcounter{mainframecount}{\value{framenumber}}
+
+\newcounter{extraframenumber}
+\setcounter{extraframenumber}{1}  % Start counting extra frames from 1
+
+\setbeamercolor{background canvas}{bg=white}
+\begin{frame}
+	% Freeze the total frame number by setting framenumber to mainframecount
+	\frametitle{Slide 53 (not counted in total)}
+    \setcounter{framenumber}{\value{framenumber} + 1}  % Increment to show as 53
+	Content for frame 53.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Slide 54 (not counted in total)}
+	\setcounter{framenumber}{\value{mainframecount}}  % Continue freezing the total at the last main frame
+	Content for frame 54.
+\end{frame}
+
+% Add more extra frames as needed...
+
+
 \end{document}
