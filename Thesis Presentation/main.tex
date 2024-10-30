@@ -15,8 +15,20 @@
 \usepackage{hyperref}
 \usepackage{cancel}
 
-\usepackage[backend=biber,style=alphabetic]{biblatex} % Use biblatex for bibliography
-\addbibresource{tesis presentation.bib} % Your .bib file
+\usepackage[backend=biber,style=alphabetic,url=false]{biblatex} % Use biblatex for bibliography
+
+\addbibresource{CV.bib}
+%\addbibresource{tesis presentation.bib} % Your .bib file
+
+% Redefine bibliography environment
+\renewcommand*{\bibfont}{\tiny} % Set font size for the bibliography
+\setlength{\bibitemsep}{0.5\baselineskip} % Adjust space between items
+
+
+%% Remove the label/icon from bibliography entries
+%\AtEveryBibitem{%
+%\clearfield{label}} % This removes the label for all entries
+
 
 % \hypersetup{colorlinks=true, 
 %     linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
@@ -207,7 +219,7 @@
 	\textbf{Conductance-based models\\}
 	By \textbf{modeling synapses} we can model whole \textbf{circuits} by connecting single modeled neurons.\\
 	\only<1>{\centering\includegraphics[width=0.7\linewidth]{Images/cpg1.pdf}}	\only<2>{\centering\includegraphics[width=0.7\linewidth]{Images/cpg2.pdf}}	\only<3>{\centering\includegraphics[width=0.7\linewidth]{Images/cpg.pdf}}
-	%TODO hacer que aparezca cada modelo de neurona x click.
+
 
 \end{frame}
 
@@ -517,6 +529,10 @@
 			\end{figure}
 			% TODO probar invariantes cuadrados para ampliar pantalla
 			
+\end{frame}
+
+\begin{frame}{Publication}
+	This work was published in \\ \fullcite{garrido-pena_characterization_2021}
 \end{frame}
 
 
@@ -1014,6 +1030,14 @@
 	\includegraphics[width=\textwidth]{Images/laser_summary.png}
 \end{frame}
 
+\begin{frame}{Publication}
+	\centering
+	This work was published in:\\
+	\fullcite{garrido-pena_modulation_2024}
+\end{frame}
+
+
+
 \section{Conclusions}
     \begin{frame}{Conclusions}
     	\begin{itemize}
@@ -1035,27 +1059,23 @@
 %    	
     \end{frame}
 
-\begin{frame}{Conclusiones} 
-	\begin{itemize} 
-		\only<1-5>{ 
-			\item<1->{La combinación de enfoques experimentales y computacionales ha demostrado el potencial de los protocolos de bucle cerrado en tiempo real ofrecen para una modulación secuencial efectiva.} 
-			\item<2->{El estudio de secuencias neuronales en diferentes escalas espaciales y temporales puede proporcionar \textbf{nuevas perspectivas para relacionar la dinámica neuronal y el comportamiento}.} 
-			\item<3->{Se ha \textbf{sugerido la universalidad de invariantes dinámicos secuenciales} en datos experimentales y de modelado en el CPG de alimentación.} 
-			\item<4->{Los invariantes dinámicos pueden ser \textbf{indicadores de la distribución funcional} de la variabilidad en el CPG.} 
-			\item<5->{\textbf{Nuevas neurotecnologías} pueden contribuir a identificar y explotar la naturaleza secuencial del procesamiento de información neuronal.} } 
-		\only<5->{ 
-			\item<6->{La iluminación sostenida con láser CW-NIR \textbf{acelera asimétricamente la dinámica de los potenciales de acción} y \textbf{la tasa de disparo} en neuronas individuales.} 
-			\item<7->{Mediante el estudio del efecto del CW-NIR basado en modelos mostramos que \textbf{ningún candidato biofísico por sí solo podía reproducir completamente la modulación observada}, y la modulación global a través del \textbf{cambio de temperatura} en la simulación fue \textbf{la aproximación más cercana}.} 
-			\item<8->{El \textbf{protocolo de bucle cerrado} ha mostrado el efecto del láser CW en \textbf{diferentes fases de la dinámica neuronal}.} 
-			\item<9->{Los resultados discutidos en esta tesis en el contexto de secuencias neuronales también pueden tener \textbf{importantes implicaciones} en los campos de neurorrehabilitación, robótica e inteligencia artificial.} } 
-	\end{itemize}
-	
-\end{frame}
+%\begin{frame}{Conclusiones} 
+%	\begin{itemize} 
+%		\only<1-5>{ 
+%			\item<1->{La combinación de enfoques experimentales y computacionales ha demostrado el potencial de los protocolos de bucle cerrado en tiempo real ofrecen para una modulación secuencial efectiva.} 
+%			\item<2->{El estudio de secuencias neuronales en diferentes escalas espaciales y temporales puede proporcionar \textbf{nuevas perspectivas para relacionar la dinámica neuronal y el comportamiento}.} 
+%			\item<3->{Se ha \textbf{sugerido la universalidad de invariantes dinámicos secuenciales} en datos experimentales y de modelado en el CPG de alimentación.} 
+%			\item<4->{Los invariantes dinámicos pueden ser \textbf{indicadores de la distribución funcional} de la variabilidad en el CPG.} 
+%			\item<5->{\textbf{Nuevas neurotecnologías} pueden contribuir a identificar y explotar la naturaleza secuencial del procesamiento de información neuronal.} } 
+%		\only<5->{ 
+%			\item<6->{La iluminación sostenida con láser CW-NIR \textbf{acelera asimétricamente la dinámica de los potenciales de acción} y \textbf{la tasa de disparo} en neuronas individuales.} 
+%			\item<7->{Mediante el estudio del efecto del CW-NIR basado en modelos mostramos que \textbf{ningún candidato biofísico por sí solo podía reproducir completamente la modulación observada}, y la modulación global a través del \textbf{cambio de temperatura} en la simulación fue \textbf{la aproximación más cercana}.} 
+%			\item<8->{El \textbf{protocolo de bucle cerrado} ha mostrado el efecto del láser CW en \textbf{diferentes fases de la dinámica neuronal}.} 
+%			\item<9->{Los resultados discutidos en esta tesis en el contexto de secuencias neuronales también pueden tener \textbf{importantes implicaciones} en los campos de neurorrehabilitación, robótica e inteligencia artificial.} } 
+%	\end{itemize}
+%	
+%\end{frame}
 
-\begin{frame}{References}
-	\printbibliography
-\end{frame}
-%TODO aadir referencias
 %}
 %\setbeamercolor{background canvas}{bg=violet}
 \setbeamercolor{background canvas}{bg=CCNUFootcolor}
@@ -1067,25 +1087,55 @@
 \includegraphics[width=0.25\textwidth]{Images/logo_eps-white.png}
 \end{frame}
 
-
 % Save the current number of frames into the new counter
 \setcounter{mainframecount}{\value{framenumber}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 	Extra frames
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \newcounter{extraframenumber}
 \setcounter{extraframenumber}{1}  % Start counting extra frames from 1
 
 \setbeamercolor{background canvas}{bg=white}
-\begin{frame}
+
+
+\begin{frame}[allowframebreaks]
 	% Freeze the total frame number by setting framenumber to mainframecount
-	\frametitle{Slide 53 (not counted in total)}
-    \setcounter{framenumber}{\value{framenumber} + 1}  % Increment to show as 53
-	Content for frame 53.
+	\frametitle{References}
+%	\setcounter{framenumber}{\value{mainframecount}}  
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{Journal Publications}
+	\nocite{*}
+	\renewcommand*{\bibfont}{\large} % Set font size for journal publications
+	\printbibliography[type=article, heading=none]
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{International Conferences}
+	\renewcommand*{\bibfont}{\tiny} % Set font size for conference proceedings
+	\printbibliography[type=inproceedings, heading=none]
 \end{frame}
 
 \begin{frame}
-	\frametitle{Slide 54 (not counted in total)}
+	% Freeze the total frame number by setting framenumber to mainframecount
+	\frametitle{Spike predictor algorithm}
+%	\setcounter{framenumber}{\value{mainframecount}}  % Ensure the total stays at 52 (or however many main slides there are)
+\end{frame}
+
+\begin{frame}
+	% Freeze the total frame number by setting framenumber to mainframecount
+	\frametitle{Spike predictor algorithm}
+%	\setcounter{framenumber}{\value{mainframecount}}  % Ensure the total stays at 52 (or however many main slides there are)
+\end{frame}
+
+\begin{frame}
+	\frametitle{END}
 	\setcounter{framenumber}{\value{mainframecount}}  % Continue freezing the total at the last main frame
-	Content for frame 54.
+
 \end{frame}
 
 % Add more extra frames as needed...
