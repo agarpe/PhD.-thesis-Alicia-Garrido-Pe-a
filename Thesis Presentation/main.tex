@@ -15,7 +15,7 @@
 \usepackage{hyperref}
 \usepackage{cancel}
 
-\usepackage[backend=biber,style=alphabetic,url=false]{biblatex} % Use biblatex for bibliography
+\usepackage[backend=biber,style=numeric,url=false]{biblatex} % Use biblatex for bibliography
 
 \addbibresource{CV.bib}
 %\addbibresource{tesis presentation.bib} % Your .bib file
@@ -131,11 +131,10 @@
 			\includegraphics[width=0.7\textwidth]{intro/spike-types.pdf}
 	\end{center}}
 	
-	\uncover<4->{\vfill}
+%	\uncover<4->{\vspace{4pt}}
 	\uncover<4->{And the type of spiking activity: tonic firing, bursting, etc.}
 	\uncover<4->{\begin{center}
 			\includegraphics[width=0.8\textwidth]{intro/spike_activity-types.pdf}
-			%TODO no se ven los picos zoom?
 			\note{Señalar los picos}
 	\end{center}}
 }
@@ -281,11 +280,11 @@
 %				\end{column}
 %				\begin{column}{0.7\textwidth}
 					\centering
-					\uncover<7->{\includegraphics[width=0.2\textwidth]{Images/chemical_stim.pdf}}
+					\uncover<7-12>{\includegraphics[width=0.2\textwidth]{Images/chemical_stim.pdf}}
 					\uncover<8->{\includegraphics[width=0.2\textwidth]{Images/electrical_stim.pdf}}
 					\\
-					\uncover<9->{\includegraphics[width=0.2\textwidth]{Images/magnetic_stim.pdf}}
-					\uncover<10->{\includegraphics[width=0.2\textwidth]{Images/mechanical_stim.pdf}}
+					\uncover<9-12>{\includegraphics[width=0.2\textwidth]{Images/magnetic_stim.pdf}}
+					\uncover<10-12>{\includegraphics[width=0.2\textwidth]{Images/mechanical_stim.pdf}}
 					\uncover<11->{\includegraphics[width=0.2\textwidth]{Images/optical_stim.pdf}}
 %				\end{column}
 %			\end{columns}
@@ -567,7 +566,7 @@
 	\uncover<3>{
 			Previous studies point to the linear relation between some phases and the period 
 			\includegraphics[width=0.9\linewidth]{Images/elliot_n_andrew.png}
-			\tiny{Elliott, C. J. H., \& Andrew, T. (1991). Temporal Analysis of Snail Feeding Rhythms: A Three-Phase Relaxation Oscillator. Journal of Experimental Biology, 157(1), 391–408. Figure 5.}
+			\tiny{\\Elliott, C. J. H., \& Andrew, T. (1991). Temporal Analysis of Snail Feeding Rhythms: A Three-Phase Relaxation Oscillator. Journal of Experimental Biology, 157(1), 391–408. Figure 5.}
 		}
 	\note{WE ANALYZE ALL INTERVALS, dejar clara aportación
 	Linear relationships with the interval -> linear relatioships with the cycle period 
