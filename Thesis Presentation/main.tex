@@ -474,6 +474,8 @@
 \end{frame}
 
 \begin{frame}{N1M stimulation}
+	\hypertarget{modelinvariant}{}
+	
 	\begin{figure}[hbt!]
 		\begin{minipage}[b]{0.36\textwidth}
 			\centering
@@ -531,6 +533,7 @@
 \end{frame}
 
 \begin{frame}{Publication}
+	\centering
 	This work was published in \\ \fullcite{garrido-pena_characterization_2021}
 \end{frame}
 
@@ -542,16 +545,17 @@
 		\uncover<2->{
 			\begin{column}{0.5\textwidth}
 				\includegraphics[width=\textwidth]{invariants/variability/lp_burst_variability.png}
-				\textbf{Living recording }of LP neuron in the pyloric CPG of \textit{Carcinus maenas}
+				\small{\textbf{Living recording }of LP neuron in the pyloric CPG of \textit{Carcinus maenas}}
 			\end{column}
 		}
-		\uncover<3>{
+		\uncover<3->{
 			\begin{column}{0.5\textwidth}
 				\includegraphics[width=\textwidth]{invariants/variability/TN-burst_variability.png}
-				\textbf{Model simulation} with chaotic activity from model Nowotny et al. \textit{PlosOne}(2008)
+				\small{\textbf{Model simulation} with chaotic activity from model Nowotny et al. \textit{PlosOne}(2008)}
 			\end{column}
 		}
 	\end{columns}
+	\uncover<4>{\tiny{\fullcite{garrido-pena_exploring_2024}}}
 \end{frame}
 
 
@@ -563,20 +567,22 @@
 		\item<2->Do the invariants change under different stimulation conditions?\\
 	\end{itemize}
 	\vspace{7pt}
-	\uncover<3>{
-			Previous studies point to the linear relation between some phases and the period 
-			\includegraphics[width=0.9\linewidth]{Images/elliot_n_andrew.png}
+	\only<3>{
+			Previous studies point to the linear relation between some phases and the period \\
+			\centering
+			\includegraphics[width=0.7\linewidth]{Images/elliot_n_andrew.png}
 			\tiny{\\Elliott, C. J. H., \& Andrew, T. (1991). Temporal Analysis of Snail Feeding Rhythms: A Three-Phase Relaxation Oscillator. Journal of Experimental Biology, 157(1), 391–408. Figure 5.}
 		}
 	\note{WE ANALYZE ALL INTERVALS, dejar clara aportación
-	Linear relationships with the interval -> linear relatioships with the cycle period 
+	Linear relationships with the interval -> linear relationships with the cycle period 
 }	
+	\only<4>{\small{This work was presented in: \fullcite{garrido-pena_universality_2021}}}
 	
 \end{frame}
 
 \begin{frame}{Distributed neural system of \textit{L. stagnalis}}
 	\only<1>{
-		\includegraphics[width=\textwidth]{invariants/distributed_benjamin_2012.png}
+		\includegraphics[width=\textwidth]{invariants/distributed_benjamin_2012.pdf}
 		\tiny{Benjamin, P. R. (2012). Distributed network organization underlying feeding behavior in the mollusk Lymnaea. Neural Systems \& Circuits, 2(1), 1–16. https://doi.org/10.1186/2042-1001-2-4}
 			
 	}
@@ -858,6 +864,7 @@
 {\includegraphics[width=\textwidth]{invariants/robot/Figure1_experiment_design_v1.png}}{Movies/GNB Hybrot with living CPG.mp4}
 }
 \only<2>{\centering\includegraphics[width=\textwidth]{invariants/robot/robot_results_invariant.png}}
+\fullcite{amaducci_controlling_2021}
 \note{Solución de inteniería, 'mas biologico'´} 
 \end{frame}
 
@@ -932,9 +939,14 @@
 \end{frame}
 
 \begin{frame}{Effect on the firing rate}
+	\hypertarget{FRorg}{}
 	\centering
 	The sustained CW laser illumination accelerates the tonic firing.
+
+	Absolute firing rate for N=23\\
+	\hyperlink{extraFR}{
 	\includegraphics[width=0.7\textwidth]{Images/frequency-general.pdf}
+}
 \end{frame}
 
 
@@ -946,25 +958,15 @@
 		\end{column}
 	\vspace{15pt}
 		\begin{column}{0.7\textwidth}
-			The stimulation of electrically coupled neurons, showed a first approximation to the capacity of the laser illumination to modulate neural dynamics. 
+			The stimulation of electrically coupled neurons, showed a first approximation to the capacity of the laser illumination to modulate \textbf{circuit} neural dynamics. 
 		\end{column}
 	\end{columns}
 	\vspace{10pt}
 	\centering
 	\includegraphics[width=\textwidth]{Images/electrical_result.png}	
+	\small{\fullcite{garrido-pena_experimental_2021}}
 \end{frame}
 
-%\begin{frame}{Biophysical candidates}
-%		There are distinct candidates under discussion
-%		\begin{itemize}
-%			\item{Fast activation of ionic currents	($K^+$,$Na^+$). \tiny{\textit{Li, X., et al. (2013). Cell Biochemistry and Biophysics, 67(3), 1409–1419.}}}
-%			\item{Change in capacitance. \tiny{\textit{Shapiro, M. G., et al. (2012). Nature Communications, 3(1), 1–11.}}}
-%			\item{Temperature receptor channels TRPV \tiny{\textit{Albert, E. S., et al. (2012). Journal of Neurophysiology, 107(12), 3227–3234}}.
-%			}
-%			\item{$Ca^{+2}$ transient \tiny{\textit{Dittami, G. M., et al. (2011). The Journal of Physiology, 589(Pt 6), 1295–1306.}}}
-%			
-%		\end{itemize}
-%\end{frame}
 
 \begin{frame}{Model analysis to explore biophysical candidates}
 	
@@ -1079,11 +1081,14 @@
 %\setbeamercolor{background canvas}{bg=violet}
 \setbeamercolor{background canvas}{bg=CCNUFootcolor}
 \begin{frame}[plain,t]
-\vspace{100pt}
+
 \centering
+{\color{white} \inserttitle \\ \insertauthor\\}
+\vspace{50pt}
 %\includegraphics[width=0.6\textwidth]{logos/UAM+EPS_L-eps-converted-to.pdf}
-\includegraphics[width=0.25\textwidth]{Images/logo_uam-white.png}
-\includegraphics[width=0.25\textwidth]{Images/logo_eps-white.png}
+\centering
+\includegraphics[width=0.5\textwidth]{Images/logos.png}
+%\includegraphics[width=0.25\textwidth]{Images/logo_eps-white.png}
 \end{frame}
 
 % Save the current number of frames into the new counter
@@ -1119,16 +1124,83 @@
 	\printbibliography[type=inproceedings, heading=none]
 \end{frame}
 
+
+\begin{frame}{Effect on the firing rate}
+	
+	\hypertarget{extraFR}{}
+	\centering
+	
+	The sustained CW laser illumination accelerates the tonic firing.
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\normalsize{Absolute FR for N=23}\\
+			\hyperlink{FRorg}{
+			\includegraphics[width=\textwidth]{Images/frequency-general.pdf}
+		}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+		\small{Subset showing acceleration N=12}\\
+			\includegraphics[width=\textwidth]{Images/FR_excitation.pdf}
+		\small{Subset showing no change in average N=11}\\
+			\includegraphics[width=\textwidth]{Images/FR_nochange.pdf}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
 \begin{frame}
 	% Freeze the total frame number by setting framenumber to mainframecount
 	\frametitle{Spike predictor algorithm}
+	\includegraphics[width=\textwidth]{Images/alg1.pdf}
 %	\setcounter{framenumber}{\value{mainframecount}}  % Ensure the total stays at 52 (or however many main slides there are)
 \end{frame}
 
 \begin{frame}
 	% Freeze the total frame number by setting framenumber to mainframecount
 	\frametitle{Spike predictor algorithm}
+	\includegraphics[width=\textwidth]{Images/alg2.pdf}
 %	\setcounter{framenumber}{\value{mainframecount}}  % Ensure the total stays at 52 (or however many main slides there are)
+\end{frame}
+
+\begin{frame}{Biophysical candidates}
+		There are distinct candidates under discussion
+		\begin{itemize}
+				\item{Fast activation of ionic currents	($K^+$,$Na^+$). \small{\textit{Li, X., et al. (2013). Cell Biochemistry and Biophysics, 67(3), 1409–1419.}}}
+				\item{Change in capacitance. \small{\textit{Shapiro, M. G., et al. (2012). Nature Communications, 3(1), 1–11.}}}
+				\item{Temperature receptor channels TRPV \small{\textit{Albert, E. S., et al. (2012). Journal of Neurophysiology, 107(12), 3227–3234}}.
+					}
+				\item{$Ca^{+2}$ transient \small{\textit{Dittami, G. M., et al. (2011). The Journal of Physiology, 589(Pt 6), 1295–1306.}}}
+				
+		\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{N3t stimulation}
+	\begin{figure}[hbt!]
+		\begin{minipage}[b]{0.36\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_boxplot.pdf}
+		\end{minipage}
+		\begin{minipage}[b]{0.44\textwidth}
+			\centering
+			\begin{minipage}[b]{\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_durations.pdf}
+			\end{minipage}\
+			\begin{minipage}[b]{\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_intervals.pdf}
+			\end{minipage}\
+			\begin{minipage}[b]{\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{invariants/data/MODEL/n3t_driven/images/3phases/_delays.pdf}
+			\end{minipage}
+		\end{minipage}
+		%		\caption{\textbf{N1M stimulation:} a) Box-plots of the  sequence intervals under N1M neuron stimulation. b) Interval correlations to period for N1M-driven simulation. First row: Burst duration. Second and third row: Two-neuron intervals. Forth and fifth row: Two-neuron delays. Linear relationships are quantified by the $R^2$ values of the linear regression.}
+		%		\label{fig:invariant n1m}
+	\end{figure}
+	
 \end{frame}
 
 \begin{frame}
