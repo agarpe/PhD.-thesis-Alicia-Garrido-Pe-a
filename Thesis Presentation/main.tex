@@ -15,6 +15,8 @@
 \usepackage{hyperref}
 \usepackage{cancel}
 
+\usepackage{multirow}
+
 \usepackage[backend=biber,style=numeric,url=false]{biblatex} % Use biblatex for bibliography
 
 \addbibresource{CV.bib}
@@ -181,15 +183,17 @@
 
 	\only<-1>{
 		\textbf{Conductance-based models}
-		\uncover<1>{\begin{table}[h!]
-			\resizebox{\textwidth}{!}{%
+		\uncover<1>{
+			\begin{table}[h!]
 				\begin{tabular}{lccc}
-					Voltage equation                                                                 & \multicolumn{3}{c}{$C \frac{dV}{dt} = I - g_K n^4 (V - E_K) - g_{Na} m^3h(V-E_{Na}) - g_L (V-E_L)$}                                                                                                                                  \\ \hline
-					& \multicolumn{2}{c}{Activation variables}                                                                                                                              & Inactivation variable                                        \\ \hline
-					\multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}gating \\ variables\end{tabular}} & \multicolumn{1}{c|}{$\frac{dm(t)}{dt}=\frac{m_{\infty}(V(t))-m(t)}{\tau_m(V(t))}$} & \multicolumn{1}{c|}{$\frac{dn(t)}{dt}=\frac{n_{\infty}(V(t))-n(t)}{\tau_n(V(t))}$} & $\frac{dh(t)}{dt}=\frac{h_{\infty}(V(t))-h(t)}{\tau_h(V(t))}$ \\ \hline
-				\end{tabular}%
-			}
-		\end{table}
+					\hline
+					Voltage equation                                                                 & \multicolumn{3}{c}{$C_m \frac{dV}{dt} = I - \color[HTML]{750202}I_K - \color[HTML]{999903}I_Na - I_L $}                                                                                                                                                                                                                                                               \\ \hline
+					\multicolumn{1}{l|}{\multirow{2}{*}{Ionic channels}}                             & \multicolumn{1}{c|}{\multirow{2}{*}{$\color[HTML]{750202}I_K = g_K \color[HTML]{FE0000}n^4 V - E_K$}}                        & \multicolumn{1}{c|}{\multirow{2}{*}{$\color[HTML]{999903}I_Na = g_Na \color[HTML]{F8A102} m^3\color[HTML]{009901}h(V-E_Na$}} & \multirow{2}{*}{$I_L= g_L (V-E_L)$}                                                                     \\
+					\multicolumn{1}{l|}{}                                                            & \multicolumn{1}{c|}{}                                                                                                        & \multicolumn{1}{c|}{}                                                                                                        &                                                                                                         \\ \hline
+					& Activation variables                                                                                                         & \multicolumn{2}{c}{Inactivation variable}                                                                                                                                                                                              \\ \hline
+					\multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Gating \\ variables\end{tabular}} & \multicolumn{1}{c|}{\textbackslash{}color{[}HTML{]}\{F8A102\} $\frac{dm(t)}{dt}=\frac{m_{\infty}(V(t))-m(t)}{\tau_m(V(t))}$} & \multicolumn{1}{c|}{\textbackslash{}color{[}HTML{]}\{FE0000\} $\frac{dn(t)}{dt}=\frac{n_{\infty}(V(t))-n(t)}{\tau_n(V(t))}$} & \textbackslash{}color{[}HTML{]}\{009901\} $\frac{dh(t)}{dt}=\frac{h_{\infty}(V(t))-h(t)}{\tau_h(V(t))}$ \\ \hline
+				\end{tabular}
+			\end{table}
 		}
 		\tiny{Hodgkin, A. L. and Huxley, A. F. (1952). A quantitative description of membrane current and its application to conduction and excitation in nerve. The Journal of Physiology, 117(4), 500–544. https://doi.org/10.1113/jphysiol.1952.sp004764}
 	}
